@@ -1,0 +1,3276 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Not Found</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="canonical" href="https://www.dobot-robots.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.dobot-robots.com/" /> 
+    <link rel="alternate" href="https://www.dobot-robots.com/" hreflang="en-US" />
+    <link rel="alternate" href="https://de.dobot-robots.com/" hreflang="de-DE" />
+    <link rel="alternate" href="https://jp.dobot-robots.com/" hreflang="ja-JP" />
+    <link rel="alternate" href="https://th.dobot-robots.com/" hreflang="th-TH" />
+    <link rel="alternate" href="https://fr.dobot-robots.com/" hreflang="fr-FR" />
+    <link rel="alternate" href="https://es.dobot-robots.com/" hreflang="es-ES" />
+    <link rel="alternate" href="https://id.dobot-robots.com/" hreflang="id-ID" />
+    <meta name="author" content="sumaart.com" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <meta name="screen-orientation" content="portrait" />
+    <meta name="x5-orientation" content="portrait" />
+    <meta name="format-detection" content="telephone=no,email=no,address=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="msvalidate.01" content="B09D4C7910E2D7E02E78C37E5EB7A9AD" />
+
+    <!-- Share to Facebook -->
+    <!-- <meta property="og:type" content="article" />
+    <meta property="og:title" content="Not Found" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" /> -->
+
+    <link rel="shortcut icon" type="image/ico" href="/themes/en/default/assets/images/favicon.png" />
+    <link rel="stylesheet" href="/themes/en/default/styles/app.css?1774014439">
+    <link rel="stylesheet" href="/themes/en/default/sass/new_apply.css?1774014439">
+    <link rel="stylesheet" href="/themes/en/default/sass/new_products.css?1774014439">
+    <link rel="stylesheet" href="/themes/en/default/sass/outindex.css?1774014439">
+    <link rel="stylesheet" href="/themes/en/default/sass/2024.css?1774014439">
+    <link rel="stylesheet" href="/themes/en/default/sass/index.css?1774014439">
+
+    <!-- <script src="/themes/en/default/scripts/country.js"></script> -->
+    <!-- <link rel="stylesheet" href="//at.alicdn.com/t/font_3258130_5chjio5i3lj.css"> -->
+    
+    <!-- cookiefirst -->
+    <script src="https://consent.cookiefirst.com/sites/dobot-robots.com-8677260a-4c8d-4756-92df-ef70cc4079e1/consent.js"></script>
+    <!-- End cookiefirst -->
+
+     <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4K57V7XNE2"></script>
+    <script defer="defer">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-4K57V7XNE2');
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script defer="defer">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-W7TNWR9');</script>
+    <!-- End Google Tag Manager -->
+
+    <script src="//code.tidio.co/hjzomuu2dxngzgyjtwbjj6k8mfpdu0tu.js" async></script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1530591891138110');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=1530591891138110&ev=PageView&noscript=1"
+    /></noscript>
+
+    <style>
+        /* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+        @font-face {
+            font-family: "iconfont"; /* Project id 4609207 */
+            src: url('//at.alicdn.com/t/c/font_4609207_dkcwrjx962q.woff2?t=1720063884102') format('woff2'),
+            url('//at.alicdn.com/t/c/font_4609207_dkcwrjx962q.woff?t=1720063884102') format('woff'),
+            url('//at.alicdn.com/t/c/font_4609207_dkcwrjx962q.ttf?t=1720063884102') format('truetype');
+        }
+
+        .iconfont {
+            font-family: "iconfont" !important;
+            font-size: 20px;
+            font-style: normal;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .icon-tuite:before {
+            content: "\e600";
+        }
+    </style>
+
+</head><body class="page-inner">
+<header>
+	<div class="header">
+		<div class="wrap header-inner">
+			<a href="/" class="header-logo">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 30">
+					<path d="M26.1,6.5L26.1,6.5L15.6,0.4c-0.9-0.5-2-0.5-2.9,0L2.2,6.5C1.4,7,0.8,7.9,0.8,8.9v12.1c0,1,0.5,2,1.4,2.5l10.5,6.1c0.9,0.5,2,0.5,2.9,0l10.5-6.1c0.9-0.5,1.4-1.5,1.4-2.5V8.9C27.6,7.9,27,7,26.1,6.5z M10.1,14L10.1,14l0,7.3l-2-1.1c-0.9-0.5-1.4-1.5-1.4-2.5v-5.4c0-1,0.5-2,1.4-2.5l4.6-2.7c0.9-0.5,2-0.5,2.9,0l2,1.1L11.2,12C10.5,12.4,10.1,13.1,10.1,14z M21.7,17.7c0,1-0.5,2-1.4,2.5l-4.6,2.7c-0.9,0.5-2,0.5-2.9,0l-2-1.2l6.4-3.7c0.7-0.4,1.1-1.2,1.1-2V8.7l2,1.2c0.9,0.5,1.4,1.5,1.4,2.5L21.7,17.7z M44.8,13.5v3.7c0,2.1-1.7,3.7-3.7,3.7h-6.2v-9.2h3.1v7.8h2.9c0.5,0,0.9-0.4,0.9-0.9V12c0-0.5-0.4-0.9-0.9-0.9h-2.5h-3.5V9.8H41l0,0c0,0,0,0,0,0C43.1,9.8,44.8,11.5,44.8,13.5z M82.7,11.7h3.1v9.2h-3.1V11.7z M89.2,9.8v1.4h-10V9.8H89.2z M52,9.8L52,9.8h-2.5c-2.1,0-3.7,1.7-3.7,3.7v3.7c0,2.1,1.7,3.7,3.7,3.7c0,0,0,0,0,0H52c2.1,0,3.7-1.7,3.7-3.7c0,0,0,0,0,0v-3.7C55.8,11.5,54.1,9.8,52,9.8z M52.7,12v6.6c0,0.5-0.4,0.9-0.9,0.9h-2.1c-0.5,0-0.9-0.4-0.9-0.9V12c0-0.5,0.4-0.9,0.9-0.9h2.1C52.3,11.2,52.7,11.5,52.7,12C52.7,12,52.7,12,52.7,12z M74.7,9.8L74.7,9.8l-2.5,0c-2.1,0-3.7,1.7-3.7,3.7v3.7c0,2.1,1.7,3.7,3.7,3.7h2.5c2.1,0,3.7-1.7,3.7-3.7c0,0,0,0,0,0v-3.7C78.4,11.5,76.8,9.8,74.7,9.8z M75.3,18.7c0,0.5-0.4,0.9-0.9,0.9h-2.1c-0.5,0-0.9-0.4-0.9-0.9V12c0-0.5,0.4-0.9,0.9-0.9c0,0,0,0,0,0h2.1c0.5,0,0.9,0.4,0.9,0.9V18.7z M63.9,9.8C63.9,9.8,63.9,9.8,63.9,9.8L63.9,9.8l-6.8,0v1.4h4.2h1.8c0.5,0,0.9,0.4,0.9,0.9v1.8c0,0.5-0.4,0.9-0.9,0.9h-2.9v-3h-3.1v9.2h6.8c1.8,0,3.2-1.4,3.2-3.2c0,0,0,0,0,0v-0.1c0-0.9-0.4-1.7-1.1-2.2c0.7-0.5,1.1-1.3,1.1-2.2V13C67.1,11.2,65.6,9.8,63.9,9.8z M64,16.8l0,1.8c0,0.5-0.4,0.9-0.9,0.9h-2.9V16h2.9C63.6,16,64,16.4,64,16.8C64,16.8,64,16.8,64,16.8z"></path>
+				</svg>
+			</a>
+
+												
+			<nav class="header-menu">
+				<ul class="hm-ul subsit">
+					
+					<li class="hm-item " data-sub="products" data-id="17-">
+						<a href="/products" class="hm-link fw-500 fz-16 dh">
+															Products
+													</a>
+						<span class="hm-item__arrow icon-next"></span>
+					</li>
+					
+					<li class="hm-item " data-sub="industries" data-id="16-">
+						<a href="/industries" class="hm-link fw-500 fz-16 dh">
+															Industries
+													</a>
+						<span class="hm-item__arrow icon-next"></span>
+					</li>
+					
+					<li class="hm-item " data-sub="applications" data-id="19-">
+						<a href="/applications" class="hm-link fw-500 fz-16 dh">
+															Applications
+													</a>
+						<span class="hm-item__arrow icon-next"></span>
+					</li>
+					
+					<li class="hm-item " data-sub="insights" data-id="47-">
+						<a href="/insights" class="hm-link fw-500 fz-16 dh">
+															Insights
+													</a>
+						<span class="hm-item__arrow icon-next"></span>
+					</li>
+					
+					<li class="hm-item " data-sub="relations" data-id="72-">
+						<a href="/relations" class="hm-link fw-500 fz-16 dh">
+															Investor Relations
+													</a>
+						<span class="hm-item__arrow icon-next"></span>
+					</li>
+									</ul>
+				<ul class="hm-ul">
+					<li class="hm-item " data-sub="service">
+						<a href="/service" class="hm-link fz-16 fw-500 dh">Support</a>
+						<span class="hm-item__arrow icon-next"></span>
+					</li>
+					<li class="hm-item " data-sub="about">
+						<a href="/about" class="hm-link fz-16 fw-500 dh">About Dobot</a>
+						<span class="hm-item__arrow icon-next"></span>
+					</li>
+				</ul>
+			</nav>
+
+						<div class="header-right">
+				<a href="javascript:;" class="header-user search fz-16 icon-search js-open-hs dh">Search</a>
+								<!--<a href="/auth/login" class="header-user fz-16 icon-user dh">User</a>-->
+				<a href="/auth/newLogin" class="header-user fz-16 icon-user dh">User</a>
+								<a href="/" class="header-user home fz-16 icon-home dh">Home</a>
+				<a href="/about/contact-us" class="header-contact fz-16 dh">
+					<i class="fz-20 icon-email"></i>
+					Contact
+				</a>
+				<!-- <a href="https://www.dobot.cc/" target="_blank" class="header-contact fz-16">Old website</a> -->
+
+				<div class="footer-lang" style="margin-top: 5px;">
+					<div class="fl-header fz-12" style="width:85px;">
+						<span class="ico icon-lang fz-14"></span>English
+					</div>
+					<div class="fl-body">
+						<!-- <a href="/" class="flb-link fz-12 yr" target="_blank">English</a> -->
+						<a href="javascript:;" class="flb-link link_de fz-12 yr" target="_blank">Deutsch</a>
+						<a href="javascript:;" class="flb-link link_es fz-12 yr" target="_blank">Español</a>
+						<a href="javascript:;" class="flb-link link_fr fz-12 yr" target="_blank">Français</a>
+						<a href="/language/italian.html" class="flb-link fz-12 yr" target="_blank">Italian</a>
+						<!--<a href="/products/cr-series/france.html" class="flb-link fz-12 yr" target="_blank">Français</a>-->
+						<a href="/language/polski.html" class="flb-link fz-12 yr" target="_blank">Polski</a>
+						<a href="/language/nederlands.html" class="flb-link fz-12 yr" target="_blank">Nederlands</a>
+						<a href="/language/portuguese.html" class="flb-link fz-12 yr" target="_blank">Portuguese</a>
+						<a href="/products/cr-series/russian.html" class="flb-link fz-12 yr" target="_blank">Pусский</a>
+						<a href="javascript:;" class="flb-link link_jp fz-12 yr" target="_blank">日本語</a>
+						<!--<a href="/language/thai.html" class="flb-link fz-12 yr" target="_blank">Thai</a>-->
+					    <a href="javascript:;" class="flb-link link_th fz-12 yr" target="_blank">Thai</a>
+					    <a href="javascript:;" class="flb-link link_id fz-12 yr" target="_blank">Indonesia</a>
+						<a href="/products/cr-series/korean.html" class="flb-link fz-12 yr" target="_blank">한국어</a>
+						<a href="/language/tw.html" class="flb-link fz-12 yr" target="_blank">繁体中文</a>
+						<a href="https://www.dobot.cn" class="flb-link fz-12 yr" target="_blank">简体中文</a>
+					</div>
+				</div>
+				<!-- https://jp.dobot-robots.com/?_gl=1*2okunu*_gcl_au*MTMwODgwNzIxOC4xNzE3MDU4MzE2*_ga*ODEwOTg5NjQyLjE3MTcwNTgzMTk.*_ga_4K57V7XNE2*MTcyMTg3MTQ1OC44OS4xLjE3MjE4NzE5NTguNTAuMC4w -->
+				<!-- https://jp.dobot-robots.com/?_gl=1*1vxykmk*_ga*MTUxNjgyNTQ2Mi4xNjg5NTYxOTQ0*_ga_4K57V7XNE2*MTcxNzA0MjczOS4zODAuMS4xNzE3MDQyODYzLjYwLjAuMA..
+				https://de.dobot-robots.com/?_gl=1*1uarc2s*_ga*MTUxNjgyNTQ2Mi4xNjg5NTYxOTQ0*_ga_4K57V7XNE2*MTcxNzA0MjczOS4zODAuMS4xNzE3MDQzMjM4LjQ5LjAuMA.. -->
+			</div>
+
+
+			<div class="btn-menu js-btn-menu">
+				<span></span><span></span><span></span>
+			</div>
+
+			<div class="btn-search icon-search js-open-hs"></div>
+			<div class="btn-back icon-back js-btn-back"></div>
+		</div>
+	</div>
+
+	<div class="header-search" style="opacity: 0;">
+	<form action="/search/list" method="get" autocomplete="off">
+		<span class="hs-ico fz-20 black40 icon-hsearch"></span>
+		<span class="hs-close icon-close fz-14 black40 js-close-hs"></span>
+		<input type="text" name="keyword" placeholder="Search DOBOT" class="hs-input fz-14">
+		<div class="hs-links">
+			<p class="hs-links-title fz-12">Quick Links</p>
+			<ul class="list list-1 list-hslinks mt-20">
+			    <li>
+					<a href="/search/list?keyword=CRA Series" class="hslinks-item fz-20 black">CRA Series</a>
+				</li>
+				<!--<li>-->
+				<!--	<a href="/search/list?keyword=CR Series" class="hslinks-item fz-20 black">CR Series</a>-->
+				<!--</li>-->
+				<li>
+					<a href="/search/list?keyword=M1 Pro" class="hslinks-item fz-20 black">M1 Pro</a>
+				</li>
+				<li>
+					<a href="/search/list?keyword=MG400" class="hslinks-item fz-20 black">MG400</a>
+				</li>
+				<li>
+					<a href="/search/list?keyword=welding" class="hslinks-item fz-20 black">Welding</a>
+				</li>
+				<li>
+					<a href="/search/list?keyword=palletizing" class="hslinks-item fz-20 black">Palletizing</a>
+				</li>
+			</ul>
+		</div>
+	</form>
+</div>
+	<div class="sub-header" style="height: 0;">
+		<div class="wrap">
+			<!-- Products -->
+									<div class="subh-item" data-sub="products">
+				<div class="sub-industrial">
+
+										<!-- 300*160 -->
+					<ul class="list list-4 list-subip mt-20 list-default">
+												
+						<li>
+							<div class="subip-item list-item">
+																<a href="javascript:;" class="hiseries-item__img img-box">
+																	<img class="js-subip-img" src="/media/upload/2025/06/cr30h_tab.jpg" data-src="/media/upload/2025/06/cr30h_tab.jpg" alt="CR 30H">
+								</a>
+
+								<div class="subip-item__links mt-10">
+																		<span class="subip-item__cate fz-16">CR 30H</span>
+																		<!-- <a href="/products?products%5B%5D=79" class="learn-more blue fz-12">Learn More<span class="icon-more fz-12"></span></a> -->
+								</div>
+
+																<ul class="list list-1 mt-10">
+																											<li>
+									    										<a href="/products/cr-30h/cr-30h-collaborative-robots.html" class="subip-link fz-14" data-img="/media/upload/2025/06/cr30h_tab.jpg">
+																				<!--<a href="/products/cr-30h/cr-30h-collaborative-robots.html" class="subip-link fz-14" data-img="/media/upload/2025/06/cr30h_tab.jpg">-->
+											<span class="ico img-box" style="width:0px;">
+												<!--												<img src="/media/upload/2025/06/cr30h_tab.jpg" alt="CR 30H Collaborative Robots">-->
+																							</span>CR 30H Collaborative Robots
+																						<span class="new">new</span>
+																					</a>
+									</li>
+																										</ul>
+							</div>
+						</li>
+												
+						<li>
+							<div class="subip-item list-item">
+																<a href="/products/cra-series/dobot-cra-series.html" class="hiseries-item__img img-box">
+																	<img class="js-subip-img" src="/media/upload/2023/CRA/crv500/CR%E7%B3%BB%E5%88%97.jpg" data-src="/media/upload/2023/CRA/crv500/CR%E7%B3%BB%E5%88%97.jpg" alt="CRA Series">
+								</a>
+
+								<div class="subip-item__links mt-10">
+																		<a href="/products/cra-series/dobot-cra-series.html" class="subip-item__cate link fz-16">CRA Series</a>
+																		<!-- <a href="/products?products%5B%5D=61" class="learn-more blue fz-12">Learn More<span class="icon-more fz-12"></span></a> -->
+								</div>
+
+																<ul class="list list-1 mt-10">
+																											<li>
+									    										<a href="/products/cra-series/cr20a.html" class="subip-link fz-14" data-img="/media/upload/2023/cr20a/tab.jpg">
+																				<!--<a href="/products/cra-series/cr20a.html" class="subip-link fz-14" data-img="/media/upload/2023/cr20a/tab.jpg">-->
+											<span class="ico img-box" style="width:0px;">
+												<!--												<img src="/media/upload/2023/cr20a/tab.jpg" alt="CR20A (High Payload Model)">-->
+																							</span>CR20A (High Payload Model)
+																						<span class="new">new</span>
+																					</a>
+									</li>
+																																				<li>
+									    										<a href="/products/cra-series/dobot-craf-series.html" class="subip-link fz-14" data-img="/media/upload/2025/02/new_crp/box_list.png">
+																				<!--<a href="/products/cra-series/dobot-craf-series.html" class="subip-link fz-14" data-img="/media/upload/2025/02/new_crp/box_list.png">-->
+											<span class="ico img-box" style="width:0px;">
+												<!--												<img src="/media/upload/2025/02/new_crp/box_list.png" alt="CRAF Series (with Torque Sensor)">-->
+																							</span>CRAF Series (with Torque Sensor)
+																						<span class="new">new</span>
+																					</a>
+									</li>
+																																				<li>
+									    										<a href="/products/cra-series/dobot-cra-ip68-series.html" class="subip-link fz-14" data-img="/media/upload/2025/02/new_crp/box_list.png">
+																				<!--<a href="/products/cra-series/dobot-cra-ip68-series.html" class="subip-link fz-14" data-img="/media/upload/2025/02/new_crp/box_list.png">-->
+											<span class="ico img-box" style="width:0px;">
+												<!--												<img src="/media/upload/2025/02/new_crp/box_list.png" alt="CRA-IP68 Series">-->
+																							</span>CRA-IP68 Series
+																						<span class="new">new</span>
+																					</a>
+									</li>
+																																				<li>
+									    										<a href="/products/cra-series/vx500.html" class="subip-link fz-14" data-img="/media/upload/2023/CRA/crv500/tab.jpg">
+																				<!--<a href="/products/cra-series/vx500.html" class="subip-link fz-14" data-img="/media/upload/2023/CRA/crv500/tab.jpg">-->
+											<span class="ico img-box" style="width:0px;">
+												<!--												<img src="/media/upload/2023/CRA/crv500/tab.jpg" alt="VX500 Smart Camera">-->
+																							</span>VX500 Smart Camera
+																						<span class="new">new</span>
+																					</a>
+									</li>
+																																																					</ul>
+							</div>
+						</li>
+												
+						<li>
+							<div class="subip-item list-item">
+																<a href="javascript:;" class="hiseries-item__img img-box">
+																	<img class="js-subip-img" src="/media/upload/2025/07/atom/tab.jpg" data-src="/media/upload/2025/07/atom/tab.jpg" alt="Humanoid Robots">
+								</a>
+
+								<div class="subip-item__links mt-10">
+																		<span class="subip-item__cate fz-16">Humanoid Robots</span>
+																		<!-- <a href="/products?products%5B%5D=78" class="learn-more blue fz-12">Learn More<span class="icon-more fz-12"></span></a> -->
+								</div>
+
+																<ul class="list list-1 mt-10">
+																											<li>
+									    										<a href="/products/humanoid-robots/atom.html" class="subip-link fz-14" data-img="/media/upload/2025/07/atom/tab.jpg">
+																				<!--<a href="/products/humanoid-robots/atom.html" class="subip-link fz-14" data-img="/media/upload/2025/07/atom/tab.jpg">-->
+											<span class="ico img-box" style="width:0px;">
+												<!--												<img src="/media/upload/2025/07/atom/tab.jpg" alt="DOBOT Atom">-->
+																							</span>DOBOT Atom
+																						<span class="new">new</span>
+																					</a>
+									</li>
+																																				<li>
+									    										<a href="/products/humanoid-robots/x-trainer.html" class="subip-link fz-14" data-img="/media/upload/2024/x-trainer/tab.png">
+																				<!--<a href="/products/humanoid-robots/x-trainer.html" class="subip-link fz-14" data-img="/media/upload/2024/x-trainer/tab.png">-->
+											<span class="ico img-box" style="width:0px;">
+												<!--												<img src="/media/upload/2024/x-trainer/tab.png" alt="DOBOT X-Trainer">-->
+																							</span>DOBOT X-Trainer
+																						<span class="new">new</span>
+																					</a>
+									</li>
+																										</ul>
+							</div>
+						</li>
+												
+						<li>
+							<div class="subip-item list-item">
+																<a href="/products/nova-series/dobot-nova-series.html" class="hiseries-item__img img-box">
+																	<img class="js-subip-img" src="/media/upload/2025/05/nova/tab.jpg" data-src="/media/upload/2025/05/nova/tab.jpg" alt="Nova Series">
+								</a>
+
+								<div class="subip-item__links mt-10">
+																		<a href="/products/nova-series/dobot-nova-series.html" class="subip-item__cate link fz-16">Nova Series</a>
+																		<!-- <a href="/products?products%5B%5D=57" class="learn-more blue fz-12">Learn More<span class="icon-more fz-12"></span></a> -->
+								</div>
+
+																<ul class="list list-1 mt-10">
+																																																						<li>
+									    										<a href="/products/nova-series/nova2.html" class="subip-link fz-14" data-img="/media/upload/nova/xgt/nova2.jpg">
+																				<!--<a href="/products/nova-series/nova2.html" class="subip-link fz-14" data-img="/media/upload/nova/xgt/nova2.jpg">-->
+											<span class="ico img-box" style="width:0px;">
+												<!--												<img src="/media/upload/nova/icon/nova2.png" alt="Nova 2">-->
+																							</span>Nova 2
+																						<span class="new">new</span>
+																					</a>
+									</li>
+																																				<li>
+									    										<a href="/products/nova-series/nova5.html" class="subip-link fz-14" data-img="/media/upload/nova/xgt/nova5.jpg">
+																				<!--<a href="/products/nova-series/nova5.html" class="subip-link fz-14" data-img="/media/upload/nova/xgt/nova5.jpg">-->
+											<span class="ico img-box" style="width:0px;">
+												<!--												<img src="/media/upload/nova/icon/nova5.png" alt="Nova 5">-->
+																							</span>Nova 5
+																						<span class="new">new</span>
+																					</a>
+									</li>
+																																				<li>
+									    										<a href="/products/nova-series/nova-series-for-industrial-applications.html" class="subip-link fz-14" data-img="/media/upload/2025/05/nova/tab.jpg">
+																				<!--<a href="/products/nova-series/nova-series-for-industrial-applications.html" class="subip-link fz-14" data-img="/media/upload/2025/05/nova/tab.jpg">-->
+											<span class="ico img-box" style="width:0px;">
+												<!--												<img src="/media/upload/2025/05/nova/tab.jpg" alt="Nova Series for Industrial Applications">-->
+																							</span>Nova Series for Industrial Applications
+																						<span class="new">new</span>
+																					</a>
+									</li>
+																										</ul>
+							</div>
+						</li>
+												
+						<li>
+							<div class="subip-item list-item">
+																<a href="/products/cr-series/dobot-cr-series.html" class="hiseries-item__img img-box">
+																	<img class="js-subip-img" src="/media/upload/2023/cr20a/tab1.jpg" data-src="/media/upload/2023/cr20a/tab1.jpg" alt="CR Series">
+								</a>
+
+								<div class="subip-item__links mt-10">
+																		<a href="/products/cr-series/dobot-cr-series.html" class="subip-item__cate link fz-16">CR Series</a>
+																		<!-- <a href="/products?products%5B%5D=18" class="learn-more blue fz-12">Learn More<span class="icon-more fz-12"></span></a> -->
+								</div>
+
+																<ul class="list list-1 mt-10">
+																											<li>
+									    										<a href="/products/cr-series/cr3.html" class="subip-link fz-14" data-img="/media/upload/cr-list/navigation/cr3.jpg">
+																				<!--<a href="/products/cr-series/cr3.html" class="subip-link fz-14" data-img="/media/upload/cr-list/navigation/cr3.jpg">-->
+											<span class="ico img-box" style="width:0px;">
+												<!--												<img src="/media/upload/cr-list/tubiao/cr3.png" alt="CR3">-->
+																							</span>CR3
+																					</a>
+									</li>
+																																				<li>
+									    										<a href="/products/cr-series/cr5.html" class="subip-link fz-14" data-img="/media/upload/cr-list/navigation/cr5.jpg">
+																				<!--<a href="/products/cr-series/cr5.html" class="subip-link fz-14" data-img="/media/upload/cr-list/navigation/cr5.jpg">-->
+											<span class="ico img-box" style="width:0px;">
+												<!--												<img src="/media/upload/cr-list/tubiao/cr5.png" alt="CR5">-->
+																							</span>CR5
+																					</a>
+									</li>
+																																																															<li>
+									    										<a href="/products/cr-series/cr7.html" class="subip-link fz-14" data-img="/media/upload/cr-list/navigation/cr7.jpg">
+																				<!--<a href="/products/cr-series/cr7.html" class="subip-link fz-14" data-img="/media/upload/cr-list/navigation/cr7.jpg">-->
+											<span class="ico img-box" style="width:0px;">
+												<!--												<img src="/media/upload/cr-list/tubiao/cr7.png" alt="CR7">-->
+																							</span>CR7
+																					</a>
+									</li>
+																																				<li>
+									    										<a href="/products/cr-series/cr10.html" class="subip-link fz-14" data-img="/media/upload/cr-list/navigation/cr10.jpg">
+																				<!--<a href="/products/cr-series/cr10.html" class="subip-link fz-14" data-img="/media/upload/cr-list/navigation/cr10.jpg">-->
+											<span class="ico img-box" style="width:0px;">
+												<!--												<img src="/media/upload/cr-list/tubiao/cr10.png" alt="CR10">-->
+																							</span>CR10
+																					</a>
+									</li>
+																																				<li>
+									    										<a href="/products/cr-series/cr12.html" class="subip-link fz-14" data-img="/media/upload/cr-list/navigation/cr12.jpg">
+																				<!--<a href="/products/cr-series/cr12.html" class="subip-link fz-14" data-img="/media/upload/cr-list/navigation/cr12.jpg">-->
+											<span class="ico img-box" style="width:0px;">
+												<!--												<img src="/media/upload/cr-list/tubiao/cr12.png" alt="CR12">-->
+																							</span>CR12
+																					</a>
+									</li>
+																																				<li>
+									    										<a href="/products/cr-series/cr16.html" class="subip-link fz-14" data-img="/media/upload/cr-list/navigation/cr16.jpg">
+																				<!--<a href="/products/cr-series/cr16.html" class="subip-link fz-14" data-img="/media/upload/cr-list/navigation/cr16.jpg">-->
+											<span class="ico img-box" style="width:0px;">
+												<!--												<img src="/media/upload/cr-list/tubiao/cr16.png" alt="CR16">-->
+																							</span>CR16
+																					</a>
+									</li>
+																										</ul>
+							</div>
+						</li>
+												
+						<li>
+							<div class="subip-item list-item">
+																<a href="/products/crs-series/cr5s.html" class="hiseries-item__img img-box">
+																	<img class="js-subip-img" src="/media/upload/cr-list/navigation/crs.jpg" data-src="/media/upload/cr-list/navigation/crs.jpg" alt="CRS Series">
+								</a>
+
+								<div class="subip-item__links mt-10">
+																		<a href="/products/crs-series/cr5s.html" class="subip-item__cate link fz-16">CRS Series</a>
+																		<!-- <a href="/products?products%5B%5D=36" class="learn-more blue fz-12">Learn More<span class="icon-more fz-12"></span></a> -->
+								</div>
+
+																<ul class="list list-1 mt-10">
+																											<li>
+									    										<a href="/products/crs-series/cr3s.html" class="subip-link fz-14" data-img="/media/upload/cr-list/navigation/cr3s.jpg">
+																				<!--<a href="/products/crs-series/cr3s.html" class="subip-link fz-14" data-img="/media/upload/cr-list/navigation/cr3s.jpg">-->
+											<span class="ico img-box" style="width:0px;">
+												<!--												<img src="/media/upload/cr-list/tubiao/cr3s.png" alt="CR3S">-->
+																							</span>CR3S
+																					</a>
+									</li>
+																																				<li>
+									    										<a href="/products/crs-series/cr3as.html" class="subip-link fz-14" data-img="/media/upload/cr-list/navigation/cr3s.jpg">
+																				<!--<a href="/products/crs-series/cr3as.html" class="subip-link fz-14" data-img="/media/upload/cr-list/navigation/cr3s.jpg">-->
+											<span class="ico img-box" style="width:0px;">
+												<!--												<img src="/media/upload/cr-list/tubiao/cr3s.png" alt="CR3AS">-->
+																							</span>CR3AS
+																						<span class="new">new</span>
+																					</a>
+									</li>
+																																				<li>
+									    										<a href="/products/crs-series/cr5s.html" class="subip-link fz-14" data-img="/media/upload/cr-list/navigation/cr5s.jpg">
+																				<!--<a href="/products/crs-series/cr5s.html" class="subip-link fz-14" data-img="/media/upload/cr-list/navigation/cr5s.jpg">-->
+											<span class="ico img-box" style="width:0px;">
+												<!--												<img src="/media/upload/cr-list/tubiao/cr5s.png" alt="CR5S">-->
+																							</span>CR5S
+																					</a>
+									</li>
+																																				<li>
+									    										<a href="/products/crs-series/cr5as.html" class="subip-link fz-14" data-img="/media/upload/cr-list/navigation/cr5s.jpg">
+																				<!--<a href="/products/crs-series/cr5as.html" class="subip-link fz-14" data-img="/media/upload/cr-list/navigation/cr5s.jpg">-->
+											<span class="ico img-box" style="width:0px;">
+												<!--												<img src="/media/upload/cr-list/tubiao/cr5s.png" alt="CR5AS">-->
+																							</span>CR5AS
+																						<span class="new">new</span>
+																					</a>
+									</li>
+																																				<li>
+									    										<a href="/products/crs-series/cr10s.html" class="subip-link fz-14" data-img="/media/upload/cr-list/navigation/cr10s.jpg">
+																				<!--<a href="/products/crs-series/cr10s.html" class="subip-link fz-14" data-img="/media/upload/cr-list/navigation/cr10s.jpg">-->
+											<span class="ico img-box" style="width:0px;">
+												<!--												<img src="/media/upload/cr-list/tubiao/cr10s.png" alt="CR10S">-->
+																							</span>CR10S
+																					</a>
+									</li>
+																																				<li>
+									    										<a href="/products/crs-series/cr10as.html" class="subip-link fz-14" data-img="/media/upload/cr-list/navigation/cr10s.jpg">
+																				<!--<a href="/products/crs-series/cr10as.html" class="subip-link fz-14" data-img="/media/upload/cr-list/navigation/cr10s.jpg">-->
+											<span class="ico img-box" style="width:0px;">
+												<!--												<img src="/media/upload/cr-list/tubiao/cr10s.png" alt="CR10AS">-->
+																							</span>CR10AS
+																						<span class="new">new</span>
+																					</a>
+									</li>
+																										</ul>
+							</div>
+						</li>
+												
+						<li>
+							<div class="subip-item list-item">
+																<a href="/products/desktop-four-axis/mg400.html" class="hiseries-item__img img-box">
+																	<img class="js-subip-img" src="/media/upload/cr-list/navigation/mg400-nv.jpg" data-src="/media/upload/cr-list/navigation/mg400-nv.jpg" alt="Desktop">
+								</a>
+
+								<div class="subip-item__links mt-10">
+																		<a href="/products/desktop-four-axis/mg400.html" class="subip-item__cate link fz-16">Desktop</a>
+																		<!-- <a href="/products?products%5B%5D=32" class="learn-more blue fz-12">Learn More<span class="icon-more fz-12"></span></a> -->
+								</div>
+
+																<ul class="list list-1 mt-10">
+																											<li>
+									    										<a href="/products/desktop-four-axis/mg400.html" class="subip-link fz-14" data-img="/media/upload/cr-list/navigation/mg400-nv.jpg">
+																				<!--<a href="/products/desktop-four-axis/mg400.html" class="subip-link fz-14" data-img="/media/upload/cr-list/navigation/mg400-nv.jpg">-->
+											<span class="ico img-box" style="width:0px;">
+												<!--												<img src="/media/upload/icon/mg400.jpg" alt="MG400">-->
+																							</span>MG400
+																					</a>
+									</li>
+																										</ul>
+							</div>
+						</li>
+												
+						<li>
+							<div class="subip-item list-item">
+																<a href="/products/dobot-series/m1-pro.html" class="hiseries-item__img img-box">
+																	<img class="js-subip-img" src="/media/upload/cr-list/navigation/m1pro.jpg" data-src="/media/upload/cr-list/navigation/m1pro.jpg" alt="SCARA">
+								</a>
+
+								<div class="subip-item__links mt-10">
+																		<a href="/products/dobot-series/m1-pro.html" class="subip-item__cate link fz-16">SCARA</a>
+																		<!-- <a href="/products?products%5B%5D=33" class="learn-more blue fz-12">Learn More<span class="icon-more fz-12"></span></a> -->
+								</div>
+
+																<ul class="list list-1 mt-10">
+																											<li>
+									    										<a href="/products/dobot-series/m1-pro.html" class="subip-link fz-14" data-img="/media/upload/cr-list/navigation/m1pro.jpg">
+																				<!--<a href="/products/dobot-series/m1-pro.html" class="subip-link fz-14" data-img="/media/upload/cr-list/navigation/m1pro.jpg">-->
+											<span class="ico img-box" style="width:0px;">
+												<!--												<img src="/media/upload/icon/m1-pro.jpg" alt="M1 Pro">-->
+																							</span>M1 Pro
+																					</a>
+									</li>
+																										</ul>
+							</div>
+						</li>
+												
+						<li>
+							<div class="subip-item list-item">
+																<a href="/industries/education.html" class="hiseries-item__img img-box">
+																	<img class="js-subip-img" src="/media/upload/2023/education/collection.jpg" data-src="/media/upload/2023/education/collection.jpg" alt="Education">
+								</a>
+
+								<div class="subip-item__links mt-10">
+																		<a href="/industries/education.html" class="subip-item__cate link fz-16">Education</a>
+																		<!-- <a href="/products?products%5B%5D=45" class="learn-more blue fz-12">Learn More<span class="icon-more fz-12"></span></a> -->
+								</div>
+
+																<ul class="list list-1 mt-10">
+																											<li>
+									    										<a href="/products/education/magician-e6.html" class="subip-link fz-14" data-img="/media/upload/2023/e6/e6-menu.jpg">
+																				<!--<a href="/products/education/magician-e6.html" class="subip-link fz-14" data-img="/media/upload/2023/e6/e6-menu.jpg">-->
+											<span class="ico img-box" style="width:0px;">
+												<!--												<img src="/media/upload/2023/e6/e6-menu.jpg" alt="Magician E6">-->
+																							</span>Magician E6
+																						<span class="new">new</span>
+																					</a>
+									</li>
+																																				<li>
+									    										<a href="/products/education/magician.html" class="subip-link fz-14" data-img="/media/upload/cr-list/navigation/8.jpg">
+																				<!--<a href="/products/education/magician.html" class="subip-link fz-14" data-img="/media/upload/cr-list/navigation/8.jpg">-->
+											<span class="ico img-box" style="width:0px;">
+												<!--												<img src="/media/upload/education/Magician-xt.png" alt="Magician">-->
+																							</span>Magician
+																					</a>
+									</li>
+																																				<li>
+									    										<a href="/products/education/magician-lite.html" class="subip-link fz-14" data-img="/media/upload/2023/education/Lite.jpg">
+																				<!--<a href="/products/education/magician-lite.html" class="subip-link fz-14" data-img="/media/upload/2023/education/Lite.jpg">-->
+											<span class="ico img-box" style="width:0px;">
+												<!--												<img src="/media/upload/2023/education/Lite.jpg" alt="Magician Lite">-->
+																							</span>Magician Lite
+																					</a>
+									</li>
+																																				<li>
+									    										<a href="/products/education/magician-go.html" class="subip-link fz-14" data-img="/media/upload/cr-list/navigation/9.jpg">
+																				<!--<a href="/products/education/magician-go.html" class="subip-link fz-14" data-img="/media/upload/cr-list/navigation/9.jpg">-->
+											<span class="ico img-box" style="width:0px;">
+												<!--												<img src="/media/upload/education/Magician%20Go-xt.png" alt="Magician Go">-->
+																							</span>Magician Go
+																					</a>
+									</li>
+																																				<li>
+									    										<a href="https://dobotlab.dobot-robots.com/#/" target="_blank" class="subip-link fz-14" data-img="/media/upload/cr-list/navigation/6.jpg">
+																				<!--<a href="/products/education/dobotlab.html" class="subip-link fz-14" data-img="/media/upload/cr-list/navigation/6.jpg">-->
+											<span class="ico img-box" style="width:0px;">
+												<!--												<img src="/media/upload/education/dobotlab-xt.png" alt="DobotLab">-->
+																							</span>DobotLab
+																					</a>
+									</li>
+																										</ul>
+							</div>
+						</li>
+												
+						<li>
+							<div class="subip-item list-item">
+																<a href="/products/conveyor-belt/basic-ai-kit-for-magician.html" class="hiseries-item__img img-box">
+																	<img class="js-subip-img" src="/media/upload/2024/10/event/Dobot%20Accessories%20for%20Education.png" data-src="/media/upload/2024/10/event/Dobot%20Accessories%20for%20Education.png" alt="Accessories for Education">
+								</a>
+
+								<div class="subip-item__links mt-10">
+																		<a href="/products/conveyor-belt/basic-ai-kit-for-magician.html" class="subip-item__cate link fz-16">Accessories for Education</a>
+																		<!-- <a href="/products?products%5B%5D=46" class="learn-more blue fz-12">Learn More<span class="icon-more fz-12"></span></a> -->
+								</div>
+
+																<ul class="list list-1 mt-10">
+																											<li>
+									    										<a href="/ecosystem/accessories/864.html" target="_blank" class="subip-link fz-14" data-img="/media/upload/2024/03/xipan/tab.png">
+																				<!--<a href="/products/conveyor-belt/865.html" class="subip-link fz-14" data-img="/media/upload/2024/03/xipan/tab.png">-->
+											<span class="ico img-box" style="width:0px;">
+												<!--												<img src="/media/upload/2024/03/xipan/tab.png" alt="DOBOT ES01 Electric Suction Cup">-->
+																							</span>DOBOT ES01 Electric Suction Cup
+																						<span class="new">new</span>
+																					</a>
+									</li>
+																																				<li>
+									    										<a href="/products/conveyor-belt/collaborative-robot.html" class="subip-link fz-14" data-img="/media/upload/2023/education/331_tab.png">
+																				<!--<a href="/products/conveyor-belt/collaborative-robot.html" class="subip-link fz-14" data-img="/media/upload/2023/education/331_tab.png">-->
+											<span class="ico img-box" style="width:0px;">
+												<!--												<img src="/media/upload/2024/10/event/Dobot%20Accessories%20for%20Education.png" alt="Collaborative Robot Universal Training Platform">-->
+																							</span>Collaborative Robot Universal Training Platform
+																						<span class="new">new</span>
+																					</a>
+									</li>
+																																				<li>
+									    										<a href="/products/conveyor-belt/dobot-vision-kit.html" class="subip-link fz-14" data-img="/media/upload/cr-list/navigation/2.jpg">
+																				<!--<a href="/products/conveyor-belt/dobot-vision-kit.html" class="subip-link fz-14" data-img="/media/upload/cr-list/navigation/2.jpg">-->
+											<span class="ico img-box" style="width:0px;">
+												<!--												<img src="/media/upload/education/Dobot-Vision-Kit-xt.png" alt="Vision Kit">-->
+																							</span>Vision Kit
+																					</a>
+									</li>
+																																				<li>
+									    										<a href="/products/conveyor-belt/sensor-kit-magicianlite.html" class="subip-link fz-14" data-img="/media/upload/2023/sensor-kit/tab.jpg">
+																				<!--<a href="/products/conveyor-belt/sensor-kit-magicianlite.html" class="subip-link fz-14" data-img="/media/upload/2023/sensor-kit/tab.jpg">-->
+											<span class="ico img-box" style="width:0px;">
+												<!--												<img src="/media/upload/2023/sensor-kit/tab.jpg" alt="Sensor Kit for Magician Lite">-->
+																							</span>Sensor Kit for Magician Lite
+																					</a>
+									</li>
+																																				<li>
+									    										<a href="/products/conveyor-belt/sensor-kit.html" class="subip-link fz-14" data-img="/media/upload/2023/sensor-kit/tab-lite.jpg">
+																				<!--<a href="/products/conveyor-belt/sensor-kit.html" class="subip-link fz-14" data-img="/media/upload/2023/sensor-kit/tab-lite.jpg">-->
+											<span class="ico img-box" style="width:0px;">
+												<!--												<img src="/media/upload/2023/sensor-kit/tab-lite.jpg" alt="Sensor Kit for Magician">-->
+																							</span>Sensor Kit for Magician
+																					</a>
+									</li>
+																																				<li>
+									    										<a href="/products/conveyor-belt/basic-ai-kit-for-magician.html" class="subip-link fz-14" data-img="/media/upload/2023/education/tab1.jpg">
+																				<!--<a href="/products/conveyor-belt/basic-ai-kit-for-magician.html" class="subip-link fz-14" data-img="/media/upload/2023/education/tab1.jpg">-->
+											<span class="ico img-box" style="width:0px;">
+												<!--												<img src="/media/upload/2023/education/tab1.jpg" alt="Basic AI Kit for Magician">-->
+																							</span>Basic AI Kit for Magician
+																					</a>
+									</li>
+																																				<li>
+									    										<a href="/products/conveyor-belt/sliding-rail-kit-overview.html" class="subip-link fz-14" data-img="/media/upload/cr-list/navigation/4.jpg">
+																				<!--<a href="/products/conveyor-belt/sliding-rail-kit-overview.html" class="subip-link fz-14" data-img="/media/upload/cr-list/navigation/4.jpg">-->
+											<span class="ico img-box" style="width:0px;">
+												<!--												<img src="/media/upload/education/Sliding-Rail-Kit-xt.png" alt="Sliding Rail Kit">-->
+																							</span>Sliding Rail Kit
+																					</a>
+									</li>
+																										</ul>
+							</div>
+						</li>
+						
+						<!-- 生态配件 -->
+						<!-- 												<li>
+							<div class="subip-item list-item">
+								<a href="/ecosystem" class="hiseries-item__img img-box">
+									<img class="js-subip-img" src="/media/upload/accessories/4.jpg" data-src="/media/upload/accessories/4.jpg" alt="Accessories for Education">
+								</a>
+
+								<div class="subip-item__links mt-10">
+									<a href="/ecosystem" class="subip-item__cate link fz-16">Dobot Ecosystem</a>
+								</div>
+							</div>
+						</li>
+						 -->
+					</ul>
+				</div>
+			</div>
+												<div class="subh-item" data-sub="industries">
+				<div class="sub-industry">
+					<div class="subi-left tt">
+						<div class="subi-intro cc">
+							<div class="subi-title fz-18">Industries</div>
+							<div class="subi-desc line2 fz-14 mt-10">Collaborative robots offer competitive advantages to businesses across industries. </div>
+							<a href="/industries" class="learn-more blue fz-14 mt-20">Learn More<span class="icon-more fz-12"></span></a>
+						</div>
+					</div>
+										<div class="subi-right new_subi_subi">
+						<ul class="list list-3 list-subi ll">
+														<li class="zsli">
+								<a href=" /industries/metal-and-machining.html " class="subi-item fz-18 zz">
+																		<img class="js-subip-img" src="/media/upload/industrial/%E8%A1%8C%E4%B8%9Aicon/%E9%87%91%E5%B1%9E%E5%8A%A0%E5%B7%A5.svg" data-src="/media/upload/industrial/%E8%A1%8C%E4%B8%9Aicon/%E9%87%91%E5%B1%9E%E5%8A%A0%E5%B7%A5.svg" alt="">
+																		Metal Processing
+								</a>
+							    <!-- 								<a href="/industries/metal-and-machining.html" class="subi-item fz-18 zz">
+									Metal Processing</a>
+								 -->
+								<!--<a href="/industries/metal-and-machining.html" class="subi-item fz-18 zz">Metal Processing</a>-->
+							</li>
+														<li class="zsli">
+								<a href=" /industries/automotive.html " class="subi-item fz-18 zz">
+																		<img class="js-subip-img" src="/media/upload/industrial/%E8%A1%8C%E4%B8%9Aicon/%E6%B1%BD%E8%BD%A6%E5%88%B6%E9%80%A0.svg" data-src="/media/upload/industrial/%E8%A1%8C%E4%B8%9Aicon/%E6%B1%BD%E8%BD%A6%E5%88%B6%E9%80%A0.svg" alt="">
+																		Automotive
+								</a>
+							    <!-- 								<a href="/industries/automotive.html" class="subi-item fz-18 zz">
+									Automotive</a>
+								 -->
+								<!--<a href="/industries/automotive.html" class="subi-item fz-18 zz">Automotive</a>-->
+							</li>
+														<li class="zsli">
+								<a href=" /industries/food-beverage.html " class="subi-item fz-18 zz">
+																		<img class="js-subip-img" src="/media/upload/industrial/%E8%A1%8C%E4%B8%9Aicon/%E9%A3%9F%E5%93%81%E9%A5%AE%E6%96%991.svg" data-src="/media/upload/industrial/%E8%A1%8C%E4%B8%9Aicon/%E9%A3%9F%E5%93%81%E9%A5%AE%E6%96%991.svg" alt="">
+																		Food &amp; Beverage
+								</a>
+							    <!-- 								<a href="/industries/food-beverage.html" class="subi-item fz-18 zz">
+									Food &amp; Beverage</a>
+								 -->
+								<!--<a href="/industries/food-beverage.html" class="subi-item fz-18 zz">Food &amp; Beverage</a>-->
+							</li>
+														<li class="zsli">
+								<a href=" /industries/chemical.html " class="subi-item fz-18 zz">
+																		<img class="js-subip-img" src="/media/upload/industrial/%E8%A1%8C%E4%B8%9Aicon/%E5%8C%96%E5%B7%A5.svg" data-src="/media/upload/industrial/%E8%A1%8C%E4%B8%9Aicon/%E5%8C%96%E5%B7%A5.svg" alt="">
+																		Chemical
+								</a>
+							    <!-- 								<a href="/industries/chemical.html" class="subi-item fz-18 zz">
+									Chemical</a>
+								 -->
+								<!--<a href="/industries/chemical.html" class="subi-item fz-18 zz">Chemical</a>-->
+							</li>
+														<li class="zsli">
+								<a href=" /industries/consumer-electronics.html " class="subi-item fz-18 zz">
+																		<img class="js-subip-img" src="/media/upload/industrial/%E8%A1%8C%E4%B8%9Aicon/3c1.svg" data-src="/media/upload/industrial/%E8%A1%8C%E4%B8%9Aicon/3c1.svg" alt="">
+																		Consumer Electronics
+								</a>
+							    <!-- 								<a href="/industries/consumer-electronics.html" class="subi-item fz-18 zz">
+									Consumer Electronics</a>
+								 -->
+								<!--<a href="/industries/consumer-electronics.html" class="subi-item fz-18 zz">Consumer Electronics</a>-->
+							</li>
+														<li class="zsli">
+								<a href=" /industries/medical.html " class="subi-item fz-18 zz">
+																		<img class="js-subip-img" src="/media/upload/industrial/%E8%A1%8C%E4%B8%9Aicon/%E5%8C%BB%E7%96%97.svg" data-src="/media/upload/industrial/%E8%A1%8C%E4%B8%9Aicon/%E5%8C%BB%E7%96%97.svg" alt="">
+																		Healthcare
+								</a>
+							    <!-- 								<a href="/industries/medical.html" class="subi-item fz-18 zz">
+									Healthcare</a>
+								 -->
+								<!--<a href="/industries/medical.html" class="subi-item fz-18 zz">Healthcare</a>-->
+							</li>
+														<li class="zsli">
+								<a href=" /industries/new-retail.html " class="subi-item fz-18 zz">
+																		<img class="js-subip-img" src="/media/upload/industrial/%E8%A1%8C%E4%B8%9Aicon/%E6%96%B0%E9%9B%B6%E5%94%AE.svg" data-src="/media/upload/industrial/%E8%A1%8C%E4%B8%9Aicon/%E6%96%B0%E9%9B%B6%E5%94%AE.svg" alt="">
+																		New Retail
+								</a>
+							    <!-- 								<a href="/industries/new-retail.html" class="subi-item fz-18 zz">
+									New Retail</a>
+								 -->
+								<!--<a href="/industries/new-retail.html" class="subi-item fz-18 zz">New Retail</a>-->
+							</li>
+														<li class="zsli">
+								<a href=" /industries/semiconductor.html " class="subi-item fz-18 zz">
+																		<img class="js-subip-img" src="/media/upload/industrial/%E8%A1%8C%E4%B8%9Aicon/%E5%8D%8A%E5%AF%BC%E4%BD%93.svg" data-src="/media/upload/industrial/%E8%A1%8C%E4%B8%9Aicon/%E5%8D%8A%E5%AF%BC%E4%BD%93.svg" alt="">
+																		Semiconductor
+								</a>
+							    <!-- 								<a href="/industries/semiconductor.html" class="subi-item fz-18 zz">
+									Semiconductor</a>
+								 -->
+								<!--<a href="/industries/semiconductor.html" class="subi-item fz-18 zz">Semiconductor</a>-->
+							</li>
+													</ul>
+					</div>
+				</div>
+			</div>
+												<div class="subh-item" data-sub="applications">
+				<div class="sub-industry">
+					<div class="subi-left tt">
+						<div class="subi-intro cc">
+							<div class="subi-title fz-18">Applications</div>
+							<div class="subi-desc line2 fz-14 mt-10">Dobot's robots are capable of performing a wide range of tasks more efficiently.</div>
+							<a href="/applications" class="learn-more blue fz-14 mt-20">Learn More<span class="icon-more fz-12"></span></a>
+						</div>
+					</div>
+										<div class="subi-right new_subi_subi">
+						<ul class="list list-3 list-subi ll">
+														<li class="zsli">
+								<a href=" /apply/welding.html " class="subi-item fz-18 zz">
+																		<img class="js-subip-img" src="/media/upload/industrial/%E5%BA%94%E7%94%A8icon/%E7%84%8A%E6%8E%A5.svg" data-src="/media/upload/industrial/%E5%BA%94%E7%94%A8icon/%E7%84%8A%E6%8E%A5.svg" alt="">
+																		Welding
+								</a>
+							    <!-- 								<a href="/apply/welding.html" class="subi-item fz-18 zz">
+									Welding</a>
+								 -->
+								<!--<a href="/applications/welding1.html" class="subi-item fz-18 zz">Welding</a>-->
+							</li>
+														<li class="zsli">
+								<a href=" /apply/palletizing.html " class="subi-item fz-18 zz">
+																		<img class="js-subip-img" src="/media/upload/industrial/%E5%BA%94%E7%94%A8icon/%E7%A0%81%E5%9E%9B.svg" data-src="/media/upload/industrial/%E5%BA%94%E7%94%A8icon/%E7%A0%81%E5%9E%9B.svg" alt="">
+																		Palletizing
+								</a>
+							    <!-- 								<a href="/apply/palletizing.html" class="subi-item fz-18 zz">
+									Palletizing</a>
+								 -->
+								<!--<a href="/applications/palletizing1.html" class="subi-item fz-18 zz">Palletizing</a>-->
+							</li>
+														<li class="zsli">
+								<a href=" /applications/loading-and-unloading.html " class="subi-item fz-18 zz">
+																		<img class="js-subip-img" src="/media/upload/industrial/%E5%BA%94%E7%94%A8icon/%E4%B8%8A%E4%B8%8B%E6%96%99.svg" data-src="/media/upload/industrial/%E5%BA%94%E7%94%A8icon/%E4%B8%8A%E4%B8%8B%E6%96%99.svg" alt="">
+																		Loading and Unloading
+								</a>
+							    <!-- 								<a href="/applications/loading-and-unloading.html" class="subi-item fz-18 zz">
+									Loading and Unloading</a>
+								 -->
+								<!--<a href="/applications/loading-and-unloading.html" class="subi-item fz-18 zz">Loading and Unloading</a>-->
+							</li>
+														<li class="zsli">
+								<a href=" /applications/assembly.html " class="subi-item fz-18 zz">
+																		<img class="js-subip-img" src="/media/upload/industrial/%E5%BA%94%E7%94%A8icon/%E8%A3%85%E9%85%8D.svg" data-src="/media/upload/industrial/%E5%BA%94%E7%94%A8icon/%E8%A3%85%E9%85%8D.svg" alt="">
+																		Assembly
+								</a>
+							    <!-- 								<a href="/applications/assembly.html" class="subi-item fz-18 zz">
+									Assembly</a>
+								 -->
+								<!--<a href="/applications/assembly.html" class="subi-item fz-18 zz">Assembly</a>-->
+							</li>
+														<li class="zsli">
+								<a href=" /applications/sorting.html " class="subi-item fz-18 zz">
+																		<img class="js-subip-img" src="/media/upload/industrial/%E5%BA%94%E7%94%A8icon/%E6%97%A0%E5%BA%8F%E5%88%86%E6%8B%A3.svg" data-src="/media/upload/industrial/%E5%BA%94%E7%94%A8icon/%E6%97%A0%E5%BA%8F%E5%88%86%E6%8B%A3.svg" alt="">
+																		Bin Picking
+								</a>
+							    <!-- 								<a href="/applications/sorting.html" class="subi-item fz-18 zz">
+									Bin Picking</a>
+								 -->
+								<!--<a href="/applications/sorting.html" class="subi-item fz-18 zz">Bin Picking</a>-->
+							</li>
+														<li class="zsli">
+								<a href=" /applications/gluing.html " class="subi-item fz-18 zz">
+																		<img class="js-subip-img" src="/media/upload/industrial/%E5%BA%94%E7%94%A8icon/%E7%82%B9%E6%B6%82%E8%83%B6(2).svg" data-src="/media/upload/industrial/%E5%BA%94%E7%94%A8icon/%E7%82%B9%E6%B6%82%E8%83%B6(2).svg" alt="">
+																		Gluing
+								</a>
+							    <!-- 								<a href="/applications/gluing.html" class="subi-item fz-18 zz">
+									Gluing</a>
+								 -->
+								<!--<a href="/applications/gluing.html" class="subi-item fz-18 zz">Gluing</a>-->
+							</li>
+														<li class="zsli">
+								<a href=" /applications/insertion.html " class="subi-item fz-18 zz">
+																		<img class="js-subip-img" src="/media/upload/industrial/%E5%BA%94%E7%94%A8icon/%E6%8F%92%E4%BB%B6.svg" data-src="/media/upload/industrial/%E5%BA%94%E7%94%A8icon/%E6%8F%92%E4%BB%B6.svg" alt="">
+																		Insertion
+								</a>
+							    <!-- 								<a href="/applications/insertion.html" class="subi-item fz-18 zz">
+									Insertion</a>
+								 -->
+								<!--<a href="/applications/insertion.html" class="subi-item fz-18 zz">Insertion</a>-->
+							</li>
+														<li class="zsli">
+								<a href=" /applications/polishing.html " class="subi-item fz-18 zz">
+																		<img class="js-subip-img" src="/media/upload/industrial/%E5%BA%94%E7%94%A8icon/%E6%8A%9B%E5%85%89.svg" data-src="/media/upload/industrial/%E5%BA%94%E7%94%A8icon/%E6%8A%9B%E5%85%89.svg" alt="">
+																		Polishing
+								</a>
+							    <!-- 								<a href="/applications/polishing.html" class="subi-item fz-18 zz">
+									Polishing</a>
+								 -->
+								<!--<a href="/applications/polishing.html" class="subi-item fz-18 zz">Polishing</a>-->
+							</li>
+													</ul>
+					</div>
+				</div>
+			</div>
+												<!-- Insights -->
+						<div class="subh-item" data-sub="insights">
+				<ul class="list list-2 list-subhsas">
+										<li>
+												<a href="/insights/case-studies" class="subhsas-item">
+													<div class="subhsas-item__wrap">
+								<div class="subhsas-item__title fz-18">Case Studies</div>
+																<div class="subhsas-item__desc fz-14 line2 mt-10 vv">
+									Learn how Dobot helps companies reduce costs and improve efficiency. 
+								</div>
+															</div>
+						</a>
+					</li>
+										<li>
+												<a href="/insights/event" class="subhsas-item">
+													<div class="subhsas-item__wrap">
+								<div class="subhsas-item__title fz-18">Events</div>
+																<div class="subhsas-item__desc fz-14 line2 mt-10 vv">
+									<p>Browse our event below to find one that suits you.</p>
+ 
+								</div>
+															</div>
+						</a>
+					</li>
+										<li>
+												<a href="/insights/news" class="subhsas-item">
+													<div class="subhsas-item__wrap">
+								<div class="subhsas-item__title fz-18">Newsroom</div>
+																<div class="subhsas-item__desc fz-14 line2 mt-10 vv">
+									Dobot's latest press releases and events. 
+								</div>
+															</div>
+						</a>
+					</li>
+										<li>
+												<a href="/insights/news?type=57" class="subhsas-item">
+													<div class="subhsas-item__wrap">
+								<div class="subhsas-item__title fz-18">Blog</div>
+																<div class="subhsas-item__desc fz-14 line2 mt-10 vv">
+									Latest automation trends. 
+								</div>
+															</div>
+						</a>
+					</li>
+									</ul>
+			</div>
+
+									
+						
+			<!-- Service And Support -->
+			<div class="subh-item" data-sub="service">
+				<ul class="list list-2 list-subhsas">
+																									<li>
+												<a onclick="goPPToken()" class="subhsas-item">
+													<div class="subhsas-item__wrap">
+								<div class="subhsas-item__title fz-18">Download Center</div>
+								<div class="subhsas-item__desc fz-14 line2 mt-10 vv">
+									Get the latest software and firmware to keep your robots up to date.
+								</div>
+							</div>
+						</a>
+					</li>
+																				<li>
+						<div class="subhsas-item">
+							<div class="subhsas-item__wrap">
+								<a href="/service/academy" class="subhsas-item__title fz-18">Academy service</a>
+								<div class="subhsas-item__desc fz-14 line1 mt-10 vv">
+									Level up your automation with robotics training sessions.
+								</div>
+								<div class="subhsas-item__link mt-20">
+																																				<a href="/service/academy/video-tutorial" class="subhsas-link fz-14 vv">Video Tutorials</a>
+																		<a href="/service/academy/online-training" class="subhsas-link fz-14 vv">Online Sessions</a>
+																		<a href="/service/academy/onsite-training" class="subhsas-link fz-14 vv">Onsite Sessions</a>
+
+									<!-- <a href="/member/course" class="subhsas-link fz-14">Online Training</a> -->
+								</div>
+							</div>
+						</div>
+					</li>
+																				<li>
+												<a href="/service/customer-service" class="subhsas-item">
+													<div class="subhsas-item__wrap">
+								<div class="subhsas-item__title fz-18">Customer Service</div>
+								<div class="subhsas-item__desc fz-14 line2 mt-10 vv">
+									Get dedicated support you need to optimize Dobot robots.
+								</div>
+							</div>
+						</a>
+					</li>
+																				<li>
+												<a href="/service/faq" class="subhsas-item">
+													<div class="subhsas-item__wrap">
+								<div class="subhsas-item__title fz-18">FAQ</div>
+								<div class="subhsas-item__desc fz-14 line2 mt-10 vv">
+									Common questions answered here. 
+								</div>
+							</div>
+						</a>
+					</li>
+														</ul>
+			</div>
+
+			<!-- About -->
+						<div class="subh-item" data-sub="about">
+				<ul class="list list-2 list-subhsas">
+										<li>
+						<a href="/about/about-dobot" class="subhsas-item">
+							<div class="subhsas-item__wrap">
+								<div class="subhsas-item__title fz-18">Our Company</div>
+								<div class="subhsas-item__desc fz-14 line2 mt-10 vv">
+									Learn about the leading provider of <br>robotics solutions.<!--									Learn about the leading provider of robotics solutions. -->
+								</div>
+							</div>
+						</a>
+					</li>
+										<li>
+						<a href="/about/cooperation" class="subhsas-item">
+							<div class="subhsas-item__wrap">
+								<div class="subhsas-item__title fz-18">Become A Distributor</div>
+								<div class="subhsas-item__desc fz-14 line2 mt-10 vv">
+									Join Dobot's distribution network to accelerate automation transformation.<!--									Join Dobot's distribution network to accelerate automation transformation. -->
+								</div>
+							</div>
+						</a>
+					</li>
+										<li>
+						<a href="/about/contact-us" class="subhsas-item">
+							<div class="subhsas-item__wrap">
+								<div class="subhsas-item__title fz-18">Contact Us</div>
+								<div class="subhsas-item__desc fz-14 line2 mt-10 vv">
+									Reach out for dedicated support.<!--									Reach out for dedicated support. -->
+								</div>
+							</div>
+						</a>
+					</li>
+					
+					<!-- 生态配件 -->
+																		<li>
+							<a href="/ecosystem" class="subhsas-item">
+								<div class="subhsas-item__wrap">
+									<div class="subhsas-item__title fz-18">Dobot Ecosystem</div>
+									<div class="subhsas-item__desc fz-14 line2 mt-10 vv">
+										Making collaboration and creativity easier.
+									</div>
+								</div>
+							</a>
+						</li>
+										</ul>
+			</div>
+		</div>
+	</div>
+</header>
+
+<style>
+	.new_subi_subi .list-subi>li .subi-item{
+		align-items: center;
+    justify-content: flex-start;
+		cursor: pointer;
+		display: flex;
+	}
+	.new_subi_subi .list-subi>li .subi-item img{
+		margin: 0 16px;
+		width: 20px;
+		height: auto;
+	}
+	
+	.new_subi_subi .list-subi>li:hover .subi-item a{
+		color: #fff;
+	}
+	.visually-hidden {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border: 0;
+	}
+	@media (min-width: 1100px){
+		.new_subi_subi .list-subi>li .subi-item{
+		
+			flex-direction: column;
+			justify-content: center;
+		}
+		.new_subi_subi .list-subi>li .subi-item a{
+			color: #000;
+		}
+		.new_subi_subi .list-subi>li .subi-item img{
+			margin-bottom: 16px;
+			width: 30px;
+		}
+		.new_subi_subi .list-subi>li:hover .subi-item img{
+			filter: brightness(0) invert(1); 
+		}
+	
+		.hover-menu .container{
+			position: unset !important; top: 0; left: unset; right: unset;
+		}
+		.zz{
+			height:130px;
+			font-size:14px;
+			font-weight: 300;
+		}
+		.hm-item{
+			margin-right: 10px;
+			margin-left: 10px;
+		}
+		.ll .zsli{
+			width:25%;
+		}
+		.show{border-bottom: #e8e8e8 1px solid;}
+		.cc{max-width: 320px;}
+		.vv{font-weight:300;}
+	}
+	@media (min-width: 1280px){
+		.dh{
+			font-size:14px;
+		}
+	}
+	.fl-body{background-color: #474747;}
+	.yr:hover{
+		background-color: #888;
+	}
+	.flb-link{border-bottom: 1px solid rgba(255,255,255,.2);}
+	.fl-header::after{top:2px;}
+</style><div class="container">
+    <div class="blank-top"></div>
+    <!-- <div class="error-404">
+        <div class="fz-60 blue">404</div>
+        <p class="fz-20 black mt-30">:( Sorry, the page you are visiting does not exist!</p>
+        <p class="ptb-50 fz-16"><span class="fz-24" id="countdown">10</span>s 后自动跳转到Home</p>
+        <a href="/" class="back-home fz-16 bg-black white mt-20">Home</a>
+    </div> -->
+
+    <div class="error-404">
+        <div class="fz-60 blue">Oops!</div>
+        <p class="fz-20 black mt-30">The page you're looking for couldn't be found.</p>
+        <!-- <p class="ptb-50 fz-16"><span class="fz-24" id="countdown">10</span>s 后自动跳转到Home</p> -->
+        <a href="/" class="back-home fz-16 bg-black white mt-20">Back to home</a>
+    </div>
+
+    <footer>
+	<div class="footer">
+		<div class="wrap">
+			<div class="footer-inner">
+				<div class="footer-left">
+					<a href="/" class="footer-logo">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 30">
+							<path d="M26.1,6.5L26.1,6.5L15.6,0.4c-0.9-0.5-2-0.5-2.9,0L2.2,6.5C1.4,7,0.8,7.9,0.8,8.9v12.1c0,1,0.5,2,1.4,2.5l10.5,6.1c0.9,0.5,2,0.5,2.9,0l10.5-6.1c0.9-0.5,1.4-1.5,1.4-2.5V8.9C27.6,7.9,27,7,26.1,6.5z M10.1,14L10.1,14l0,7.3l-2-1.1c-0.9-0.5-1.4-1.5-1.4-2.5v-5.4c0-1,0.5-2,1.4-2.5l4.6-2.7c0.9-0.5,2-0.5,2.9,0l2,1.1L11.2,12C10.5,12.4,10.1,13.1,10.1,14z M21.7,17.7c0,1-0.5,2-1.4,2.5l-4.6,2.7c-0.9,0.5-2,0.5-2.9,0l-2-1.2l6.4-3.7c0.7-0.4,1.1-1.2,1.1-2V8.7l2,1.2c0.9,0.5,1.4,1.5,1.4,2.5L21.7,17.7z M44.8,13.5v3.7c0,2.1-1.7,3.7-3.7,3.7h-6.2v-9.2h3.1v7.8h2.9c0.5,0,0.9-0.4,0.9-0.9V12c0-0.5-0.4-0.9-0.9-0.9h-2.5h-3.5V9.8H41l0,0c0,0,0,0,0,0C43.1,9.8,44.8,11.5,44.8,13.5z M82.7,11.7h3.1v9.2h-3.1V11.7z M89.2,9.8v1.4h-10V9.8H89.2z M52,9.8L52,9.8h-2.5c-2.1,0-3.7,1.7-3.7,3.7v3.7c0,2.1,1.7,3.7,3.7,3.7c0,0,0,0,0,0H52c2.1,0,3.7-1.7,3.7-3.7c0,0,0,0,0,0v-3.7C55.8,11.5,54.1,9.8,52,9.8z M52.7,12v6.6c0,0.5-0.4,0.9-0.9,0.9h-2.1c-0.5,0-0.9-0.4-0.9-0.9V12c0-0.5,0.4-0.9,0.9-0.9h2.1C52.3,11.2,52.7,11.5,52.7,12C52.7,12,52.7,12,52.7,12z M74.7,9.8L74.7,9.8l-2.5,0c-2.1,0-3.7,1.7-3.7,3.7v3.7c0,2.1,1.7,3.7,3.7,3.7h2.5c2.1,0,3.7-1.7,3.7-3.7c0,0,0,0,0,0v-3.7C78.4,11.5,76.8,9.8,74.7,9.8z M75.3,18.7c0,0.5-0.4,0.9-0.9,0.9h-2.1c-0.5,0-0.9-0.4-0.9-0.9V12c0-0.5,0.4-0.9,0.9-0.9c0,0,0,0,0,0h2.1c0.5,0,0.9,0.4,0.9,0.9V18.7z M63.9,9.8C63.9,9.8,63.9,9.8,63.9,9.8L63.9,9.8l-6.8,0v1.4h4.2h1.8c0.5,0,0.9,0.4,0.9,0.9v1.8c0,0.5-0.4,0.9-0.9,0.9h-2.9v-3h-3.1v9.2h6.8c1.8,0,3.2-1.4,3.2-3.2c0,0,0,0,0,0v-0.1c0-0.9-0.4-1.7-1.1-2.2c0.7-0.5,1.1-1.3,1.1-2.2V13C67.1,11.2,65.6,9.8,63.9,9.8z M64,16.8l0,1.8c0,0.5-0.4,0.9-0.9,0.9h-2.9V16h2.9C63.6,16,64,16.4,64,16.8C64,16.8,64,16.8,64,16.8z"/>
+						</svg>
+					</a>
+
+					<div class="fleft-wrap">
+						<div class="fleft-txt fz-14 mt-60">
+							Subscribe to the latest updates.
+						</div>
+						<div class="fleft-form mt-20">
+							<form action="/subscribe/store" method="post" autocomplete="off" id="subscribeForm">
+								<input type="text" class="fleft-input fz-16" name="email" placeholder="Email">
+								<button class="fleft-submit icon-submit js-submit-subscribe"></button>
+							</form>
+						</div>
+						<div class="fleft-social fz-12 mt-20">
+							Follow Us
+							<!-- <a href="javascript:;" class="fsocial-link fz-20 icon-wechat social-qrcode"><img src="/themes/en/default/assets/images/weixin.jpg" alt="weixin"></a>
+							<a href="javascript:;" class="fsocial-link fz-20 icon-tiktok social-qrcode"></a>
+							<a href="" class="fsocial-link fz-20 icon-weibo" target="_blank"></a> -->
+							<a href="https://www.facebook.com/dobotarm" aria-label="Dobot Robotics Facebook Page" class="fsocial-link fz-20 icon-facebook1" target="_blank"></a>
+							<!-- <a href="https://twitter.com/DobotRobotics" class="fsocial-link fz-20 icon-twitter" target="_blank"></a> -->
+							<a href="https://twitter.com/DobotRobotics" aria-label="Dobot Robotics X (Twitter)" class="fsocial-link fz-20 iconfont icon-tuite" target="_blank"></a>
+
+							<a href="https://www.instagram.com/dobotrobotics/" aria-label="Dobot Robotics Instagram" class="fsocial-link fz-20 icon-instagram1" target="_blank"></a>
+							<a href="https://www.linkedin.com/company/dobotrobotics" aria-label="Dobot Robotics LinkedIn" class="fsocial-link fz-20 icon-linkedin" target="_blank"></a>
+							<a href="https://www.youtube.com/@DobotRobotics" aria-label="Dobot Robotics YouTube Channel" class="fsocial-link fz-20 icon-youtube" target="_blank"></a>
+						</div>
+						<div class="fleft-social fz-12 mt-20 white">
+							Contact Us   &nbsp;&nbsp;&nbsp;
+							<a class="white" href="mailto:sales@dobot-robots.com">sales@dobot-robots.com</a><br />
+							<!--<a class="white" href="/auth/newLogin">New User</a><br />-->
+							<!--<a class="white" onclick="goPPToken()">Download Center</a>-->
+						</div>
+					</div>
+				</div>
+
+
+				
+
+												<div class="footer-right">
+
+										<dl class="footer-menu" style="margin-right:38px;">
+						<dt class="fz-14">
+							<a href="/products"  class="white fmenu-link">Products</a>
+						</dt>
+
+												<dd>
+						    							<a href="https://www.dobot-robots.com/products/cra-series/dobot-cra-series.html"  class="fmenu-link fz-12">CRA Series</a>
+														<!--<a href="https://www.dobot-robots.com/products/cra-series/dobot-cra-series.html"  class="fmenu-link fz-12">CRA Series</a>-->
+						</dd>
+												<dd>
+						    							<a href="/products/cra-series/dobot-cra-ip68-series.html"  class="fmenu-link fz-12">CRA-IP68 Series</a>
+														<!--<a href="/products/cra-series/dobot-cra-ip68-series.html"  class="fmenu-link fz-12">CRA-IP68 Series</a>-->
+						</dd>
+												<dd>
+						    							<a href="/products/nova-series/dobot-nova-series.html"  class="fmenu-link fz-12">Nova Series</a>
+														<!--<a href="/products/nova-series/dobot-nova-series.html"  class="fmenu-link fz-12">Nova Series</a>-->
+						</dd>
+												<dd>
+						    							<a href="/products/cr-series/dobot-cr-series.html"  class="fmenu-link fz-12">CR Series</a>
+														<!--<a href="/products/cr-series/dobot-cr-series.html"  class="fmenu-link fz-12">CR Series</a>-->
+						</dd>
+												<dd>
+						    							<a href="/products/crs-series/cr5s.html"  class="fmenu-link fz-12">CRS Series</a>
+														<!--<a href="/products/crs-series/cr5s.html"  class="fmenu-link fz-12">CRS Series</a>-->
+						</dd>
+												<dd>
+						    							<a href="/products/education/magician-e6.html"  class="fmenu-link fz-12">Magician E6</a>
+														<!--<a href="/products/education/magician-e6.html"  class="fmenu-link fz-12">Magician E6</a>-->
+						</dd>
+												<dd>
+						    							<a href="/products/desktop-four-axis/mg400.html"  class="fmenu-link fz-12">MG400</a>
+														<!--<a href="/products/desktop-four-axis/mg400.html"  class="fmenu-link fz-12">MG400</a>-->
+						</dd>
+												<dd>
+						    							<a href="/products/dobot-series/m1-pro.html"  class="fmenu-link fz-12">M1 Pro</a>
+														<!--<a href="/products/dobot-series/m1-pro.html"  class="fmenu-link fz-12">M1 Pro</a>-->
+						</dd>
+												<dd>
+						    							<a href="/products/humanoid-robots/x-trainer.html"  class="fmenu-link fz-12">X-Trainer</a>
+														<!--<a href="/products/humanoid-robots/x-trainer.html"  class="fmenu-link fz-12">X-Trainer</a>-->
+						</dd>
+											</dl>
+										<dl class="footer-menu" style="margin-right:38px;">
+						<dt class="fz-14">
+							<a href="/industries"  class="white fmenu-link">Industries</a>
+						</dt>
+
+												<dd>
+						    							<a href="/industries/automotive.html"  class="fmenu-link fz-12">Automotive</a>
+														<!--<a href="/industries/automotive.html"  class="fmenu-link fz-12">Automotive</a>-->
+						</dd>
+												<dd>
+						    							<a href="/industries/consumer-electronics.html"  class="fmenu-link fz-12">Consumer Electronics</a>
+														<!--<a href="/industries/consumer-electronics.html"  class="fmenu-link fz-12">Consumer Electronics</a>-->
+						</dd>
+												<dd>
+						    							<a href="/industries/education.html"  class="fmenu-link fz-12">Education</a>
+														<!--<a href="/industries/education.html"  class="fmenu-link fz-12">Education</a>-->
+						</dd>
+												<dd>
+						    							<a href="/industries/food-beverage.html"  class="fmenu-link fz-12">Food & Beverage</a>
+														<!--<a href="/industries/food-beverage.html"  class="fmenu-link fz-12">Food & Beverage</a>-->
+						</dd>
+												<dd>
+						    							<a href="/industries/medical.html"  class="fmenu-link fz-12">Healthcare</a>
+														<!--<a href="/industries/medical.html"  class="fmenu-link fz-12">Healthcare</a>-->
+						</dd>
+												<dd>
+						    							<a href="/industries/metal-and-machining.html"  class="fmenu-link fz-12">Metal Processing</a>
+														<!--<a href="/industries/metal-and-machining.html"  class="fmenu-link fz-12">Metal Processing</a>-->
+						</dd>
+												<dd>
+						    							<a href="/industries/semiconductor.html"  class="fmenu-link fz-12">Semiconductor</a>
+														<!--<a href="/industries/semiconductor.html"  class="fmenu-link fz-12">Semiconductor</a>-->
+						</dd>
+												<dd>
+						    							<a href="/industries/research-lab.html"  class="fmenu-link fz-12">Research Lab</a>
+														<!--<a href="/industries/research-lab.html"  class="fmenu-link fz-12">Research Lab</a>-->
+						</dd>
+											</dl>
+										<dl class="footer-menu" style="margin-right:38px;">
+						<dt class="fz-14">
+							<a href="/applications"  class="white fmenu-link">Applications</a>
+						</dt>
+
+												<dd>
+						    							<a href="/applications/welding.html"  class="fmenu-link fz-12">Welding</a>
+														<!--<a href="/applications/welding.html"  class="fmenu-link fz-12">Welding</a>-->
+						</dd>
+												<dd>
+						    							<a href="/applications/palletizing.html"  class="fmenu-link fz-12">Palletizing</a>
+														<!--<a href="/applications/palletizing.html"  class="fmenu-link fz-12">Palletizing</a>-->
+						</dd>
+												<dd>
+						    							<a href="/applications/loading-and-unloading.html"  class="fmenu-link fz-12">Loading and Unloading</a>
+														<!--<a href="/applications/loading-and-unloading.html"  class="fmenu-link fz-12">Loading and Unloading</a>-->
+						</dd>
+												<dd>
+						    							<a href="/applications/assembly.html"  class="fmenu-link fz-12">Assembly</a>
+														<!--<a href="/applications/assembly.html"  class="fmenu-link fz-12">Assembly</a>-->
+						</dd>
+												<dd>
+						    							<a href="/applications/sorting.html"  class="fmenu-link fz-12">Bin Picking</a>
+														<!--<a href="/applications/sorting.html"  class="fmenu-link fz-12">Bin Picking</a>-->
+						</dd>
+												<dd>
+						    							<a href="/applications/gluing.html"  class="fmenu-link fz-12">Gluing</a>
+														<!--<a href="/applications/gluing.html"  class="fmenu-link fz-12">Gluing</a>-->
+						</dd>
+												<dd>
+						    							<a href="/applications/insertion.html"  class="fmenu-link fz-12">Insertion</a>
+														<!--<a href="/applications/insertion.html"  class="fmenu-link fz-12">Insertion</a>-->
+						</dd>
+												<dd>
+						    							<a href="/applications/polishing.html"  class="fmenu-link fz-12">Polishing</a>
+														<!--<a href="/applications/polishing.html"  class="fmenu-link fz-12">Polishing</a>-->
+						</dd>
+											</dl>
+										<dl class="footer-menu" style="margin-right:38px;">
+						<dt class="fz-14">
+							<a href="/insights"  class="white fmenu-link">Insights</a>
+						</dt>
+
+												<dd>
+						    							<a href="/insights/case-studies"  class="fmenu-link fz-12">Case Studies</a>
+														<!--<a href="/insights/case-studies"  class="fmenu-link fz-12">Case Studies</a>-->
+						</dd>
+												<dd>
+						    							<a href="/insights/news"  class="fmenu-link fz-12">Newsroom</a>
+														<!--<a href="/insights/news"  class="fmenu-link fz-12">Newsroom</a>-->
+						</dd>
+												<dd>
+						    							<a href="/insights/news?type=57"  class="fmenu-link fz-12">Blog</a>
+														<!--<a href="/insights/news?type=57"  class="fmenu-link fz-12">Blog</a>-->
+						</dd>
+												<dd>
+						    							<a href="/insights/event"  class="fmenu-link fz-12">Events</a>
+														<!--<a href="/insights/event"  class="fmenu-link fz-12">Events</a>-->
+						</dd>
+											</dl>
+										<dl class="footer-menu" style="margin-right:38px;">
+						<dt class="fz-14">
+							<a href="/service"  class="white fmenu-link">Support</a>
+						</dt>
+
+												<dd>
+						    							<a href="/member/course"  class="fmenu-link fz-12">MyDobot</a>
+														<!--<a href="/member/course"  class="fmenu-link fz-12">MyDobot</a>-->
+						</dd>
+												<dd>
+						    							<a href="/service/academy"  class="fmenu-link fz-12">Academy</a>
+														<!--<a href="/service/academy"  class="fmenu-link fz-12">Academy</a>-->
+						</dd>
+												<dd>
+						    							<a href="/service/customer-service"  class="fmenu-link fz-12">Customer Service</a>
+														<!--<a href="/service/customer-service"  class="fmenu-link fz-12">Customer Service</a>-->
+						</dd>
+												<dd>
+						    							<a href="/service/faq"  class="fmenu-link fz-12">FAQ</a>
+														<!--<a href="/service/faq"  class="fmenu-link fz-12">FAQ</a>-->
+						</dd>
+												<dd>
+						    							<a onclick="goPPToken()" class="fmenu-link fz-12">Download Center</a>
+														<!--<a href="/service/download-center"  class="fmenu-link fz-12">Download Center</a>-->
+						</dd>
+											</dl>
+										<dl class="footer-menu" style="margin-right:38px;">
+						<dt class="fz-14">
+							<a href="/about/about-dobot"  class="white fmenu-link">About Dobot</a>
+						</dt>
+
+												<dd>
+						    							<a href="/about/about-dobot"  class="fmenu-link fz-12">Our Company</a>
+														<!--<a href="/about/about-dobot"  class="fmenu-link fz-12">Our Company</a>-->
+						</dd>
+												<dd>
+						    							<a href="/about/cooperation"  class="fmenu-link fz-12">Become A Distributor</a>
+														<!--<a href="/about/cooperation"  class="fmenu-link fz-12">Become A Distributor</a>-->
+						</dd>
+												<dd>
+						    							<a href="/about/contact-us"  class="fmenu-link fz-12">Contact Us</a>
+														<!--<a href="/about/contact-us"  class="fmenu-link fz-12">Contact Us</a>-->
+						</dd>
+												<dd>
+						    							<a href="/privacy-policy"  class="fmenu-link fz-12">Privacy Policy</a>
+														<!--<a href="/privacy-policy"  class="fmenu-link fz-12">Privacy Policy</a>-->
+						</dd>
+												<dd>
+						    							<a href="/insights/news/versions.html"  class="fmenu-link fz-12">Version compatibility</a>
+														<!--<a href="/insights/news/versions.html"  class="fmenu-link fz-12">Version compatibility</a>-->
+						</dd>
+											</dl>
+					
+				</div>
+			</div>
+		</div>
+
+				<div class="footer-bottom mt-60">
+			<div class="wrap">
+				<div class="fb-wrap">
+					<div class="fb-left">
+						<!--						<div class="fb-copyright fz-12">© 2022 Dobot All Rights Reserved.  <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030502003317" target="_blank" style="color: rgba(124,118,118,0.5);">粤公网安备44030502003317号</a>  <a href="https://beian.miit.gov.cn/" target="_blank" style="color: rgba(124,118,118,0.5);">粤ICP备16048417号</a> </div>-->
+						<!--<div class="fb-copyright fz-12">© 2023 Dobot All Rights Reserved. </div>-->
+						<div class="fb-copyright fz-12">© 2025 Dobot All Rights Reserved.</div>
+
+						<div class="fb-help">
+							<!-- <a href="" class="fbh-link fz-12">Terms of Service</a> -->
+						</div>
+					</div>
+					<div class="fb-right">
+						<!--						<div class="fb-links">-->
+						<!--							&lt;!&ndash; <span class="fz-12">Link: </span> &ndash;&gt;-->
+						<!--							&lt;!&ndash; <a href="" class="fb-link fz-12">Technology</a>-->
+						<!--							<a href="" class="fb-link fz-12">Industrial</a>-->
+						<!--							<a href="" class="fb-link fz-12">Education</a> &ndash;&gt;-->
+						<!--							<a href="https://www.dobot.cc/" target="_blank" class="fb-link fz-12 white">Old website</a>-->
+						<!--						</div>-->
+						<!-- <a href="http://www.dobot.cn" class="footer-lang">
+							<div class="fl-header fz-12">
+								<span class="ico icon-lang fz-14"></span>CN
+							</div>
+						</a> -->
+						<div class="footer-lang bottom">
+							<div class="fl-header fz-12" style="width:85px;color:#fff !important;">
+								<span class="ico icon-lang fz-14"></span>English
+							</div>
+							<div class="fl-body">
+								<a href="/" class="flb-link fz-12 yr" target="_blank">English</a>
+								<a href="javascript:;" class="flb-link link_de fz-12 yr" target="_blank">Deutsch</a>
+								<a href="javascript:;" class="flb-link link_es fz-12 yr" target="_blank">Español</a>
+								<a href="javascript:;" class="flb-link link_fr fz-12 yr" target="_blank">Français</a>
+								<a href="/language/italian.html" class="flb-link fz-12 yr" target="_blank">Italian</a>
+								<a href="/language/polski.html" class="flb-link fz-12 yr" target="_blank">Polski</a>
+								<a href="/language/nederlands.html" class="flb-link fz-12 yr" target="_blank">Nederlands</a>
+								<a href="/language/portuguese.html" class="flb-link fz-12 yr" target="_blank">Portuguese</a>
+								<a href="/products/cr-series/russian.html" class="flb-link fz-12 yr" target="_blank">Pусский</a>
+								<a href="javascript:;" class="flb-link link_jp fz-12 yr" target="_blank">日本語</a>
+								<a href="javascript:;" class="flb-link link_th fz-12 yr" target="_blank">Thai</a>
+								<a href="javascript:;" class="flb-link link_id fz-12 yr" target="_blank">Indonesia</a>
+								<a href="/products/cr-series/korean.html" class="flb-link fz-12 yr" target="_blank">한국어</a>
+								<a href="/language/tw.html" class="flb-link fz-12 yr" target="_blank">繁体中文</a>
+								<a href="https://www.dobot.cn" class="flb-link fz-12 yr" target="_blank">简体中文</a>
+							</div>
+						</div>
+
+
+						<!--						<select class="fl-header fz-12" style="width:60px;margin-left: 20px;" id="status" onchange="window.open(this.value)" >-->
+						<!--							<option value="https://en.dobot.cn" selected="selected">EN</option>-->
+						<!--							<option value="https://www.dobot.cn" class="footer-lang">CN</option>-->
+						<!--							<option value="https://en.dobot.cn/products/cr-series/german.html" >German</option>-->
+						<!--							<option value="https://en.dobot.cn/products/cr-series/russian.html" >Russian</option>-->
+						<!--						</select>-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<!-- TODO: comm-layer-zohoForm  样机申请   -->
+<div class="comm-layer comm-layer-zohoForm" style="opacity: 0;">
+	<div class="comm-layer-bg js-clayer-close"></div>
+	<div class="clayer-main">
+		<div class="clayer-container">
+			<div class="wrap">
+				<div class="comm-wrap">
+					<div class="clayer-form">
+						<span class="clayer-close icon-close black80 js-clayer-close fz-20"></span>
+						<div class="clayerf-header">
+							<div class="clayerf-wrap">
+								<div class="comm-title fz-30 black">Establish Contact with Dobot Experts</div>
+							</div>
+						</div>
+						<div class="clayerf-wrap">
+							<div class="comm-desc clayerf-desc fz-14 mt-20">
+								<p>Take part in automation transformation. Let’s work together towards a more efficient tomorrow.</p>
+							</div>
+							<div class="comm-title fz-18 black mt-40">Contact Information</div>
+							<form class="zohoForm" action='https://forms.zohopublic.com/shenzhenyuejiangtechnologyco/form/EstablishContactwithDobotExperts/formperma/sF10wO_M8ahXObF-x1c0SEcTbDp6bcQCW1xNJNvjGhA/htmlRecords/submit' name='form' id='zohoForm' method='POST' accept-charset='UTF-8' enctype='multipart/form-data'>
+								<input type="hidden" name="zf_referrer_name" value=""><!-- To Track referrals , place the referrer name within the " " in the above hidden input field -->
+								<input type="hidden" name="zf_redirect_url" value=""><!-- To redirect to a specific page after record submission , place the respective url within the " " in the above hidden input field -->
+								<input type="hidden" name="zc_gad" value=""><!-- If GCLID is enabled in Zoho CRM Integration, click details of AdWords Ads will be pushed to Zoho CRM -->
+								<input type="hidden" name="utm_source" value=""/>
+								<input type="hidden" name="utm_medium" value=""/>
+								<input type="hidden" name="utm_campaign" value=""/>
+								<input type="hidden" name="utm_term" value=""/>
+								<input type="hidden" name="utm_content" value=""/>
+								<input type="hidden" name="referrername" value=""/>
+								<input type="hidden" name="gclid" value=""/>
+								<input type="hidden" name="fbclid" value=""/>
+								<input type="hidden" name="Dropdown3" value="None"/>
+
+								<div class="clayerf-box">
+									<div class="coopf-item col-50 mt-20">
+										<div class="coopf-item__wrap">
+											<input type="text" name="Name_First" class="form-input gray fz-14" placeholder="First Name*">
+										</div>
+									</div>
+									<div class="coopf-item col-50 mt-20">
+										<div class="coopf-item__wrap">
+											<input type="text" name="Name_Last" class="form-input gray fz-14" placeholder="Last Name*">
+										</div>
+									</div>
+									<div class="coopf-item col-50 mt-20">
+										<div class="coopf-item__wrap">
+											<input type="email" name="Email" class="form-input gray fz-14" placeholder="Business Email*">
+										</div>
+									</div>
+									<div class="coopf-item col-50 mt-20">
+										<div class="coopf-item__wrap">
+											<input type="text" class="form-input gray fz-14" compname="PhoneNumber" name="PhoneNumber_countrycode" phoneFormat="1" isCountryCodeEnabled=false maxlength="20" value="" fieldType=11 id="international_PhoneNumber_countrycode" placeholder="Phone*" />
+											<label>Number</label>
+										</div>
+									</div>
+									<div class="coopf-item col-50 mt-20">
+										<div class="coopf-item__wrap">
+											<input type="text" name="SingleLine" class="form-input gray fz-14" placeholder="Company*">
+										</div>
+									</div>
+									<div class="coopf-item col-50 mt-20">
+										<div class="coopf-item__wrap">
+											<input type="text" name="SingleLine3" class="form-input gray fz-14" placeholder="Job Title">
+										</div>
+									</div>
+									<div class="coopf-item col-50 mt-20">
+										<div class="coopf-item__wrap">
+											<select name="Dropdown1" class="js-select-country form-select myCountry" aria-placeholder="Country*">
+												<option value=""></option>
+											</select>
+										</div>
+									</div>
+									<div class="coopf-item col-50 mt-20">
+										<div class="coopf-item__wrap">
+											<input type="text" name="SingleLine2" class="form-input gray fz-14 myZhou" placeholder="State/Province">
+										</div>
+									</div>
+									<div class="coopf-item col-50 mt-20">
+										<div class="coopf-item__wrap">
+											<label>
+											</label>
+											<select name="Dropdown" class="js-select-country btnInd form-select" aria-placeholder="Industry*">
+											</select>
+										</div>
+									</div>
+									<div class="coopf-item col-50 mt-20">
+										<div class="coopf-item__wrap">
+											<label>
+											</label>
+											<select name="Dropdown6" class="js-select-country btnSubInd form-select" aria-placeholder="Sub-industry">
+											</select>
+										</div>
+									</div>
+									<div class="coopf-item col-50 mt-20">
+										<div class="coopf-item__wrap">
+											<label>
+											</label>
+											<select name="Dropdown5" class="form-select btnApp js-select-country" aria-placeholder="Application*">
+											</select>
+										</div>
+									</div>
+									<div class="coopf-item col-50 mt-20">
+										<div class="coopf-item__wrap">
+											<label>
+											</label>
+											<select name="Dropdown8" class="form-select btnSubApp js-select-country" aria-placeholder="Sub-application">
+											</select>
+										</div>
+									</div>
+									<div class="coopf-item col-50 mt-20">
+										<div class="coopf-item__wrap">
+											<select name="Dropdown4" class="js-select-country form-select" aria-placeholder="Customer Type*">
+												<option value=""></option>
+												<option value="End Customer">End Customer</option>
+												<option value="Integrator">Integrator</option>
+												<option value="Distributor">Distributor</option>
+												<option value="Machine Maker">Machine Maker</option>
+												<option value="Others">Others</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="comm-title fz-18 black mt-40">Choose the Product that Interests You</div>
+								<div class="clayerf-box">
+									<div class="coopf-item col-100 mt-20">
+										<div class="coopf-item__wrap">
+											
+											<!-- <input type="text" name="country" class="form-input fz-14" placeholder="Country*"> -->
+											<select name="Dropdown2" id="" class="js-select-country form-select" aria-placeholder="Product Model*">
+												<option value="">Product Model</option>
+												<!--<optgroup label="Dobot Atom">-->
+												<!--	<option value="Dobot Atom">Dobot Atom</option>-->
+												<!--</optgroup>-->
+																								<optgroup label="CR 30H">
+																																							<option value="CR 30H Collaborative Robots">CR 30H Collaborative Robots</option>
+																																						</optgroup>
+																								<optgroup label="CRA Series">
+																																							<option value="VX500 Smart Camera">VX500 Smart Camera</option>
+																																																				<option value="CR20A (High Payload Model)">CR20A (High Payload Model)</option>
+																																																																																											<option value="CRA-IP68 Series">CRA-IP68 Series</option>
+																																																				<option value="CRAF Series (with Torque Sensor)">CRAF Series (with Torque Sensor)</option>
+																																						</optgroup>
+																								<optgroup label="Humanoid Robots">
+																																							<option value="DOBOT X-Trainer">DOBOT X-Trainer</option>
+																																																				<option value="DOBOT Atom">DOBOT Atom</option>
+																																						</optgroup>
+																								<optgroup label="Nova Series">
+																																																																														<option value="Nova 2">Nova 2</option>
+																																																				<option value="Nova 5">Nova 5</option>
+																																																				<option value="Nova Series for Industrial Applications">Nova Series for Industrial Applications</option>
+																																						</optgroup>
+																								<optgroup label="CR Series">
+																																							<option value="CR3">CR3</option>
+																																																				<option value="CR16">CR16</option>
+																																																				<option value="CR10">CR10</option>
+																																																				<option value="CR5">CR5</option>
+																																																																																											<option value="CR7">CR7</option>
+																																																				<option value="CR12">CR12</option>
+																																																																													</optgroup>
+																								<optgroup label="CRS Series">
+																																							<option value="CR5S">CR5S</option>
+																																																				<option value="CR3S">CR3S</option>
+																																																				<option value="CR10S">CR10S</option>
+																																																				<option value="CR3AS">CR3AS</option>
+																																																				<option value="CR5AS">CR5AS</option>
+																																																				<option value="CR10AS">CR10AS</option>
+																																						</optgroup>
+																								<optgroup label="Desktop">
+																																							<option value="MG400">MG400</option>
+																																						</optgroup>
+																								<optgroup label="SCARA">
+																																							<option value="M1 Pro">M1 Pro</option>
+																																						</optgroup>
+																								<optgroup label="Education">
+																																							<option value="Magician Lite">Magician Lite</option>
+																																																				<option value="Magician">Magician</option>
+																																																				<option value="Magician Go">Magician Go</option>
+																																																				<option value="DobotLab">DobotLab</option>
+																																																				<option value="Magician E6">Magician E6</option>
+																																						</optgroup>
+																								<optgroup label="Accessories for Education">
+																																							<option value="AI Teaching Kit">AI Teaching Kit</option>
+																																																				<option value="Basic AI Kit for Magician">Basic AI Kit for Magician</option>
+																																																				<option value="Sliding Rail Kit">Sliding Rail Kit</option>
+																																																				<option value="Mini Conveyor Belt Kit">Mini Conveyor Belt Kit</option>
+																																																				<option value="Vision Kit">Vision Kit</option>
+																																																				<option value="Sensor Kit for Magician">Sensor Kit for Magician</option>
+																																																				<option value="Sensor Kit for Magician Lite">Sensor Kit for Magician Lite</option>
+																																																				<option value="Collaborative Robot Universal Training Platform">Collaborative Robot Universal Training Platform</option>
+																																																				<option value="DOBOT ES01 Electric Suction Cup">DOBOT ES01 Electric Suction Cup</option>
+																																						</optgroup>
+																								<optgroup label="Accessories">
+																									</optgroup>
+																								<optgroup label="Accessories">
+																																							<option value="DOBOT SmartPendant">DOBOT SmartPendant</option>
+																																																				<option value="M1 Pro Basic Kit">M1 Pro Basic Kit</option>
+																																																				<option value="Vacuum Suction Cup Kit">Vacuum Suction Cup Kit</option>
+																																																				<option value="Seer AMB Series">Seer AMB Series</option>
+																																																				<option value="SCHUNK EGH Series">SCHUNK EGH Series</option>
+																																																				<option value="ROBOTIQ EPick">ROBOTIQ EPick</option>
+																																																				<option value="Jodell Robotics RG Series Electric Gripper">Jodell Robotics RG Series Electric Gripper</option>
+																																																				<option value="OnRobot RG2 &amp; RG6">OnRobot RG2 &amp; RG6</option>
+																																																				<option value="ROBOTIQ 2F-85 &amp; 2F-140">ROBOTIQ 2F-85 &amp; 2F-140</option>
+																																																				<option value="SCHUNK Co-act EGP Series">SCHUNK Co-act EGP Series</option>
+																																																				<option value="HIKROBOT Industrial 2D Camera">HIKROBOT Industrial 2D Camera</option>
+																																																				<option value="DH-Robotics PGC Series">DH-Robotics PGC Series</option>
+																																																				<option value="Jodell Robotics EPG Series Electric Gripper">Jodell Robotics EPG Series Electric Gripper</option>
+																																																				<option value="Kunwei KWR75B">Kunwei KWR75B</option>
+																																																				<option value="Standard Robots Oasis Series">Standard Robots Oasis Series</option>
+																																																				<option value="XJCSENSOR XJC-3F">XJCSENSOR XJC-3F</option>
+																																																				<option value="ALSONTECH AT-S1000-C">ALSONTECH AT-S1000-C</option>
+																																																				<option value="Solomon AccuPick 3D">Solomon AccuPick 3D</option>
+																																																				<option value="Youibot P200 AMR">Youibot P200 AMR</option>
+																																																				<option value="Mech-Mind Mech-Eye PRO Industrial 3D Camera">Mech-Mind Mech-Eye PRO Industrial 3D Camera</option>
+																																																				<option value="Mini Air Pump Box">Mini Air Pump Box</option>
+																																																				<option value="Soft-touch Flexible Gripper">Soft-touch Flexible Gripper</option>
+																																																				<option value="Suction Cup Set">Suction Cup Set</option>
+																																																				<option value="Collaborative Robot Universal Training Platform">Collaborative Robot Universal Training Platform</option>
+																																																				<option value="Sliding Rail Kit">Sliding Rail Kit</option>
+																																																				<option value="Vision Kit">Vision Kit</option>
+																																																				<option value="3-stage Vertical Electric Lifting Column">3-stage Vertical Electric Lifting Column</option>
+																																																				<option value="SMC Vacuum Gripper System (Foam Type) ZGS">SMC Vacuum Gripper System (Foam Type) ZGS</option>
+																																																				<option value="DH-Robotics PGEA Servo Gripper">DH-Robotics PGEA Servo Gripper</option>
+																																																				<option value="All-in-One Palletizing Workstation">All-in-One Palletizing Workstation</option>
+																																						</optgroup>
+																							</select>
+										</div>
+									</div>
+									<div class="coopf-item col-100 mt-20">
+										<div class="coopf-item__wrap">
+											<textarea name="MultiLine" class="fz-14 form-textarea gray" placeholder="Please include relevant information to help us better respond to your request*" rows="3"></textarea>
+										</div>
+									</div>
+								</div>
+																
+								<div class="mt-20" style="padding: 0 0 0 14px;">
+									<input class="form-checkbox" type="checkbox" id="formDecisionBox" name="DecisionBox"/>
+									<label  class="form-checkbox__label fz-12 fw-300 blue" for="formDecisionBox">I have read and agree to the <a href="/user-registration-agreement" target="_blank">&lt;User Registration Agreement&gt;</a> and <a href="/privacy-policy" target="_blank">&lt;Privacy Statement&gt;</a> of Dobot Robotics
+										<em>*</em>
+									</label>
+								</div>
+								<button class="form-submit fz-14 mt-20" type="submit">Submit</button>
+								<div class="comm-desc fz-14 blue  mt-20">You can expect to hear from Dobot in 2 days.</div>
+								<div class="mt-20"></div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--TODO: comm-layer-controller 虚拟控制器申请 -->
+<div class="comm-layer comm-layer-controller" style="opacity: 0;">
+	<div class="comm-layer-bg js-clayer-close"></div>
+	<div class="clayer-main">
+		<div class="clayer-container">
+			<div class="wrap">
+				<div class="comm-wrap">
+					<div class="clayer-form">
+						<span class="clayer-close icon-close black80 js-clayer-close fz-36"></span>
+						<div class="clayerf-header">
+							<div class="clayerf-wrap" style="text-align: center;">
+								<div class="comm-title fz-30 black">Virtual Controller Application</div>
+							</div>
+						</div>
+						<div class="clayerf-wrap">
+							<div class="comm-desc clayerf-desc fz-14 mt-20">
+								We provide a free trial application for the robot cloud virtual controller. Fill in the following information and we will issue you a 12-hour license.
+							</div>
+							<div class="comm-title fz-18 black mt-40">Contact Information</div>
+
+							<form action="" autocomplete="off" id="controllerForm">
+								<input type="hidden" value="en" name="lang" class="form-input gray fz-14">
+								<input type="hidden" value="官网" name="sourceType" class="form-input gray fz-14">
+
+								<div class="clayerf-box">
+									<div class="coopf-item col-50 mt-20">
+										<div class="coopf-item__wrap">
+											<input type="text" name="contact" value="" class="form-input gray fz-14" placeholder="Name*">
+										</div>
+									</div>
+									<div class="coopf-item col-50 mt-20">
+										<div class="coopf-item__wrap">
+											<input type="tel" name="phone" maxlength="11" value=""  class="form-input gray fz-14" placeholder="Phone">
+										</div>
+									</div>
+									<div class="coopf-item col-50 mt-20">
+										<div class="coopf-item__wrap">
+											<input type="email" name="email" value="" class="form-input gray fz-14" placeholder="Email*">
+										</div>
+									</div>
+									<div class="coopf-item col-50 mt-20">
+										<div class="coopf-item__wrap">
+											<input type="text" name="organization" value="" class="form-input gray fz-14" placeholder="Company/University Name (Full Name)*">
+										</div>
+									</div>
+								</div>
+								<div class="comm-title fz-18 black mt-40">Application Product</div>
+								<div class="clayerf-box">
+									<div class="coopf-item col-100 mt-20">
+										<div class="coopf-item__wrap">
+											<select name="robotArm" class="js-select-country form-select" aria-placeholder="Model Name*">
+												<option value=""></option>
+											</select>
+										</div>
+									</div>
+									<div class="coopf-item col-100 mt-20">
+										<div class="coopf-item__wrap">
+											<select name="controlVersion" class="js-select-country form-select" aria-placeholder="Controller Version*">
+												<option value=""></option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<!--<div class="mt-20 agree_shuju">-->
+								<!--	<input type="checkbox" name="agree2" id="agree2" value="1" class="form-checkbox">-->
+								<!--	<label for="agree2" class="form-checkbox__label fz-14 fw-400 gray">-->
+								<!--		<p><span>Synchronize Data</span>After the time expires, you will need to reapply. If you select "Synchronize Data", the previous data will be synchronized to the cloud virtual controller.</p>-->
+								<!--	</label>-->
+								<!--</div>-->
+								<div class="mt-20">
+									<input type="checkbox" name="agree" id="agree" value="1" class="form-checkbox">
+									<label for="agree" class="form-checkbox__label fz-14 fw-400 blue">
+										<p>* I agree that Dobot processing my data in accordance with its privacy policy.</p>
+										<p>Dobot is committed to protecting and respecting your privacy. We prioritize the security of your information and employ industry-standard security measures to protect the user information you provide, preventing unauthorized access, disclosure, use, modification, damage, or loss of data.</p>
+									</label>
+								</div>
+								<div style="text-align: center;">
+									<button class="form-submit js-submit-controllerForm fz-14 mt-20" style="height: 40px;padding: 0 20px;">Submit</button>
+								</div>
+								<div class="mt-20"></div>
+								<div style="text-align: center;">
+									<div class="fz-16 white">
+										<a href="/">Back To Home Page</a>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- TODO: 留资下载成功弹窗 2023 4.27 -->
+<div class="comm-layer comm-layer-reten" style="opacity: 0;">
+	<div class="comm-layer-bg js-clayer-close"></div>
+	<div class="clayer-main">
+		<div class="clayer-container">
+			<div class="wrap">
+				<div class="comm-wrap">
+					<div class="clayer-form">
+						<span class="clayer-close icon-close black80 js-clayer-close fz-20"></span>
+						<div class="clayerf-header">
+							<div class="clayerf-wrap">
+								<div class="comm-title fz-30 black">
+									<span class="icon-process_04 blue fz-30" style="margin-right: 10px;"></span>
+									File sent
+								</div>
+							</div>
+						</div>
+						<div class="clayerf-wrap mt-40">
+							<div class="comm-title fz-30 black">The related product information has been sent, please kindly check your email.</div>
+							<p  class="mt-40"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 加载动画容器 -->
+<div id="loading" style="display:none;">
+  <div class="spinner"></div>
+  <div class="message">Loading, please wait...</div>
+</div>
+
+<!-- 生态表单 -->
+<!-- 生态表单 -->
+<div class="comm-layer comm-layer-ecology" style="opacity: 0;">
+	<div class="comm-layer-bg js-clayer-close"></div>
+	<div class="clayer-main">
+		<div class="clayer-container">
+			<div class="wrap">
+				<div class="comm-wrap">
+					<div class="clayer-form">
+						<span class="clayer-close icon-close black80 js-clayer-close fz-20"></span>
+						<div class="clayerf-header">
+							<div class="clayerf-wrap" style="text-align: center;">
+								<div class="comm-title fz-24 black">Join Dobot+ Ecosystem to Forge Deeper Partnerships</div>
+							</div>
+						</div>
+						<div class="clayerf-wrap">
+							<div class="comm-desc clayerf-desc fz-14 mt-20">
+								Dobot sincerely invites robotics software companies and hardware manufacturers to Dobot+. Together we can offer best in class solutions to end users in various industries.
+							</div>
+							<div class="comm-title fz-18 black mt-40">Contact Information</div>
+
+							<form  method="post" autocomplete="off" id="ecologyFormNew">
+								<div class="clayerf-box">
+									<div class="coopf-item col-50 mt-20">
+										<div class="coopf-item__wrap">
+											<input type="text" name="first_name" class="form-input gray fz-14" placeholder="First Name*">
+										</div>
+									</div>
+									<div class="coopf-item col-50 mt-20">
+										<div class="coopf-item__wrap">
+											<input type="text" name="last_name" class="form-input gray fz-14" placeholder="Last Name*">
+										</div>
+									</div>
+									<div class="coopf-item col-50 mt-20">
+										<div class="coopf-item__wrap">
+											<input type="tel" name="phone" maxlength="11" class="form-input gray fz-14" placeholder="Phone Number*">
+										</div>
+									</div>
+									<div class="coopf-item col-50 mt-20">
+										<div class="coopf-item__wrap">
+											<input type="email" name="email" class="form-input gray fz-14" placeholder="Email*">
+										</div>
+									</div>
+									<div class="coopf-item col-50 mt-20">
+										<div class="coopf-item__wrap">
+											
+											<select name="country"  class="js-select-country form-select" aria-placeholder="Country*">
+												<option value=""></option>
+																								<option value="AD" >Andorra</option>
+																								<option value="AE" >United Arab Emirates</option>
+																								<option value="AF" >Afghanistan</option>
+																								<option value="AG" >Antigua & Barbuda</option>
+																								<option value="AI" >Anguilla</option>
+																								<option value="AL" >Albania</option>
+																								<option value="AM" >Armenia</option>
+																								<option value="AO" >Angola</option>
+																								<option value="AQ" >Antarctica</option>
+																								<option value="AR" >Argentina</option>
+																								<option value="AS" >American Samoa</option>
+																								<option value="AT" >Austria</option>
+																								<option value="AU" >Australia</option>
+																								<option value="AW" >Aruba</option>
+																								<option value="AX" >Åland Islands</option>
+																								<option value="AZ" >Azerbaijan</option>
+																								<option value="BA" >Bosnia & Herzegovina</option>
+																								<option value="BB" >Barbados</option>
+																								<option value="BD" >Bangladesh</option>
+																								<option value="BE" >Belgium</option>
+																								<option value="BF" >Burkina Faso</option>
+																								<option value="BG" >Bulgaria</option>
+																								<option value="BH" >Bahrain</option>
+																								<option value="BI" >Burundi</option>
+																								<option value="BJ" >Benin</option>
+																								<option value="BL" >St. Barthélemy</option>
+																								<option value="BM" >Bermuda</option>
+																								<option value="BN" >Brunei</option>
+																								<option value="BO" >Bolivia</option>
+																								<option value="BQ" >Caribbean Netherlands</option>
+																								<option value="BR" >Brazil</option>
+																								<option value="BS" >Bahamas</option>
+																								<option value="BT" >Bhutan</option>
+																								<option value="BV" >Bouvet Island</option>
+																								<option value="BW" >Botswana</option>
+																								<option value="BY" >Belarus</option>
+																								<option value="BZ" >Belize</option>
+																								<option value="CA" >Canada</option>
+																								<option value="CC" >Cocos (Keeling) Islands</option>
+																								<option value="CD" >Congo - Kinshasa</option>
+																								<option value="CF" >Central African Republic</option>
+																								<option value="CG" >Congo - Brazzaville</option>
+																								<option value="CH" >Switzerland</option>
+																								<option value="CI" >Côte d’Ivoire</option>
+																								<option value="CK" >Cook Islands</option>
+																								<option value="CL" >Chile</option>
+																								<option value="CM" >Cameroon</option>
+																								<option value="CN" >China</option>
+																								<option value="CO" >Colombia</option>
+																								<option value="CR" >Costa Rica</option>
+																								<option value="CU" >Cuba</option>
+																								<option value="CV" >Cape Verde</option>
+																								<option value="CW" >Curaçao</option>
+																								<option value="CX" >Christmas Island</option>
+																								<option value="CY" >Cyprus</option>
+																								<option value="CZ" >Czechia</option>
+																								<option value="DE" >Germany</option>
+																								<option value="DJ" >Djibouti</option>
+																								<option value="DK" >Denmark</option>
+																								<option value="DM" >Dominica</option>
+																								<option value="DO" >Dominican Republic</option>
+																								<option value="DZ" >Algeria</option>
+																								<option value="EC" >Ecuador</option>
+																								<option value="EE" >Estonia</option>
+																								<option value="EG" >Egypt</option>
+																								<option value="EH" >Western Sahara</option>
+																								<option value="ER" >Eritrea</option>
+																								<option value="ES" >Spain</option>
+																								<option value="ET" >Ethiopia</option>
+																								<option value="FI" >Finland</option>
+																								<option value="FJ" >Fiji</option>
+																								<option value="FK" >Falkland Islands</option>
+																								<option value="FM" >Micronesia</option>
+																								<option value="FO" >Faroe Islands</option>
+																								<option value="FR" >France</option>
+																								<option value="GA" >Gabon</option>
+																								<option value="GB" >United Kingdom</option>
+																								<option value="GD" >Grenada</option>
+																								<option value="GE" >Georgia</option>
+																								<option value="GF" >French Guiana</option>
+																								<option value="GG" >Guernsey</option>
+																								<option value="GH" >Ghana</option>
+																								<option value="GI" >Gibraltar</option>
+																								<option value="GL" >Greenland</option>
+																								<option value="GM" >Gambia</option>
+																								<option value="GN" >Guinea</option>
+																								<option value="GP" >Guadeloupe</option>
+																								<option value="GQ" >Equatorial Guinea</option>
+																								<option value="GR" >Greece</option>
+																								<option value="GS" >South Georgia & South Sandwich Islands</option>
+																								<option value="GT" >Guatemala</option>
+																								<option value="GU" >Guam</option>
+																								<option value="GW" >Guinea-Bissau</option>
+																								<option value="GY" >Guyana</option>
+																								<option value="HK" >Hong Kong SAR China</option>
+																								<option value="HM" >Heard & McDonald Islands</option>
+																								<option value="HN" >Honduras</option>
+																								<option value="HR" >Croatia</option>
+																								<option value="HT" >Haiti</option>
+																								<option value="HU" >Hungary</option>
+																								<option value="ID" >Indonesia</option>
+																								<option value="IE" >Ireland</option>
+																								<option value="IL" >Israel</option>
+																								<option value="IM" >Isle of Man</option>
+																								<option value="IN" >India</option>
+																								<option value="IO" >British Indian Ocean Territory</option>
+																								<option value="IQ" >Iraq</option>
+																								<option value="IR" >Iran</option>
+																								<option value="IS" >Iceland</option>
+																								<option value="IT" >Italy</option>
+																								<option value="JE" >Jersey</option>
+																								<option value="JM" >Jamaica</option>
+																								<option value="JO" >Jordan</option>
+																								<option value="JP" >Japan</option>
+																								<option value="KE" >Kenya</option>
+																								<option value="KG" >Kyrgyzstan</option>
+																								<option value="KH" >Cambodia</option>
+																								<option value="KI" >Kiribati</option>
+																								<option value="KM" >Comoros</option>
+																								<option value="KN" >St. Kitts & Nevis</option>
+																								<option value="KP" >North Korea</option>
+																								<option value="KR" >South Korea</option>
+																								<option value="KW" >Kuwait</option>
+																								<option value="KY" >Cayman Islands</option>
+																								<option value="KZ" >Kazakhstan</option>
+																								<option value="LA" >Laos</option>
+																								<option value="LB" >Lebanon</option>
+																								<option value="LC" >St. Lucia</option>
+																								<option value="LI" >Liechtenstein</option>
+																								<option value="LK" >Sri Lanka</option>
+																								<option value="LR" >Liberia</option>
+																								<option value="LS" >Lesotho</option>
+																								<option value="LT" >Lithuania</option>
+																								<option value="LU" >Luxembourg</option>
+																								<option value="LV" >Latvia</option>
+																								<option value="LY" >Libya</option>
+																								<option value="MA" >Morocco</option>
+																								<option value="MC" >Monaco</option>
+																								<option value="MD" >Moldova</option>
+																								<option value="ME" >Montenegro</option>
+																								<option value="MF" >St. Martin</option>
+																								<option value="MG" >Madagascar</option>
+																								<option value="MH" >Marshall Islands</option>
+																								<option value="MK" >North Macedonia</option>
+																								<option value="ML" >Mali</option>
+																								<option value="MM" >Myanmar (Burma)</option>
+																								<option value="MN" >Mongolia</option>
+																								<option value="MO" >Macao SAR China</option>
+																								<option value="MP" >Northern Mariana Islands</option>
+																								<option value="MQ" >Martinique</option>
+																								<option value="MR" >Mauritania</option>
+																								<option value="MS" >Montserrat</option>
+																								<option value="MT" >Malta</option>
+																								<option value="MU" >Mauritius</option>
+																								<option value="MV" >Maldives</option>
+																								<option value="MW" >Malawi</option>
+																								<option value="MX" >Mexico</option>
+																								<option value="MY" >Malaysia</option>
+																								<option value="MZ" >Mozambique</option>
+																								<option value="NA" >Namibia</option>
+																								<option value="NC" >New Caledonia</option>
+																								<option value="NE" >Niger</option>
+																								<option value="NF" >Norfolk Island</option>
+																								<option value="NG" >Nigeria</option>
+																								<option value="NI" >Nicaragua</option>
+																								<option value="NL" >Netherlands</option>
+																								<option value="NO" >Norway</option>
+																								<option value="NP" >Nepal</option>
+																								<option value="NR" >Nauru</option>
+																								<option value="NU" >Niue</option>
+																								<option value="NZ" >New Zealand</option>
+																								<option value="OM" >Oman</option>
+																								<option value="PA" >Panama</option>
+																								<option value="PE" >Peru</option>
+																								<option value="PF" >French Polynesia</option>
+																								<option value="PG" >Papua New Guinea</option>
+																								<option value="PH" >Philippines</option>
+																								<option value="PK" >Pakistan</option>
+																								<option value="PL" selected>Poland</option>
+																								<option value="PM" >St. Pierre & Miquelon</option>
+																								<option value="PN" >Pitcairn Islands</option>
+																								<option value="PR" >Puerto Rico</option>
+																								<option value="PS" >Palestinian Territories</option>
+																								<option value="PT" >Portugal</option>
+																								<option value="PW" >Palau</option>
+																								<option value="PY" >Paraguay</option>
+																								<option value="QA" >Qatar</option>
+																								<option value="RE" >Réunion</option>
+																								<option value="RO" >Romania</option>
+																								<option value="RS" >Serbia</option>
+																								<option value="RU" >Russia</option>
+																								<option value="RW" >Rwanda</option>
+																								<option value="SA" >Saudi Arabia</option>
+																								<option value="SB" >Solomon Islands</option>
+																								<option value="SC" >Seychelles</option>
+																								<option value="SD" >Sudan</option>
+																								<option value="SE" >Sweden</option>
+																								<option value="SG" >Singapore</option>
+																								<option value="SH" >St. Helena</option>
+																								<option value="SI" >Slovenia</option>
+																								<option value="SJ" >Svalbard & Jan Mayen</option>
+																								<option value="SK" >Slovakia</option>
+																								<option value="SL" >Sierra Leone</option>
+																								<option value="SM" >San Marino</option>
+																								<option value="SN" >Senegal</option>
+																								<option value="SO" >Somalia</option>
+																								<option value="SR" >Suriname</option>
+																								<option value="SS" >South Sudan</option>
+																								<option value="ST" >São Tomé & Príncipe</option>
+																								<option value="SV" >El Salvador</option>
+																								<option value="SX" >Sint Maarten</option>
+																								<option value="SY" >Syria</option>
+																								<option value="SZ" >Eswatini</option>
+																								<option value="TC" >Turks & Caicos Islands</option>
+																								<option value="TD" >Chad</option>
+																								<option value="TF" >French Southern Territories</option>
+																								<option value="TG" >Togo</option>
+																								<option value="TH" >Thailand</option>
+																								<option value="TJ" >Tajikistan</option>
+																								<option value="TK" >Tokelau</option>
+																								<option value="TL" >Timor-Leste</option>
+																								<option value="TM" >Turkmenistan</option>
+																								<option value="TN" >Tunisia</option>
+																								<option value="TO" >Tonga</option>
+																								<option value="TR" >Turkey</option>
+																								<option value="TT" >Trinidad & Tobago</option>
+																								<option value="TV" >Tuvalu</option>
+																								<option value="TZ" >Tanzania</option>
+																								<option value="UA" >Ukraine</option>
+																								<option value="UG" >Uganda</option>
+																								<option value="UM" >U.S. Outlying Islands</option>
+																								<option value="US" >United States</option>
+																								<option value="UY" >Uruguay</option>
+																								<option value="UZ" >Uzbekistan</option>
+																								<option value="VA" >Vatican City</option>
+																								<option value="VC" >St. Vincent & Grenadines</option>
+																								<option value="VE" >Venezuela</option>
+																								<option value="VG" >British Virgin Islands</option>
+																								<option value="VI" >U.S. Virgin Islands</option>
+																								<option value="VN" >Vietnam</option>
+																								<option value="VU" >Vanuatu</option>
+																								<option value="WF" >Wallis & Futuna</option>
+																								<option value="WS" >Samoa</option>
+																								<option value="YE" >Yemen</option>
+																								<option value="YT" >Mayotte</option>
+																								<option value="ZA" >South Africa</option>
+																								<option value="ZM" >Zambia</option>
+																								<option value="ZW" >Zimbabwe</option>
+																							</select>
+										</div>
+									</div>
+									<div class="coopf-item col-50 mt-20">
+										<div class="coopf-item__wrap">
+											<input type="text" name="company" class="form-input gray fz-14" placeholder="Company Name*">
+										</div>
+									</div>
+								</div>
+									<div class="comm-title fz-18 black mt-40">The types of products your company expects to cooperate with Dobot</div>
+
+								<div class="clayerf-box">
+									<div class="coopf-item col-50 mt-20">
+										<div class="coopf-item__wrap">
+
+											<select name="product" class="js-select-country form-select" aria-placeholder="Accessory Category*">
+												<option value=""></option>
+												<option value="Gripper">Gripper</option>
+												<option value="Suction cup">Suction cup</option>
+												<option value="Vision">Vision</option>
+												<option value="AGV">AGV</option>
+												<option value="Gripper">Gripper</option>
+												<option value="Sander">Sander</option>
+												<option value="solution">solution</option>
+												<option value="others">others</option>
+											</select>
+										</div>
+									</div>
+									
+									<div class="coopf-item col-50 mt-20">
+										<div class="coopf-item__wrap">
+											<input type="text" name="job" class="form-input gray fz-14" placeholder="Job Title*">
+										</div>
+									</div>
+
+								</div>
+								<div class="comm-title fz-18 black mt-40">Message</div>
+								<div class="clayerf-box">
+									<div class="coopf-item col-100 mt-20">
+										<div class="coopf-item__wrap">
+											<textarea name="message" class="fz-14 form-textarea gray" placeholder="Please include relevant information that may help us in our assessment*" rows="3"></textarea>
+										</div>
+									</div>
+								</div>
+								<div class="mt-20">
+									<input type="checkbox" name="agree" id="agree2" value="1" class="form-checkbox">
+									<label for="agree2" class="form-checkbox__label fz-14 fw-400 blue">
+										<p>I agree to the <a href="https://en.dobot.cn/privacy-policy" style="font-style: inherit;">Privacy Policy</a>.</p>
+									</label>
+								</div>
+								<div style="text-align: center;">
+									<button class="form-submit fz-14 mt-20" style="height: 40px;padding: 0 20px;">Submit</button>
+								</div>
+								<div class="mt-20"></div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	function getCookie(name) {
+    let match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    if (match) {
+        return match[2];
+    } else {
+        console.log('No cookie found with the name: ' + name);
+        return null;
+    }
+  }
+
+  // 使用该函数获取 access_token
+  let accessToken = getCookie('access_token');
+  if (accessToken) {
+      console.log('Access Token:', accessToken);
+  } else {
+      console.log('Access token not found.');
+  }
+
+  function goPPToken() {
+    // console.log('goPPToken',accessToken);
+		const url = `https://portal.dobot-robots.com?token=${accessToken}`;
+		window.open(url, '_blank');
+  }
+  function btnController() {
+        const sourceForm = encodeURIComponent('官网');
+		const url = `https://portal.dobot-robots.com?token=${accessToken}&source_from=${sourceForm}`;
+		window.open(url, '_blank');
+  }
+</script>
+
+<style>
+	.hidden {
+    display: none !important;
+	}
+	/* 加载动画容器 */
+	#loading {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(255, 255, 255, 0.8); /* 半透明背景 */
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		z-index: 9999; /* 确保覆盖在其他元素之上 */
+	}
+
+	/* 旋转的加载图标 */
+	.spinner {
+		border: 4px solid rgba(0, 0, 0, 0.1);
+		border-left-color: #000;
+		border-radius: 50%;
+		width: 40px;
+		height: 40px;
+		animation: spin 1s linear infinite;
+		margin-right: 10px;
+	}
+
+	/* 文字提示 */
+	.message {
+		font-size: 18px;
+		color: #000;
+	}
+	
+	.visuallyhidden {
+        position: absolute;
+        clip: rect(1px, 1px, 1px, 1px);
+        -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
+        clip-path: inset(0px 0px 99.9% 99.9%);
+        overflow: hidden;
+        height: 1px;
+        width: 1px;
+        padding: 0;
+        border: 0;
+    }
+
+	/* 旋转动画 */
+	@keyframes spin {
+		to { transform: rotate(360deg); }
+	}
+	.comm-layer-controller .clayer-main{
+		background-color: #fff;
+	}
+	.comm-layer-controller .clayerf-header{
+		background-color: #fff;
+	}
+	.comm-layer-controller .agree_shuju span{
+		color: #000;
+		padding-right: 10px;
+	}
+	.comm-layer-controller .coopf-item__wrap label{
+		color: red;
+	}
+	.select2{
+		width: 100% !important;
+	}
+	.fl-body{background-color: #474747;}
+	.yr:hover{
+		background-color: #888;
+	}
+	.fl-header::after{top:2px;}
+	.fl-header{
+		background-color: unset;
+	}
+	.header-contact{
+		width: 70px;
+		position: relative;
+		border-radius: 60px;
+		padding-left: 30px;
+		padding-right: 10px;
+	}
+	.header-user{
+	    max-width: 100px;
+	}
+	.header-contact i{
+		position: absolute;
+		top: 50%;
+		left: 10%;
+		transform: translateY(-50%);
+	}
+	.hover-menu .fl-header,.fixed-menu .fl-header,.page-inner .fl-header,.search-open .fl-header,.menu-open .fl-header{color:#000}
+
+	@media (min-width: 1280px){
+		.footer-menu dd{
+			max-width: 130px;
+		}
+	}
+	@media (max-width: 445px){
+		.footer-menu dd{
+			width: 100px;
+		}
+	}
+	@media (min-width: 640px) and (max-width: 1380px){
+		.footer-left{
+			width: 280px;
+		}
+		.footer-right{
+			width: calc(100% - 280px);
+		}
+	}
+	@media (min-width: 1380px){
+		.footer-left{
+			width: 380px;
+		}
+		.footer-right{
+			width: calc(100% - 380px);
+		}
+	}
+	@media (min-width: 1280px){
+		.footer-menu dd{
+			max-width: 130px;
+		}
+	}
+</style></div>
+<!--<div id="myModal" class="modal">-->
+<!--    <div class="modal-content">-->
+<!--        <a href="https://en.dobot.cn/">-->
+<!--            <img src="/media/upload/cr/Copywriting16.jpg" alt="" style="width:100%;height:100%">-->
+<!--        </a>-->
+<!--        &lt;!&ndash;				<div class="parameter-table mt-5 mb-5" style="margin:5px auto;">&ndash;&gt;-->
+<!--        &lt;!&ndash;					<div style="text-align:center;color:black;font-size:50px;font-weight:900;margin-bottom:10px;">Specifications</div>&ndash;&gt;-->
+<!--        &lt;!&ndash;				</div>&ndash;&gt;-->
+<!--        <span id="closeBtn" class="close"></span>-->
+<!--    </div>-->
+<!--</div>-->
+<!--<div style="text-align:center;color:black;font-size:50px;font-weight:900;margin-bottom:10px;" id="specification"></div>-->
+<div class="fixed-service">
+	<!-- <a href="javascript:;" class="fixeds-item js-btn-apply">
+		<p class="fixed-item__title">Contact Form</p>
+		<span class="fixeds-item__ico icon-apply fz-24"></span>
+	</a>   -->
+	<!-- <div class="fixeds-item" style="display: none;">
+		<p class="fixed-item__title">Service</p>
+		<span class="fixeds-item__ico icon-service fz-24"></span>
+	</div> -->
+    <!-- <a href="javascript:;" id="zf_button_466756" class="fixeds-item ">
+		<p class="fixed-item__title">Contact Form</p>
+		<span class="fixeds-item__ico icon-apply fz-24"></span>
+	</a> -->
+
+
+	<a href="javascript:;" class="fixeds-item js-btn-zohoForm">
+		<p class="fixed-item__title">Contact Form</p>
+		<span class="fixeds-item__ico icon-email fz-24"></span>
+	</a>
+	<a href="/" class="fixeds-item">
+		<p class="fixed-item__title">Home</p>
+		<span class="fixeds-item__ico icon-home fz-24"></span>
+	</a>
+  	<a onclick="btnController()" class="fixeds-item">
+		<p class="fixed-item__title">Virtual Controller Application</p>
+		<span class="fixeds-item__ico icon-services_01 fz-28 fw-600"></span>
+	</a>
+	<a href="javascript:;" class="fixeds-item js-gotop">
+		<p class="fixed-item__title">Top</p>
+		<span class="fixeds-item__ico icon-up fz-24"></span>
+	</a>
+</div>
+
+<script src="/themes/en/default/scripts/hls.min.0.13.2m.js"></script>
+<script src="/themes/en/default/scripts/tcplayer.v4.5.2.min.js"></script>
+<script src="/themes/en/default/scripts/main.bundle.js?1774014439"></script>
+
+<!-- <script src="/themes/en/default/include/zoho/js/validation.js?1774014439"></script> -->
+<script src="/themes/en/default/scripts/validation.js"></script>
+<script src="/themes/en/default/scripts/newLogin.js"></script>
+
+<script type="text/javascript"> 
+  function ZFAdvLead(){
+  }
+  ZFAdvLead.utmPValObj = ZFAdvLead.utmPValObj || {};
+  
+  ZFAdvLead.utmPNameArr = new Array('utm_source','utm_medium','utm_campaign','utm_term','utm_content','referrername','gclid','fbclid');ZFAdvLead.utmcustPNameArr = new Array('referrername','gclid','fbclid');ZFAdvLead.isSameDomian = false;
+  
+  ZFAdvLead.prototype.zfautm_sC = function( paramName,path,domain,secure ){
+    var value = ZFAdvLead.utmPValObj[paramName];
+    if ( typeof value !== "undefined" && value !== null ){
+      var cookieStr = paramName + "=" + encodeURIComponent( value );
+      var exdate=new Date();
+      exdate.setDate(exdate.getDate()+7);
+      cookieStr += "; expires=" + exdate.toGMTString();
+      cookieStr += "; path=/";
+      if ( domain ) {
+        cookieStr += "; domain=" + encodeURIComponent( domain );
+      }
+      if ( secure ) {
+        cookieStr += "; secure";
+      }
+      document.cookie = cookieStr;
+    }
+  };
+  ZFAdvLead.prototype.zfautm_ini = function (){
+    this.zfautm_bscPCap();
+    var url_search = document.location.search;
+    for (var i = 0; i < ZFAdvLead.utmcustPNameArr.length ; i ++){
+      var zf_pN = ZFAdvLead.utmcustPNameArr[i];
+      var zf_pV;
+      if ( zf_pN == 'referrername' ) {
+        zf_pV = ( document.URL || '' ).slice( 0, 1500 );
+      } else {
+        zf_pV = this.zfautm_gP(url_search, zf_pN);
+        if (zf_pV == undefined || zf_pV == ''){
+            zf_pV = this.zfautm_gC(zf_pN);
+        }
+      }
+      if ( typeof zf_pV !== "undefined" && zf_pV !== null & zf_pV != "" ) {
+        ZFAdvLead.utmPValObj[ zf_pN ] = zf_pV;
+      }
+    }
+    for (var pkey in ZFAdvLead.utmPValObj) {
+      this.zfautm_sC(pkey);
+    }
+  };
+  ZFAdvLead.prototype.zfautm_bscPCap = function () {
+    var trafSrc = this.zfautm_calcTrafSrc();
+    if ( trafSrc.source != "" ) {
+      ZFAdvLead.utmPValObj.utm_source = trafSrc.source;
+    }
+    if ( trafSrc.medium != "" ) {
+      ZFAdvLead.utmPValObj.utm_medium = trafSrc.medium;
+    }
+    if ( trafSrc.campaign != "" ) {
+      ZFAdvLead.utmPValObj.utm_campaign = trafSrc.campaign;
+    }
+    if ( trafSrc.term != "" ) {
+      ZFAdvLead.utmPValObj.utm_term = trafSrc.term;
+    }
+    if ( trafSrc.content != "" ) {
+      ZFAdvLead.utmPValObj.utm_content = trafSrc.content;
+    }
+  }
+  ZFAdvLead.prototype.zfautm_calcTrafSrc = function() {
+    var u1='', u2='', u3='', u4='', u5='';
+    var search_engines = [['bing', 'q'], ['google', 'q'], ['yahoo', 'q'], ['baidu', 'q'], ['yandex', 'q'], ['ask', 'q']]; //List of search engines 
+    var ref = document.referrer;
+    ref = ref.substr(ref.indexOf('//')+2);
+    ref_domain = ref;
+    ref_path = '/';
+    ref_search = '';
+  
+    // Checks for campaign parameters
+    var url_search = document.location.search;
+    if(url_search.indexOf('utm_source') > -1 || url_search.indexOf('utm_medium') > -1 || url_search.indexOf('utm_campaign') > -1 || url_search.indexOf('utm_term') > -1 || url_search.indexOf('utm_content') > -1) {
+      u1 = this.zfautm_gP(url_search, 'utm_source'); 
+      u2 = this.zfautm_gP(url_search, 'utm_medium'); 
+      u3 = this.zfautm_gP(url_search, 'utm_campaign'); 
+      u4 = this.zfautm_gP(url_search, 'utm_term'); 
+      u5 = this.zfautm_gP(url_search, 'utm_content'); 
+    } else if ( this.zfautm_gP(url_search, 'gclid')) {
+      u1 = 'Google Ads'; 
+      u2 = 'cpc'; 
+      u3 = '(not set)'; 
+      if ( !ZFAdvLead.utmcustPNameArr.includes('gclid') ) {
+        ZFAdvLead.utmcustPNameArr.push('gclid');
+      }
+    } else if(ref) {
+      var r_u1 = this.zfautm_gC('utm_source'); 
+      var r_u2 = this.zfautm_gC('utm_medium'); 
+      var r_u3 = this.zfautm_gC('utm_campaign'); 
+      var r_u4 = this.zfautm_gC('utm_term'); 
+      var r_u5 = this.zfautm_gC('utm_content'); 
+      if ( typeof r_u1 === "undefined" && typeof r_u2 === "undefined" && typeof r_u3 === "undefined" && typeof r_u4 === "undefined" && typeof r_u5 === "undefined") {
+        // separate domain, path and query parameters
+        if (ref.indexOf('/') > -1) {
+          ref_domain = ref.substr(0,ref.indexOf('/'));
+          ref_path = ref.substr(ref.indexOf('/'));
+          if (ref_path.indexOf('?') > -1) {
+            ref_search = ref_path.substr(ref_path.indexOf('?'));
+            ref_path = ref_path.substr(0, ref_path.indexOf('?'));
+          }
+        }
+        u2 = 'referral'; 
+        u1 = ref_domain;                    
+      // Extract term for organic source
+        for (var i=0; i<search_engines.length; i++){
+          if(ref_domain.indexOf(search_engines[i][0]) > -1){
+            u2 = 'organic'; 
+            u1 = search_engines[i][0];
+            u4 = this.zfautm_gP(ref_search, search_engines[i][1]) || '(not provided)';
+            break;
+          }
+        }
+      } else {
+        if ( typeof r_u1 !== "undefined" ) {
+          u1 = r_u1;
+        }
+        if ( typeof r_u2 !== "undefined" ) {
+            u2 = r_u2;
+        }
+        if ( typeof r_u3 !== "undefined" ) {
+          u3 = r_u3;
+        }
+        if ( typeof r_u4 !== "undefined" ) {
+          u4 = r_u4;
+        }
+        if ( typeof r_u5 !== "undefined" ) {
+          u5 = r_u5;
+        }
+      }
+    } else {
+      var r_u1 = this.zfautm_gC('utm_source'); 
+      var r_u2 = this.zfautm_gC('utm_medium'); 
+      var r_u3 = this.zfautm_gC('utm_campaign'); 
+      var r_u4 = this.zfautm_gC('utm_term'); 
+      var r_u5 = this.zfautm_gC('utm_content'); 
+      if ( typeof r_u1 === "undefined" && typeof r_u2 === "undefined" && typeof r_u3 === "undefined" && typeof r_u4 === "undefined" && typeof r_u5 === "undefined") {
+        var locRef = document.URL;
+        locRef = locRef.substr(locRef.indexOf('//')+2);
+        if (locRef.indexOf('/') > -1) {
+          locRef = locRef.substr(0,locRef.indexOf('/'));
+        }
+        u1 = locRef;
+        u2 = 'referral'; 
+      } else {
+        if ( typeof r_u1 !== "undefined" ) {
+          u1 = r_u1;
+        }
+        if ( typeof r_u2 !== "undefined" ) {
+          u2 = r_u2;
+        }
+        if ( typeof r_u3 !== "undefined" ) {
+          u3 = r_u3;
+        }
+        if ( typeof r_u4 !== "undefined" ) {
+          u4 = r_u4;
+        }
+        if ( typeof r_u5 !== "undefined" ) {
+          u5 = r_u5;
+        }
+      }
+    }
+    return {
+      'source'  : u1, 
+      'medium'  : u2, 
+      'campaign': u3, 
+      'term'    : u4, 
+      'content' : u5 
+    };
+  }
+  ZFAdvLead.prototype.zfautm_gP = function(s, q) {
+    try{
+        var match = s.match('[?&]' + q + '=([^&]+)');
+        return match ? decodeURIComponent(match[1]) : '';
+    } catch(e){
+      return '';  
+    }
+  }
+  ZFAdvLead.prototype.zfautm_gC = function( cookieName ){
+    var cookieArr = document.cookie.split('; ');
+    for ( var i = 0 ; i < cookieArr.length ; i ++ ){
+      var cookieVals = cookieArr[i].split('=');
+        if ( cookieVals[0] === cookieName && cookieVals[1] ) {
+          return decodeURIComponent(cookieVals[1]);
+        }
+    }
+  };
+  ZFAdvLead.prototype.zfautm_gC_enc = function( cookieName ){
+    var cookieArr = document.cookie.split('; ');
+    for ( var i = 0 ; i < cookieArr.length ; i ++ ){
+      var cookieVals = cookieArr[i].split('=');
+        if ( cookieVals[0] === cookieName && cookieVals[1] ) {
+          return cookieVals[1];
+        }
+    }
+  };
+  ZFAdvLead.prototype.zfautm_iframeSprt = function () {
+    var zf_frame = document.getElementsByTagName("iframe");
+    for(var i = 0; i < zf_frame.length; ++i){
+      if((zf_frame[i].src).indexOf('formperma') > 0 ){
+        var zf_src = zf_frame[i].src;
+        for( var prmIdx = 0 ; prmIdx < ZFAdvLead.utmPNameArr.length ; prmIdx ++ ) {
+          var utmPm = ZFAdvLead.utmPNameArr[ prmIdx ];
+          utmPm = ( ZFAdvLead.isSameDomian && ( ZFAdvLead.utmcustPNameArr.indexOf(utmPm) == -1 ) ) ? "zf_" + utmPm : utmPm;
+          var utmVal = this.zfautm_gC_enc( ZFAdvLead.utmPNameArr[ prmIdx ] );
+          if ( typeof utmVal !== "undefined" ) {
+            if ( utmVal != "" ){
+              if(zf_src.indexOf('?') > 0){
+                zf_src = zf_src+'&'+utmPm+'='+ utmVal;
+              }else{
+                zf_src = zf_src+'?'+utmPm+'='+ utmVal;
+              }
+            }
+          }
+        }
+        if ( zf_frame[i].src.length < zf_src.length ) {
+          zf_frame[i].src = zf_src;
+        }
+      }
+    }
+  };
+  ZFAdvLead.prototype.zfautm_DHtmlSprt = function () {
+    var zf_formsArr = document.forms;
+    for ( var frmInd = 0 ; frmInd < zf_formsArr.length ; frmInd ++ ) {
+      var zf_form_act = zf_formsArr[frmInd].action;
+        if ( zf_form_act && zf_form_act.indexOf('formperma') > 0 ){
+          for( var prmIdx = 0 ; prmIdx < ZFAdvLead.utmPNameArr.length ; prmIdx ++ ) {
+            var utmPm = ZFAdvLead.utmPNameArr[ prmIdx ];
+            var utmVal = this.zfautm_gC( ZFAdvLead.utmPNameArr[ prmIdx ] );
+            if ( typeof utmVal !== "undefined" ) {
+              if ( utmVal != "" ) {
+                var fieldObj = zf_formsArr[frmInd][utmPm];
+              if ( fieldObj ) {
+                fieldObj.value = utmVal;
+              }
+            }
+          }
+        }
+      }
+    }
+  };
+  ZFAdvLead.prototype.zfautm_jsEmbedSprt = function ( id ) {
+    document.getElementById('zforms_iframe_id').removeAttribute("onload");
+    var jsEmbdFrm = document.getElementById("zforms_iframe_id");
+    var embdSrc = jsEmbdFrm.src;
+    for( var prmIdx = 0 ; prmIdx < ZFAdvLead.utmPNameArr.length ; prmIdx ++ ) {
+      var utmPm = ZFAdvLead.utmPNameArr[ prmIdx ];
+      utmPm = ( ZFAdvLead.isSameDomian && ( ZFAdvLead.utmcustPNameArr.indexOf(utmPm) == -1 ) ) ? "zf_" + utmPm : utmPm;
+      var utmVal = this.zfautm_gC_enc( ZFAdvLead.utmPNameArr[ prmIdx ] );
+      if ( typeof utmVal !== "undefined" ) {
+        if ( utmVal != "" ) {
+          if(embdSrc.indexOf('?') > 0){
+                      embdSrc = embdSrc+'&'+utmPm+'='+utmVal;
+          }else{
+              embdSrc = embdSrc+'?'+utmPm+'='+utmVal;
+          }
+        }
+      }
+    }
+    jsEmbdFrm.src = embdSrc;
+  };
+  var zfutm_zfAdvLead = new ZFAdvLead();
+  zfutm_zfAdvLead.zfautm_ini();
+  if( document.readyState == "complete" ){
+      zfutm_zfAdvLead.zfautm_iframeSprt();
+      zfutm_zfAdvLead.zfautm_DHtmlSprt();
+  } else {
+    window.addEventListener('load', function (){
+          zfutm_zfAdvLead.zfautm_iframeSprt();
+          zfutm_zfAdvLead.zfautm_DHtmlSprt();
+    }, false);
+  }
+</script>
+
+<script type="text/javascript">
+  const appData = [
+    {
+      title: "",
+      val: []
+    },
+    {
+      title: "Material Handling & Packing",
+      val: ["Picking & Place", "Sorting", "Positioning", "Packaginng", "Palletizing", "Labelling"]
+    },
+    {
+      title: "Assembly",
+      val: ["Inserting", "Flexible Assembly", "Screwdriving"]
+    },
+    {
+      title: "Machine Tending",
+      val: ["CNC Machine Tending", " Metal Casting Machine Tending", "IMM Machine Tending", "Press Machine Tending"]
+    },
+    {
+      title: "Material Addition",
+      val: ["Dispensing & Gluing", "Painting"]
+    },
+    {
+      title: "Material Removal",
+      val: ["Sanding & Polishing", "Deburring", "Drilling", "Milling"]
+    },
+    {
+      title: "Quality",
+      val: ["Inspection", "Measuring", "Testing"]
+    },
+    {
+      title: "Welding",
+      val: ["Arc Welding", "Laser Welding", "Ultrasonic Welding", "Plasma Welding", "Soldering"]
+    },
+    {
+      title: "Education Usage",
+      val: ["Teaching Usage", "Research Usage", "Data Acquisition Center - College", "Data Acquisition Center - Government", "Corporate Research Institute", "Demo Center/Show Room", "Training Center", "Others",]
+    },
+    {
+      title: "Cutting",
+      val: [""]
+    },
+    {
+      title: "Others",
+      val: ["EV Charging", "Car Refueling", "Moxibustion", "Massage", "Others"]
+    }
+  ];
+
+  const indData = [
+    {
+      title: "",
+      val: []
+    },
+    {
+      title: "Electronics & Technology",
+      val: ["Electronic components & devices", "Semiconductors", "Display Panels", "3C Electronics", "Household Appliances"]
+    },
+    {
+      title: "Automotive",
+      val: ["Automotive OEMs", "Automotive Parts", "Automotive Electronics"]
+    },
+    {
+      title: "Health Care Industry",
+      val: ["Pharma & Medicine", "Medical Equipments", "Health & Rehabilitation"]
+    },
+    {
+      title: "New Energy",
+      val: [""]
+    },
+    {
+      title: "Traditional Energy",
+      val: [""]
+    },
+    {
+      title: "Catering & Retail",
+      val: [""]
+    },
+    {
+      title: "Food & Beverage",
+      val: [""]
+    },
+    {
+      title: "Tobacco",
+      val: [""]
+    },
+    {
+      title: "Consumer Chemicals",
+      val: [""]
+    },
+    {
+      title: "Footwear & Apparel",
+      val: [""]
+    },
+    {
+      title: "Warehousing & Logistics",
+      val: [""]
+    },
+    {
+      title: "Hospitality",
+      val: [""]
+    },
+    {
+      title: "Agriculture",
+      val: [""]
+    },
+    {
+      title: "Mining & quarring",
+      val: [""]
+    },
+    {
+      title: "Education & Research",
+      val: ["Research/Lab","Higher Education","Vocational Education","K-12"]
+    },
+    {
+      title: "Cultural, Sports & Entainment",
+      val: [""]
+    },
+    {
+      title: "General Manufacturing",
+      val: ["Metal & Machining","Plastics & Polymers","Electrical Machinery","Instruments & Meters","Kitchen & Bathroom Fixtures","Defence Industry","Road & Rail Transportation","Ship Manufacturing","Aerospace Industry","Construction Industry","Textiles & Leather","Wood, Furniture & Equipment","Paper Product","Glass, Ceramics, Stone & Mineral products"]
+    },
+    {
+      title: "Others",
+      val: [""]
+    },
+    
+
+  ];
+
+  $(document).ready(function(){
+        $('.header').on('mouseenter', function() {
+            st = $(window).scrollTop();
+            const bodyh = $('body').outerHeight();
+            if ($(window).innerWidth() > 1100) {
+                // $('body').addClass('hover-menu');
+                $('html,body').stop().animate({
+                    scrollTop : st
+                }, 0);
+                $('.container').css({
+                    'transform': 'none'
+                });
+            }
+        });
+        
+    // 初始化单个表单的联动功能
+    function initForm(formSelector) {
+      const $form = $(formSelector);
+
+      const $btnInd = $form.find(".btnInd");
+      const $btnSubInd = $form.find(".btnSubInd");
+      const $btnApp = $form.find(".btnApp");
+      const $btnSubApp = $form.find(".btnSubApp");
+
+      // 清空并填充主行业
+      $btnInd.empty();
+      $.each(indData, function (index, item) {
+        if (item.title) { // 跳过空标题
+          $btnInd.append(new Option(item.title, item.title));
+        }
+      });
+      $btnInd.val(""); 
+
+      // 更新子行业
+      function updateInd() {
+        const selectedValue = $btnInd.val();
+        $btnSubInd.empty().append(new Option("请选择", "")); // 默认提示
+        const category = indData.find(item => item.title === selectedValue);
+        if (category && category.val.length > 0) {
+          $.each(category.val, function (index, sub) {
+            if (sub) {
+              $btnSubInd.append(new Option(sub, sub));
+            }
+          });
+        }
+      }
+      $btnInd.change(updateInd);
+
+      // 清空并填充主应用
+      $btnApp.empty();
+      $.each(appData, function (index, item) {
+        if (item.title) {
+          $btnApp.append(new Option(item.title, item.title));
+        }
+      });
+      $btnApp.val(""); 
+
+      // 更新子应用
+      function updateApp() {
+        const selectedValue = $btnApp.val();
+        $btnSubApp.empty().append(new Option("请选择", ""));
+        const category = appData.find(item => item.title === selectedValue);
+        if (category && category.val.length > 0) {
+          $.each(category.val, function (index, sub) {
+            if (sub) {
+              $btnSubApp.append(new Option(sub, sub));
+            }
+          });
+        }
+      }
+      $btnApp.change(updateApp);
+    }
+
+    // 分别初始化每个表单
+    initForm(".zohoForm");
+    initForm(".retainCapitalFormClass");
+    initForm(".cooperationForm");
+    initForm(".contactForm");
+
+  });
+  $('.slick-app-related').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          centerMode: true,
+          centerPadding: '20px',
+          slidesToShow: 1
+        }
+      },
+    ]
+  });
+</script>
+
+<script>
+    document.querySelector('.link_jp').addEventListener('click', function(event) {
+        event.preventDefault();
+        var targetUrl = 'https://jp.dobot-robots.com/';
+        window.open(targetUrl, '_blank');
+    });
+
+    document.querySelector('.link_de').addEventListener('click', function(event) {
+        event.preventDefault();
+        var targetUrl = 'https://de.dobot-robots.com/';
+        window.open(targetUrl, '_blank');
+    });
+
+    document.querySelector('.link_es').addEventListener('click', function(event) {
+        event.preventDefault();
+        var targetUrl = 'https://es.dobot-robots.com/';
+        window.open(targetUrl, '_blank');
+    });
+    
+    document.querySelector('.link_th').addEventListener('click', function(event) {
+        event.preventDefault();
+        var targetUrl = 'https://th.dobot-robots.com/';
+        window.open(targetUrl, '_blank');
+    });
+    
+    document.querySelector('.link_fr').addEventListener('click', function(event) {
+        event.preventDefault();
+        var targetUrl = 'https://fr.dobot-robots.com/';
+        window.open(targetUrl, '_blank');
+    });
+    
+    document.querySelector('.link_id').addEventListener('click', function(event) {
+        event.preventDefault();
+        var targetUrl = 'https://id.dobot-robots.com/';
+        window.open(targetUrl, '_blank');
+    });
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const button = document.querySelector('.button-more');
+    const hiddenItems = document.querySelectorAll('.indexPro .hidden');
+
+    // 初始状态：是否已加载全部
+    let allLoaded = false;
+
+    // 如果一开始就没有隐藏项（比如只有6个），直接设为“进入列表”模式
+    if (hiddenItems.length === 0) {
+      allLoaded = true;
+      button.textContent = 'View all';
+    }
+
+    button.addEventListener('click', function (e) {
+      e.preventDefault(); // 阻止默认跳转（因为 href="javascript:;"）
+
+      if (!allLoaded) {
+      // 第一次点击：加载剩余项
+      hiddenItems.forEach(item => {
+          item.classList.remove('hidden');
+      });
+
+      // 更新状态和文字
+      allLoaded = true;
+      this.textContent = 'View all';
+      } else {
+      // 第二次点击：跳转到 /products
+      window.location.href = '/products';
+      }
+    });
+  });
+  // 防抖函数  
+  function debounce(func, wait) {  
+      let timeout;  
+      return function() {  
+          const context = this;  
+          const args = arguments;  
+          clearTimeout(timeout);  
+          timeout = setTimeout(() => func.apply(context, args), wait);  
+      };  
+  }
+  function escapeSpecialChars(str) {  
+      var map = {  
+          '<': '&lt;',  
+          '>': '&gt;',  
+          '&': '&amp;',  
+          '"': '&quot;',  
+          "'": '&apos;',  
+          '`': '&grave;',  
+          '=': '&equals;',  
+          '#': '&hash;',  
+          '%': '&percent;',  
+          ';': '&semi;',  
+          '(': '&lpar;',  
+          ')': '&rpar;',  
+          '{': '&lcurly;',  
+          '}': '&rcurly;',  
+          '[': '&lbrack;',  
+          ']': '&rbrack;',  
+          '^': '&circ;',  
+          '~': '&tilde;',  
+          '|': '&vert;',  
+          '\\': '&backslash;'  
+      };  
+      return str.replace(/[<>&"'`=%;#()\{\}\[\]^\~\|\\]/g, function(m) { return map[m]; });  
+  }  
+  // 获取所有的 input 元素  
+  const inputs = document.querySelectorAll('input');  
+  // 为每个 input 元素添加事件监听器  
+  inputs.forEach((input) => {  
+      let isProgrammaticChange = false; // 标志位，用于检查是否是程序自身设置的值  
+    
+      // 使用防抖处理 input 事件  
+      const debouncedInputHandler = debounce((event) => {  
+          if (isProgrammaticChange) {  
+              // 如果是程序自身设置的值触发的，则忽略这次事件  
+              isProgrammaticChange = false;  
+              return;  
+          }  
+    
+          // 获取输入值并进行特殊字符转义  
+          const escapedValue = escapeSpecialChars(event.target.value);  
+    
+          // 将转义后的值设置回 input 的 value，并设置标志位  
+          isProgrammaticChange = true;  
+          event.target.value = escapedValue;  
+      }, 500); // 500 毫秒防抖间隔  
+    
+      input.addEventListener('input', debouncedInputHandler);  
+  });
+</script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7TNWR9"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<script>
+// 缓存国家列表，避免重复请求
+let COUNTRY_LIST = null;
+
+// 初始化所有 .myCountry 下拉框
+async function initCountrySelect2() {
+  const $selects = $('.myCountry');
+  if ($selects.length === 0) return;
+
+  try {
+    // 如果尚未加载国家列表，则请求 JSON
+    if (!COUNTRY_LIST) {
+      const response = await fetch('/themes/en/default/scripts/country.json');
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+      const rawData = await response.json();
+
+      // 提取国家名（支持 "CN-China" 或纯名称）
+      COUNTRY_LIST = rawData
+        .map(item => {
+          const str = typeof item === 'string' ? item : String(item);
+          const parts = str.split('-', 2);
+          return parts[1] || parts[0];
+        })
+        .filter(name => name && name.trim())
+        .map(name => name.trim())
+        .sort((a, b) => a.localeCompare(b, 'en')); // 按字母排序
+    }
+
+    // 清空并填充每个 select
+    $selects.each(function () {
+      const $select = $(this);
+
+      // 防止重复初始化
+      if ($select.data('select2')) {
+        $select.select2('destroy'); // 确保干净初始化
+      }
+
+      // 清空选项
+      $select.empty();
+      $select.append('<option value=""></option>'); // 空选项用于 placeholder
+
+      // 添加国家选项
+      COUNTRY_LIST.forEach(country => {
+        const option = new Option(country, country, false, false);
+        $select.append(option);
+      });
+    });
+
+    // 统一初始化 Select2
+    $('.myCountry').select2({
+      placeholder: 'Select a country...',
+      allowClear: true,
+      width: '100%',
+      minimumResultsForSearch: 5 // 少于5个选项时不显示搜索框（可选）
+    });
+
+  } catch (error) {
+    console.error('[Select2 Country] Failed to load countries:', error);
+
+    // Fallback：常见国家（排序版）
+    const fallbackCountries = [
+      'United States', 'Canada', 'United Kingdom', 'Germany', 'France',
+      'Japan', 'China', 'Australia', 'India', 'Brazil', 'Mexico', 'Italy'
+    ].sort();
+
+    $selects.each(function () {
+      const $select = $(this);
+      if ($select.data('select2')) $select.select2('destroy');
+
+      $select.empty().append('<option value=""></option>');
+      fallbackCountries.forEach(country => {
+        $select.append(new Option(country, country));
+      });
+    });
+
+    $('.myCountry').select2({
+      placeholder: 'Select a country...',
+      allowClear: true,
+      width: '100%'
+    });
+  }
+}
+
+// 页面加载完成后初始化
+$(document).ready(initCountrySelect2);
+
+// （可选）暴露函数，供后续动态添加的表单调用
+// window.initCountrySelect2 = initCountrySelect2;
+</script></body>
+</html>
+
+
+<style>
+    .modal {
+        display: block; /* 默认隐藏 */
+        position: fixed; /* 根据浏览器定位 */
+        z-index: 999; /* 放在顶部 */
+        left: 0;
+        top: 0;
+        width: 100%; /* 全宽 */
+        height: 100%; /* 全高 */
+        overflow: auto; /* 允许滚动 */
+        background-color: rgba(0,0,0,0.4); /* 背景色 */
+    }
+    /*模态框内容*/
+    @media (min-width: 1100px){
+        .modal-content {
+            display: flex; /*采用flexbox布局*/
+            flex-direction: column; /*垂直排列*/
+            position: relative;
+            background-color: #fefefe;
+            margin: 10% auto; /*距顶部15% 水平居中*/
+            /*padding: 20px;*/
+            border: 1px solid #888;
+            width: 40%;
+            /*height: 50%;*/
+            animation: topDown 0.4s; /*自定义动画，从模态框内容上到下出现*/
+        }
+    }
+    @media (max-width: 1100px){
+        .modal-content {
+            display: flex; /*采用flexbox布局*/
+            flex-direction: column; /*垂直排列*/
+            position: relative;
+            background-color: #fefefe;
+            margin: 50% auto; /*距顶部15% 水平居中*/
+            /*padding: 20px;*/
+            border: 1px solid #888;
+            width: 80%;
+            /*height: 50%;*/
+            animation: topDown 0.4s; /*自定义动画，从模态框内容上到下出现*/
+        }
+    }
+    @keyframes topDown {
+        from {top: -300px; opacity: 0}
+        to {top: 0; opacity: 1}
+    }
+    /*模态框头部*/
+    .modal-header {
+        display: flex; /*采用flexbox布局*/
+        flex-direction: row; /*水平布局*/
+        align-items: center; /*内容垂直居中*/
+        justify-content: space-between;
+    }
+    /*关闭X 样式*/
+    .close {
+        color: #000000;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+    .close:hover {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+</style>
+<script>
+    // $(document).ready(function() {  
+    //     var timeLeft = 10; // 倒计时的秒数  
+    //     var countdownElement = $('#countdown');  
+    //     var countdownInterval = setInterval(function() {  
+    //         timeLeft--;  
+    //         countdownElement.text(timeLeft);  
+    //         if (timeLeft <= 0) {  
+    //             clearInterval(countdownInterval);  
+    //             window.location.href = "https://www.dobot-robots.com/"; // 替换为你想要跳转的页面地址  
+    //         }  
+    //     }, 1000);  
+    // });  
+    (function() {
+        /*建立模态框对象*/
+        var modalBox = {};
+        /*获取模态框*/
+        modalBox.modal = document.getElementById("myModal");
+        /*获得trigger按钮*/
+        modalBox.specification = document.getElementById("specification");
+        /*获得关闭按钮*/
+        modalBox.closeBtn = document.getElementById("closeBtn");
+        /*模态框显示*/
+        modalBox.show = function() {
+            console.log(this.modal);
+            this.modal.style.display = "block";
+        }
+        /*模态框关闭*/
+        modalBox.close = function() {
+            this.modal.style.display = "none";
+        }
+        /*当用户点击模态框内容之外的区域，模态框也会关闭*/
+        modalBox.outsideClick = function() {
+            var modal = this.modal;
+            window.onclick = function(event) {
+                if(event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        }
+        /*模态框初始化*/
+        modalBox.init = function() {
+            var that = this;
+            this.specification.onclick = function() {
+                that.show();
+            }
+            this.closeBtn.onclick = function() {
+                that.close();
+            }
+            this.outsideClick();
+        }
+        modalBox.init();
+        
+
+    })();
+</script>

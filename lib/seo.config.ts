@@ -1,0 +1,46 @@
+// ─── SEO Configuration ────────────────────────────────────────────────────────
+// Centralne miejsce do zmiany ustawień SEO.
+//
+// PRZED WDROŻENIEM NA madejpak.pl:
+//   1. Zmień BLOCK_INDEXING na false
+//   2. Upewnij się że SITE_URL to 'https://madejpak.pl'
+//   3. Dodaj OG image do /public/og-image.jpg (1200x630px)
+
+// ─── Przełącznik blokady indeksowania ────────────────────────────────────────
+// true  = robots.txt blokuje wszystkich crawlerów (środowisko testowe)
+// false = robots.txt pozwala na indeksowanie (produkcja)
+export const BLOCK_INDEXING = true;
+
+// ─── Docelowy URL produkcyjny ─────────────────────────────────────────────────
+export const SITE_URL = 'https://madejpak.pl';
+
+// ─── Dane firmy ───────────────────────────────────────────────────────────────
+export const SITE_NAME = 'MadejPak';
+export const SITE_DESCRIPTION =
+  'Projektujemy i integrujemy linie pakujące, wdrażamy automatykę i robotyzację oraz dostarczamy maszyny dla przemysłu.';
+
+// ─── OG image default ─────────────────────────────────────────────────────────
+export const OG_IMAGE = `${SITE_URL}/og-image.jpg`;
+
+// ─── Dane kontaktowe (dla JSON-LD) ────────────────────────────────────────────
+export const COMPANY = {
+  name:          'PPHU MadejPak Sp. z o.o.',
+  legalName:     'PPHU MADEJPAK SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ',
+  url:           SITE_URL,
+  logo:          `${SITE_URL}/MadejPakLogo.svg`,
+  email:         'biuro@madejpak.pl',
+  phone:         '+48123454397',
+  foundingYear:  '2000',
+  taxID:         '8681986442',   // NIP
+  vatID:         'PL8681986442', // VAT EU
+  address: {
+    streetAddress:   'Dziewin 333',
+    addressLocality: 'Dziewin',
+    postalCode:      '32-708',
+    addressRegion:   'małopolskie',
+    addressCountry:  'PL',
+  },
+  sameAs: [
+    'https://www.linkedin.com/company/madejpak',  // TODO: uzupełnić jeśli istnieje
+  ],
+};
