@@ -133,12 +133,39 @@ function DropdownPanel({ item, open, onMouseEnter, onMouseLeave, onClose }: Drop
   const pathname = usePathname();
   if (!item.children?.length) return null;
 
+  // Check if children use groups
+  const hasGroups = item.children.some((c) => c.group);
+
+  // Build grouped structure when needed
+  const groups: { name: string; items: typeof item.children }[] = [];
+  if (hasGroups) {
+    const seen = new Map<string, (typeof item.children)>();
+    for (const child of item.children) {
+      const g = child.group ?? '';
+      if (!seen.has(g)) seen.set(g, []);
+      seen.get(g)!.push(child);
+    }
+    seen.forEach((items, name) => groups.push({ name, items }));
+  }
+
+  const subLinkSx = (isActive: boolean) => ({
+    display: 'flex',
+    alignItems: 'center',
+    px: 2,
+    py: 1,
+    textDecoration: 'none',
+    color: isActive ? ACCENT : 'var(--dim-75)',
+    fontWeight: isActive ? 600 : 400,
+    fontSize: '0.8rem',
+    letterSpacing: 0,
+    whiteSpace: 'nowrap',
+    borderRadius: '4px',
+    transition: 'color 0.12s ease, background-color 0.12s ease',
+    '&:hover': { color: 'var(--text)', bgcolor: 'var(--surface-05)' },
+    '&:focus-visible': { outline: `2px solid ${ACCENT}`, outlineOffset: '-2px' },
+  });
+
   return (
-    /*
-     * The pt (padding-top) creates a mouse-capture buffer between the
-     * trigger button and the visible panel, so fast diagonal moves
-     * don't accidentally close the menu.
-     */
     <Box
       role="menu"
       aria-label={`Podmenu: ${item.label}`}
@@ -156,7 +183,7 @@ function DropdownPanel({ item, open, onMouseEnter, onMouseLeave, onClose }: Drop
         pointerEvents: open ? 'auto' : 'none',
         opacity: open ? 1 : 0,
         transition: 'opacity 0.15s ease, transform 0.15s ease',
-        minWidth: 230,
+        minWidth: hasGroups ? 480 : 230,
       }}
     >
       <Box
@@ -166,45 +193,103 @@ function DropdownPanel({ item, open, onMouseEnter, onMouseLeave, onClose }: Drop
           borderRadius: '8px',
           overflow: 'hidden',
           boxShadow: '0 12px 40px rgba(0,0,0,0.55)',
-          py: 1,
         }}
       >
-        {item.children.map((sub) => {
-          const isActive = pathname === sub.href;
-          return (
-            <Box
-              key={sub.href}
-              component={Link}
-              href={sub.href}
-              role="menuitem"
-              onClick={onClose}
-              sx={{
-                display: 'flex',
-                alignItems: 'center',
-                px: 2.5,
-                py: 1.25,
-                textDecoration: 'none',
-                color: isActive ? ACCENT : 'var(--dim-75)',
-                fontWeight: isActive ? 600 : 400,
-                fontSize: '0.875rem',
-                letterSpacing: 0,
-                whiteSpace: 'nowrap',
-                transition: 'color 0.12s ease, background-color 0.12s ease',
-                '&:hover': {
-                  color: 'var(--text)',
-                  bgcolor: 'var(--surface-05)',
-                },
-                '&:focus-visible': {
-                  outline: `2px solid ${ACCENT}`,
-                  outlineOffset: '-2px',
-                },
-              }}
-            >
-              {sub.label}
-              <ChevronRight />
+        {hasGroups ? (
+          /* ── Grouped layout ── */
+          <>
+            <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 0, p: 2 }}>
+              {groups.map((group) => (
+                <Box key={group.name}>
+                  <Typography sx={{
+                    px: 2, pt: 0.5, pb: 1,
+                    fontSize: '0.6rem', fontWeight: 700, letterSpacing: '0.12em',
+                    textTransform: 'uppercase', color: 'var(--dim-28)',
+                  }}>
+                    {group.name}
+                  </Typography>
+                  {group.items!.map((sub) => (
+                    <Box
+                      key={sub.href}
+                      component={Link}
+                      href={sub.href}
+                      role="menuitem"
+                      onClick={onClose}
+                      sx={subLinkSx(pathname === sub.href)}
+                    >
+                      {sub.label}
+                    </Box>
+                  ))}
+                </Box>
+              ))}
             </Box>
-          );
-        })}
+
+            {item.footerCta && (
+              <Box sx={{ borderTop: `1px solid ${BORDER}`, px: 2.5, py: 1.5 }}>
+                <Box
+                  component={Link}
+                  href={item.footerCta.href}
+                  onClick={onClose}
+                  sx={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: 0.75,
+                    px: 2, py: 0.875,
+                    bgcolor: ACCENT,
+                    color: '#fff',
+                    borderRadius: '5px',
+                    textDecoration: 'none',
+                    fontSize: '0.8rem',
+                    fontWeight: 700,
+                    transition: 'background-color 0.15s ease',
+                    '&:hover': { bgcolor: ACCENT_HOVER },
+                  }}
+                >
+                  {item.footerCta.label}
+                  <Box component="svg" viewBox="0 0 16 16" fill="none" aria-hidden="true"
+                    sx={{ width: 12, height: 12 }}>
+                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor"
+                      strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                  </Box>
+                </Box>
+              </Box>
+            )}
+          </>
+        ) : (
+          /* ── Simple list (no groups) ── */
+          <Box sx={{ py: 1 }}>
+            {item.children.map((sub) => {
+              const isActive = pathname === sub.href;
+              return (
+                <Box
+                  key={sub.href}
+                  component={Link}
+                  href={sub.href}
+                  role="menuitem"
+                  onClick={onClose}
+                  sx={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    px: 2.5,
+                    py: 1.25,
+                    textDecoration: 'none',
+                    color: isActive ? ACCENT : 'var(--dim-75)',
+                    fontWeight: isActive ? 600 : 400,
+                    fontSize: '0.875rem',
+                    letterSpacing: 0,
+                    whiteSpace: 'nowrap',
+                    transition: 'color 0.12s ease, background-color 0.12s ease',
+                    '&:hover': { color: 'var(--text)', bgcolor: 'var(--surface-05)' },
+                    '&:focus-visible': { outline: `2px solid ${ACCENT}`, outlineOffset: '-2px' },
+                  }}
+                >
+                  {sub.label}
+                  <ChevronRight />
+                </Box>
+              );
+            })}
+          </Box>
+        )}
       </Box>
     </Box>
   );

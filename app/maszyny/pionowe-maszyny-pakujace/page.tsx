@@ -259,6 +259,41 @@ export default function PionoweMaszynyPage() {
         </Container>
       </Box>
 
+      {/* ── Co to jest i do czego służy ── */}
+      <Box sx={{ py: { xs: 7, md: 10 }, bgcolor: BG_ALT, borderBottom: `1px solid ${BORDER}` }}>
+        <Container maxWidth="lg">
+          <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: { xs: 5, md: 10 } }}>
+            <Box>
+              <Typography sx={{ fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: ACCENT, mb: 2 }}>
+                Czym jest ta maszyna
+              </Typography>
+              <Typography variant="h2" sx={{ fontSize: { xs: '1.4rem', md: '1.75rem' }, fontWeight: 700, letterSpacing: '-0.02em', lineHeight: 1.2, mb: 3 }}>
+                Masz produkt sypki, proszkowy lub granulowany i chcesz go pakować w torebki?
+              </Typography>
+              <Typography sx={{ fontSize: '0.95rem', color: TEXT_DIM, lineHeight: 1.8 }}>
+                Pionowa maszyna pakująca pobiera folię z rolki, formuje z niej torebkę, dozuje do środka odmierzoną porcję produktu i zgrzewa opakowanie — wszystko automatycznie, w jednym cyklu. Na wyjściu masz gotowe, szczelne torebki w równych porcjach, gotowe do sprzedaży lub dalszego pakowania zbiorczego.
+              </Typography>
+            </Box>
+            <Box>
+              <Typography sx={{ fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: ACCENT, mb: 2 }}>
+                Kiedy to rozwiązanie jest dla Ciebie
+              </Typography>
+              {[
+                'Pakujesz ręcznie i chcesz to zautomatyzować — maszyna zastępuje kilka stanowisk i pracuje bez przerwy.',
+                'Potrzebujesz stałych porcji — każda torebka waży dokładnie tyle samo, bez odchyłek.',
+                'Twój produkt to coś sypkiego: mąka, cukier, kawa, granulat, proszek, kasza, nawóz, karma.',
+                'Chcesz różne formaty torebek — maszyna zmienia format bez wymiany całego oprzyrządowania.',
+              ].map((text) => (
+                <Box key={text} sx={{ display: 'flex', alignItems: 'flex-start', gap: 1.5, mb: 2 }}>
+                  <Box sx={{ width: 5, height: 5, borderRadius: '50%', bgcolor: ACCENT, mt: '8px', flexShrink: 0 }} />
+                  <Typography sx={{ fontSize: '0.9rem', color: TEXT_DIM, lineHeight: 1.75 }}>{text}</Typography>
+                </Box>
+              ))}
+            </Box>
+          </Box>
+        </Container>
+      </Box>
+
       {/* ── Jak działa VFFS ── */}
       <Box sx={{ py: { xs: 6, md: 8 }, borderBottom: `1px solid ${BORDER}` }}>
         <Container maxWidth="lg">

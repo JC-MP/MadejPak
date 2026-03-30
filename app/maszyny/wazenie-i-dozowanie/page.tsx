@@ -42,14 +42,56 @@ function ArrowRight() {
   );
 }
 
+function Icon({ path, size = 20 }: { path: string; size?: number }) {
+  return (
+    <Box component="svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"
+      sx={{ width: size, height: size, flexShrink: 0 }}>
+      <path d={path} stroke="currentColor" strokeWidth="1.5"
+        strokeLinecap="round" strokeLinejoin="round" />
+    </Box>
+  );
+}
+
+function IconBox({ path }: { path: string }) {
+  return (
+    <Box sx={{
+      width: 40, height: 40, borderRadius: '9px',
+      bgcolor: `${ACCENT}15`, color: ACCENT,
+      display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0,
+    }}>
+      <Icon path={path} />
+    </Box>
+  );
+}
+
 // ─── Data ────────────────────────────────────────────────────────────────────
 
 const FEATURES = [
-  { title: 'Ważenie według masy i liczby sztuk',    desc: 'Porcjowanie w jednym cyklu — wagowe lub zliczanie sztuk. Dokładność powtarzalna niezależnie od tempa linii.' },
-  { title: 'Szeroki zakres produktów',              desc: 'Produkty sypkie, ziarniste, granulowane, kruche, lepkie i śliskie — bez konieczności zmiany urządzenia.' },
-  { title: 'Ograniczone uszkodzenia',               desc: 'Konstrukcja misek i kanałów zminimalizowana pod kątem produktów łamliwych i kruchych — herbatniki, chipsy, wafle.' },
-  { title: 'Integracja z maszyną pakującą',         desc: 'Waga montowana nad maszyną VFFS lub pakowaczką tacek. Bezpośrednie dozowanie do opakowania bez ręcznych operacji.' },
-  { title: 'Pakowanie do woreczków i na tacki',     desc: 'Dostosowane do różnych typów opakowań jednostkowych — woreczki foliowe, tacki MAP, opakowania luzem.' },
+  {
+    icon: 'M12 3v3M9 6h6M7 20h10M12 6l-3.5 11h7L12 6z',
+    title: 'Ważenie według masy i liczby sztuk',
+    desc: 'Porcjowanie w jednym cyklu — wagowe lub zliczanie sztuk. Dokładność powtarzalna niezależnie od tempa linii.',
+  },
+  {
+    icon: 'M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z',
+    title: 'Szeroki zakres produktów',
+    desc: 'Produkty sypkie, ziarniste, granulowane, kruche, lepkie i śliskie — bez konieczności zmiany urządzenia.',
+  },
+  {
+    icon: 'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10zM9 12l2 2 4-4',
+    title: 'Ograniczone uszkodzenia',
+    desc: 'Konstrukcja misek i kanałów zminimalizowana pod kątem produktów łamliwych i kruchych — herbatniki, chipsy, wafle.',
+  },
+  {
+    icon: 'M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71',
+    title: 'Integracja z maszyną pakującą',
+    desc: 'Waga montowana nad maszyną VFFS lub pakowaczką tacek. Bezpośrednie dozowanie do opakowania bez ręcznych operacji.',
+  },
+  {
+    icon: 'M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16zM3.27 6.96L12 12.01l8.73-5.05M12 22.08V12',
+    title: 'Pakowanie do woreczków i na tacki',
+    desc: 'Dostosowane do różnych typów opakowań jednostkowych — woreczki foliowe, tacki MAP, opakowania luzem.',
+  },
 ];
 
 const APPLICATIONS = [
@@ -90,9 +132,21 @@ const SCALE_TYPES = [
 ];
 
 const DOSING_TYPES = [
-  { label: 'Wagowe wielogłowicowe', desc: 'Główna metoda dla nieregularnych kształtów i produktów wymagających precyzji masowej. Wiele głowic pracuje równocześnie — wyniki sumowane są do zadanej masy docelowej.' },
-  { label: 'Objętościowe',          desc: 'Dozowanie kubkowe lub objętościowe stosowane dla produktów jednorodnych o stabilnej gęstości. Niższy koszt systemu przy akceptowalnej dokładności masowej.' },
-  { label: 'Liniowe',               desc: 'Systemy ważenia liniowego dla produktów pakowanych w ciągłym strumieniu. Stosowane m.in. przy pakowaniu na tacki i do pojemników.' },
+  {
+    icon: 'M12 2a3 3 0 100 6 3 3 0 000-6zM4.5 9.5a3 3 0 100 6 3 3 0 000-6zM19.5 9.5a3 3 0 100 6 3 3 0 000-6zM12 8v3.5M12 11.5l-7.5 2M12 11.5l7.5 2',
+    label: 'Wagowe wielogłowicowe',
+    desc: 'Główna metoda dla nieregularnych kształtów i produktów wymagających precyzji masowej. Wiele głowic pracuje równocześnie — wyniki sumowane są do zadanej masy docelowej.',
+  },
+  {
+    icon: 'M4 5h16l-1.5 13H5.5L4 5zM8 5V3M16 5V3M4 9h16',
+    label: 'Objętościowe',
+    desc: 'Dozowanie kubkowe lub objętościowe stosowane dla produktów jednorodnych o stabilnej gęstości. Niższy koszt systemu przy akceptowalnej dokładności masowej.',
+  },
+  {
+    icon: 'M5 12h14M13 6l6 6-6 6',
+    label: 'Liniowe',
+    desc: 'Systemy ważenia liniowego dla produktów pakowanych w ciągłym strumieniu. Stosowane m.in. przy pakowaniu na tacki i do pojemników.',
+  },
 ];
 
 const PARTNERS = [
@@ -171,10 +225,13 @@ export default function WazenieIDozowaniePage() {
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
               {FEATURES.map((f, i) => (
                 <Box key={f.title}
-                  sx={{ display: 'grid', gridTemplateColumns: '220px 1fr', gap: 3, py: 2.5, borderBottom: i < FEATURES.length - 1 ? `1px solid ${BORDER}` : 'none', alignItems: 'start' }}>
-                  <Typography sx={{ fontSize: '0.875rem', fontWeight: 700, color: 'var(--text)', lineHeight: 1.35 }}>
-                    {f.title}
-                  </Typography>
+                  sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '260px 1fr' }, gap: { xs: 1, md: 3 }, py: 2.5, borderBottom: i < FEATURES.length - 1 ? `1px solid ${BORDER}` : 'none', alignItems: 'center' }}>
+                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.75 }}>
+                    <IconBox path={f.icon} />
+                    <Typography sx={{ fontSize: '0.875rem', fontWeight: 700, color: 'var(--text)', lineHeight: 1.35 }}>
+                      {f.title}
+                    </Typography>
+                  </Box>
                   <Typography sx={{ fontSize: '0.85rem', color: TEXT_DIM, lineHeight: 1.7 }}>
                     {f.desc}
                   </Typography>
@@ -244,7 +301,8 @@ export default function WazenieIDozowaniePage() {
             {DOSING_TYPES.map((d) => (
               <Box key={d.label}
                 sx={{ bgcolor: BG_CARD, border: `1px solid ${BORDER}`, borderTop: `3px solid ${ACCENT}`, borderRadius: '4px', p: { xs: 3, md: 3.5 } }}>
-                <Typography sx={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--text)', mb: 1.5 }}>{d.label}</Typography>
+                <IconBox path={d.icon} />
+                <Typography sx={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--text)', mt: 2, mb: 1.5 }}>{d.label}</Typography>
                 <Typography sx={{ fontSize: '0.85rem', color: TEXT_DIM, lineHeight: 1.75 }}>{d.desc}</Typography>
               </Box>
             ))}
@@ -302,15 +360,34 @@ export default function WazenieIDozowaniePage() {
             </Box>
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
               {[
-                { label: 'Z maszyną VFFS',         desc: 'Waga nad maszyną VFFS dostarcza porcje wagowe bezpośrednio do formowanego woreczka. Stosowane dla produktów sypkich, granulowanych i ziarnistych.' },
-                { label: 'Z pakowaczką tacek',      desc: 'Dozowanie na tacki MAP lub do pojemników. Ważenie kontroluje masę porcji, maszyna zamyka i uszczelnia opakowanie.' },
-                { label: 'Z maszyną workującą',     desc: 'Systemy Concetti łączą ważenie i workowanie w jedną linię — dla produktów bulk i sypkich w workach otwartych lub zaworowych.' },
-                { label: 'Z transportem i podajnikiem', desc: 'Podajniki wibracyjne lub taśmowe doprowadzają produkt do wagi. Wyjście z wagi trafia grawitacyjnie lub przez rynnę do opakowania.' },
+                {
+                  icon: 'M12 2v5M12 22v-5M9 4.5l3-2.5 3 2.5M9 19.5l3 2.5 3-2.5M5 10h14M5 14h14',
+                  label: 'Z maszyną VFFS',
+                  desc: 'Waga nad maszyną VFFS dostarcza porcje wagowe bezpośrednio do formowanego woreczka. Stosowane dla produktów sypkich, granulowanych i ziarnistych.',
+                },
+                {
+                  icon: 'M3 9h18v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9zM3 9V7a2 2 0 012-2h14a2 2 0 012 2v2M8 5V3M16 5V3',
+                  label: 'Z pakowaczką tacek',
+                  desc: 'Dozowanie na tacki MAP lub do pojemników. Ważenie kontroluje masę porcji, maszyna zamyka i uszczelnia opakowanie.',
+                },
+                {
+                  icon: 'M6 2h12l2 19H4L6 2zM9 9a3 3 0 006 0',
+                  label: 'Z maszyną workującą',
+                  desc: 'Systemy Concetti łączą ważenie i workowanie w jedną linię — dla produktów bulk i sypkich w workach otwartych lub zaworowych.',
+                },
+                {
+                  icon: 'M3 12h18M7 8v8M17 8v8M3 8h18M3 16h18',
+                  label: 'Z transportem i podajnikiem',
+                  desc: 'Podajniki wibracyjne lub taśmowe doprowadzają produkt do wagi. Wyjście z wagi trafia grawitacyjnie lub przez rynnę do opakowania.',
+                },
               ].map((item) => (
                 <Box key={item.label}
-                  sx={{ bgcolor: BG_CARD, border: `1px solid ${BORDER}`, borderRadius: '4px', p: { xs: 2.5, md: 3 } }}>
-                  <Typography sx={{ fontSize: '0.875rem', fontWeight: 700, color: 'var(--text)', mb: 0.75 }}>{item.label}</Typography>
-                  <Typography sx={{ fontSize: '0.83rem', color: TEXT_DIM, lineHeight: 1.65 }}>{item.desc}</Typography>
+                  sx={{ bgcolor: BG_CARD, border: `1px solid ${BORDER}`, borderRadius: '4px', p: { xs: 2.5, md: 3 }, display: 'flex', gap: 2, alignItems: 'flex-start' }}>
+                  <IconBox path={item.icon} />
+                  <Box>
+                    <Typography sx={{ fontSize: '0.875rem', fontWeight: 700, color: 'var(--text)', mb: 0.75 }}>{item.label}</Typography>
+                    <Typography sx={{ fontSize: '0.83rem', color: TEXT_DIM, lineHeight: 1.65 }}>{item.desc}</Typography>
+                  </Box>
                 </Box>
               ))}
             </Box>

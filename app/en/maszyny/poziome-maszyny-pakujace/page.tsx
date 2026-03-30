@@ -10,9 +10,9 @@ import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'Horizontal Flow Wrap Packaging Machines | MadejPak',
+  title: 'Horizontal Flow Wrap Packaging Machines GSP | MadejPak',
   description:
-    'Horizontal flow wrap packaging machines GSP – Tecno Pack from MadejPak. Models FP 095E, FP 100E, FP 100 HP Box Motion. Packaging for food, chemical and industrial products.',
+    'Horizontal flow wrap packaging machines GSP from MadejPak. S series (45, 50, 55, 75) and EVO series (MAP, box motion). Food, cosmetics and industrial packaging — standard to modified atmosphere.',
   alternates: {
     canonical: `${SITE_URL}/en/maszyny/poziome-maszyny-pakujace`,
     languages: {
@@ -23,8 +23,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     url:         `${SITE_URL}/en/maszyny/poziome-maszyny-pakujace`,
-    title:       'Horizontal Flow Wrap Packaging Machines | MadejPak',
-    description: 'Horizontal flow wrap packaging machines GSP – Tecno Pack from MadejPak. Models FP 095E, FP 100E, FP 100 HP Box Motion.',
+    title:       'Horizontal Flow Wrap Packaging Machines GSP | MadejPak',
+    description: 'Horizontal flow wrap machines GSP from MadejPak. S series and EVO series (MAP, box motion). Food, cosmetics and industrial packaging.',
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Horizontal Flow Wrap Machines – MadejPak' }],
   },
 };
@@ -162,8 +162,8 @@ function ModelCard({ model }: { model: MachineModel }) {
           {model.features.map((f) => (
             <Box key={f} sx={{
               px: 1.25, py: 0.35,
-              bgcolor: `${ACCENT}0D`, border: `1px solid ${ACCENT}25`,
-              borderRadius: '2px', fontSize: '0.7rem', color: 'rgba(232,97,10,0.85)',
+              bgcolor: ACCENT,
+              borderRadius: '2px', fontSize: '0.7rem', color: '#fff',
             }}>
               {f}
             </Box>
@@ -176,57 +176,136 @@ function ModelCard({ model }: { model: MachineModel }) {
 
 const MODELS: MachineModel[] = [
   {
-    id: 'fp095e',
-    name: 'FP 095 E',
-    tagline: 'Compact, high output — up to 350 packs/min',
+    id: 'gsp45s',
+    name: 'GSP 45 S',
+    badge: 'New model',
+    tagline: 'Compact flow pack — versatile and easy to operate',
     description:
-      'Multi-axis horizontal machine with cantilever construction — designed for automatic production lines. High throughput up to 350 packs/min is combined with ergonomic access to the forming area and easy sanitation. Handles heat-seal films and cold-seal films for heat-sensitive products.',
+      'Electronic horizontal pillow pack wrapper with cantilever frame construction. Compact design works equally well in food and non-food industries. Simple operation and easy format changeover — a great entry point for packaging automation.',
     specs: [
-      { label: 'Throughput', value: 'up to 350 pks/min' },
-      { label: 'Max film width', value: '500 mm' },
-      { label: 'Max prod. width', value: '200 mm' },
-      { label: 'Max prod. height', value: '120 mm' },
+      { label: 'Frame', value: 'Cantilever' },
+      { label: 'Application', value: 'Food & non-food' },
     ],
-    features: ['Multi-axis PLC control', 'Touch screen', 'Recipe storage', 'Cold seal', 'Machine diagnostics'],
-    products: ['Bars', 'Chocolate', 'Biscuits', 'Soap', 'Cheese slices', 'OTC tablets'],
-    imageSrc: '/images/machines/flowpack-fp095e.jpg',
-    imageAlt: 'Tecno Pack FP 095 E – horizontal packaging machine',
+    features: ['Electronic control', 'Cantilever frame', 'Easy format change', 'Heat-seal films'],
+    products: ['Bars', 'Biscuits', 'Soap', 'Cosmetics', 'Technical components'],
+    imageSrc: '/images/machines/flowpack-gsp45s.jpg',
+    imageAlt: 'GSP 45 S – compact flow pack machine',
   },
   {
-    id: 'fp100e',
-    name: 'FP 100 E',
-    badge: 'Standard series',
-    tagline: 'Versatile flow wrap — food and industrial products',
+    id: 'gsp50s',
+    name: 'GSP 50 S',
+    tagline: 'Versatile flow wrap for a wider range of products',
     description:
-      'Standard horizontal machine series from Tecno Pack — flexible configuration for a wide range of products and packaging formats. Modular design enables integration with automatic feeding, weighing and marking systems. Proven in food, cosmetics and industrial sectors for formats from a few to several hundred grams.',
+      'Electronic horizontal wrapper with cantilever frame — larger format than GSP 45 S, equally simple to operate. Proven in food and non-food industries. Handles a wide range of product shapes and sizes.',
     specs: [
-      { label: 'Throughput', value: 'up to 200 pks/min' },
-      { label: 'Film format', value: 'wide range' },
-      { label: 'Films', value: 'PP, OPP, PE, laminates' },
-      { label: 'Control', value: 'PLC + HMI' },
+      { label: 'Frame', value: 'Cantilever' },
+      { label: 'Application', value: 'Food & non-food' },
     ],
-    features: ['Print module', 'No-product-no-bag system', 'Toolless format change', 'Auto film tension', 'INOX version'],
-    products: ['Bread', 'Vegetables', 'Chemical products', 'Pasta', 'Salads', 'Accessories'],
-    imageSrc: '/images/machines/flowpack-fp100e.jpg',
-    imageAlt: 'Tecno Pack FP 100 E – standard flow pack machine',
+    features: ['Electronic control', 'Cantilever frame', 'Wide format range', 'Heat-seal & cold-seal films'],
+    products: ['Bread', 'Cheese', 'Vegetables', 'Cosmetics', 'DIY articles'],
+    imageSrc: '/images/machines/flowpack-gsp50s.jpg',
+    imageAlt: 'GSP 50 S – flow pack machine',
   },
   {
-    id: 'fp100hp',
-    name: 'FP 100 HP Box Motion',
-    badge: 'High Performance',
-    tagline: 'Box motion jaw — delicate products at maximum throughput',
+    id: 'gsp55s',
+    name: 'GSP 55 S',
+    badge: 'Most popular',
+    tagline: 'High throughput and multi-axis loader support',
     description:
-      'High-performance version of the FP 100 series with a box motion sealing head — jaws move synchronously with the product, eliminating the risk of damage during sealing. Designed for delicate or irregular products requiring precise package closure at high line speeds. Optional automatic product infeed.',
+      'Electronic horizontal wrapper with cantilever frame — supports multi-axis loaders, enabling integration with sorters, vibratory tables and automatic feeding systems. Ideal for building complete production lines.',
     specs: [
-      { label: 'Throughput', value: 'up to 400 pks/min' },
-      { label: 'Head', value: 'Box Motion' },
-      { label: 'Film format', value: 'up to 520 mm width' },
-      { label: 'Control', value: 'Multi-axis PLC' },
+      { label: 'Frame', value: 'Cantilever' },
+      { label: 'Loaders', value: 'Multi-axis' },
+      { label: 'Application', value: 'Food & non-food' },
     ],
-    features: ['Box motion jaw', 'Product synchronisation', 'No pack deformation', 'Auto infeed', 'High sealing precision'],
-    products: ['Croissants', 'Ice cream', 'Fragile products', 'Irregular items', 'Muffins', 'Fish'],
-    imageSrc: '/images/machines/flowpack-fp100hp.jpg',
-    imageAlt: 'Tecno Pack FP 100 HP Box Motion – high performance flow pack machine',
+    features: ['Electronic control', 'Multi-axis loader support', 'Production line integration', 'Cantilever frame'],
+    products: ['Bread & pastries', 'Chocolate', 'Dairy', 'Fruit & vegetables', 'Chemical products'],
+    imageSrc: '/images/machines/flowpack-gsp55s.jpg',
+    imageAlt: 'GSP 55 S – flow pack with multi-axis loaders',
+  },
+  {
+    id: 'gsp55sbb',
+    name: 'GSP 55 S BB',
+    badge: 'New model',
+    tagline: 'Bottom seal — clean package appearance without top seam',
+    description:
+      'Bottom Brake (BB) version — the film reel is fed from below, so the longitudinal seal is hidden underneath the package. Result: clean, attractive shelf presentation. Popular in food and cosmetics industries.',
+    specs: [
+      { label: 'Film reel', value: 'From below (bottom brake)' },
+      { label: 'Longitudinal seal', value: 'Under the package' },
+      { label: 'Application', value: 'Food & non-food' },
+    ],
+    features: ['Bottom Brake (reel from below)', 'Seal hidden under pack', 'Clean shelf appearance', 'Electronic control'],
+    products: ['Confectionery', 'Cosmetics', 'Premium products', 'Bread', 'Cheese'],
+    imageSrc: '/images/machines/flowpack-gsp55sbb.jpg',
+    imageAlt: 'GSP 55 S BB – flow pack bottom brake',
+  },
+  {
+    id: 'gsp75s',
+    name: 'GSP 75 S',
+    badge: 'Highest throughput',
+    tagline: 'Heavy-duty frame and cantable sealing units — for the most demanding lines',
+    description:
+      'Exceptionally robust packaging machine supporting multi-axis loaders. Features special cantable longitudinal sealing units — ensuring precise seals even at high speed and with thicker gas-barrier films. Built for intensive multi-shift production.',
+    specs: [
+      { label: 'Frame', value: 'Heavy-duty industrial' },
+      { label: 'Long. seal unit', value: 'Cantable' },
+      { label: 'Loaders', value: 'Multi-axis' },
+    ],
+    features: ['Cantable longitudinal sealing units', 'High mechanical durability', 'Multi-axis loader support', 'Standard & gas-barrier films'],
+    products: ['Biscuits & wafers', 'Bars & chocolate', 'FMCG products', 'Industrial articles'],
+    imageSrc: '/images/machines/flowpack-gsp75s.jpg',
+    imageAlt: 'GSP 75 S – high throughput robust flow pack',
+  },
+  {
+    id: 'gsp65evo',
+    name: 'GSP 65 EVO',
+    badge: 'Modified atmosphere',
+    tagline: 'MAP and box motion — industrial hermetic packaging',
+    description:
+      'Industrial MAP (Modified Atmosphere Packaging) machine with electronically controlled box motion jaw system — jaws follow the product, guaranteeing hermetic seals even with variable bag lengths. Handles large, tall and in-chain products. Available with gas flushing (N₂/CO₂) or aroma spraying. PE and polyolefin films.',
+    specs: [
+      { label: 'Cross seal', value: 'Box motion (electronic)' },
+      { label: 'Packaging', value: 'MAP (modified atmosphere)' },
+      { label: 'Bag length', value: 'Variable' },
+    ],
+    features: ['Box motion – electronic sealing jaws', 'N₂/CO₂ gas flushing (MAP)', 'Aroma spraying (option)', 'Hermetic packaging', 'PE & polyolefin films', 'Variable bag length'],
+    products: ['Fresh meat & fish', 'Cheese & dairy', 'Ready meals', 'Large & tall products', 'In-chain products'],
+    imageSrc: '/images/machines/flowpack-gsp65evo.jpg',
+    imageAlt: 'GSP 65 EVO – MAP box motion packaging',
+  },
+  {
+    id: 'gsp65evobb',
+    name: 'GSP 65 EVO BB',
+    badge: 'New model',
+    tagline: 'MAP with box motion and bottom seal — shelf appeal plus airtight freshness',
+    description:
+      'Bottom Brake version of the GSP 65 EVO — combines all MAP box motion benefits with the aesthetic advantage of a hidden longitudinal seal under the package. Ideal for producers who prioritise both extended shelf life and on-shelf appearance.',
+    specs: [
+      { label: 'Cross seal', value: 'Box motion (electronic)' },
+      { label: 'Film reel', value: 'From below (bottom brake)' },
+      { label: 'Packaging', value: 'MAP (modified atmosphere)' },
+    ],
+    features: ['Box motion – electronic sealing jaws', 'Bottom Brake (seal hidden below)', 'N₂/CO₂ gas flushing (MAP)', 'Hermetic packaging', 'PE & polyolefin films'],
+    products: ['Fresh meat & fish', 'Premium cheeses', 'Ready meals', 'Tall & large products'],
+    imageSrc: '/images/machines/flowpack-gsp65evobb.jpg',
+    imageAlt: 'GSP 65 EVO BB – MAP box motion bottom brake',
+  },
+  {
+    id: 'gsp600trbbe',
+    name: 'GSP 600 TR BB-E',
+    tagline: 'MAP for large and heavy products — with motorised jaw closing',
+    description:
+      'Industrial MAP machine in Bottom Brake configuration only. Designed for large, tall and in-chain products. Optional motorised jaw closing mechanism enables high-speed operation with heavy-gauge films. PE and polyolefin films.',
+    specs: [
+      { label: 'Film reel', value: 'From below (bottom brake)' },
+      { label: 'Packaging', value: 'MAP (modified atmosphere)' },
+      { label: 'Jaw closing', value: 'Motorised (option)' },
+    ],
+    features: ['BB only (bottom brake)', 'Motorised jaw closing (option)', 'N₂/CO₂ gas flushing (MAP)', 'Heavy-gauge films at high speed', 'PE & polyolefin films'],
+    products: ['Large meat cuts', 'Fish & seafood', 'Large MAP products', 'In-chain products'],
+    imageSrc: '/images/machines/flowpack-gsp600trbbe.jpg',
+    imageAlt: 'GSP 600 TR BB-E – MAP for large products',
   },
 ];
 
@@ -256,7 +335,7 @@ export default function HorizontalMachinesPage() {
             <Box>
               <Typography sx={{ fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.18em',
                 textTransform: 'uppercase', color: ACCENT, mb: 2.5 }}>
-                GSP – Tecno Pack — flow pack
+                GSP — flow pack
               </Typography>
               <Typography component="h1" sx={{
                 fontSize: { xs: '2rem', md: '2.75rem', lg: '3.25rem' },
@@ -291,9 +370,44 @@ export default function HorizontalMachinesPage() {
               bgcolor: BG_CARD, border: `1px solid ${BORDER}`, borderRadius: '4px',
             }}>
               <StatChip value="400" label="packs/min – max throughput" />
-              <StatChip value="3" label="FP machine series" />
-              <StatChip value="4" label="industry sectors" />
-              <StatChip value="500mm" label="max film width" />
+              <StatChip value="8" label="GSP models in offer" />
+              <StatChip value="MAP" label="modified atmosphere packaging" />
+              <StatChip value="920mm" label="max film width" />
+            </Box>
+          </Box>
+        </Container>
+      </Box>
+
+      {/* ── Co to jest i do czego służy ── */}
+      <Box component="section" sx={{ py: { xs: 7, md: 10 }, borderBottom: `1px solid ${BORDER}` }}>
+        <Container maxWidth="xl">
+          <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: { xs: 5, md: 10 } }}>
+            <Box>
+              <Typography sx={{ fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: ACCENT, mb: 2 }}>
+                What this machine does
+              </Typography>
+              <Typography component="h2" sx={{ fontSize: { xs: '1.4rem', md: '1.75rem' }, fontWeight: 800, letterSpacing: '-0.02em', lineHeight: 1.2, mb: 3, color: 'var(--text)' }}>
+                Have a product you want to wrap in film — securely, neatly and fast?
+              </Typography>
+              <Typography sx={{ fontSize: '0.95rem', color: TEXT_DIM, lineHeight: 1.8 }}>
+                A horizontal packaging machine (flow pack) takes the product from the infeed, wraps it in film from a reel, forms the package and seals both ends — all in one continuous motion. The output is a ready, sealed film pack, one after another, at a constant rate.
+              </Typography>
+            </Box>
+            <Box>
+              <Typography sx={{ fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: ACCENT, mb: 2 }}>
+                When this solution is right for you
+              </Typography>
+              {[
+                'Your product has a consistent shape and can be fed onto a conveyor — bar, roll, cheese, confectionery, OTC product, industrial part.',
+                'You want clean, attractive film packaging — the machine wraps the product tightly on all sides.',
+                'You are packaging manually and want to replace that with automation — one machine replaces several workstations.',
+                'Throughput matters — flow packs can seal hundreds of products per minute.',
+              ].map((text) => (
+                <Box key={text} sx={{ display: 'flex', alignItems: 'flex-start', gap: 1.5, mb: 2 }}>
+                  <Box sx={{ width: 5, height: 5, borderRadius: '50%', bgcolor: ACCENT, mt: '8px', flexShrink: 0 }} />
+                  <Typography sx={{ fontSize: '0.9rem', color: TEXT_DIM, lineHeight: 1.75 }}>{text}</Typography>
+                </Box>
+              ))}
             </Box>
           </Box>
         </Container>
@@ -346,7 +460,7 @@ export default function HorizontalMachinesPage() {
             fontSize: { xs: '1.5rem', md: '2rem' }, fontWeight: 800,
             letterSpacing: '-0.02em', color: 'var(--text)', mb: { xs: 6, md: 8 }, maxWidth: 560,
           }}>
-            FP series – Tecno Pack machines at MadejPak
+            GSP series – flow wrap machines at MadejPak
           </Typography>
           <Stack spacing={3}>
             {MODELS.map((model) => (
@@ -476,8 +590,8 @@ export default function HorizontalMachinesPage() {
                 </Typography>
               </Box>
               <Typography sx={{ fontSize: '0.875rem', color: TEXT_DIM, lineHeight: 1.7, mb: 3 }}>
-                GSP (General System Pack) – Tecno Pack is an Italian manufacturer of horizontal packaging machines
-                (flow wrappers) with long-standing experience in the food, pharmaceutical and industrial sectors.
+                GSP (General System Pack) is an Italian manufacturer of horizontal packaging machines
+                (flow wrappers) with extensive experience in food, pharmaceutical and industrial sectors.
                 The modular machine design allows rapid adaptation to changing production formats.
               </Typography>
               <Stack spacing={1}>
@@ -515,15 +629,15 @@ export default function HorizontalMachinesPage() {
                 Flow pack machine selection guide
               </Typography>
               <Typography sx={{ fontSize: '0.875rem', color: TEXT_DIM, lineHeight: 1.7, mb: 2.5 }}>
-                We select the right horizontal machine model based on the product, throughput and film format.
-                Key parameters are product shape and dimensions, required line speed and film type.
+                We select the right GSP model based on product type, throughput and film format.
+                Key parameters are product shape and dimensions, required line speed and packaging type.
               </Typography>
               <Stack spacing={1.5}>
                 {[
-                  { label: 'Delicate product', val: 'FP 100 HP Box Motion' },
-                  { label: 'High throughput', val: 'FP 095 E (up to 350 pks/min)' },
-                  { label: 'Versatility', val: 'FP 100 E – wide range' },
-                  { label: 'Cold sealing', val: 'FP 095 E (cold seal)' },
+                  { label: 'Extended shelf life', val: 'GSP 65 EVO / GSP 600 TR BB-E (MAP)' },
+                  { label: 'Clean shelf appearance', val: 'GSP 55 S BB / GSP 65 EVO BB' },
+                  { label: 'High throughput line', val: 'GSP 75 S (cantable sealing)' },
+                  { label: 'Automation entry point', val: 'GSP 45 S / GSP 50 S' },
                 ].map((r) => (
                   <Box key={r.label} sx={{
                     display: 'flex', justifyContent: 'space-between', alignItems: 'center',
@@ -560,7 +674,7 @@ export default function HorizontalMachinesPage() {
                 Looking for a horizontal machine for your line?
               </Typography>
               <Typography sx={{ fontSize: { xs: '0.9rem', md: '0.95rem' }, color: TEXT_DIM, lineHeight: 1.75, maxWidth: 460 }}>
-                We will help select the right FP Tecno Pack model for your product, throughput and packaging requirements.
+                We will help select the right GSP model for your product, throughput and packaging requirements.
               </Typography>
             </Box>
             <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} sx={{ flexShrink: 0 }}>

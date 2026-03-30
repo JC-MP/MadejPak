@@ -167,8 +167,8 @@ function ModelCard({ model }: { model: MachineModel }) {
           {model.features.map((f) => (
             <Box key={f} sx={{
               px: 1.25, py: 0.35,
-              bgcolor: `${ACCENT}0D`, border: `1px solid ${ACCENT}25`,
-              borderRadius: '2px', fontSize: '0.7rem', color: 'rgba(232,97,10,0.85)',
+              bgcolor: ACCENT,
+              borderRadius: '2px', fontSize: '0.7rem', color: '#fff',
             }}>
               {f}
             </Box>

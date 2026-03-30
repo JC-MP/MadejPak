@@ -10,9 +10,9 @@ import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'Poziome maszyny pakujące Flow Pack – pakowanie żywności i produktów | MadejPak',
+  title: 'Poziome maszyny pakujące Flow Pack GSP – seria S i EVO | MadejPak',
   description:
-    'Poziome maszyny pakujące flow pack GSP – Tecno Pack. Pakowanie żywności, kosmetyków, produktów chemicznych i przemysłowych w folię. Modele FP 095E, FP 100E, FP 100 HP Box Motion.',
+    'Poziome maszyny pakujące flow pack GSP w ofercie MadejPak. Serie S (45, 50, 55, 75) i EVO (MAP). Pakowanie żywności, kosmetyków i produktów przemysłowych w folię — do 400 op./min.',
   keywords: [
     'flow pack', 'poziome maszyny pakujące', 'maszyna pakująca pozioma',
     'pakowanie żywności maszyna', 'pakowanie w folię', 'flowpack',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     url:         `${SITE_URL}/maszyny/poziome-maszyny-pakujace`,
     title:       'Poziome maszyny pakujące Flow Pack | MadejPak',
-    description: 'Poziome maszyny pakujące (flow pack) GSP – Tecno Pack w ofercie MadejPak. Modele FP 095E, FP 100E, FP 100 HP Box Motion. Pakowanie żywności, produktów chemicznych i przemysłowych.',
+    description: 'Poziome maszyny pakujące (flow pack) GSP w ofercie MadejPak. Serie S (45, 50, 55, 75) i EVO (MAP, box motion). Pakowanie żywności, kosmetyków i produktów przemysłowych — od standardowych po atmosferę modyfikowaną.',
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Poziome maszyny pakujące – MadejPak' }],
   },
 };
@@ -167,8 +167,8 @@ function ModelCard({ model }: { model: MachineModel }) {
           {model.features.map((f) => (
             <Box key={f} sx={{
               px: 1.25, py: 0.35,
-              bgcolor: `${ACCENT}0D`, border: `1px solid ${ACCENT}25`,
-              borderRadius: '2px', fontSize: '0.7rem', color: 'rgba(232,97,10,0.85)',
+              bgcolor: ACCENT,
+              borderRadius: '2px', fontSize: '0.7rem', color: '#fff',
             }}>
               {f}
             </Box>
@@ -182,57 +182,136 @@ function ModelCard({ model }: { model: MachineModel }) {
 // ─── Data ─────────────────────────────────────────────────────────────────────
 const MODELS: MachineModel[] = [
   {
-    id: 'fp095e',
-    name: 'FP 095 E',
-    tagline: 'Kompaktowa, wysoko wydajna — do 350 opakowań/min',
+    id: 'gsp45s',
+    name: 'GSP 45 S',
+    badge: 'Nowość',
+    tagline: 'Kompaktowy flow pack — wszechstronny i łatwy w obsłudze',
     description:
-      'Wieloosiowa maszyna pozioma o konstrukcji wspornikowej (cantilever) — zaprojektowana do pracy w automatycznych liniach produkcyjnych. Wysoka wydajność do 350 opakowań/min łączy się z ergonomiczną dostępnością strefy formatowania i łatwością sanitacji. Obsługuje folie termozgrzewalne oraz folie zimno-klejące (cold seal) dla produktów wrażliwych na ciepło.',
+      'Elektroniczna pozioma maszyna pakująca (pillow pack) z ramą w wykonaniu wspornikowym (cantilever). Kompaktowa budowa sprawdza się zarówno w branży spożywczej, jak i niespożywczej. Prosta obsługa i łatwa zmiana formatu — dobre wejście w automatyzację pakowania.',
     specs: [
-      { label: 'Wydajność', value: 'do 350 op./min' },
-      { label: 'Szer. folii max', value: '500 mm' },
-      { label: 'Szer. prod. max', value: '200 mm' },
-      { label: 'Wys. prod. max', value: '120 mm' },
+      { label: 'Konstrukcja', value: 'Wspornikowa (cantilever)' },
+      { label: 'Zastosowanie', value: 'Spożywcze i niespożywcze' },
     ],
-    features: ['Wieloosiowe sterowanie PLC', 'Ekran dotykowy', 'Zapis receptur', 'Cold seal', 'Diagnostyka maszyny'],
-    products: ['Batony', 'Czekolada', 'Biszkopty', 'Mydło', 'Sera plastry', 'Tabletki OTC'],
-    imageSrc: '/images/machines/flowpack-fp095e.jpg',
-    imageAlt: 'Tecno Pack FP 095 E – pozioma maszyna pakująca',
+    features: ['Sterowanie elektroniczne', 'Rama wspornikowa (cantilever)', 'Łatwa zmiana formatu', 'Folie termozgrzewalne'],
+    products: ['Batony', 'Ciastka', 'Mydło', 'Kosmetyki', 'Elementy techniczne'],
+    imageSrc: '/images/machines/flowpack-gsp45s.jpg',
+    imageAlt: 'GSP 45 S – kompaktowa maszyna flow pack',
   },
   {
-    id: 'fp100e',
-    name: 'FP 100 E',
-    badge: 'Podstawowa seria',
-    tagline: 'Wszechstronny flow wrap — żywność i produkty przemysłowe',
+    id: 'gsp50s',
+    name: 'GSP 50 S',
+    tagline: 'Wszechstronny flow pack dla szerszego zakresu produktów',
     description:
-      'Standardowa seria maszyn poziomych Tecno Pack — elastyczna konfiguracja dla szerokiego zakresu produktów i formatów opakowań. Modułowa budowa umożliwia integrację z automatycznym podawaniem, ważeniem i systemem znakowania. Sprawdzona w branży spożywczej, kosmetycznej i przemysłowej przy formatach od kilku do kilkuset gramów.',
+      'Elektroniczna pozioma maszyna pakująca z ramą wspornikową — większy format niż GSP 45 S, równie prosta w obsłudze. Sprawdzona w branży spożywczej i niespożywczej. Obsługuje szeroki zakres kształtów i wymiarów produktu.',
     specs: [
-      { label: 'Wydajność', value: 'do 200 op./min' },
-      { label: 'Format folii', value: 'szeroki zakres' },
-      { label: 'Folie', value: 'PP, OPP, PE, laminaty' },
-      { label: 'Sterowanie', value: 'PLC + HMI' },
+      { label: 'Konstrukcja', value: 'Wspornikowa (cantilever)' },
+      { label: 'Zastosowanie', value: 'Spożywcze i niespożywcze' },
     ],
-    features: ['Moduł drukujący', 'System no-product-no-bag', 'Zmiana formatu bez narzędzi', 'Auto naciąg folii', 'Wersja INOX'],
-    products: ['Pieczywo', 'Warzywa', 'Artykuły chemiczne', 'Pasta', 'Sałatki', 'Akcesoria'],
-    imageSrc: '/images/machines/flowpack-fp100e.jpg',
-    imageAlt: 'Tecno Pack FP 100 E – standardowa maszyna flow pack',
+    features: ['Sterowanie elektroniczne', 'Rama wspornikowa (cantilever)', 'Szeroki zakres formatów', 'Folie termozgrzewalne i cold seal'],
+    products: ['Pieczywo', 'Sery', 'Warzywa', 'Kosmetyki', 'Artykuły DIY'],
+    imageSrc: '/images/machines/flowpack-gsp50s.jpg',
+    imageAlt: 'GSP 50 S – maszyna flow pack',
   },
   {
-    id: 'fp100hp',
-    name: 'FP 100 HP Box Motion',
-    badge: 'High Performance',
-    tagline: 'Box motion jaw — produkty delikatne przy najwyższej wydajności',
+    id: 'gsp55s',
+    name: 'GSP 55 S',
+    badge: 'Najpopularniejsza',
+    tagline: 'Wysoka wydajność i obsługa podajników wieloosiowych',
     description:
-      'Wersja wysokowydajna serii FP 100 z głowicą zgrzewającą w układzie box motion — szczęki poruszają się synchronicznie z produktem, eliminując ryzyko uszkodzenia podczas zgrzewu. Dedykowana dla delikatnych lub nieregularnych produktów wymagających precyzyjnego zamknięcia opakowania przy dużej prędkości linii. Możliwość instalacji automatycznego podajnika produktu.',
+      'Elektroniczna pozioma maszyna pakująca z ramą wspornikową — obsługuje podajniki wieloosiowe, co umożliwia integrację z sortownikami, wibrostołami i automatycznymi systemami podawania. Idealna do budowy kompletnych linii produkcyjnych.',
     specs: [
-      { label: 'Wydajność', value: 'do 400 op./min' },
-      { label: 'Głowica', value: 'Box Motion' },
-      { label: 'Format folii', value: 'do 520 mm szer.' },
-      { label: 'Sterowanie', value: 'Wieloosiowe PLC' },
+      { label: 'Konstrukcja', value: 'Wspornikowa (cantilever)' },
+      { label: 'Podajniki', value: 'Wieloosiowe' },
+      { label: 'Zastosowanie', value: 'Spożywcze i niespożywcze' },
     ],
-    features: ['Box motion jaw', 'Synchronizacja z produktem', 'Brak deformacji opakowania', 'Auto podawanie', 'Wysoka precyzja zgrzewu'],
-    products: ['Croissanty', 'Lody', 'Produkty kruche', 'Artykuły nieregularne', 'Muffinki', 'Ryby'],
-    imageSrc: '/images/machines/flowpack-fp100hp.jpg',
-    imageAlt: 'Tecno Pack FP 100 HP Box Motion – maszyna flow pack high performance',
+    features: ['Sterowanie elektroniczne', 'Obsługa podajników wieloosiowych', 'Integracja z linią produkcyjną', 'Rama wspornikowa (cantilever)'],
+    products: ['Pieczywo i ciastka', 'Czekolada', 'Nabiał', 'Owoce i warzywa', 'Produkty chemiczne'],
+    imageSrc: '/images/machines/flowpack-gsp55s.jpg',
+    imageAlt: 'GSP 55 S – maszyna flow pack z podajnikami wieloosiowymi',
+  },
+  {
+    id: 'gsp55sbb',
+    name: 'GSP 55 S BB',
+    badge: 'Nowość',
+    tagline: 'Zgrzew od spodu — estetyczne opakowanie bez szwu na wierzchu',
+    description:
+      'Wersja Bottom Brake (BB) — rolka folii podawana jest od dołu maszyny, dzięki czemu zgrzew podłużny ukryty jest pod opakowaniem. Efekt: czysty, estetyczny wygląd produktu na półce. Chętnie wybierana w branży spożywczej i kosmetycznej.',
+    specs: [
+      { label: 'Rolka folii', value: 'Od dołu (bottom brake)' },
+      { label: 'Zgrzew podłużny', value: 'Pod opakowaniem' },
+      { label: 'Zastosowanie', value: 'Spożywcze i niespożywcze' },
+    ],
+    features: ['Bottom Brake (rolka od dołu)', 'Zgrzew ukryty pod opakowaniem', 'Estetyczny wygląd na półce', 'Sterowanie elektroniczne'],
+    products: ['Wyroby cukiernicze', 'Kosmetyki', 'Produkty premium', 'Pieczywo', 'Sery'],
+    imageSrc: '/images/machines/flowpack-gsp55sbb.jpg',
+    imageAlt: 'GSP 55 S BB – flow pack bottom brake',
+  },
+  {
+    id: 'gsp75s',
+    name: 'GSP 75 S',
+    badge: 'Najwyższa wydajność',
+    tagline: 'Masywna konstrukcja i uchylne jednostki zgrzewające — dla najcięższych linii',
+    description:
+      'Wyjątkowo wytrzymała maszyna pakująca z obsługą podajników wieloosiowych. Wyposażona w specjalne uchylne jednostki zgrzewu podłużnego (cantable longitudinal sealing units) — zapewniają precyzyjne zgrzewy nawet przy wysokiej prędkości i grubszych foliach gazoszczelnych. Przeznaczona do intensywnej, wielozmianowej produkcji.',
+    specs: [
+      { label: 'Konstrukcja', value: 'Masywna, przemysłowa' },
+      { label: 'Zgrzew podłużny', value: 'Uchylny (cantable)' },
+      { label: 'Podajniki', value: 'Wieloosiowe' },
+    ],
+    features: ['Uchylne jednostki zgrzewu podłużnego', 'Wysoka odporność mechaniczna', 'Obsługa podajników wieloosiowych', 'Folie standardowe i gazoszczelne'],
+    products: ['Ciastka i wafle', 'Batony i czekolada', 'Produkty FMCG', 'Artykuły przemysłowe'],
+    imageSrc: '/images/machines/flowpack-gsp75s.jpg',
+    imageAlt: 'GSP 75 S – flow pack wysoka wydajność i wytrzymałość',
+  },
+  {
+    id: 'gsp65evo',
+    name: 'GSP 65 EVO',
+    badge: 'Atmosfera modyfikowana',
+    tagline: 'MAP i box motion — przemysłowe pakowanie hermetyczne',
+    description:
+      'Przemysłowa maszyna do pakowania w atmosferze modyfikowanej (MAP) z elektronicznie sterowanym systemem szczęk box motion — szczęki podążają za produktem, co gwarantuje hermetyczne zgrzewy nawet przy zmiennych długościach opakowania. Obsługuje duże, wysokie i łączone produkty. Dostępna w wersji z gazowaniem (N₂/CO₂) lub natryskiwaniem aromatu. Folia polietylenowa i poliolefinowa.',
+    specs: [
+      { label: 'Zgrzew poprzeczny', value: 'Box motion (elektroniczny)' },
+      { label: 'Pakowanie', value: 'MAP (atmosfera modyfikowana)' },
+      { label: 'Długość worka', value: 'Zmienna' },
+    ],
+    features: ['Box motion – elektroniczne szczęki zgrzewające', 'Gazowanie N₂/CO₂ (MAP)', 'Natrysk aromatu (opcja)', 'Hermetyczne opakowanie', 'Folia PE i poliolefinowa', 'Zmienna długość worka'],
+    products: ['Świeże mięso i ryby', 'Sery i nabiał', 'Gotowe dania', 'Duże i wysokie produkty', 'Produkty łączone (in-chain)'],
+    imageSrc: '/images/machines/flowpack-gsp65evo.jpg',
+    imageAlt: 'GSP 65 EVO – pakowanie MAP box motion',
+  },
+  {
+    id: 'gsp65evobb',
+    name: 'GSP 65 EVO BB',
+    badge: 'Nowość',
+    tagline: 'MAP z box motion i zgrzewem od spodu — estetyka plus szczelność',
+    description:
+      'Wersja Bottom Brake modelu GSP 65 EVO — łączy wszystkie zalety pakowania MAP z box motion z estetycznym ukryciem zgrzewu podłużnego pod opakowaniem. Idealna dla producentów, którzy stawiają zarówno na przedłużenie trwałości produktu, jak i na wygląd na półce.',
+    specs: [
+      { label: 'Zgrzew poprzeczny', value: 'Box motion (elektroniczny)' },
+      { label: 'Rolka folii', value: 'Od dołu (bottom brake)' },
+      { label: 'Pakowanie', value: 'MAP (atmosfera modyfikowana)' },
+    ],
+    features: ['Box motion – elektroniczne szczęki zgrzewające', 'Bottom Brake (zgrzew od spodu)', 'Gazowanie N₂/CO₂ (MAP)', 'Hermetyczne opakowanie', 'Folia PE i poliolefinowa'],
+    products: ['Świeże mięso i ryby', 'Sery premium', 'Gotowe dania', 'Produkty wysokie i duże'],
+    imageSrc: '/images/machines/flowpack-gsp65evobb.jpg',
+    imageAlt: 'GSP 65 EVO BB – MAP box motion bottom brake',
+  },
+  {
+    id: 'gsp600trbbe',
+    name: 'GSP 600 TR BB-E',
+    tagline: 'MAP dla dużych i ciężkich produktów — z napędzanym zamknięciem szczęk',
+    description:
+      'Przemysłowa maszyna do pakowania w atmosferze modyfikowanej (MAP) w wersji wyłącznie Bottom Brake. Przeznaczona dla dużych, wysokich i łączonych produktów. Opcjonalny napędzany mechanizm zamknięcia szczęk (motorised jaw closing) pozwala na pracę z grubszymi foliami i wyższymi prędkościami. Folia polietylenowa i poliolefinowa.',
+    specs: [
+      { label: 'Rolka folii', value: 'Od dołu (bottom brake)' },
+      { label: 'Pakowanie', value: 'MAP (atmosfera modyfikowana)' },
+      { label: 'Zamknięcie szczęk', value: 'Napędzane (opcja)' },
+    ],
+    features: ['Wyłącznie wersja BB (bottom brake)', 'Napędzane zamknięcie szczęk (opcja)', 'Gazowanie N₂/CO₂ (MAP)', 'Grube folie i wysokie prędkości', 'Folia PE i poliolefinowa'],
+    products: ['Duże kawałki mięsa', 'Ryby i owoce morza', 'Wysokie i duże produkty MAP', 'Produkty łączone (in-chain)'],
+    imageSrc: '/images/machines/flowpack-gsp600trbbe.jpg',
+    imageAlt: 'GSP 600 TR BB-E – MAP dla dużych produktów',
   },
 ];
 
@@ -263,7 +342,7 @@ export default function PoziomeMaszynyPage() {
             <Box>
               <Typography sx={{ fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.18em',
                 textTransform: 'uppercase', color: ACCENT, mb: 2.5 }}>
-                GSP – Tecno Pack — flow pack
+                GSP – Grupa Tecnopack — flow pack
               </Typography>
               <Typography component="h1" sx={{
                 fontSize: { xs: '2rem', md: '2.75rem', lg: '3.25rem' },
@@ -299,9 +378,44 @@ export default function PoziomeMaszynyPage() {
               bgcolor: BG_CARD, border: `1px solid ${BORDER}`, borderRadius: '4px',
             }}>
               <StatChip value="400" label="opakowań/min – max wydajność" />
-              <StatChip value="3" label="serie maszynowe FP" />
-              <StatChip value="4" label="sektory przemysłowe" />
-              <StatChip value="500mm" label="max szerokość folii" />
+              <StatChip value="8" label="modeli w ofercie GSP" />
+              <StatChip value="MAP" label="pakowanie w atmosferze modyfikowanej" />
+              <StatChip value="920mm" label="max szerokość folii" />
+            </Box>
+          </Box>
+        </Container>
+      </Box>
+
+      {/* ── Co to jest i do czego służy ── */}
+      <Box component="section" sx={{ py: { xs: 7, md: 10 }, borderBottom: `1px solid ${BORDER}` }}>
+        <Container maxWidth="xl">
+          <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: { xs: 5, md: 10 } }}>
+            <Box>
+              <Typography sx={{ fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: ACCENT, mb: 2 }}>
+                Czym jest ta maszyna
+              </Typography>
+              <Typography component="h2" sx={{ fontSize: { xs: '1.4rem', md: '1.75rem' }, fontWeight: 800, letterSpacing: '-0.02em', lineHeight: 1.2, mb: 3, color: 'var(--text)' }}>
+                Masz produkt, który chcesz zapakować w folię — szczelnie, estetycznie i szybko?
+              </Typography>
+              <Typography sx={{ fontSize: '0.95rem', color: TEXT_DIM, lineHeight: 1.8 }}>
+                Pozioma maszyna pakująca (flow pack) pobiera produkt z podajnika, owija go folią z rolki, formuje opakowanie i zgrzewa z obu stron — wszystko w jednym ruchu taśmy. Na wyjściu masz gotowe, szczelne opakowania foliowe, jedno za drugim, w stałym tempie.
+              </Typography>
+            </Box>
+            <Box>
+              <Typography sx={{ fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: ACCENT, mb: 2 }}>
+                Kiedy to rozwiązanie jest dla Ciebie
+              </Typography>
+              {[
+                'Twój produkt ma stały kształt i można go podać na taśmę — baton, bułka, ser, wyrób cukierniczy, artykuł OTC, element przemysłowy.',
+                'Chcesz estetyczne opakowanie foliowe — maszyna owijia produkt szczelnie z każdej strony.',
+                'Pakujesz ręcznie i chcesz to zastąpić automatem — jedna maszyna zastępuje kilka stanowisk.',
+                'Zależy Ci na wydajności — flow pack może pakować setki sztuk na minutę.',
+              ].map((text) => (
+                <Box key={text} sx={{ display: 'flex', alignItems: 'flex-start', gap: 1.5, mb: 2 }}>
+                  <Box sx={{ width: 5, height: 5, borderRadius: '50%', bgcolor: ACCENT, mt: '8px', flexShrink: 0 }} />
+                  <Typography sx={{ fontSize: '0.9rem', color: TEXT_DIM, lineHeight: 1.75 }}>{text}</Typography>
+                </Box>
+              ))}
             </Box>
           </Box>
         </Container>
@@ -354,7 +468,7 @@ export default function PoziomeMaszynyPage() {
             fontSize: { xs: '1.5rem', md: '2rem' }, fontWeight: 800,
             letterSpacing: '-0.02em', color: 'var(--text)', mb: { xs: 6, md: 8 }, maxWidth: 560,
           }}>
-            Serie FP – Tecno Pack w ofercie MadejPak
+            Maszyny GSP – Grupa Tecnopack w ofercie MadejPak
           </Typography>
           <Stack spacing={3}>
             {MODELS.map((model) => (
@@ -476,7 +590,7 @@ export default function PoziomeMaszynyPage() {
             }}>
               <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', mb: 2.5 }}>
                 <Typography sx={{ fontSize: '1.2rem', fontWeight: 800, color: 'var(--text)', letterSpacing: '-0.02em' }}>
-                  GSP – Tecno Pack
+                  GSP – Grupa Tecnopack
                 </Typography>
                 <Typography sx={{ fontSize: '0.65rem', fontWeight: 600, letterSpacing: '0.1em',
                   textTransform: 'uppercase', color: 'var(--dim-28)' }}>
@@ -484,7 +598,7 @@ export default function PoziomeMaszynyPage() {
                 </Typography>
               </Box>
               <Typography sx={{ fontSize: '0.875rem', color: TEXT_DIM, lineHeight: 1.7, mb: 3 }}>
-                GSP (General System Pack) – Tecno Pack to włoski producent poziomych maszyn pakujących (flow wrappers)
+                GSP (General System Pack) to włoski producent poziomych maszyn pakujących (flow wrappers)
                 z wieloletnim doświadczeniem w sektorze spożywczym, farmaceutycznym i przemysłowym.
                 Modułowa budowa maszyn umożliwia szybkie dostosowanie do zmieniających się formatów produkcji.
               </Typography>
@@ -528,10 +642,10 @@ export default function PoziomeMaszynyPage() {
               </Typography>
               <Stack spacing={1.5}>
                 {[
-                  { label: 'Produkt delikatny', val: 'FP 100 HP Box Motion' },
-                  { label: 'Wysoka wydajność', val: 'FP 095 E (do 350 op./min)' },
-                  { label: 'Wszechstronność', val: 'FP 100 E – szeroki zakres' },
-                  { label: 'Zimne klejenie', val: 'FP 095 E (cold seal)' },
+                  { label: 'Dłuższy termin ważności', val: 'GSP 65 EVO / GSP 600 TR BB-E (MAP)' },
+                  { label: 'Estetyka na półce', val: 'GSP 55 S BB / GSP 65 EVO BB' },
+                  { label: 'Wysoka wydajność linii', val: 'GSP 75 S (uchylne jednostki zgrzewu)' },
+                  { label: 'Wejście w automatyzację', val: 'GSP 45 S / GSP 50 S' },
                 ].map((r) => (
                   <Box key={r.label} sx={{
                     display: 'flex', justifyContent: 'space-between', alignItems: 'center',
@@ -568,7 +682,7 @@ export default function PoziomeMaszynyPage() {
                 Szukasz maszyny poziomej dla swojej linii?
               </Typography>
               <Typography sx={{ fontSize: { xs: '0.9rem', md: '0.95rem' }, color: TEXT_DIM, lineHeight: 1.75, maxWidth: 460 }}>
-                Pomożemy dobrać właściwy model FP Tecno Pack do produktu, wydajności i wymagań pakowania w Twoim zakładzie.
+                Pomożemy dobrać właściwy model GSP do produktu, wydajności i wymagań pakowania w Twoim zakładzie.
               </Typography>
             </Box>
             <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} sx={{ flexShrink: 0 }}>

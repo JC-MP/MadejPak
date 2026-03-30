@@ -7,19 +7,19 @@ import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'Systemy paletyzacji – robotyczna i warstwowa | MadejPak',
+  title: 'Systemy paletyzacji – z robotem i warstwowa | MadejPak',
   description:
-    'MadejPak dobiera i integruje systemy paletyzacji dla linii pakujących — paletyzacja robotyczna, warstwowa i cobotowa. Robot do paletyzacji worków, kartonów i opakowań. Partnerzy: KUKA, Yaskawa, Sidel, BEUMER.',
+    'MadejPak dobiera i integruje systemy paletyzacji dla linii pakujących — z robotem, warstwowe i cobotowe. Robot do paletyzacji worków, kartonów i opakowań zbiorczych.',
   keywords: [
-    'systemy paletyzacji', 'paletyzacja robotyczna', 'paletyzator robotyczny',
-    'robot do paletyzacji worków', 'paletyzacja warstwowa', 'cobot paletyzacja',
-    'paletyzacja kartonów', 'automatyczna paletyzacja', 'koniec linii pakującej',
+    'systemy paletyzacji', 'paletyzacja z robotem', 'robot do paletyzacji',
+    'robot do paletyzacji worków', 'paletyzacja warstwowa', 'automatyczna paletyzacja',
+    'paletyzacja kartonów', 'koniec linii pakującej',
   ],
   alternates: { canonical: `${SITE_URL}/maszyny/paletyzacja` },
   openGraph: {
     url:         `${SITE_URL}/maszyny/paletyzacja`,
-    title:       'Paletyzacja robotyczna i warstwowa | MadejPak',
-    description: 'MadejPak dobiera i integruje systemy paletyzacji dla linii pakujących — robotyczne, warstwowe i cobotowe. Partnerzy: KUKA, Yaskawa, Sidel, BEUMER, OCME, TopTier, Concetti.',
+    title:       'Paletyzacja z robotem i warstwowa | MadejPak',
+    description: 'MadejPak dobiera i integruje systemy paletyzacji dla linii pakujących — z robotem, warstwowe i cobotowe. Robot do paletyzacji worków, kartonów i opakowań zbiorczych.',
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Paletyzacja – MadejPak' }],
   },
 };
@@ -56,10 +56,10 @@ const PROCESS_STEPS = [
 
 const SOLUTION_TYPES = [
   {
-    id: 'robotyczna',
-    label: 'Paletyzacja robotyczna',
-    scope: 'Wiele formatów, zmienny asortyment, aplikacje wymagające elastyczności',
-    desc: 'Robot przemysłowy z odpowiednim chwytakiem obsługuje wiele formatów produktów bez mechanicznego przezbrojenia. Zmiana układu palety odbywa się przez przeprogramowanie. Systemy robotyczne umożliwiają integrację z transportem palet, magazynem palet, owijarką i systemem nadrzędnym zakładu.',
+    id: 'elastyczna',
+    type: 'Paletyzacja z robotem',
+    forWhom: 'Masz wiele formatów i zmienny asortyment',
+    desc: 'Jeśli Twoja linia pakuje kilka różnych produktów lub asortyment zmienia się sezonowo — paletyzacja powinna nadążać bez długich przestojów na przezbrojenie. Dobieramy rozwiązanie, które zmienia format szybko i bez angażowania mechanika.',
     products: [
       'Kartony i opakowania kartonowe',
       'Worki z produktami sypkimi',
@@ -67,45 +67,41 @@ const SOLUTION_TYPES = [
       'Skrzynki i pojemniki',
       'Tacki i opakowania wielosztukowe',
     ],
-    partners: ['KUKA', 'Yaskawa Motoman seria PL', 'ABB', 'Sidel Pal Robo-Kombi / Pal Vite / RoboAccess', 'BEUMER robotpac®'],
   },
   {
-    id: 'warstwowa',
-    label: 'Paletyzacja warstwowa / konwencjonalna',
-    scope: 'Średnie i wysokie wydajności, powtarzalne formaty, ustabilizowany strumień produktu',
-    desc: 'Produkty są grupowane w kompletne warstwy, które następnie odkładane są na paletę jako całość. Formowanie warstwy może odbywać się w linii z transportem lub pod kątem 90°. Systemy warstwowe są właściwym wyborem tam, gdzie kluczowa jest powtarzalność i wysoka przepustowość.',
+    id: 'wydajnosc',
+    type: 'Paletyzacja warstwowa',
+    forWhom: 'Zależy Ci na wysokiej wydajności i niezawodności',
+    desc: 'Gdy asortyment jest stały, a linia pracuje 3 zmiany — liczy się przede wszystkim niezawodność i niski koszt utrzymania. Wdrażamy sprawdzone systemy paletyzacji dopasowane do tempa Twojej linii, które nie generują przestojów.',
     products: [
       'Kartony z produktami spożywczymi i FMCG',
       'Opakowania zbiorcze w ustabilizowanych formatach',
       'Pojemniki i skrzynki',
     ],
-    partners: ['OCME (modele tradycyjne i jednokolumnowe)', 'Sidel PalPack 4000 / PalKombi', 'Sidel PalLinear (wysoka wydajność, górny załadunek)', 'BEUMER paletpac®', 'TopTier'],
   },
   {
     id: 'worki',
-    label: 'Paletyzacja worków i produktów sypkich',
-    scope: 'Produkty pakowane w worki — chemia, budownictwo, nawozy, pet food, surowce sypkie',
-    desc: 'Produkty sypkie pakowane w worki wymagają odmiennej logiki paletyzacji niż kartony czy zgrzewki. Kluczowe jest stabilne chwytanie worka, kontrolowane odkładanie warstw i budowanie statecznego stosu na palecie. BEUMER paletpac® osiąga wydajność do 6 000 worków na godzinę.',
+    type: 'Paletyzacja worków',
+    forWhom: 'Pakujesz w worki — nawozy, chemię, materiały budowlane',
+    desc: 'Worki to specyficzny produkt — ciężkie, nieregularne, podatne na uszkodzenie. Paletyzacja worków wymaga innego podejścia niż kartony. Dobieramy system, który układa palety stabilnie i bezpiecznie, bez uszkodzeń worka i bez udziału pracownika.',
     products: [
-      'Worki z cementem, zaprawą i kruszywa',
-      'Worki z nawozami i produktami agrochemicznymi',
-      'Worki z karmą dla zwierząt (pet food)',
-      'Worki z chemią przemysłową i środkami czyszczącymi',
-      'Worki z granulowanymi surowcami sypkimi',
+      'Worki z cementem i zaprawą',
+      'Worki z nawozami i granulatem',
+      'Karma dla zwierząt',
+      'Chemia przemysłowa',
+      'Surowce sypkie',
     ],
-    partners: ['BEUMER paletpac® (do 6 000 worków/h)', 'BEUMER robotpac® (wersja robotyczna)', 'Concetti (systemy dla bulk solid products)', 'TopTier (bag palletizing)'],
   },
   {
-    id: 'coboty',
-    label: 'Kompaktowe cele paletyzacji / coboty',
-    scope: 'Mniejsze zakłady, ograniczona przestrzeń, niższy wolumen, pierwszy etap automatyzacji',
-    desc: 'Dla zakładów o mniejszej skali produkcji lub ograniczonej dostępnej przestrzeni dostępne są kompaktowe cele paletyzacji z cobotami lub lżejszymi robotami przemysłowymi. Coboty w określonych aplikacjach mogą pracować bez klasycznego wygrodzenia stałego, co redukuje wymagania przestrzenne i skraca czas wdrożenia. Sidel CoboAccess_Pal generuje dopasowany layout celi na podstawie 10 parametrów produkcyjnych.',
+    id: 'mniejszy-zaklad',
+    type: 'Kompaktowe stanowisko paletyzacji',
+    forWhom: 'Masz mniejszy zakład lub ograniczoną przestrzeń',
+    desc: 'Automatyzacja paletyzacji nie wymaga dużej hali ani wielkiego budżetu. Dla mniejszych zakładów lub linii o umiarkowanej wydajności mamy kompaktowe rozwiązania, które zajmują mało miejsca i szybko się zwracają — nawet przy jednej zmianie.',
     products: [
       'Kartony i opakowania dla mniejszych wolumenów',
-      'Aplikacje wymagające częstych zmian formatów',
-      'Stanowiska przy liniach krótkych serii',
+      'Linie z częstymi zmianami formatów',
+      'Zakłady stawiające pierwsze kroki w automatyzacji',
     ],
-    partners: ['Sidel CoboAccess_Pal', 'KUKA LBR iisy'],
   },
 ];
 
@@ -147,57 +143,13 @@ const INTEGRATION_ITEMS = [
   { title: 'Synchronizacja z linią',        desc: 'Paletyzator synchronizowany z maszyną pakującą i otoczeniem przez wspólny system sterowania lub komunikację maszynową (Profinet, EtherNet/IP, OPC-UA).' },
 ];
 
-const PARTNERS = [
-  {
-    name: 'KUKA',
-    origin: 'Niemcy',
-    href: 'https://www.kuka.com',
-    desc: 'Producent robotów przemysłowych z ofertą robotów paletyzujących i depaletyzujących. Systemy KUKA integrowane są z istniejącymi liniami pakującymi i końcówkami linii. W ofercie zarówno roboty do ciężkich aplikacji przemysłowych, jak i cobot LBR iisy do kompaktowych stanowisk paletyzacji bez klasycznego wygrodzenia stałego.',
-  },
-  {
-    name: 'Yaskawa — Motoman seria PL',
-    origin: 'Japonia',
-    href: 'https://www.motoman.com',
-    desc: 'Seria robotów paletyzujących o udźwigu od 80 do 800 kg. Przeznaczone do aplikacji z kartonami, workami, napojami i pojemnikami. Zakres udźwigu pozwala na obsługę zarówno lekkich opakowań jednostkowych, jak i ciężkich ładunków zbiorczych.',
-  },
-  {
-    name: 'Sidel',
-    origin: 'Francja',
-    href: 'https://www.sidel.com',
-    desc: 'Producent kompletnych systemów paletyzacji dla przemysłu napojowego i FMCG. Oferta obejmuje systemy warstwowe (PalKombi, PalPack 4000), robotyczne (Pal Robo-Kombi, Pal Vite, RoboAccess), wysokowydajne z górnym załadunkiem (PalLinear) oraz kompaktowe cele cobotowe (CoboAccess_Pal). Sidel dostarcza systemy jako element kompletnego end-of-line.',
-  },
-  {
-    name: 'BEUMER Group',
-    origin: 'Niemcy',
-    href: 'https://www.beumergroup.com',
-    desc: 'Producent systemów paletyzacji i transportu palet. Seria paletpac® to system warstwowy do worków z wydajnością do 6 000 worków na godzinę. Seria robotpac® to wersja robotyczna obsługująca worki, kartony, skrzynki i kanistry. BEUMER oferuje także systemy zabezpieczania palet i kompletne rozwiązania pakowania końca linii.',
-  },
-  {
-    name: 'OCME',
-    origin: 'Włochy',
-    href: 'https://www.ocme.it',
-    desc: 'Producent kompletnych systemów paletyzacji i depaletyzacji. Oferta obejmuje modele tradycyjne i jednokolumnowe z układami formowania warstw w linii lub pod kątem 90°. OCME dostarcza systemy end-of-line z akcesoriami i integracją z dalszym transportem palet.',
-  },
-  {
-    name: 'TopTier',
-    origin: 'USA',
-    href: 'https://www.toptierpalletizer.com',
-    desc: 'Producent systemów paletyzacji dla różnych sektorów przemysłowych. W ofercie systemy z dolnym załadunkiem (Low Level Infeed), konwencjonalne i hybrydowe robotyczne (Robotier Hybrid Robotic) oraz dedykowane systemy do worków. Kompaktowy model Value Palletizer przeznaczony do aplikacji o umiarkowanej wydajności przy ograniczonym footprincie.',
-  },
-  {
-    name: 'Concetti',
-    origin: 'Włochy',
-    href: 'https://www.concetti.com',
-    desc: 'Producent specjalizujący się w systemach ważenia, pakowania i paletyzacji produktów sypkich (bulk solid products). Oferta obejmuje kompletne linie dla materiałów bulk — od dozowania i pakowania w worki po paletyzację gotowego ładunku.',
-  },
-];
 
 const MADEJPAK_ROLE = [
-  { step: '01', title: 'Dobór rozwiązania',       desc: 'Analizujemy produkt, wolumen, zmienność formatów, dostępną przestrzeń i istniejący układ linii. Na tej podstawie dobieramy typ systemu i technologię partnera.' },
-  { step: '02', title: 'Projektowanie aplikacji', desc: 'Projektujemy układ stanowiska, określamy schemat palety i definiujemy interfejsy z otoczeniem linii. W razie potrzeby dobieramy typ chwytaka robotycznego.' },
-  { step: '03', title: 'Dostawa i integracja',    desc: 'Dostarczamy paletyzator i wszystkie elementy otoczenia — transport, bufory, podajniki palet, przekładki, owijarki. Integrujemy całość mechanicznie, elektrycznie i komunikacyjnie.' },
-  { step: '04', title: 'Uruchomienie i testy',    desc: 'Przeprowadzamy testy odbiorcze (FAT) i uruchomienie w zakładzie klienta (SAT). Szkolimy operatorów i służby utrzymania ruchu.' },
-  { step: '05', title: 'Serwis i modernizacje',   desc: 'Zapewniamy serwis gwarancyjny i pogwarancyjny, dostęp do części zamiennych oraz wsparcie przy zmianie formatów lub rozbudowie systemu.' },
+  { step: '01', title: 'Przyjeżdżamy i słuchamy', desc: 'Odwiedzamy zakład, oglądamy linię i rozmawiamy o problemie — nie sprzedajemy rozwiązania zanim go nie zrozumiemy.' },
+  { step: '02', title: 'Proponujemy konkretne rozwiązanie', desc: 'Na podstawie Twojego produktu, wydajności i układu hali wskazujemy, co wdrożyć i ile to kosztuje. Bez ogólników.' },
+  { step: '03', title: 'Dostarczamy i uruchamiamy', desc: 'Przywożmy wszystko — paletyzator, transport, owijarki. Integrujemy z istniejącą linią i uruchamiamy w Twoim zakładzie.' },
+  { step: '04', title: 'Szkolimy Twoich ludzi', desc: 'Operatorzy i utrzymanie ruchu wychodzą z rozruchu ze znajomością maszyny — nie są zdani wyłącznie na serwis zewnętrzny.' },
+  { step: '05', title: 'Jesteśmy po uruchomieniu', desc: 'Serwisujemy, dostarczamy części i pomagamy przy zmianach formatów. Jeden kontakt do wszystkich kwestii technicznych.' },
 ];
 
 // ─── Page ────────────────────────────────────────────────────────────────────
@@ -216,16 +168,15 @@ export default function PaletyzacjaPage() {
               </Typography>
               <Typography variant="h1"
                 sx={{ fontSize: { xs: '2rem', md: '2.75rem', lg: '3rem' }, fontWeight: 800, lineHeight: 1.1, letterSpacing: '-0.03em', color: 'var(--dim-85)' }}>
-                Paletyzacja —<br />robotyczna, warstwowa<br />i zintegrowana
+                Paletyzacja —<br />z robotem, warstwowa<br />i zintegrowana
               </Typography>
             </Box>
 
             <Box>
               <Typography sx={{ fontSize: { xs: '0.95rem', md: '1.05rem' }, lineHeight: 1.8, color: TEXT_DIM, mb: 3 }}>
-                MadejPak dobiera, dostarcza i integruje systemy paletyzacji dla przemysłowych linii pakujących.
-                Oferujemy rozwiązania robotyczne, warstwowe i cobotowe — dopasowane do produktu, wydajności
-                i układu przestrzennego zakładu. Paletyzator jest zawsze częścią szerszego systemu końca linii,
-                nie odizolowaną maszyną.
+                Ręczna paletyzacja spowalnia koniec linii, obciąża pracowników i generuje błędy.
+                MadejPak dobiera i wdraża system paletyzacji dopasowany do Twojego produktu i zakładu —
+                tak żeby koniec linii przestał być wąskim gardłem i żebyś nie musiał szukać ludzi do tej roboty.
               </Typography>
               <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2 }}>
                 <Box component={Link} href="/kontakt"
@@ -274,55 +225,38 @@ export default function PaletyzacjaPage() {
       <Box sx={{ py: { xs: 8, md: 12 }, borderBottom: `1px solid ${BORDER}` }}>
         <Container maxWidth="lg">
           <Typography sx={{ fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: ACCENT, mb: 2 }}>
-            Typy systemów
+            Dla kogo
           </Typography>
           <Typography variant="h2"
             sx={{ fontSize: { xs: '1.5rem', md: '2rem' }, fontWeight: 700, letterSpacing: '-0.02em', mb: { xs: 6, md: 8 }, maxWidth: 560 }}>
-            Jakie systemy paletyzacji dobieramy
+            Znajdź sytuację, która pasuje do Twojego zakładu
           </Typography>
 
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
             {SOLUTION_TYPES.map((sol) => (
               <Box key={sol.id}
-                sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', lg: '280px 1fr' }, gap: { xs: 3, lg: 8 }, p: { xs: 3, md: 4 }, bgcolor: BG_CARD, border: `1px solid ${BORDER}`, borderLeft: `3px solid ${ACCENT}`, borderRadius: '4px' }}>
-                {/* Left: title + scope */}
+                sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', lg: '300px 1fr' }, gap: { xs: 3, lg: 8 }, p: { xs: 3, md: 4 }, bgcolor: BG_CARD, border: `1px solid ${BORDER}`, borderLeft: `3px solid ${ACCENT}`, borderRadius: '4px' }}>
                 <Box>
-                  <Typography sx={{ fontSize: '1rem', fontWeight: 700, color: 'var(--text)', mb: 1.5, lineHeight: 1.3 }}>
-                    {sol.label}
+                  <Typography sx={{ fontSize: '1.05rem', fontWeight: 800, color: 'var(--text)', mb: 1, lineHeight: 1.3 }}>
+                    {sol.type}
                   </Typography>
-                  <Typography sx={{ fontSize: '0.78rem', color: 'var(--dim-45)', lineHeight: 1.6, fontStyle: 'italic' }}>
-                    {sol.scope}
+                  <Typography sx={{ fontSize: '0.85rem', color: ACCENT, lineHeight: 1.6, fontWeight: 600 }}>
+                    {sol.forWhom}
                   </Typography>
                 </Box>
-                {/* Right: desc + products + partners */}
                 <Box>
                   <Typography sx={{ fontSize: '0.9rem', color: TEXT_DIM, lineHeight: 1.8, mb: 3 }}>
                     {sol.desc}
                   </Typography>
-                  <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' }, gap: 3 }}>
-                    <Box>
-                      <Typography sx={{ fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--dim-42)', mb: 1.5 }}>
-                        Typowe produkty
-                      </Typography>
-                      {sol.products.map((p) => (
-                        <Box key={p} sx={{ display: 'flex', alignItems: 'flex-start', gap: 1.25, mb: 0.75 }}>
-                          <Box sx={{ width: 4, height: 4, borderRadius: '50%', bgcolor: ACCENT, mt: '7px', flexShrink: 0 }} />
-                          <Typography sx={{ fontSize: '0.82rem', color: TEXT_DIM, lineHeight: 1.55 }}>{p}</Typography>
-                        </Box>
-                      ))}
+                  <Typography sx={{ fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--dim-42)', mb: 1.5 }}>
+                    Typowe produkty
+                  </Typography>
+                  {sol.products.map((p) => (
+                    <Box key={p} sx={{ display: 'flex', alignItems: 'flex-start', gap: 1.25, mb: 0.75 }}>
+                      <Box sx={{ width: 4, height: 4, borderRadius: '50%', bgcolor: ACCENT, mt: '7px', flexShrink: 0 }} />
+                      <Typography sx={{ fontSize: '0.82rem', color: TEXT_DIM, lineHeight: 1.55 }}>{p}</Typography>
                     </Box>
-                    <Box>
-                      <Typography sx={{ fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--dim-42)', mb: 1.5 }}>
-                        Partnerzy / systemy
-                      </Typography>
-                      {sol.partners.map((p) => (
-                        <Box key={p} sx={{ display: 'flex', alignItems: 'flex-start', gap: 1.25, mb: 0.75 }}>
-                          <Box sx={{ width: 4, height: 4, borderRadius: '50%', bgcolor: 'var(--dim-28)', mt: '7px', flexShrink: 0 }} />
-                          <Typography sx={{ fontSize: '0.82rem', color: TEXT_DIM, lineHeight: 1.55 }}>{p}</Typography>
-                        </Box>
-                      ))}
-                    </Box>
-                  </Box>
+                  ))}
                 </Box>
               </Box>
             ))}
@@ -393,41 +327,6 @@ export default function PaletyzacjaPage() {
         </Container>
       </Box>
 
-      {/* ── Partnerzy ── */}
-      <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: BG_ALT, borderBottom: `1px solid ${BORDER}` }}>
-        <Container maxWidth="lg">
-          <Typography sx={{ fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: ACCENT, mb: 2 }}>
-            Partnerzy technologiczni
-          </Typography>
-          <Typography variant="h2"
-            sx={{ fontSize: { xs: '1.4rem', md: '1.75rem' }, fontWeight: 700, letterSpacing: '-0.02em', mb: { xs: 5, md: 7 }, maxWidth: 480 }}>
-            Producenci systemów paletyzacji
-          </Typography>
-          <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 3 }}>
-            {PARTNERS.map((partner) => (
-              <Box key={partner.name}
-                sx={{ bgcolor: BG_CARD, border: `1px solid ${BORDER}`, borderRadius: '4px', p: { xs: 3, md: 3.5 } }}>
-                <Box sx={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 2, mb: 1.5, flexWrap: 'wrap' }}>
-                  <Typography sx={{ fontSize: '1.1rem', fontWeight: 800, color: 'var(--text)', letterSpacing: '-0.01em' }}>
-                    {partner.name}
-                  </Typography>
-                  <Typography sx={{ fontSize: '0.7rem', color: 'var(--dim-35)', textTransform: 'uppercase', letterSpacing: '0.1em', flexShrink: 0 }}>
-                    {partner.origin}
-                  </Typography>
-                </Box>
-                <Typography sx={{ fontSize: '0.87rem', color: TEXT_DIM, lineHeight: 1.75, mb: 2 }}>
-                  {partner.desc}
-                </Typography>
-                <Box component="a" href={partner.href} target="_blank" rel="noopener noreferrer"
-                  sx={{ display: 'inline-flex', alignItems: 'center', gap: 0.75, fontSize: '0.78rem', fontWeight: 600, color: ACCENT, textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}>
-                  Strona producenta
-                  <ArrowRight />
-                </Box>
-              </Box>
-            ))}
-          </Box>
-        </Container>
-      </Box>
 
       {/* ── Rola MadejPak ── */}
       <Box sx={{ py: { xs: 8, md: 10 }, borderBottom: `1px solid ${BORDER}` }}>

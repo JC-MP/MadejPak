@@ -1,12 +1,14 @@
 export interface NavSubItem {
   label: string;
   href: string;
+  group?: string;
 }
 
 export interface NavItem {
   label: string;
   href: string;
   children?: NavSubItem[];
+  footerCta?: { label: string; href: string };
 }
 
 export const NAV_ITEMS: NavItem[] = [
@@ -25,10 +27,19 @@ export const NAV_ITEMS: NavItem[] = [
     label: 'Maszyny',
     href: '/maszyny',
     children: [
-      { label: 'Maszyny MadejPak',      href: '/maszyny/madejpak' },
-      { label: 'Maszyny partnerów',     href: '/maszyny/partnerzy' },
-      { label: 'Gotowe linie pakujące', href: '/maszyny/gotowe-linie-pakujace' },
+      { label: 'Pionowe maszyny pakujące',  href: '/maszyny/pionowe-maszyny-pakujace',  group: 'Typy maszyn' },
+      { label: 'Poziome maszyny pakujące',  href: '/maszyny/poziome-maszyny-pakujace',  group: 'Typy maszyn' },
+      { label: 'Paletyzacja',               href: '/maszyny/paletyzacja',               group: 'Typy maszyn' },
+      { label: 'Ważenie i dozowanie',       href: '/maszyny/wazenie-i-dozowanie',       group: 'Typy maszyn' },
+      { label: 'Workowanie',                href: '/maszyny/workowanie',                group: 'Typy maszyn' },
+      { label: 'Owijarki do palet',         href: '/maszyny/owijarki-do-palet',         group: 'Typy maszyn' },
+      { label: 'Robotyzacja pakowania',     href: '/maszyny/robotyzacja-pakowania',     group: 'Typy maszyn' },
+      { label: 'Transport i koniec linii',  href: '/maszyny/transport-i-koniec-linii',  group: 'Typy maszyn' },
+      { label: 'Maszyny MadejPak',          href: '/maszyny/madejpak',                  group: 'Oferta' },
+      { label: 'Maszyny partnerów',         href: '/maszyny/partnerzy',                 group: 'Oferta' },
+      { label: 'Gotowe linie pakujące',     href: '/maszyny/gotowe-linie-pakujace',     group: 'Oferta' },
     ],
+    footerCta: { label: 'Znajdź maszynę', href: '/maszyny' },
   },
   {
     label: 'Serwis',
@@ -66,10 +77,19 @@ export const EN_NAV_ITEMS: NavItem[] = [
     label: 'Machines',
     href: '/en/maszyny',
     children: [
-      { label: 'MadejPak Machines',    href: '/en/maszyny/madejpak' },
-      { label: 'Partner Machines',     href: '/en/maszyny/partnerzy' },
-      { label: 'Ready Packaging Lines', href: '/en/maszyny/gotowe-linie-pakujace' },
+      { label: 'Vertical Packaging Machines', href: '/en/maszyny/pionowe-maszyny-pakujace',  group: 'Machine types' },
+      { label: 'Horizontal Packaging Machines', href: '/en/maszyny/poziome-maszyny-pakujace', group: 'Machine types' },
+      { label: 'Palletizing',                 href: '/en/maszyny/paletyzacja',               group: 'Machine types' },
+      { label: 'Weighing & Dosing',           href: '/en/maszyny/wazenie-i-dozowanie',       group: 'Machine types' },
+      { label: 'Bagging',                     href: '/en/maszyny/workowanie',                group: 'Machine types' },
+      { label: 'Pallet Wrappers',             href: '/en/maszyny/owijarki-do-palet',         group: 'Machine types' },
+      { label: 'Packaging Robotics',          href: '/en/maszyny/robotyzacja-pakowania',     group: 'Machine types' },
+      { label: 'Transport & End of Line',     href: '/en/maszyny/transport-i-koniec-linii',  group: 'Machine types' },
+      { label: 'MadejPak Machines',           href: '/en/maszyny/madejpak',                  group: 'Offer' },
+      { label: 'Partner Machines',            href: '/en/maszyny/partnerzy',                 group: 'Offer' },
+      { label: 'Ready Packaging Lines',       href: '/en/maszyny/gotowe-linie-pakujace',     group: 'Offer' },
     ],
+    footerCta: { label: 'Find a machine', href: '/en/maszyny' },
   },
   {
     label: 'Service',
