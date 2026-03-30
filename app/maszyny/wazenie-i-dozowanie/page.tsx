@@ -7,9 +7,14 @@ import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'Wagi wielogłowicowe i dozowanie | MadejPak',
+  title: 'Wagi wielogłowicowe i systemy dozowania do linii pakujących | MadejPak',
   description:
-    'Wagi wielogłowicowe i systemy dozowania do linii pakujących — ważenie wagowe i sztukowe, integracja z maszynami VFFS i pakowaczkami tacek. Concetti, Essegi.',
+    'Wagi wielogłowicowe i systemy dozowania do pakowania produktów sypkich, spożywczych i chemicznych. Ważenie wagowe i sztukowe, integracja z maszyną VFFS i pakowaczką tacek.',
+  keywords: [
+    'wagi wielogłowicowe', 'systemy dozowania', 'dozowanie do linii pakującej',
+    'ważenie produktów sypkich', 'dozownik do maszyny pakującej',
+    'integracja wagi z maszyną pakującą', 'dokładne ważenie pakowanie',
+  ],
   alternates: { canonical: `${SITE_URL}/maszyny/wazenie-i-dozowanie` },
   openGraph: {
     url:         `${SITE_URL}/maszyny/wazenie-i-dozowanie`,
@@ -56,7 +61,7 @@ const APPLICATIONS = [
 const SCALE_TYPES = [
   {
     name: 'Waga wielogłowicowa',
-    img: '/images/machines/waga-wieloglowicowa.png',
+    img: '/images/machines/waga-wieloglowicowa.jpg',
     alt: 'Waga wielogłowicowa do linii pakującej',
     desc: 'Radialny układ misek — każda niezależnie waży porcję produktu. System wybiera kombinację misek, której suma jest najbliższa zadanej masie docelowej. Wysoka dokładność przy dużych prędkościach cyklu.',
     use: 'Produkty sypkie, ziarniste, granulowane, kruche i lepkie — kawa, orzechy, chipsy, mrożonki, karma, nasiona. Integracja z VFFS i pakowaczkami tacek.',

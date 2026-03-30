@@ -8,8 +8,14 @@ import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'Integracja linii pakujących | MadejPak',
-  description: 'MadejPak projektuje i integruje kompletne linie pakujące — maszyny różnych producentów w spójny, zsynchronizowany ciąg technologiczny.',
+  title: 'Integracja linii pakujących – projektowanie i wdrożenie | MadejPak',
+  description: 'MadejPak projektuje i integruje linie pakujące z maszyn różnych producentów w spójny ciąg technologiczny. Synchronizacja, sterowanie, transport wewnętrzny i rozruch — wszystko pod klucz.',
+  keywords: [
+    'integracja linii pakujących', 'projektowanie linii pakujących',
+    'integracja maszyn pakujących', 'linia pakująca pod klucz',
+    'synchronizacja linii produkcyjnej', 'transport wewnętrzny linia pakująca',
+    'integrator linii pakujących',
+  ],
   alternates: { canonical: `${SITE_URL}/rozwiazania/integracja-linii-pakujacych` },
   openGraph: {
     url:         `${SITE_URL}/rozwiazania/integracja-linii-pakujacych`,
@@ -229,7 +235,7 @@ export default function IntegracjaPage() {
               `linear-gradient(to bottom, color-mix(in srgb, var(--bg-alt) 55%, transparent) 0%, transparent 20%, transparent 80%, color-mix(in srgb, var(--bg-alt) 55%, transparent) 100%)`,
             ].join(', '),
           }} />
-          <Image src="/images/other/integracjaliniipakowania.png" alt="" fill sizes="(max-width: 768px) 0vw, 50vw"
+          <Image src="/images/other/integracjaliniipakowania.jpg" alt="" fill sizes="(max-width: 768px) 0vw, 50vw"
           style={{ objectFit: 'cover', objectPosition: 'center', opacity: 0.5 }} />
         </Box>
         <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1, py: { xs: 6, md: 10 } }}>

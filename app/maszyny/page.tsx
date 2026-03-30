@@ -10,9 +10,15 @@ import MachineSelector from '@/components/sections/MachineSelector';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'Maszyny pakujące — oferta | MadejPak',
+  title: 'Maszyny pakujące – flow pack, VFFS, paletyzacja, workowanie | MadejPak',
   description:
-    'Maszyny pakujące MadejPak i partnerów: pionowe i poziome maszyny pakujące, workowanie, paletyzacja, owijarki, robotyzacja, transport i dozowanie. Dobieramy i integrujemy.',
+    'Maszyny pakujące MadejPak: flow pack, VFFS (maszyny pionowe), workowanie, systemy paletyzacji, owijarki do palet, transport wewnętrzny i dozowanie. Dobieramy, dostarczamy i integrujemy w linię.',
+  keywords: [
+    'maszyny pakujące', 'flow pack', 'VFFS', 'pionowe maszyny pakujące',
+    'poziome maszyny pakujące', 'systemy paletyzacji', 'workowanie',
+    'owijarki do palet', 'transport wewnętrzny', 'dozowanie i ważenie',
+    'automat do pakowania', 'linia pakująca',
+  ],
   alternates: { canonical: `${SITE_URL}/maszyny` },
   openGraph: {
     url:         `${SITE_URL}/maszyny`,
@@ -55,7 +61,7 @@ export default function MaszynyPage() {
               `linear-gradient(to bottom, color-mix(in srgb, var(--bg-alt) 55%, transparent) 0%, transparent 20%, transparent 80%, color-mix(in srgb, var(--bg-alt) 55%, transparent) 100%)`,
             ].join(', '),
           }} />
-          <Image src="/images/other/maszyny-zdjecieogolnedopodstrony.png" alt="" fill sizes="(max-width: 768px) 0vw, 50vw"
+          <Image src="/images/other/maszyny-zdjecieogolnedopodstrony.jpg" alt="" fill sizes="(max-width: 768px) 0vw, 50vw"
           style={{ objectFit: 'cover', objectPosition: 'center', opacity: 0.5 }} />
         </Box>
         <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1, py: { xs: 8, md: 14 } }}>

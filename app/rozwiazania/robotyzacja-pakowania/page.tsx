@@ -8,8 +8,13 @@ import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'Robotyzacja pakowania | MadejPak',
-  description: 'MadejPak wdraża roboty przemysłowe i coboty liderów branży w liniach pakujących — pick-and-place, paletyzacja, handling.',
+  title: 'Robotyzacja pakowania – roboty i coboty w liniach pakujących | MadejPak',
+  description: 'MadejPak wdraża roboty przemysłowe i coboty w liniach pakujących — pick-and-place, paletyzacja robotyczna, robot do paletyzacji worków i kartonów. Integracja z istniejącą linią.',
+  keywords: [
+    'robotyzacja pakowania', 'robot do pakowania', 'paletyzacja robotyczna',
+    'robot do paletyzacji worków', 'pick-and-place robot', 'cobot linia pakująca',
+    'robotyzacja końca linii', 'robot przemysłowy pakowanie',
+  ],
   alternates: { canonical: `${SITE_URL}/rozwiazania/robotyzacja-pakowania` },
   openGraph: {
     url:         `${SITE_URL}/rozwiazania/robotyzacja-pakowania`,
@@ -103,7 +108,7 @@ export default function RobotyzacjaRozwiazaniaPage() {
               `linear-gradient(to bottom, color-mix(in srgb, var(--bg-alt) 55%, transparent) 0%, transparent 20%, transparent 80%, color-mix(in srgb, var(--bg-alt) 55%, transparent) 100%)`,
             ].join(', '),
           }} />
-          <Image src="/images/other/robotyzacjapakowania.png" alt="" fill sizes="(max-width: 768px) 0vw, 50vw"
+          <Image src="/images/other/robotyzacjapakowania.jpg" alt="" fill sizes="(max-width: 768px) 0vw, 50vw"
           style={{ objectFit: 'cover', objectPosition: 'center', opacity: 0.5 }} />
         </Box>
         <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1, py: { xs: 6, md: 10 } }}>

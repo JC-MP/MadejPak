@@ -62,7 +62,7 @@ const APPLICATIONS = [
 const SCALE_TYPES = [
   {
     name: 'Multihead weigher',
-    img: '/images/machines/waga-wieloglowicowa.png',
+    img: '/images/machines/waga-wieloglowicowa.jpg',
     alt: 'Multihead weigher for packaging line',
     desc: 'Radial bowl arrangement — each bowl independently weighs a product portion. The system selects the bowl combination whose sum is closest to the target weight. High accuracy at high cycle speeds.',
     use: 'Free-flowing, granular, granulated, brittle and sticky products — coffee, nuts, crisps, frozen goods, pet food, seeds. Integration with VFFS and tray sealers.',

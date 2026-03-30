@@ -133,7 +133,7 @@ export default function RobotyzacjaPage() {
             <Box sx={{ borderRadius: 2, overflow: 'hidden', border: `1px solid ${BORDER}` }}>
               <Box
                 component="img"
-                src="/images/other/robotyzacja-cobot.png"
+                src="/images/other/robotyzacja-cobot.jpg"
                 alt="Industrial robot on a packaging workstation"
                 sx={{ width: '100%', height: { xs: 240, md: 380 }, objectFit: 'cover', display: 'block' }}
               />

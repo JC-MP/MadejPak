@@ -2,16 +2,25 @@ import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'MadejPak – Technologie pakowania i integracja linii produkcyjnych',
+  title: 'MadejPak – Integrator linii pakujących i automatyzacja pakowania',
   description:
-    'Projektujemy i integrujemy linie pakujące, wdrażamy automatykę i robotyzację oraz dostarczamy maszyny dla przemysłu. 25 lat doświadczenia, 200+ wdrożeń, opieka serwisowa.',
+    'MadejPak projektuje i integruje linie pakujące, wdraża automatyzację i robotyzację pakowania oraz zapewnia serwis maszyn pakujących. 25 lat doświadczenia, 200+ wdrożeń w przemyśle spożywczym, chemicznym i innych branżach.',
+  keywords: [
+    'MadejPak', 'Madej Pak', 'Madej',
+    'integrator linii pakujących', 'integracja linii pakujących',
+    'automatyzacja pakowania', 'robotyzacja pakowania',
+    'maszyny pakujące', 'linie pakujące', 'linia pakująca',
+    'automat do pakowania', 'pakowanie zbiorcze',
+    'serwis maszyn pakujących', 'modernizacja linii pakujących',
+    'systemy paletyzacji', 'flow pack', 'VFFS',
+  ],
   alternates: { canonical: SITE_URL },
   openGraph: {
     url:   SITE_URL,
-    title: 'MadejPak – Technologie pakowania i integracja linii produkcyjnych',
+    title: 'MadejPak – Integrator linii pakujących i automatyzacja pakowania',
     description:
-      'Projektujemy i integrujemy linie pakujące, wdrażamy automatykę i robotyzację oraz dostarczamy maszyny dla przemysłu. 25 lat doświadczenia, 200+ wdrożeń.',
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'MadejPak – technologie pakowania' }],
+      'MadejPak projektuje i integruje linie pakujące, wdraża automatyzację i robotyzację pakowania oraz zapewnia serwis maszyn pakujących. 25 lat doświadczenia, 200+ wdrożeń.',
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'MadejPak – integrator linii pakujących' }],
   },
 };
 

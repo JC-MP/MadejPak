@@ -7,9 +7,14 @@ import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'Transport i koniec linii — przenośniki i integracja | MadejPak',
+  title: 'Transport wewnętrzny i koniec linii pakującej – przenośniki | MadejPak',
   description:
-    'MadejPak projektuje i integruje systemy transportu wewnętrznego, przenośników i końca linii pakujących. Od wyjścia maszyny pakującej po owiniętą paletę gotową do ekspedycji.',
+    'MadejPak projektuje i integruje transport wewnętrzny, przenośniki i koniec linii pakującej. Od wyjścia maszyny pakującej po owiniętą paletę — owijarki, etykieciarki, systemy sortowania.',
+  keywords: [
+    'transport wewnętrzny linia pakująca', 'przenośniki linia pakująca',
+    'koniec linii pakującej', 'owijarki do palet', 'transport produktu w linii',
+    'integracja transportu wewnętrznego', 'systemy końca linii',
+  ],
   alternates: { canonical: `${SITE_URL}/maszyny/transport-i-koniec-linii` },
   openGraph: {
     url:         `${SITE_URL}/maszyny/transport-i-koniec-linii`,

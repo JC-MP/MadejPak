@@ -301,7 +301,7 @@ export default function EnPartnerzyPage() {
                 `linear-gradient(to bottom, color-mix(in srgb, var(--bg) 55%, transparent) 0%, transparent 20%, transparent 80%, color-mix(in srgb, var(--bg) 55%, transparent) 100%)`,
               ].join(', '),
             }} />
-            <Image src="/images/other/partnerzy-zdjecieusciskdloni.png" alt="" fill sizes="(max-width: 768px) 0vw, 50vw"
+            <Image src="/images/other/partnerzy-zdjecieusciskdloni.jpg" alt="" fill sizes="(max-width: 768px) 0vw, 50vw"
               style={{ objectFit: 'cover', objectPosition: 'center', opacity: 0.5 }} />
           </Box>
 

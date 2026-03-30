@@ -7,9 +7,14 @@ import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'Paletyzacja — systemy robotyczne i warstwowe | MadejPak',
+  title: 'Systemy paletyzacji – robotyczna i warstwowa | MadejPak',
   description:
-    'MadejPak dobiera i integruje systemy paletyzacji dla linii pakujących — robotyczne, warstwowe i cobotowe. Partnerzy: KUKA, Yaskawa, Sidel, BEUMER, OCME, TopTier, Concetti.',
+    'MadejPak dobiera i integruje systemy paletyzacji dla linii pakujących — paletyzacja robotyczna, warstwowa i cobotowa. Robot do paletyzacji worków, kartonów i opakowań. Partnerzy: KUKA, Yaskawa, Sidel, BEUMER.',
+  keywords: [
+    'systemy paletyzacji', 'paletyzacja robotyczna', 'paletyzator robotyczny',
+    'robot do paletyzacji worków', 'paletyzacja warstwowa', 'cobot paletyzacja',
+    'paletyzacja kartonów', 'automatyczna paletyzacja', 'koniec linii pakującej',
+  ],
   alternates: { canonical: `${SITE_URL}/maszyny/paletyzacja` },
   openGraph: {
     url:         `${SITE_URL}/maszyny/paletyzacja`,

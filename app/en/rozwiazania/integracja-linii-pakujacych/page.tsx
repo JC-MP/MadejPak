@@ -238,7 +238,7 @@ export default function IntegracjaEnPage() {
               `linear-gradient(to bottom, color-mix(in srgb, var(--bg-alt) 55%, transparent) 0%, transparent 20%, transparent 80%, color-mix(in srgb, var(--bg-alt) 55%, transparent) 100%)`,
             ].join(', '),
           }} />
-          <Image src="/images/other/integracjaliniipakowania.png" alt="" fill sizes="(max-width: 768px) 0vw, 50vw"
+          <Image src="/images/other/integracjaliniipakowania.jpg" alt="" fill sizes="(max-width: 768px) 0vw, 50vw"
           style={{ objectFit: 'cover', objectPosition: 'center', opacity: 0.5 }} />
         </Box>
         <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1, py: { xs: 6, md: 10 } }}>

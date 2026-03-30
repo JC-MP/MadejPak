@@ -7,9 +7,14 @@ import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'Pionowe maszyny pakujące VFFS | MadejPak',
+  title: 'Pionowe maszyny pakujące VFFS – pakowanie produktów sypkich | MadejPak',
   description:
-    'Pionowe maszyny pakujące VFFS (form-fill-seal) dla produktów sypkich, granulowanych, proszkowych i płynnych. Essegi i Concetti — dostawa i integracja przez MadejPak.',
+    'Pionowe maszyny pakujące VFFS (form-fill-seal) do pakowania produktów sypkich, granulowanych, proszkowych i płynnych. Linia do pakowania kartonów, torebek i saszetek. Essegi i Concetti.',
+  keywords: [
+    'VFFS', 'pionowe maszyny pakujące', 'maszyna pakująca produkty sypkie',
+    'pakowanie produktów sypkich', 'pakowanie proszków', 'pakowanie granulatów',
+    'form-fill-seal', 'linia do pakowania torebek', 'automat pakujący sypkie',
+  ],
   alternates: { canonical: `${SITE_URL}/maszyny/pionowe-maszyny-pakujace` },
   openGraph: {
     url:         `${SITE_URL}/maszyny/pionowe-maszyny-pakujace`,

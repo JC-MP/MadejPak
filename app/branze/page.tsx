@@ -11,9 +11,15 @@ import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'Branże obsługiwane przez MadejPak',
+  title: 'Linie pakujące dla branży spożywczej, chemicznej i kosmetycznej | MadejPak',
   description:
-    'Technologie pakowania, integracja linii i automatyzacja dla przemysłu spożywczego, chemicznego, kosmetycznego, farmaceutycznego i innych branż produkcyjnych.',
+    'MadejPak projektuje linie pakujące dla przemysłu spożywczego, chemicznego, kosmetycznego i farmaceutycznego. Pakowanie nawozów, kosmetyków, żywności, proszków i granulatów.',
+  keywords: [
+    'linie pakujące dla branży spożywczej', 'pakowanie kosmetyków',
+    'pakowanie nawozów', 'linia pakująca przemysł chemiczny',
+    'pakowanie żywności linia', 'maszyny pakujące farmacja',
+    'pakowanie proszków i granulatów', 'automatyzacja pakowania spożywcze',
+  ],
   alternates: { canonical: `${SITE_URL}/branze` },
   openGraph: {
     url:         `${SITE_URL}/branze`,
@@ -385,7 +391,7 @@ export default function BranzePage() {
               `linear-gradient(to bottom, color-mix(in srgb, var(--bg) 55%, transparent) 0%, transparent 20%, transparent 80%, color-mix(in srgb, var(--bg) 55%, transparent) 100%)`,
             ].join(', '),
           }} />
-          <Image src="/images/other/branze-zdjeciapudelek.png" alt="" fill sizes="(max-width: 768px) 0vw, 50vw"
+          <Image src="/images/other/branze-zdjeciapudelek.jpg" alt="" fill sizes="(max-width: 768px) 0vw, 50vw"
           style={{ objectFit: 'cover', objectPosition: 'center', opacity: 0.5 }} />
         </Box>
 

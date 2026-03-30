@@ -8,8 +8,13 @@ import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'Automatyzacja pakowania',
-  description: 'MadejPak automatyzuje procesy pakowania — od pojedynczych stanowisk po kompletne linie. Ograniczamy pracę manualną i zwiększamy stabilność procesu.',
+  title: 'Automatyzacja pakowania – eliminacja pracy ręcznej | MadejPak',
+  description: 'MadejPak automatyzuje pakowanie w zakładach produkcyjnych — flow pack, VFFS, systemy ważenia i dozowania, podawanie i etykietowanie. Od pojedynczego stanowiska po kompletną linię pakującą.',
+  keywords: [
+    'automatyzacja pakowania', 'automat do pakowania', 'linia pakująca automatyczna',
+    'flow pack', 'VFFS', 'pakowanie zbiorcze', 'dozowanie i ważenie',
+    'eliminacja pracy ręcznej pakowanie', 'stanowisko pakowania automatyczne',
+  ],
   alternates: { canonical: `${SITE_URL}/rozwiazania/automatyzacja-pakowania` },
   openGraph: {
     url:         `${SITE_URL}/rozwiazania/automatyzacja-pakowania`,
@@ -133,7 +138,7 @@ export default function AutomatyzacjaPage() {
               `linear-gradient(to bottom, color-mix(in srgb, var(--bg-alt) 55%, transparent) 0%, transparent 20%, transparent 80%, color-mix(in srgb, var(--bg-alt) 55%, transparent) 100%)`,
             ].join(', '),
           }} />
-          <Image src="/images/other/automatyzacjapakowania.png" alt="" fill sizes="(max-width: 768px) 0vw, 50vw"
+          <Image src="/images/other/automatyzacjapakowania.jpg" alt="" fill sizes="(max-width: 768px) 0vw, 50vw"
           style={{ objectFit: 'cover', objectPosition: 'center', opacity: 0.5 }} />
         </Box>
         <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1, py: { xs: 6, md: 10 } }}>

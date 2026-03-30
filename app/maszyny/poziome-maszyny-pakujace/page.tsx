@@ -10,9 +10,14 @@ import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'Poziome maszyny pakujące Flow Pack | MadejPak',
+  title: 'Poziome maszyny pakujące Flow Pack – pakowanie żywności i produktów | MadejPak',
   description:
-    'Poziome maszyny pakujące (flow pack) GSP – Tecno Pack w ofercie MadejPak. Modele FP 095E, FP 100E, FP 100 HP Box Motion. Pakowanie żywności, produktów chemicznych i przemysłowych.',
+    'Poziome maszyny pakujące flow pack GSP – Tecno Pack. Pakowanie żywności, kosmetyków, produktów chemicznych i przemysłowych w folię. Modele FP 095E, FP 100E, FP 100 HP Box Motion.',
+  keywords: [
+    'flow pack', 'poziome maszyny pakujące', 'maszyna pakująca pozioma',
+    'pakowanie żywności maszyna', 'pakowanie w folię', 'flowpack',
+    'linia pakująca żywność', 'pakowanie kosmetyków maszyna',
+  ],
   alternates: { canonical: `${SITE_URL}/maszyny/poziome-maszyny-pakujace` },
   openGraph: {
     url:         `${SITE_URL}/maszyny/poziome-maszyny-pakujace`,

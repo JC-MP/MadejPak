@@ -8,8 +8,13 @@ import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'Projekty custom | MadejPak',
-  description: 'MadejPak realizuje niestandardowe projekty maszyn i systemów pakujących — od chwytaków robotycznych po kompletne stanowiska specjalne.',
+  title: 'Niestandardowe maszyny pakujące – projekty custom | MadejPak',
+  description: 'MadejPak projektuje i buduje niestandardowe maszyny pakujące i stanowiska specjalne — gdy żadna maszyna z katalogu nie rozwiązuje problemu. Trudne produkty, specyficzne linie, ograniczona przestrzeń.',
+  keywords: [
+    'niestandardowe maszyny pakujące', 'projekt custom maszyna',
+    'dedykowana maszyna pakująca', 'stanowisko specjalne pakowanie',
+    'chwytak robotyczny custom', 'maszyna pakująca na zamówienie',
+  ],
   alternates: { canonical: `${SITE_URL}/rozwiazania/projekty-custom` },
   openGraph: {
     url:         `${SITE_URL}/rozwiazania/projekty-custom`,
@@ -150,7 +155,7 @@ export default function ProjektyCustomPage() {
               `linear-gradient(to bottom, color-mix(in srgb, var(--bg-alt) 55%, transparent) 0%, transparent 20%, transparent 80%, color-mix(in srgb, var(--bg-alt) 55%, transparent) 100%)`,
             ].join(', '),
           }} />
-          <Image src="/images/other/custom-smarowanieform.png" alt="" fill sizes="(max-width: 768px) 0vw, 50vw"
+          <Image src="/images/other/custom-smarowanieform.jpg" alt="" fill sizes="(max-width: 768px) 0vw, 50vw"
           style={{ objectFit: 'cover', objectPosition: 'center', opacity: 0.5 }} />
         </Box>
         <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1, py: { xs: 6, md: 10 } }}>

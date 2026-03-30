@@ -7,9 +7,15 @@ import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'Robotyzacja pakowania — coboty i roboty przemysłowe | MadejPak',
+  title: 'Robotyzacja pakowania – coboty i roboty przemysłowe w liniach | MadejPak',
   description:
-    'MadejPak integruje roboty przemysłowe i coboty liderów branży w liniach pakujących. Pick-and-place, paletyzacja, handling produktów — elastyczna automatyzacja stanowisk.',
+    'MadejPak integruje roboty przemysłowe i coboty w liniach pakujących — pick-and-place, paletyzacja robotyczna, robot do paletyzacji worków i kartonów. Elastyczna automatyzacja końca linii.',
+  keywords: [
+    'robotyzacja pakowania', 'robot przemysłowy linia pakująca',
+    'cobot pakowanie', 'pick-and-place robot pakowanie',
+    'robot do paletyzacji', 'automatyzacja końca linii',
+    'robotyczne stanowisko pakowania',
+  ],
   alternates: { canonical: `${SITE_URL}/maszyny/robotyzacja-pakowania` },
   openGraph: {
     url:         `${SITE_URL}/maszyny/robotyzacja-pakowania`,
@@ -126,7 +132,7 @@ export default function RobotyzacjaPage() {
             <Box sx={{ borderRadius: 2, overflow: 'hidden', border: `1px solid ${BORDER}` }}>
               <Box
                 component="img"
-                src="/images/other/robotyzacja-cobot.png"
+                src="/images/other/robotyzacja-cobot.jpg"
                 alt="Robot przemysłowy na stanowisku pakującym"
                 sx={{ width: '100%', height: { xs: 240, md: 380 }, objectFit: 'cover', display: 'block' }}
               />

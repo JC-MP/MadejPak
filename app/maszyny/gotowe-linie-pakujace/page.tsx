@@ -8,9 +8,15 @@ import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'Gotowe linie pakujące i stanowiska paletyzacji | MadejPak',
+  title: 'Gotowe linie pakujące – sprawdzone układy dla zakładów produkcyjnych | MadejPak',
   description:
-    'MadejPak projektuje i wdraża gotowe linie pakujące, stanowiska paletyzacji i rozwiązania automatyzacji końca linii. Sprawdzone układy oparte na realnych wdrożeniach przemysłowych.',
+    'MadejPak wdraża gotowe linie pakujące i stanowiska paletyzacji oparte na realnych wdrożeniach. Linia do pakowania produktów sypkich, żywności lub chemikaliów — gotowa do uruchomienia.',
+  keywords: [
+    'gotowe linie pakujące', 'linia pakująca dla zakładu produkcyjnego',
+    'linia do pakowania produktów sypkich', 'linia pakująca żywność',
+    'stanowisko paletyzacji', 'gotowe rozwiązanie pakowania',
+    'szybkie wdrożenie linii pakującej',
+  ],
   alternates: { canonical: `${SITE_URL}/maszyny/gotowe-linie-pakujace` },
   openGraph: {
     url:         `${SITE_URL}/maszyny/gotowe-linie-pakujace`,
@@ -323,7 +329,7 @@ export default function GotoweLiniePage() {
               `linear-gradient(to bottom, color-mix(in srgb, var(--bg-alt) 55%, transparent) 0%, transparent 20%, transparent 80%, color-mix(in srgb, var(--bg-alt) 55%, transparent) 100%)`,
             ].join(', '),
           }} />
-          <Image src="/images/other/robotyzacja-cobot.png" alt="" fill sizes="(max-width: 768px) 0vw, 50vw"
+          <Image src="/images/other/robotyzacja-cobot.jpg" alt="" fill sizes="(max-width: 768px) 0vw, 50vw"
             style={{ objectFit: 'cover', objectPosition: 'center', opacity: 0.5, filter: 'grayscale(100%)' }} />
         </Box>
 

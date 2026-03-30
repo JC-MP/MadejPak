@@ -522,7 +522,7 @@ export default function ServiceEnPage() {
               `linear-gradient(to right, var(--bg) 0%, color-mix(in srgb, var(--bg) 80%, transparent) 20%, color-mix(in srgb, var(--bg) 30%, transparent) 45%, transparent 100%)`,
               `linear-gradient(to bottom, color-mix(in srgb, var(--bg) 60%, transparent) 0%, transparent 20%, transparent 80%, color-mix(in srgb, var(--bg) 60%, transparent) 100%)`,
             ].join(', ') }} />
-          <Box component="img" src="/images/other/serwis.png" alt=""
+          <Box component="img" src="/images/other/serwis.jpg" alt=""
             sx={{ display: 'block', width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', opacity: 0.55 }} />
         </Box>
 

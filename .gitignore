@@ -29,7 +29,7 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
-# videos (except hero)
+# videos (except hero — used as fallback on Safari/iOS)
 public/videos/*.mp4
 !public/videos/hero.mp4
 

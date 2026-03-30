@@ -9,7 +9,7 @@
 // ─── Przełącznik blokady indeksowania ────────────────────────────────────────
 // true  = robots.txt blokuje wszystkich crawlerów (środowisko testowe)
 // false = robots.txt pozwala na indeksowanie (produkcja)
-export const BLOCK_INDEXING = true;
+export const BLOCK_INDEXING = false;
 
 // ─── Docelowy URL produkcyjny ─────────────────────────────────────────────────
 export const SITE_URL = 'https://madejpak.pl';

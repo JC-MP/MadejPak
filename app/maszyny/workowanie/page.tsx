@@ -10,9 +10,14 @@ import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'Workowanie i zamykanie worków – Concetti | MadejPak',
+  title: 'Workowanie – maszyny do pakowania nawozów, cementu i proszków | MadejPak',
   description:
-    'Maszyny workujące Concetti w ofercie MadejPak — IGF open-mouth, CONTINUA FFS, workowanie big-bag. Produkty sypkie, proszki, granulaty, cement, nawozy.',
+    'Maszyny workujące Concetti do pakowania nawozów, cementu, proszków i granulatów — IGF open-mouth, CONTINUA FFS, workowanie big-bag. Linia do pakowania worków dla przemysłu.',
+  keywords: [
+    'workowanie', 'maszyny workujące', 'pakowanie nawozów', 'pakowanie cementu',
+    'pakowanie proszków worki', 'big-bag', 'linia workująca',
+    'automat do workowania', 'pakowanie granulatów worki',
+  ],
   alternates: { canonical: `${SITE_URL}/maszyny/workowanie` },
   openGraph: {
     url:         `${SITE_URL}/maszyny/workowanie`,

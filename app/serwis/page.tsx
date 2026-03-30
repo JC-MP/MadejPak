@@ -640,7 +640,7 @@ export default function ServicePage() {
             ].join(', '),
           }} />
           <Box component="img"
-            src="/images/other/serwis.png"
+            src="/images/other/serwis.jpg"
             alt=""
             sx={{
               display: 'block', width: '100%', height: '100%',

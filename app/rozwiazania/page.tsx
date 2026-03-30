@@ -8,15 +8,20 @@ import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'Rozwiązania dla przemysłu',
+  title: 'Integracja i automatyzacja linii pakujących – rozwiązania | MadejPak',
   description:
-    'Kompleksowe rozwiązania z zakresu integracji linii pakujących, automatyzacji i robotyzacji pakowania oraz projektów custom dla przemysłu.',
+    'MadejPak integruje linie pakujące, automatyzuje i robotyzuje pakowanie oraz realizuje projekty custom dla zakładów produkcyjnych. Od analizy procesu po serwis i modernizację.',
+  keywords: [
+    'integracja linii pakujących', 'automatyzacja pakowania', 'robotyzacja pakowania',
+    'modernizacja linii pakujących', 'projekty custom maszyny pakujące',
+    'linia pakująca dla przemysłu', 'integrator linii produkcyjnych',
+  ],
   alternates: { canonical: `${SITE_URL}/rozwiazania` },
   openGraph: {
     url:         `${SITE_URL}/rozwiazania`,
-    title:       'Rozwiązania dla przemysłu | MadejPak',
-    description: 'Kompleksowe rozwiązania z zakresu integracji linii pakujących, automatyzacji i robotyzacji pakowania oraz projektów custom dla przemysłu.',
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Rozwiązania MadejPak' }],
+    title:       'Integracja i automatyzacja linii pakujących | MadejPak',
+    description: 'MadejPak integruje linie pakujące, automatyzuje i robotyzuje pakowanie oraz realizuje projekty custom dla zakładów produkcyjnych.',
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Rozwiązania MadejPak – integracja linii pakujących' }],
   },
 };
 
@@ -92,7 +97,7 @@ export default function RozwiazaniaPage() {
               `linear-gradient(to bottom, color-mix(in srgb, var(--bg-alt) 55%, transparent) 0%, transparent 20%, transparent 80%, color-mix(in srgb, var(--bg-alt) 55%, transparent) 100%)`,
             ].join(', '),
           }} />
-          <Image src="/images/other/rozwiazania-ogolnezdjecie.png" alt="" fill sizes="(max-width: 768px) 0vw, 50vw"
+          <Image src="/images/other/rozwiazania-ogolnezdjecie.jpg" alt="" fill sizes="(max-width: 768px) 0vw, 50vw"
           style={{ objectFit: 'cover', objectPosition: 'center', opacity: 0.5 }} />
         </Box>
         <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1, py: { xs: 8, md: 12 } }}>

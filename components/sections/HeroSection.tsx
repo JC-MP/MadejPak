@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
@@ -13,11 +13,15 @@ const BG = 'var(--bg)';           // popielaty ciemny
 const ACCENT = '#E8610A';       // pomarańczowy
 const ACCENT_HOVER = '#F07520'; // pomarańczowy jaśniejszy (hover)
 
-// ─── Video asset paths ────────────────────────────────────────────────────────
-// Place files in /public/videos/ and /public/images/
-// To get the video: download https://youtu.be/-isRtDx3tn8 and save as hero.mp4
+// ─── Video sources ────────────────────────────────────────────────────────────
+const YOUTUBE_ID = '-isRtDx3tn8';
 const VIDEO_SRC = '/videos/hero.mp4';
 const POSTER_SRC = '/images/hero-poster.jpg';
+
+function isSafari(): boolean {
+  const ua = navigator.userAgent;
+  return /iP(hone|ad|od)/.test(ua) || (/Macintosh/.test(ua) && /Safari/.test(ua) && !/Chrome/.test(ua));
+}
 
 // ─── Trust metrics ───────────────────────────────────────────────────────────
 const METRICS = [
@@ -28,23 +32,31 @@ const METRICS = [
 ] as const;
 
 // ─── Video background ─────────────────────────────────────────────────────────
-// Uses native <video> — only approach that works reliably on Safari.
-// YouTube iframe cannot autoplay on Safari without user gesture.
 
 function VideoBackground() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [ready, setReady] = useState(false);
+  const [useSafari, setUseSafari] = useState<boolean | null>(null);
 
   useEffect(() => {
-    const el = videoRef.current;
-    if (!el) return;
-    // canplaythrough fires when enough data is buffered to play without stops
-    const onReady = () => setReady(true);
-    el.addEventListener('canplaythrough', onReady, { once: true });
-    // If video already buffered before effect ran
-    if (el.readyState >= 4) setReady(true);
-    return () => el.removeEventListener('canplaythrough', onReady);
+    setUseSafari(isSafari());
   }, []);
+
+  const youtubeSrc =
+    `https://www.youtube-nocookie.com/embed/${YOUTUBE_ID}` +
+    `?autoplay=1&mute=1&loop=1&playlist=${YOUTUBE_ID}` +
+    `&controls=0&rel=0&modestbranding=1&playsinline=1&disablekb=1`;
+
+  const gradientSx = {
+    position: 'absolute',
+    inset: 0,
+    zIndex: 1,
+    background: {
+      xs: `linear-gradient(to bottom, var(--hero-f0) 0%, var(--hero-99) 40%, var(--hero-e0) 100%)`,
+      md: [
+        `linear-gradient(to right, var(--hero-bg) 0%, var(--hero-ee) 15%, var(--hero-66) 45%, transparent 100%)`,
+        `linear-gradient(to bottom, transparent 55%, var(--hero-99) 100%)`,
+      ].join(', '),
+    },
+  };
 
   return (
     <Box
@@ -60,23 +72,9 @@ function VideoBackground() {
         pointerEvents: 'none',
       }}
     >
-      {/* Gradient overlay */}
-      <Box
-        sx={{
-          position: 'absolute',
-          inset: 0,
-          zIndex: 1,
-          background: {
-            xs: `linear-gradient(to bottom, var(--hero-f0) 0%, var(--hero-99) 40%, var(--hero-e0) 100%)`,
-            md: [
-              `linear-gradient(to right, var(--hero-bg) 0%, var(--hero-ee) 15%, var(--hero-66) 45%, transparent 100%)`,
-              `linear-gradient(to bottom, transparent 55%, var(--hero-99) 100%)`,
-            ].join(', '),
-          },
-        }}
-      />
+      <Box sx={gradientSx} />
 
-      {/* Poster — shown before video loads */}
+      {/* Poster — always present as base layer */}
       <Box
         sx={{
           position: 'absolute',
@@ -84,31 +82,50 @@ function VideoBackground() {
           backgroundImage: `url(${POSTER_SRC})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          opacity: ready ? 0 : 1,
-          transition: 'opacity 0.6s ease',
         }}
       />
 
-      <Box
-        ref={videoRef}
-        component="video"
-        src={VIDEO_SRC}
-        poster={POSTER_SRC}
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-        sx={{
-          display: 'block',
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover',
-          objectPosition: 'center',
-          opacity: ready ? 1 : 0,
-          transition: 'opacity 0.6s ease',
-        }}
-      />
+      {/* Safari/iOS — native video file (autoplay works) */}
+      {useSafari === true && (
+        <Box
+          component="video"
+          src={VIDEO_SRC}
+          poster={POSTER_SRC}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          sx={{
+            position: 'absolute',
+            inset: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: 'center',
+            display: 'block',
+          }}
+        />
+      )}
+
+      {/* Chrome/Firefox — YouTube iframe */}
+      {useSafari === false && (
+        <Box
+          component="iframe"
+          src={youtubeSrc}
+          allow="autoplay; encrypted-media"
+          sx={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            width: 'max(100%, calc(100vh * 16 / 9))',
+            height: 'max(100%, calc(100vw * 9 / 16))',
+            transform: 'translate(-50%, -50%)',
+            border: 'none',
+            pointerEvents: 'none',
+          }}
+        />
+      )}
     </Box>
   );
 }
