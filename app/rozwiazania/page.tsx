@@ -36,7 +36,7 @@ const SOLUTIONS = [
   {
     num: '01',
     title: 'Integracja linii pakujących',
-    body: 'Masz pakarki, wagi i przenośniki różnych dostawców, które nie współpracują? Projektujemy przepływ materiału, dobieramy interfejsy komunikacyjne i synchronizujemy każdy etap — tak żeby cała linia działała jako jeden organizm bez wąskich gardeł.',
+    body: 'Masz maszyny pakujące, wagi i przenośniki różnych dostawców, które nie współpracują? Projektujemy przepływ materiału, dobieramy interfejsy komunikacyjne i synchronizujemy każdy etap — tak żeby cała linia działała jako jeden organizm bez wąskich gardeł.',
     tags: ['Linie wielomaszynowe', 'SCADA / HMI', 'Synchronizacja procesów', 'Rozruch i uruchomienie'],
     href: '/rozwiazania/integracja-linii-pakujacych',
   },

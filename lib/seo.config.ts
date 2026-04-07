@@ -31,7 +31,7 @@ export const COMPANY = {
   email:         'biuro@madejpak.pl',
   phone:         '+48123454397',
   foundingYear:  '2000',
-  taxID:         '8681986442',   // NIP
+  taxID:         '8681986442',   // NIP: 868-198-64-42
   vatID:         'PL8681986442', // VAT EU
   address: {
     streetAddress:   'Dziewin 333',

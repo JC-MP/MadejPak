@@ -26,7 +26,7 @@ const DIFFERENTIATORS = [
       </>
     ),
     title: 'Własny serwis i magazyn części',
-    desc: 'Reagujemy szybko, bo mamy własnych serwisantów i części na stanie. Czas reakcji liczymy w godzinach — nie uzależniamy Cię od producenta z zagranicy.',
+    desc: 'Reagujemy szybko, bo mamy własnych serwisantów i większość kluczowych części na stanie. Czas reakcji liczymy w godzinach — nie uzależniamy Cię od producenta z zagranicy.',
   },
   {
     icon: (

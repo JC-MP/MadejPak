@@ -122,7 +122,7 @@ export default function ServiceTeaserSection() {
               }}
             >
               Serwis to dla nas nie usługa dodatkowa — to część oferty.
-              Reagujemy szybko, mamy części na stanie i dbamy o ciągłość
+              Reagujemy szybko, mamy większość kluczowych części na stanie i dbamy o ciągłość
               pracy Twojej linii.
             </Typography>
           </Box>

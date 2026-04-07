@@ -14,11 +14,12 @@ const DIM     = 'var(--dim-45)';
 const DIM_LO  = 'var(--dim-28)';
 
 const COMPANY = {
-  name:    'PPHU MADEJPAK SP. Z O.O.',
-  address: 'Dziewin 333, 32-708 Dziewin',
-  phone:   '+48 12 345 43 97',
-  email:   'biuro@madejpak.pl',
-  nip:     '868-000-08-38',
+  name:      'PPHU MADEJPAK SP. Z O.O.',
+  address:   'Dziewin 333, 32-708 Dziewin',
+  phone:     '+48 12 345 43 97',
+  email:     'biuro@madejpak.pl',
+  nip:       '868-198-64-42',
+  linkedin:  'https://www.linkedin.com/company/madejpak/posts/?feedView=all',
 };
 
 const NAV_COLS = [
@@ -170,6 +171,15 @@ export default function Footer() {
                   NIP
                 </Typography>
                 <Typography sx={{ fontSize: '0.82rem', color: DIM }}>{COMPANY.nip}</Typography>
+              </Box>
+              <Box>
+                <Typography sx={{ fontSize: '0.7rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: DIM_LO, mb: 0.5 }}>
+                  LinkedIn
+                </Typography>
+                <Typography component="a" href={COMPANY.linkedin} target="_blank" rel="noopener noreferrer"
+                  sx={{ ...linkSx, '&:hover': { color: ACCENT } }}>
+                  MadejPak
+                </Typography>
               </Box>
             </Stack>
           </Box>

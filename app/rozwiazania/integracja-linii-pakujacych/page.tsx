@@ -84,7 +84,7 @@ const STEPS = [
 const SCOPE = [
   {
     title: 'Pakowanie produktu',
-    desc: 'Worki, kartony, tacki, flow-pack — dopasowujemy format opakowania do produktu i wolumenu linii.',
+    desc: 'Worki, kartony, flow-pack — dopasowujemy format opakowania do produktu i wolumenu linii.',
     icon: (
       <Box component="svg" viewBox="0 0 24 24" fill="none" aria-hidden sx={{ width: 26, height: 26 }}>
         <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
@@ -106,7 +106,7 @@ const SCOPE = [
   },
   {
     title: 'Paletyzacja',
-    desc: 'Paletyzatory liniowe i robotyczne — od 200 do 1800+ cykli/h, dla worków, kartonów i opakowań zbiorczych.',
+    desc: 'Paletyzatory z robotem i paletyzatory warstwowe — dla worków, kartonów i opakowań zbiorczych.',
     icon: (
       <Box component="svg" viewBox="0 0 24 24" fill="none" aria-hidden sx={{ width: 26, height: 26 }}>
         <rect x="3" y="14" width="8" height="7" rx="1" stroke="currentColor" strokeWidth="1.75" />
@@ -163,7 +163,7 @@ const SCOPE = [
   },
   {
     title: 'Kontrola jakości',
-    desc: 'Detekcja metali, kontrola wagowa i wizja maszynowa wbudowane w przepływ — przed lub po opakowaniu.',
+    desc: 'Detekcja metali i kontrola wagowa wbudowane w przepływ — przed lub po opakowaniu.',
     icon: (
       <Box component="svg" viewBox="0 0 24 24" fill="none" aria-hidden sx={{ width: 26, height: 26 }}>
         <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
@@ -177,7 +177,7 @@ const SCOPE = [
 const EXAMPLE_LINES = [
   {
     label: 'Produkty sypkie',
-    title: 'Waga wielogłowicowa → VFFS → owiniarka → paletyzator',
+    title: 'Waga wielogłowicowa → VFFS → paletyzator → owijarka',
     desc: 'Sól, kasza, granulatym nawozy. Jeden ciąg od dozowania po gotową paletę z folią stretch — sterowany z jednego HMI.',
     tags: ['Przemysł spożywczy', 'FMCG', 'Materiały budowlane'],
   },

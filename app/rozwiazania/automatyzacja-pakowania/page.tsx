@@ -56,7 +56,7 @@ const AREAS = [
     step: '05',
     icon: <Ico d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" d2="M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6z" />,
     title: 'Kontrola jakości in-line',
-    desc: 'Ważenie kontrolne, detekcja metali, wizja maszynowa i kontrola szczelności — wbudowane w przepływ tak, że niezgodne opakowania są odrzucane zanim trafią na paletę.',
+    desc: 'Ważenie kontrolne, detekcja metali i kontrola szczelności — wbudowane w przepływ tak, że niezgodne opakowania są odrzucane zanim trafią na paletę.',
   },
   {
     step: '06',

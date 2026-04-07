@@ -76,7 +76,7 @@ const SOLUTIONS = [
     problem: 'Paletyzacja blokuje tempo linii?',
     headline: 'Robotyzacja i paletyzacja',
     description:
-      'Roboty przemysłowe, coboty i paletyzatory liderów branży — budujemy stanowiska, które pracują 3 zmiany bez przerwy. Obsługujemy worki, kartony i tace w trudnych warunkach.',
+      'Roboty przemysłowe, coboty i paletyzatory liderów branży — budujemy stanowiska, które pracują 3 zmiany bez przerwy. Obsługujemy worki i kartony w trudnych warunkach.',
     href: '/rozwiazania/robotyzacja-pakowania',
     cta: 'Sprawdź robotyzację',
   },
@@ -90,7 +90,7 @@ const SOLUTIONS = [
     problem: 'Maszyny nie rozmawiają ze sobą?',
     headline: 'Integracja linii pakujących',
     description:
-      'Łączymy w jeden system: pakarkę, wagę, przenośniki, robot i paletyzator. Jeden sterownik, jeden przepływ, zero wąskich gardeł.',
+      'Łączymy w jeden system: maszynę pakującą, wagę, przenośniki, robot i paletyzator. Jeden sterownik, jeden przepływ, zero wąskich gardeł.',
     href: '/rozwiazania/integracja-linii-pakujacych',
     cta: 'Sprawdź integrację',
   },
