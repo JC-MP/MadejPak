@@ -23,16 +23,16 @@ const BG_ALT   = 'var(--bg-alt)';
 // ─── Data ─────────────────────────────────────────────────────────────────────
 const PARTNERS = [
   {
-    name:         'Tecno Pack',
+    name:         'GSP (Tecnopack group)',
     group:        'Tecnopack Group · GSP (General System Pack)',
-    logo:         null as string | null,
+    logo:         '/logos/partnerzy/GSP LOGO.png',
     image:        '/images/machines/interpack-gsp.png',
     hall:         'Halle 5',
     stand:        'F22',
     interpackUrl: 'https://www.interpack.com/vis/v1/en/exhprofiles/8EaLFUvVSNSmpKXCu4QAQQ?ticket=g_u_e_s_t',
     ticketUrl:    null as string | null,
     tags: ['Poziome flow-pack (H-FFS)', 'Pionowe VFFS', 'Termofoliowanie', 'Paletyzacja', 'Autonomiczny załadunek'],
-    description:  'Tecno Pack, flagowa marka Tecnopack Group, prezentuje szerokie portfolio maszyn pakujących — od kompaktowych flow-pack i pionowych VFFS, przez owijanie termokurczliwe i pakowanie w kartony, po kompletne systemy paletyzacji z robotem przemysłowym i autonomiczny wózek załadunkowy ATL. Na stoisku obecne jest również GSP (General System Pack) — kolejna marka grupy.',
+    description:  'GSP (Tecnopack group), flagowa marka Tecnopack Group, prezentuje szerokie portfolio maszyn pakujących — od kompaktowych flow-pack i pionowych VFFS, przez owijanie termokurczliwe i pakowanie w kartony, po kompletne systemy paletyzacji z robotem przemysłowym i autonomiczny wózek załadunkowy ATL. Na stoisku obecne jest również GSP (General System Pack) — kolejna marka grupy.',
     highlights: [
       { icon: 'box',    text: 'FP 100 E COMPACT — superkompaktowa maszyna flow-pack, małe zapotrzebowanie na powierzchnię' },
       { icon: 'vffs',  text: 'FV 210 — pionowa maszyna pakująca (VFFS) z wielogłowicową wagą kombinacyjną' },
@@ -88,7 +88,7 @@ const PARTNERS = [
   {
     name:         'Vimco',
     group:        null as string | null,
-    logo:         null,
+    logo:         'https://vimco.it/wp-content/uploads/2021/11/cropped-Logo_VIMCO.png',
     image:        '/images/machines/interpack-vimco.png',
     hall:         'Halle 13',
     stand:        'C59',
