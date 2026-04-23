@@ -54,14 +54,11 @@ const PARTNERS = [
     interpackUrl: 'https://www.interpack.com/vis/v1/en/exhprofiles/7Aa5RVwJT56dblxcY1Yp8Q?ticket=g_u_e_s_t',
     ticketUrl:    null as string | null,
     tags: ['Pionowe VFFS', 'Systemy ważenia', 'Produkty sypkie', 'Mieszanie i baling', 'Automatyzacja przemysłowa'],
-    description:  'EsseGi to lider w projektowaniu pionowych systemów pakujących, balerów, linii mieszania podłoży, systemów ważenia i automatyzacji przemysłowej — z 40-letnim doświadczeniem. Na Interpack 2026 prezentuje modele z serii EVO/Syncro i F-series, wyposażone w nowy panel operatorski Siemens Unified MTP1000.',
+    description:  'EsseGi prezentuje na Interpack 2026 dwie maszyny z serii EVO/Syncro — obie wyposażone w nowy panel operatorski Siemens Unified MTP1000 (10") z intuicyjnym oprogramowaniem.',
     highlights: [
-      { icon: 'vffs',  text: 'EVO 1000SYNCRO / INOX — wersja ze stali nierdzewnej, mieszanki przypraw do 12 kg, podajnik ślimakowy' },
-      { icon: 'vffs',  text: 'EVO 1200SYNCRO — konstrukcja malowana z częściami ze stali nierdzewnej, karma rybna 20–25 kg, waga dwutaśmowa' },
-      { icon: 'vffs',  text: 'F1200 + volumetryczny podajnik taśmowy DTS80' },
-      { icon: 'vffs',  text: 'F1000 MOTION SU&SO + wagi taśmowe B/N-K' },
-      { icon: 'vffs',  text: 'F1300 MOTION SU&SO + volumetryczny podajnik taśmowy DTS80 MAX' },
-      { icon: 'panel', text: 'Nowy interfejs Siemens Unified MTP1000 (10") — intuicyjna obsługa i nowe oprogramowanie' },
+      { icon: 'vffs',  text: 'EVO 1000SYNCRO / INOX — wersja ze stali nierdzewnej · mieszanki przypraw do 12 kg · podajnik ślimakowy' },
+      { icon: 'vffs',  text: 'EVO 1200SYNCRO — konstrukcja malowana, części kontaktowe ze stali nierdzewnej · karma rybna 20–25 kg · waga dwutaśmowa' },
+      { icon: 'panel', text: 'Nowy interfejs Siemens Unified MTP1000 (10") — intuicyjna obsługa i nowe oprogramowanie na obu maszynach' },
     ],
   },
   {
