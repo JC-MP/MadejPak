@@ -19,6 +19,32 @@ export interface TradeEvent {
 }
 
 export const EVENTS: TradeEvent[] = [
+  // ─── 2026 ────────────────────────────────────────────────────────────────
+  {
+    id: 'interpack-2026',
+    name: 'Interpack 2026',
+    dateLabel: '7–13 maja 2026',
+    dateStart: '2026-05-07',
+    city: 'Düsseldorf',
+    venue: 'Messe Düsseldorf',
+    country: 'Niemcy',
+    zajawka:
+      'MadejPak na największych światowych targach branży pakowania. Odwiedź nas na stoiskach partnerów technologicznych w Düsseldorfie — cztery stoiska w trzech halach.',
+    opis:
+      'Interpack 2026 to największe na świecie targi branży pakowania, odbywające się co trzy lata w Düsseldorfie. MadejPak będzie obecny na stoiskach czterech partnerów technologicznych: Tecno Pack (Halle 5 / F22), EsseGi (Halle 12 / D07), Concetti (Halle 12 / B10) i Vimco (Halle 13 / C59). Zapraszamy do odwiedzenia stoisk z nowościami maszyn pakujących, workujących i paletyzujących.',
+    partners: ['Tecno Pack / GSP', 'EsseGi', 'Concetti', 'Vimco'],
+    boothInfo: 'Halle 5/F22 · Halle 12/D07 · Halle 12/B10 · Halle 13/C59',
+    teamNote: 'MadejPak obecny na stoiskach partnerów technologicznych. Bezpłatny bilet wstępu przez formularz Concetti.',
+    highlights: [
+      'Tecno Pack / GSP — flow-pack, VFFS, paletyzacja robotyczna, autonomiczny wózek ATL (Halle 5 / F22)',
+      'EsseGi — pionowe maszyny workujące serii EVO/Syncro i F-series, panel Siemens MTP1000 (Halle 12 / D07)',
+      'Concetti — workowanie pet food IMF āles, Big Bag, C-LAB, serwis CHECK (Halle 12 / B10)',
+      'Vimco — maszyny do pakowania wtórnego, box erecting, wrap-around, top-load (Halle 13 / C59)',
+    ],
+    eventType: 'targi',
+    status: 'upcoming',
+  },
+
   // ─── 2025 ────────────────────────────────────────────────────────────────
   {
     id: 'maintenance-symas-2025',

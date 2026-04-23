@@ -33,10 +33,14 @@ import SolutionsSection from '@/components/sections/SolutionsSection';
 // import PartnersStripSection from '@/components/sections/PartnersStripSection';
 import ServiceTeaserSection from '@/components/sections/ServiceTeaserSection';
 import EventsSection from '@/components/sections/EventsSection';
+import InterpackBanner from '@/components/sections/InterpackBanner';
 
 export default function HomePage() {
   return (
     <main>
+      {/* Tymczasowy baner Interpack 2026 — znika po 20 maja 2026 */}
+      <InterpackBanner />
+
       {/* 1. Hero — kim jesteśmy, wideo, liczby */}
       <HeroSection />
 
