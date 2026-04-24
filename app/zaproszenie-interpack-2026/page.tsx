@@ -29,13 +29,18 @@ const PARTNERS = [
     image:        '/images/machines/interpack-gsp.png',
     hall:         'Halle 5',
     stand:        'F22',
-    interpackUrl: 'https://www.interpack.com/vis/v1/en/exhprofiles/8EaLFUvVSNSmpKXCu4QAQQ?ticket=g_u_e_s_t',
+    interpackUrl:     'https://www.interpack.com/vis/v1/en/exhprofiles/8EaLFUvVSNSmpKXCu4QAQQ?ticket=g_u_e_s_t',
+    presentationUrl:  'https://www.interpack.com/vis/v1/en/exhprofiles/8EaLFUvVSNSmpKXCu4QAQQ?utm_term=8EaLFUvVSNSmpKXCu4QAQQ&utm_campaign=exhibitor-share&utm_source=sharing&utm_medium=link',
     ticketUrl:    null as string | null,
     tags: ['Poziome flow-pack (H-FFS)', 'Pionowe VFFS', 'Termofoliowanie', 'Paletyzacja', 'Autonomiczny załadunek'],
     description:  'GSP (Tecnopack group), flagowa marka Tecnopack Group, prezentuje szerokie portfolio maszyn pakujących — od kompaktowych flow-pack i pionowych VFFS, przez owijanie termokurczliwe i pakowanie w kartony, po kompletne systemy paletyzacji z robotem przemysłowym i autonomiczny wózek załadunkowy ATL.  ',
     highlights: [
       { icon: 'wrap',  text: 'SSI-600 + TS — maszyna pakująca produkty w folię termokurczliwą z tunelem obkurczającym' },
       { icon: 'box',   text: 'FP 100 HP BOX MOTION — wysokowydajna maszyna do pakowania produktów w papierowy materiał opakowaniowy' },
+    ],
+    photos: [
+      '/images/interpack/gsp-1.jpg',
+      '/images/interpack/gsp-2.jpg',
     ],
   },
   {
@@ -45,7 +50,8 @@ const PARTNERS = [
     image:        '/images/machines/interpack-essegi.png',
     hall:         'Halle 12',
     stand:        'D07',
-    interpackUrl: 'https://www.interpack.com/vis/v1/en/exhprofiles/7Aa5RVwJT56dblxcY1Yp8Q?ticket=g_u_e_s_t',
+    interpackUrl:     'https://www.interpack.com/vis/v1/en/exhprofiles/7Aa5RVwJT56dblxcY1Yp8Q?ticket=g_u_e_s_t',
+    presentationUrl:  'https://www.interpack.com/vis/v1/en/exhprofiles/7Aa5RVwJT56dblxcY1Yp8Q?utm_term=7Aa5RVwJT56dblxcY1Yp8Q&utm_campaign=exhibitor-share&utm_source=sharing&utm_medium=link',
     ticketUrl:    null as string | null,
     tags: ['Pionowe VFFS', 'Systemy ważenia', 'Produkty sypkie', 'Linie mieszające', 'Balery', 'Automatyzacja przemysłowa'],
     description:  'EsseGi prezentuje na Interpack 2026 dwie maszyny z serii EVO/Syncro — obie wyposażone w nowy panel operatorski Siemens Unified MTP1000 (10") z intuicyjnym oprogramowaniem.',
@@ -53,6 +59,11 @@ const PARTNERS = [
       { icon: 'vffs',  text: 'EVO 1000SYNCRO / INOX — wersja ze stali nierdzewnej · mieszanki przypraw do 12 kg · podajnik ślimakowy' },
       { icon: 'vffs',  text: 'EVO 1200SYNCRO — konstrukcja malowana, części kontaktowe ze stali nierdzewnej · karma rybna 20–25 kg · waga dwutaśmowa' },
       { icon: 'panel', text: 'Nowy interfejs Siemens Unified MTP1000 (10") — intuicyjna obsługa i nowe oprogramowanie na obu maszynach' },
+    ],
+    photos: [
+      '/images/interpack/essegi-1.jpg',
+      '/images/interpack/essegi-2.jpg',
+      '/images/interpack/essegi-3.jpg',
     ],
   },
   {
@@ -62,7 +73,8 @@ const PARTNERS = [
     image:        '/images/machines/interpack-concetti.png',
     hall:         'Halle 12',
     stand:        'B10',
-    interpackUrl: 'https://www.interpack.com/vis/v1/en/exhprofiles/rZxeuKpnRTKsbEnRKHSy3Q?ticket=g_u_e_s_t',
+    interpackUrl:     'https://www.interpack.com/vis/v1/en/exhprofiles/rZxeuKpnRTKsbEnRKHSy3Q?ticket=g_u_e_s_t',
+    presentationUrl:  'https://www.interpack.de/vis-content/event-interpack2026/exh-interpack2026.3007204/interpack-2026-Concetti-S.p.A.-Paper-interpack2026.3007204-Z07F4MQURVWDHf7VEznoKg.pdf',
     ticketUrl:    null as string | null,
     tags: ['Workowanie (VFFS)', 'Systemy Big Bag', 'Paletyzacja', 'Pet food', 'End-of-line'],
     description:  'Concetti projektuje i produkuje automatyczne rozwiązania do workowania produktów sypkich od 1975 roku. Specjalizuje się w systemach ważenia, workowania, paletyzacji i kompletnej automatyzacji końca linii. Na Interpack 2026 prezentuje nowości dla branży pet food, systemy Big Bag i kompletne linie pakujące.',
@@ -70,6 +82,11 @@ const PARTNERS = [
       { icon: 'box',    text: 'IMF āles — innowacyjna maszyna workująca (open-mouth) zaprojektowana specjalnie dla sektora pet food' },
       { icon: 'bigbag', text: 'Automatyczny system Big Bag — wypełnianie worków Big Bag dla linii wysokowydajnych' },
       { icon: 'lab',    text: 'C-LAB — laboratorium charakteryzacji produktu przed fazą projektową' },
+    ],
+    photos: [
+      '/images/interpack/concetti-1.jpg',
+      '/images/interpack/concetti-2.jpg',
+      '/images/interpack/concetti-3.jpg',
     ],
   },
   {
@@ -79,12 +96,16 @@ const PARTNERS = [
     image:        '/images/machines/interpack-vimco.png',
     hall:         'Halle 13',
     stand:        'C59',
-    interpackUrl: 'https://www.interpack.com/vis/v1/en/exhprofiles/HfS6kGvkSCaBInbfZpm6NQ?ticket=g_u_e_s_t',
+    interpackUrl:     'https://www.interpack.com/vis/v1/en/exhprofiles/HfS6kGvkSCaBInbfZpm6NQ?ticket=g_u_e_s_t',
+    presentationUrl:  'https://www.interpack.de/vis-content/event-interpack2026/exh-interpack2026.3006861/interpack-2026-Vimco-S.r.l.-Product-interpack2026.3006861-QiGwlIahTTSMKdXy4Z8nzg.pdf',
     ticketUrl:    null as string | null,
     tags: ['Pakowanie wtórne', 'Box erecting', 'Wrap-around', 'Top-load', 'End-of-line turnkey'],
     description:  'Vimco to włoski producent maszyn do pakowania wtórnego z ponad 40-letnim doświadczeniem. Specjalizuje się w projektowaniu i produkcji kompletnych linii końca produkcji dla branży spożywczej i niespożywczej.',
     highlights: [
       { icon: 'carton', text: 'Kartoniarka z załadunkiem od boku — szczegółowe informacje wkrótce' },
+    ],
+    photos: [
+      '/images/interpack/vimco-1.jpg',
     ],
   },
 ];
@@ -187,8 +208,6 @@ function LogoArea({ logo, name }: { logo: string | null; name: string }) {
 function PartnerBlock({ partner, index }: { partner: typeof PARTNERS[0]; index: number }) {
   return (
     <Box sx={{
-      position: 'relative',
-      overflow: 'hidden',
       display: 'grid',
       gridTemplateColumns: { xs: '1fr', md: '220px 1fr' },
       gap: { xs: 4, md: 8 },
@@ -196,30 +215,8 @@ function PartnerBlock({ partner, index }: { partner: typeof PARTNERS[0]; index: 
       pt: { xs: 6, md: 8 },
       '@media print': { pageBreakInside: 'avoid', pt: 5, gap: 4 },
     }}>
-      {/* Background machine image — left side, hidden on mobile and print */}
-      <Box aria-hidden="true" sx={{
-        display: { xs: 'none', md: 'block' },
-        position: 'absolute', top: 0, left: 0,
-        width: '20%', height: '100%', zIndex: 0, pointerEvents: 'none',
-        '@media print': { display: 'none' },
-      }}>
-        <Box sx={{
-          position: 'absolute', inset: 0, zIndex: 1,
-          background: [
-            `linear-gradient(to right, var(--bg) 0%, color-mix(in srgb, var(--bg) 60%, transparent) 30%, color-mix(in srgb, var(--bg) 15%, transparent) 60%, transparent 100%)`,
-            `linear-gradient(to bottom, var(--bg) 0%, transparent 15%, transparent 85%, var(--bg) 100%)`,
-          ].join(', '),
-        }} />
-        <Image
-          src={partner.image}
-          alt=""
-          fill
-          sizes="(max-width: 768px) 0vw, 55vw"
-          style={{ objectFit: 'contain', objectPosition: 'left center', opacity: 0.6, filter: 'grayscale(100%)' }}
-        />
-      </Box>
       {/* Left */}
-      <Box sx={{ position: 'relative', zIndex: 1 }}>
+      <Box>
         {/* <Typography sx={{ fontSize: '0.57rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--dim-45)', mb: 1.5 }}>
           Partner {String(index + 1).padStart(2, '0')}
         </Typography> */}
@@ -231,10 +228,32 @@ function PartnerBlock({ partner, index }: { partner: typeof PARTNERS[0]; index: 
         )}
         {!partner.group && <Box sx={{ mb: 2.5 }} />}
         <StandBadge hall={partner.hall} stand={partner.stand} url={partner.interpackUrl} />
+        {partner.presentationUrl && (
+          <Box
+            component="a"
+            href={partner.presentationUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 1,
+              mt: 1.5,
+              fontSize: '0.7rem',
+              fontWeight: 600,
+              color: ACCENT,
+              textDecoration: 'none',
+              '&:hover': { textDecoration: 'underline' },
+              '@media print': { display: 'none' },
+            }}
+          >
+            Prezentacja firmy →
+          </Box>
+        )}
       </Box>
 
       {/* Right */}
-      <Box sx={{ position: 'relative', zIndex: 1 }}>
+      <Box>
         <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.75, mb: 3 }}>
           {partner.tags.map((t) => <TagPill key={t} label={t} />)}
         </Box>
@@ -303,6 +322,22 @@ function PartnerBlock({ partner, index }: { partner: typeof PARTNERS[0]; index: 
             </Box>
           ))}
         </Box>
+
+        {partner.photos && partner.photos.length > 0 && (
+          <Box sx={{
+            mt: 3,
+            display: 'grid',
+            gridTemplateColumns: `repeat(${partner.photos.length}, 1fr)`,
+            gap: 1.5,
+            '@media print': { display: 'none' },
+          }}>
+            {partner.photos.map((src, i) => (
+              <Box key={i} sx={{ position: 'relative', aspectRatio: '4/3', borderRadius: '3px', overflow: 'hidden', bgcolor: 'var(--bg-card)' }}>
+                <Image src={src} alt="" fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'cover' }} />
+              </Box>
+            ))}
+          </Box>
+        )}
       </Box>
     </Box>
   );
