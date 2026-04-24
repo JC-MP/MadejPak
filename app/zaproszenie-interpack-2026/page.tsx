@@ -377,7 +377,12 @@ export default function InterpackInvitationPage() {
                 <Typography sx={{ fontSize: { xs: '0.93rem', md: '1rem' }, lineHeight: 1.85, color: 'var(--dim-85)', fontWeight: 700, mb: 4 }}>
                   Prosimy o kontakt w celu otrzymania bezpłatnych biletów wstępu.
                 </Typography>
-                <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2 }}>
+                       <Typography sx={{ fontSize: { xs: '0.93rem', md: '1rem' }, lineHeight: 1.8, color: 'var(--dim-85)', fontWeight: 500, mb: 4 }}>
+               <a  href= 'tel:+48603664755'>Adam Madej +48 603 664 755</a>  <br/>          
+                <a href= 'tel:+48697097997'>Bartłomiej Zyznawski +48 697 097 997</a>   
+             
+                </Typography>
+                   <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2 }}>
                   <Box
                     component={Link}
                     href="/kontakt"
