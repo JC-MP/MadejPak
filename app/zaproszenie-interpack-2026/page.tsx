@@ -32,28 +32,22 @@ const PARTNERS = [
     interpackUrl: 'https://www.interpack.com/vis/v1/en/exhprofiles/8EaLFUvVSNSmpKXCu4QAQQ?ticket=g_u_e_s_t',
     ticketUrl:    null as string | null,
     tags: ['Poziome flow-pack (H-FFS)', 'Pionowe VFFS', 'Termofoliowanie', 'Paletyzacja', 'Autonomiczny załadunek'],
-    description:  'GSP (Tecnopack group), flagowa marka Tecnopack Group, prezentuje szerokie portfolio maszyn pakujących — od kompaktowych flow-pack i pionowych VFFS, przez owijanie termokurczliwe i pakowanie w kartony, po kompletne systemy paletyzacji z robotem przemysłowym i autonomiczny wózek załadunkowy ATL. Na stoisku obecne jest również GSP (General System Pack) — kolejna marka grupy.',
+    description:  'GSP (Tecnopack group), flagowa marka Tecnopack Group, prezentuje szerokie portfolio maszyn pakujących — od kompaktowych flow-pack i pionowych VFFS, przez owijanie termokurczliwe i pakowanie w kartony, po kompletne systemy paletyzacji z robotem przemysłowym i autonomiczny wózek załadunkowy ATL.  ',
     highlights: [
-      { icon: 'box',    text: 'FP 100 E COMPACT — superkompaktowa maszyna flow-pack, małe zapotrzebowanie na powierzchnię' },
-      { icon: 'vffs',  text: 'FV 210 — pionowa maszyna pakująca (VFFS) z wielogłowicową wagą kombinacyjną' },
-      { icon: 'wrap',  text: 'SSI-600 + TS — owiniarka termokurczliwa ze zintegrowanym tunelem' },
-      { icon: 'box',   text: 'FP 100 HP BOX MOTION — maszyna wysokowydajna do materiałów papierowych' },
-      { icon: 'box',   text: 'TRI-FUNCTIONAL CELL — formowanie, napełnianie i zamykanie tacek lub pudełek display' },
-      { icon: 'box',   text: 'WP 015 — maszyna Wrap Around do pudełek z przykrywką' },
-      { icon: 'pallet',text: 'THE CUBE — superkompaktowy monoblock paletyzujący z robotem przemysłowym' },
-      { icon: 'truck', text: 'ATL — autonomiczny wózek załadunkowy do nawigacji w hali i kontenerach' },
+      { icon: 'wrap',  text: 'SSI-600 + TS — maszyna pakująca produkty w folię termokurczliwą z tunelem obkurczającym' },
+      { icon: 'box',   text: 'FP 100 HP BOX MOTION — wysokowydajna maszyna do pakowania produktów w papierowy materiał opakowaniowy' },
     ],
   },
   {
     name:         'EsseGi',
-    group:        null as string | null,
+    group:        'EsseGi',
     logo:         '/logos/partnerzy/essegi.png',
     image:        '/images/machines/interpack-essegi.png',
     hall:         'Halle 12',
     stand:        'D07',
     interpackUrl: 'https://www.interpack.com/vis/v1/en/exhprofiles/7Aa5RVwJT56dblxcY1Yp8Q?ticket=g_u_e_s_t',
     ticketUrl:    null as string | null,
-    tags: ['Pionowe VFFS', 'Systemy ważenia', 'Produkty sypkie', 'Mieszanie i baling', 'Automatyzacja przemysłowa'],
+    tags: ['Pionowe VFFS', 'Systemy ważenia', 'Produkty sypkie', 'Linie mieszające', 'Balery', 'Automatyzacja przemysłowa'],
     description:  'EsseGi prezentuje na Interpack 2026 dwie maszyny z serii EVO/Syncro — obie wyposażone w nowy panel operatorski Siemens Unified MTP1000 (10") z intuicyjnym oprogramowaniem.',
     highlights: [
       { icon: 'vffs',  text: 'EVO 1000SYNCRO / INOX — wersja ze stali nierdzewnej · mieszanki przypraw do 12 kg · podajnik ślimakowy' },
@@ -63,28 +57,24 @@ const PARTNERS = [
   },
   {
     name:         'Concetti',
-    group:        null as string | null,
+    group:        'Concetti',
     logo:         'https://link-pack.com/wp-content/uploads/2021/06/Concetti-logo.png',
     image:        '/images/machines/interpack-concetti.png',
     hall:         'Halle 12',
     stand:        'B10',
     interpackUrl: 'https://www.interpack.com/vis/v1/en/exhprofiles/rZxeuKpnRTKsbEnRKHSy3Q?ticket=g_u_e_s_t',
-    ticketUrl:    'https://www.concetti.com/events-registration#formeventi',
+    ticketUrl:    null as string | null,
     tags: ['Workowanie (VFFS)', 'Systemy Big Bag', 'Paletyzacja', 'Pet food', 'End-of-line'],
     description:  'Concetti projektuje i produkuje automatyczne rozwiązania do workowania produktów sypkich od 1975 roku. Specjalizuje się w systemach ważenia, workowania, paletyzacji i kompletnej automatyzacji końca linii. Na Interpack 2026 prezentuje nowości dla branży pet food, systemy Big Bag i kompletne linie pakujące.',
     highlights: [
       { icon: 'box',    text: 'IMF āles — innowacyjna maszyna workująca (open-mouth) zaprojektowana specjalnie dla sektora pet food' },
       { icon: 'bigbag', text: 'Automatyczny system Big Bag — wypełnianie worków Big Bag dla linii wysokowydajnych' },
-      { icon: 'vffs',   text: 'Ciągła maszyna FFS (Form-Fill-Seal) do workowania cementu w worki PE' },
-      { icon: 'box',    text: 'IGF — system napełniania produktów granulowanych' },
-      { icon: 'line',   text: 'Kompletne linie pakujące — od ważenia po paletyzację' },
       { icon: 'lab',    text: 'C-LAB — laboratorium charakteryzacji produktu przed fazą projektową' },
-      { icon: 'service',text: 'CHECK — pełna oferta działu serwisu posprzedażowego After-Sales' },
     ],
   },
   {
     name:         'Vimco',
-    group:        null as string | null,
+    group:        'Vimco',
     logo:         'https://vimco.it/wp-content/uploads/2021/11/cropped-Logo_VIMCO.png',
     image:        '/images/machines/interpack-vimco.png',
     hall:         'Halle 13',
@@ -92,13 +82,9 @@ const PARTNERS = [
     interpackUrl: 'https://www.interpack.com/vis/v1/en/exhprofiles/HfS6kGvkSCaBInbfZpm6NQ?ticket=g_u_e_s_t',
     ticketUrl:    null as string | null,
     tags: ['Pakowanie wtórne', 'Box erecting', 'Wrap-around', 'Top-load', 'End-of-line turnkey'],
-    description:  'Vimco to włoski producent maszyn do pakowania wtórnego z ponad 40-letnim doświadczeniem — „We pack your wishes". Specjalizuje się w projektowaniu i produkcji kompletnych linii końca produkcji dla branży spożywczej i niespożywczej: od formowania kartonów, przez kartoniarkę poziomą i ładowaną od góry, po zamykanie i transport.',
+    description:  'Vimco to włoski producent maszyn do pakowania wtórnego z ponad 40-letnim doświadczeniem. Specjalizuje się w projektowaniu i produkcji kompletnych linii końca produkcji dla branży spożywczej i niespożywczej.',
     highlights: [
-      { icon: 'carton', text: 'Box erecting machines — maszyny do formowania artykułów kartonowych' },
-      { icon: 'carton', text: 'Kartoniarka pozioma (Horizontal cartoner) — pakowanie produktów metodą poziomą' },
-      { icon: 'carton', text: 'Kartoniarka ładowana od góry (Top load cartoner) — załadunek produktów od góry' },
-      { icon: 'wrap',   text: 'Owijarki Wrap Around — formaty skrzynek z kartonu falistego' },
-      { icon: 'line',   text: 'Kompletne linie turnkey — od projektu po uruchomienie i serwis' },
+      { icon: 'carton', text: 'Kartoniarka z załadunkiem od boku — szczegółowe informacje wkrótce' },
     ],
   },
 ];
@@ -384,10 +370,12 @@ export default function InterpackInvitationPage() {
                   Mamy przyjemność zaprosić Państwa na największe
                   światowe targi branży pakowania.
                 </Typography>
-                <Typography sx={{ fontSize: { xs: '0.93rem', md: '1rem' }, lineHeight: 1.85, color: TEXT_DIM, mb: 4 }}>
+                <Typography sx={{ fontSize: { xs: '0.93rem', md: '1rem' }, lineHeight: 1.85, color: TEXT_DIM, mb: 1.5 }}>
                   MadejPak będzie obecny na stoiskach swoich partnerów technologicznych —
-                  zapraszamy do odwiedzenia czterech stoisk z nowościami w branżach maszyn pakujących i 
-                 paletyzujących.
+                  zapraszamy do odwiedzenia czterech stoisk z nowościami w branżach maszyn pakujących i paletyzujących.
+                </Typography>
+                <Typography sx={{ fontSize: { xs: '0.93rem', md: '1rem' }, lineHeight: 1.85, color: 'var(--dim-85)', fontWeight: 700, mb: 4 }}>
+                  Prosimy o kontakt w celu otrzymania bezpłatnych biletów wstępu.
                 </Typography>
                 <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2 }}>
                   <Box
@@ -413,31 +401,6 @@ export default function InterpackInvitationPage() {
                     }}
                   >
                     Umów spotkanie
-                  </Box>
-                  <Box
-                    component="a"
-                    href="https://www.concetti.com/events-registration#formeventi"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    sx={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: 1.5,
-                      px: 3,
-                      py: 1.25,
-                      border: `1px solid ${ACCENT}55`,
-                      borderRadius: '3px',
-                      fontSize: '0.78rem',
-                      fontWeight: 600,
-                      letterSpacing: '0.04em',
-                      color: ACCENT,
-                      textDecoration: 'none',
-                      transition: 'border-color 0.15s ease, background-color 0.15s ease',
-                      '&:hover': { borderColor: ACCENT, bgcolor: `${ACCENT}0D` },
-                      '@media print': { display: 'none' },
-                    }}
-                  >
-                    Bezpłatny bilet wstępu
                   </Box>
                   <PrintButton />
                 </Box>
@@ -527,10 +490,11 @@ export default function InterpackInvitationPage() {
                   Skontaktuj się z nami wcześniej — umówimy spotkanie na stoisku partnera,
                   przygotujemy materiały dopasowane do Twojej branży i odpowiemy na pytania.
                 </Typography>
-                <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mb: 4 }}>
+                <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3, mb: 4 }}>
                   {[
-                    { label: 'Telefon', value: '+48 12 345 43 97', href: 'tel:+48123454397' },
-                    { label: 'E-mail',  value: 'biuro@madejpak.pl',  href: 'mailto:biuro@madejpak.pl' },
+                    { label: 'Adam Madej',             value: '+48 603 664 755', href: 'tel:+48603664755' },
+                    { label: 'Bartłomiej Zyznawski',   value: '+48 697 097 997', href: 'tel:+48697097997' },
+                    { label: 'E-mail',                 value: 'biuro@madejpak.pl', href: 'mailto:biuro@madejpak.pl' },
                   ].map(({ label, value, href }) => (
                     <Box key={label}>
                       <Typography sx={{ fontSize: '0.6rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--dim-45)', mb: 0.4 }}>
@@ -546,6 +510,10 @@ export default function InterpackInvitationPage() {
                     </Box>
                   ))}
                 </Box>
+
+                <Typography sx={{ fontSize: '0.82rem', lineHeight: 1.75, color: TEXT_DIM, mb: 3, fontStyle: 'italic' }}>
+                  Jeśli są Państwo zainteresowani odwiedzeniem stoisk naszych partnerów technologicznych na targach, prosimy o kontakt — istnieje możliwość udostępnienia bezpłatnych wejściówek.
+                </Typography>
                 <Box
                   component={Link}
                   href="/kontakt"
@@ -622,7 +590,6 @@ export default function InterpackInvitationPage() {
                   {[
                     { label: 'Wskazówki dojazdu', desc: 'Jak dotrzeć na Messe Düsseldorf', href: 'https://www.interpack.com/en/Visit/Preparations/Arrival' },
                     { label: 'Mapa obiektu', desc: 'Plan hal i stoisk targowych', href: 'https://www.interpack.com/en/Visit/Preparations/Floor_Plan_Site_Map' },
-                    { label: 'Bezpłatny bilet wstępu', desc: 'Rejestracja przez formularz Concetti', href: 'https://www.concetti.com/events-registration#formeventi' },
                   ].map(({ label, desc, href }, idx, arr) => (
                     <Box
                       key={label}
@@ -686,8 +653,7 @@ export default function InterpackInvitationPage() {
                 </Typography>
                 <Typography sx={{ fontSize: '0.78rem', color: '#444', lineHeight: 1.8 }}>
                   Dojazd: interpack.com/en/Visit/Preparations/Arrival<br />
-                  Mapa: interpack.com/en/Visit/Preparations/Floor_Plan_Site_Map<br />
-                  Bezpłatny bilet: concetti.com/events-registration
+                  Mapa: interpack.com/en/Visit/Preparations/Floor_Plan_Site_Map
                 </Typography>
               </Box>
             </Box>

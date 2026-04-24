@@ -37,12 +37,12 @@ export default function InterpackBanner() {
               <Box component="span" sx={{ fontWeight: 700, color: ACCENT }}>Interpack 2026</Box>
               {' '}— 7–13 maja, Düsseldorf.{' '}
               <Box component="span" sx={{ color: 'var(--dim-58)' }}>
-                MadejPak na stoiskach partnerów: Tecno Pack, EsseGi, Concetti, Vimco.
+                MadejPak na stoiskach partnerów: GSP, EsseGi, Concetti, Vimco.
               </Box>
             </Typography>
           </Box>
           <Box sx={{ display: 'flex', gap: 1.5, flexShrink: 0 }}>
-            <Box
+            {/* <Box
               component="a"
               href="https://www.concetti.com/events-registration#formeventi"
               target="_blank"
@@ -65,7 +65,7 @@ export default function InterpackBanner() {
               }}
             >
               Bezpłatny bilet wstępu
-            </Box>
+            </Box> */}
             <Box
               component={Link}
               href="/zaproszenie-interpack-2026"
