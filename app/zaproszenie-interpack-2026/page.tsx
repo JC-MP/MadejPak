@@ -329,7 +329,6 @@ function PartnerBlock({ partner, index }: { partner: typeof PARTNERS[0]; index: 
             display: 'grid',
             gridTemplateColumns: `repeat(${partner.photos.length}, 1fr)`,
             gap: 1.5,
-            '@media print': { display: 'none' },
           }}>
             {partner.photos.map((src, i) => (
               <Box key={i} sx={{ position: 'relative', aspectRatio: '4/3', borderRadius: '3px', overflow: 'hidden', bgcolor: 'var(--bg-card)' }}>
