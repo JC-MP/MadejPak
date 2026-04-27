@@ -331,8 +331,9 @@ function PartnerBlock({ partner, index }: { partner: typeof PARTNERS[0]; index: 
             gap: 1.5,
           }}>
             {partner.photos.map((src, i) => (
-              <Box key={i} sx={{ position: 'relative', aspectRatio: '4/3', borderRadius: '3px', overflow: 'hidden', bgcolor: 'var(--bg-card)' }}>
-                <Image src={src} alt="" fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'cover' }} />
+              <Box key={i} sx={{ borderRadius: '3px', overflow: 'hidden', bgcolor: 'var(--bg-card)' }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={src} alt="" style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }} />
               </Box>
             ))}
           </Box>
