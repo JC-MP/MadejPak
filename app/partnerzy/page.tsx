@@ -6,7 +6,14 @@ export const metadata = {
   title: 'Partnerzy technologiczni | MadejPak',
   description:
     'Sprawdzone technologie i zweryfikowani partnerzy — Concetti, Essegi, GSP, Technowrapp oraz liderzy w robotyzacji. MadejPak realizuje kompleksowe projekty integracji linii pakujących.',
-  alternates: { canonical: `${SITE_URL}/partnerzy` },
+  alternates: {
+    canonical: `${SITE_URL}/partnerzy`,
+    languages: {
+      'pl':        `${SITE_URL}/partnerzy`,
+      'en':        `${SITE_URL}/en/partnerzy`,
+      'x-default': `${SITE_URL}/partnerzy`,
+    },
+  },
   openGraph: {
     url:         `${SITE_URL}/partnerzy`,
     title:       'Partnerzy technologiczni | MadejPak',

@@ -11,7 +11,14 @@ export const metadata: Metadata = {
   title: 'O firmie',
   description:
     'MadejPak — integrator linii pakujących, producent technologii i partner wdrożeniowy dla przemysłu. Ponad 25 lat doświadczenia w automatyzacji i robotyzacji pakowania.',
-  alternates: { canonical: `${SITE_URL}/o-firmie` },
+  alternates: {
+    canonical: `${SITE_URL}/o-firmie`,
+    languages: {
+      'pl':        `${SITE_URL}/o-firmie`,
+      'en':        `${SITE_URL}/en/o-firmie`,
+      'x-default': `${SITE_URL}/o-firmie`,
+    },
+  },
   openGraph: {
     url:         `${SITE_URL}/o-firmie`,
     title:       'O firmie | MadejPak',

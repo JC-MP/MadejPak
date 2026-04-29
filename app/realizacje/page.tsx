@@ -10,7 +10,14 @@ export const metadata: Metadata = {
   title: 'Realizacje',
   description:
     'Projekty automatyzacji, paletyzacji i integracji linii pakujących dla producentów z branży spożywczej, chemicznej i przemysłowej. Zrealizowane wdrożenia MadejPak.',
-  alternates: { canonical: `${SITE_URL}/realizacje` },
+  alternates: {
+    canonical: `${SITE_URL}/realizacje`,
+    languages: {
+      'pl':        `${SITE_URL}/realizacje`,
+      'en':        `${SITE_URL}/en/realizacje`,
+      'x-default': `${SITE_URL}/realizacje`,
+    },
+  },
   openGraph: {
     url:         `${SITE_URL}/realizacje`,
     title:       'Realizacje | MadejPak',

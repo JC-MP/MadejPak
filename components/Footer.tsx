@@ -17,6 +17,10 @@ const COMPANY = {
   name:      'PPHU MADEJPAK SP. Z O.O.',
   address:   'Dziewin 333, 32-708 Dziewin',
   phone:     '+48 12 345 43 97',
+  wew1: 'wew 11 - biuro',
+  wew2: 'wew 12 - księgowość',
+  wew3: 'wew 13 - projekty',
+  wew4: 'wew 14 - serwis',
   email:     'biuro@madejpak.pl',
   nip:       '868-198-64-42',
   linkedin:  'https://www.linkedin.com/company/madejpak/posts/?feedView=all',
@@ -144,7 +148,7 @@ export default function Footer() {
                 <Typography sx={{ fontSize: '0.7rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: DIM_LO, mb: 0.5 }}>
                   {t.address}
                 </Typography>
-                <Typography sx={{ fontSize: '0.82rem', color: DIM, lineHeight: 1.6 }}>
+                <Typography sx={{ fontSize: '0.82rem', color: DIM, lineHeight: 1.6, fontWeight: 900, }}>
                   {COMPANY.address}
                 </Typography>
               </Box>
@@ -153,8 +157,18 @@ export default function Footer() {
                   {t.phone}
                 </Typography>
                 <Typography component="a" href={`tel:${COMPANY.phone.replace(/\s/g, '')}`}
-                  sx={{ ...linkSx, '&:hover': { color: ACCENT } }}>
+                  sx={{ ...linkSx,fontWeight: 900, '&:hover': { color: ACCENT }  }}>
                   {COMPANY.phone}
+                </Typography>
+                <Typography   sx={{ ...linkSx, '&:hover': { color: ACCENT } }}>
+                  {COMPANY.wew1}
+                  <br/>
+                   {COMPANY.wew2}
+                  <br/>
+                   {COMPANY.wew3}
+                  <br/>
+                   {COMPANY.wew4}
+                  <br/>
                 </Typography>
               </Box>
               <Box>
@@ -162,7 +176,7 @@ export default function Footer() {
                   E-mail
                 </Typography>
                 <Typography component="a" href={`mailto:${COMPANY.email}`}
-                  sx={{ ...linkSx, '&:hover': { color: ACCENT } }}>
+                  sx={{ ...linkSx,fontWeight: 900, '&:hover': { color: ACCENT } }}>
                   {COMPANY.email}
                 </Typography>
               </Box>
@@ -170,14 +184,14 @@ export default function Footer() {
                 <Typography sx={{ fontSize: '0.7rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: DIM_LO, mb: 0.5 }}>
                   NIP
                 </Typography>
-                <Typography sx={{ fontSize: '0.82rem', color: DIM }}>{COMPANY.nip}</Typography>
+                <Typography sx={{ fontSize: '0.82rem',fontWeight: 900, color: DIM }}>{COMPANY.nip}</Typography>
               </Box>
               <Box>
                 <Typography sx={{ fontSize: '0.7rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: DIM_LO, mb: 0.5 }}>
                   LinkedIn
                 </Typography>
                 <Typography component="a" href={COMPANY.linkedin} target="_blank" rel="noopener noreferrer"
-                  sx={{ ...linkSx, '&:hover': { color: ACCENT } }}>
+                  sx={{ ...linkSx,fontWeight: 900, '&:hover': { color: ACCENT } }}>
                   MadejPak
                 </Typography>
               </Box>

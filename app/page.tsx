@@ -14,7 +14,14 @@ export const metadata: Metadata = {
     'serwis maszyn pakujących', 'modernizacja linii pakujących',
     'systemy paletyzacji', 'flow pack', 'VFFS',
   ],
-  alternates: { canonical: `${SITE_URL}/` },
+  alternates: {
+    canonical: `${SITE_URL}/`,
+    languages: {
+      'pl':        `${SITE_URL}/`,
+      'en':        `${SITE_URL}/en`,
+      'x-default': `${SITE_URL}/`,
+    },
+  },
   openGraph: {
     url:   SITE_URL,
     title: 'MadejPak – Integrator linii pakujących i automatyzacja pakowania',

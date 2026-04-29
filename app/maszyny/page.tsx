@@ -19,7 +19,14 @@ export const metadata: Metadata = {
     'owijarki do palet', 'transport wewnętrzny', 'dozowanie i ważenie',
     'automat do pakowania', 'linia pakująca',
   ],
-  alternates: { canonical: `${SITE_URL}/maszyny` },
+  alternates: {
+    canonical: `${SITE_URL}/maszyny`,
+    languages: {
+      'pl':        `${SITE_URL}/maszyny`,
+      'en':        `${SITE_URL}/en/maszyny`,
+      'x-default': `${SITE_URL}/maszyny`,
+    },
+  },
   openGraph: {
     url:         `${SITE_URL}/maszyny`,
     title:       'Maszyny pakujące | MadejPak',

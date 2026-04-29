@@ -11,7 +11,14 @@ export const metadata: Metadata = {
   title: 'Targi i wydarzenia',
   description:
     'MadejPak na targach branżowych: Taropak, IPACK-IMA, IBA, Warsaw Industry Automatica i innych. Technologie pakowania, automatyzacja i robotyzacja — obecność na kluczowych wydarzeniach przemysłowych.',
-  alternates: { canonical: `${SITE_URL}/targi-i-wydarzenia` },
+  alternates: {
+    canonical: `${SITE_URL}/targi-i-wydarzenia`,
+    languages: {
+      'pl':        `${SITE_URL}/targi-i-wydarzenia`,
+      'en':        `${SITE_URL}/en/targi-i-wydarzenia`,
+      'x-default': `${SITE_URL}/targi-i-wydarzenia`,
+    },
+  },
   openGraph: {
     url:         `${SITE_URL}/targi-i-wydarzenia`,
     title:       'Targi i wydarzenia | MadejPak',

@@ -16,7 +16,14 @@ export const metadata: Metadata = {
     'modernizacja linii pakujących', 'projekty custom maszyny pakujące',
     'linia pakująca dla przemysłu', 'integrator linii produkcyjnych',
   ],
-  alternates: { canonical: `${SITE_URL}/rozwiazania` },
+  alternates: {
+    canonical: `${SITE_URL}/rozwiazania`,
+    languages: {
+      'pl':        `${SITE_URL}/rozwiazania`,
+      'en':        `${SITE_URL}/en/rozwiazania`,
+      'x-default': `${SITE_URL}/rozwiazania`,
+    },
+  },
   openGraph: {
     url:         `${SITE_URL}/rozwiazania`,
     title:       'Integracja i automatyzacja linii pakujących | MadejPak',

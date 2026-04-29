@@ -20,7 +20,14 @@ export const metadata: Metadata = {
     'pakowanie żywności linia', 'maszyny pakujące farmacja',
     'pakowanie proszków i granulatów', 'automatyzacja pakowania spożywcze',
   ],
-  alternates: { canonical: `${SITE_URL}/branze` },
+  alternates: {
+    canonical: `${SITE_URL}/branze`,
+    languages: {
+      'pl':        `${SITE_URL}/branze`,
+      'en':        `${SITE_URL}/en/branze`,
+      'x-default': `${SITE_URL}/branze`,
+    },
+  },
   openGraph: {
     url:         `${SITE_URL}/branze`,
     title:       'Branże | MadejPak',

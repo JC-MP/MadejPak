@@ -5,7 +5,14 @@ export const metadata: Metadata = {
   title: 'Kontakt',
   description:
     'Skontaktuj się z MadejPak – zapytaj o automatyzację pakowania, robotyzację, dobór maszyn lub serwis. Biuro w Krakowie, realizacje w całej Polsce.',
-  alternates: { canonical: `${SITE_URL}/kontakt` },
+  alternates: {
+    canonical: `${SITE_URL}/kontakt`,
+    languages: {
+      'pl':        `${SITE_URL}/kontakt`,
+      'en':        `${SITE_URL}/en/kontakt`,
+      'x-default': `${SITE_URL}/kontakt`,
+    },
+  },
   openGraph: {
     url:         `${SITE_URL}/kontakt`,
     title:       'Kontakt | MadejPak',
