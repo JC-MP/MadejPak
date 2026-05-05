@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { headers } from 'next/headers';
+import Script from 'next/script';
 import ThemeRegistry from '@/components/ThemeRegistry';
 import Header from '@/components/navigation/Header';
 import Footer from '@/components/Footer';
@@ -83,15 +84,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
-        {/* Google Tag Manager */}
-        <script dangerouslySetInnerHTML={{ __html:
-          `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_ID}');`
-        }} />
-        {/* Google Analytics 4 */}
-        <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
-        <script dangerouslySetInnerHTML={{ __html:
-          `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');`
-        }} />
       </head>
       <body style={{ margin: 0, padding: 0 }}>
         <ThemeRegistry>
@@ -107,6 +99,11 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <Footer />
           <CookieConsent />
         </ThemeRegistry>
+        {/* Google Tag Manager — afterInteractive nie blokuje renderowania */}
+        <Script id="gtm" strategy="afterInteractive">{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_ID}');`}</Script>
+        {/* Google Analytics 4 */}
+        <Script strategy="afterInteractive" src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
+        <Script id="ga4" strategy="afterInteractive">{`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');`}</Script>
       </body>
     </html>
   );

@@ -265,6 +265,35 @@ function EventBlock({ event }: { event: TradeEvent }) {
             </Box>
           </Box>
         )}
+
+        {event.invitationUrl && (
+          <Box sx={{ mt: 3 }}>
+            <Box
+              component={Link}
+              href={event.invitationUrl}
+              sx={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 1,
+                px: 2.5,
+                py: 1.1,
+                bgcolor: ACCENT,
+                borderRadius: '3px',
+                fontSize: '0.75rem',
+                fontWeight: 700,
+                letterSpacing: '0.06em',
+                textTransform: 'uppercase',
+                color: '#fff',
+                textDecoration: 'none',
+                transition: 'background-color 0.15s ease',
+                '&:hover': { bgcolor: '#D45509' },
+              }}
+            >
+              Zarejestruj się
+              <ArrowRight />
+            </Box>
+          </Box>
+        )}
       </Box>
     </Box>
   );
