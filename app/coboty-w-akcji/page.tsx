@@ -26,9 +26,7 @@ const EJS_TEMPLATE = 'template_ppuo1ll';
 const EJS_KEY      = 'IAq3TNyMDLA3SxC62';
 
 const DAYS = [
-  'Wtorek, 2 czerwca 2026',
-  'Środa, 3 czerwca 2026',
-  'Czwartek, 4 czerwca 2026',
+  'Środa, 10 czerwca 2026',
 ];
 
 const INTERESTS = [
@@ -312,7 +310,7 @@ export default function CobotsOpenDayPage() {
             {/* Left — headline */}
             <Box>
               <Typography sx={{ fontSize: '0.6rem', fontWeight: 700, letterSpacing: '0.24em', textTransform: 'uppercase', color: ACCENT, mb: 3.5 }}>
-                Dni otwarte MadejPak + DOBOT · Czerwiec 2026
+                Dni otwarte MadejPak + DOBOT · 10 czerwca 2026
               </Typography>
               <Typography
                 component="h1"
@@ -354,7 +352,7 @@ export default function CobotsOpenDayPage() {
         <Container maxWidth="lg">
           <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: { xs: 4, md: 6 }, alignItems: 'center' }}>
             {[
-              { label: 'Termin', value: '2–4 czerwca 2026', note: 'Potwierdzamy wkrótce' },
+              { label: 'Termin', value: '10 czerwca 2026', note: 'Środa' },
               { label: 'Lokalizacja', value: 'k. Bochni', note: 'Siedziba MadejPak, Małopolska' },
               { label: 'Pokazy', value: 'CR20A + Nova 5', note: 'Dwa coboty DOBOT' },
               { label: 'Wstęp', value: 'Bezpłatny', note: 'Rejestracja wymagana' },
@@ -636,12 +634,12 @@ export default function CobotsOpenDayPage() {
             <Box>
               <Label>Miejsce i termin</Label>
               <Typography component="h2" sx={{ fontSize: { xs: '2rem', md: '2.75rem' }, fontWeight: 800, lineHeight: 1.1, letterSpacing: '-0.035em', color: '#fff', mb: 4 }}>
-                Małopolska.<br />Czerwiec 2026.
+                Małopolska.<br />10 czerwca 2026.
               </Typography>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2.5 }}>
                 {[
                   { label: 'Adres', val: 'Dziewin 333, 32-708 Dziewin' },
-                  { label: 'Daty', val: '2–4 czerwca 2026 · Wt–Cz (robocze)' },
+                  { label: 'Data', val: '10 czerwca 2026 · Środa' },
                   { label: 'Czas trwania', val: 'ok. 2–3 godziny na grupę' },
                   { label: 'Wstęp', val: 'Bezpłatny · Po rejestracji' },
                 ].map(({ label, val }) => (

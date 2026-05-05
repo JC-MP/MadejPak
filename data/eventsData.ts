@@ -24,13 +24,13 @@ export const EVENTS: TradeEvent[] = [
   {
     id: 'dni-otwarte-coboty-2026',
     name: 'Dni Otwarte MadejPak — Coboty w Akcji',
-    dateLabel: '2–4 czerwca 2026',
-    dateStart: '2026-06-02',
+    dateLabel: '10 czerwca 2026',
+    dateStart: '2026-06-10',
     city: 'Dziewin',
     venue: 'Siedziba MadejPak',
     country: 'Polska',
     zajawka:
-      'Pokazy cobotów DOBOT na żywo — paletyzacja CR20A, pick & place Nova 5, integracja z flowpackiem. Bezpłatna rejestracja, ograniczona liczba miejsc.',
+      'Pokazy cobotów DOBOT na żywo — paletyzacja CR20A, pick & place Nova 5, integracja z flowpackiem. 10 czerwca 2026. Bezpłatna rejestracja, ograniczona liczba miejsc.',
     opis:
       'Dni Otwarte MadejPak + DOBOT to wydarzenie dla właścicieli firm, kierowników produkcji i inżynierów, którzy chcą zobaczyć na żywo jak coboty pracują w realnych warunkach produkcyjnych. DOBOT CR20A (20 kg, zasięg 1700 mm) pokaże możliwości paletyzacji kartonów i worków, a Nova 5 (5 kg, zasięg 850 mm) zademonstruje precyzyjny pick & place i automatyczne podawanie do maszyny flow-pack. Wstęp bezpłatny, rejestracja obowiązkowa.',
     highlights: [
