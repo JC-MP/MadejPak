@@ -41,7 +41,6 @@ interface RegForm {
   name: string;
   company: string;
   email: string;
-  day: string;
   interest: string;
   headcount: string;
   consent: boolean;
@@ -49,7 +48,7 @@ interface RegForm {
 
 type SubmitState = 'idle' | 'loading' | 'success' | 'error';
 
-const EMPTY: RegForm = { name: '', company: '', email: '', day: '', interest: '', headcount: '', consent: false };
+const EMPTY: RegForm = { name: '', company: '', email: '', interest: '', headcount: '', consent: false };
 
 // ─── Shared MUI field styles ────────────────────────────────────────────────────
 const fieldSx = {
@@ -166,7 +165,6 @@ function RegFormSection() {
     if (!form.company.trim()) e.company = 'Nazwa firmy jest wymagana';
     if (!form.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
       e.email = 'Podaj poprawny adres email';
-    if (!form.day)     e.day     = 'Wybierz dzień wizyty';
     if (!form.consent) e.consent = 'Zgoda jest wymagana';
     setErrors(e);
     return Object.keys(e).length === 0;
@@ -191,7 +189,7 @@ function RegFormSection() {
           firma:      form.company,
           user_email: form.email,
           phone:      form.headcount ? `${form.headcount} os.` : '–',
-          produkt:    `REJESTRACJA — Coboty w Akcji · ${form.day}`,
+          produkt:    'REJESTRACJA — Coboty w Akcji · Środa, 10 czerwca 2026',
           message:    `Obszar zainteresowania: ${form.interest || 'nie podano'}`,
         },
         { publicKey: EJS_KEY },
@@ -227,9 +225,6 @@ function RegFormSection() {
         <TextField label="Imię i nazwisko *" value={form.name} onChange={field('name')} error={!!errors.name} helperText={errors.name} sx={fieldSx} fullWidth />
         <TextField label="Firma *" value={form.company} onChange={field('company')} error={!!errors.company} helperText={errors.company} sx={fieldSx} fullWidth />
         <TextField label="Adres email *" type="email" value={form.email} onChange={field('email')} error={!!errors.email} helperText={errors.email} sx={fieldSx} fullWidth />
-        <TextField select label="Dzień wizyty *" value={form.day} onChange={field('day')} error={!!errors.day} helperText={errors.day} sx={fieldSx} fullWidth>
-          {DAYS.map(d => <MenuItem key={d} value={d}>{d}</MenuItem>)}
-        </TextField>
         <TextField select label="Obszar zainteresowania (opcjonalne)" value={form.interest} onChange={field('interest')} sx={fieldSx} fullWidth>
           <MenuItem value="">Brak preferencji</MenuItem>
           {INTERESTS.map(i => <MenuItem key={i} value={i}>{i}</MenuItem>)}
@@ -651,29 +646,18 @@ export default function CobotsOpenDayPage() {
               </Box>
             </Box>
 
-            {/* Day selector card */}
-            <Box sx={{ bgcolor: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '4px', overflow: 'hidden' }}>
-              <Box sx={{ px: 3.5, py: 2.5, borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
-                <Typography sx={{ fontSize: '0.6rem', fontWeight: 700, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)' }}>
-                  Wybierz dzień w formularzu
+            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+              <Box sx={{ px: 3.5, py: 3.5, bgcolor: ACCENT, borderRadius: '4px', display: 'inline-block' }}>
+                <Typography sx={{ fontSize: { xs: '2rem', md: '2.75rem' }, fontWeight: 800, color: '#fff', letterSpacing: '-0.03em', lineHeight: 1.1 }}>
+                  Środa,<br />10 czerwca 2026
                 </Typography>
               </Box>
-              {DAYS.map((d, i, arr) => (
-                <Box key={d} sx={{ display: 'flex', alignItems: 'center', gap: 2.5, px: 3.5, py: 2, borderBottom: i < arr.length - 1 ? '1px solid rgba(255,255,255,0.06)' : 'none' }}>
-                  <Typography sx={{ fontSize: '0.6rem', fontWeight: 700, color: ACCENT, letterSpacing: '0.1em', width: 22, flexShrink: 0 }}>
-                    {`0${i + 1}`}
-                  </Typography>
-                  <Typography sx={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.62)' }}>{d}</Typography>
-                </Box>
-              ))}
-              <Box sx={{ px: 3.5, py: 3, borderTop: '1px solid rgba(255,255,255,0.07)' }}>
-                <Box
-                  component="a"
-                  href="#rejestracja"
-                  sx={{ display: 'inline-flex', alignItems: 'center', px: 3, py: 1.5, bgcolor: ACCENT, borderRadius: '3px', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.07em', textTransform: 'uppercase', color: '#fff', textDecoration: 'none', transition: 'background-color 0.15s', '&:hover': { bgcolor: '#D45509' } }}
-                >
-                  Zarejestruj się →
-                </Box>
+              <Box
+                component="a"
+                href="#rejestracja"
+                sx={{ display: 'inline-flex', alignItems: 'center', px: 3, py: 1.5, border: '1.5px solid rgba(255,255,255,0.25)', borderRadius: '3px', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.07em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.7)', textDecoration: 'none', transition: 'all 0.15s', '&:hover': { borderColor: '#fff', color: '#fff' }, alignSelf: 'flex-start' }}
+              >
+                Zarejestruj się →
               </Box>
             </Box>
           </Box>
