@@ -10,14 +10,6 @@ const nextConfig: NextConfig = {
       { source: '/systemy_paletyzacji', destination: '/maszyny/paletyzacja',               permanent: true },
       { source: '/maszyny_wagi',        destination: '/maszyny/wazenie-i-dozowanie',       permanent: true },
 
-      // ── www → bez www (5xx: www.madejpak.pl) ─────────────────────────────────
-      {
-        source:      '/:path*',
-        has:         [{ type: 'host', value: 'www.madejpak.pl' }],
-        destination: 'https://madejpak.pl/:path*',
-        permanent:   true,
-      },
-
       // ── stare 5xx ─────────────────────────────────────────────────────────────
       { source: '/home',  destination: '/',                   permanent: true },
       { source: '/targi', destination: '/targi-i-wydarzenia', permanent: true },
