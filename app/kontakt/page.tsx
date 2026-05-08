@@ -216,6 +216,8 @@ export default function ContactPage() {
       setSubmitState('success');
       setForm(INITIAL_FORM);
       setErrors({});
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (window as any).gtag?.('event', 'generate_lead', { event_category: 'contact_form' });
     } catch {
       setSubmitState('error');
     }

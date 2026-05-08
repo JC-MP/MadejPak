@@ -13,7 +13,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/polityka-prywatnosci', '/polityka-cookies', '/informacje-prawne'],
+        disallow: ['/api/', '/polityka-prywatnosci', '/polityka-cookies', '/informacje-prawne', '/*?_rsc=*'],
       },
     ],
     sitemap: `${SITE_URL}/sitemap.xml`,
