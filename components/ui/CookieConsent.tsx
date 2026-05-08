@@ -19,10 +19,21 @@ export default function CookieConsent() {
   }, []);
 
   function accept(type: 'all' | 'essential') {
-    try {
-      localStorage.setItem('mp-consent', type);
-    } catch {
-      // ignore
+    try { localStorage.setItem('mp-consent', type); } catch { /* ignore */ }
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const w = window as any;
+    if (typeof w.gtag === 'function') {
+      w.gtag('consent', 'update', type === 'all' ? {
+        ad_storage:        'granted',
+        ad_user_data:      'granted',
+        ad_personalization:'granted',
+        analytics_storage: 'granted',
+      } : {
+        ad_storage:        'denied',
+        ad_user_data:      'denied',
+        ad_personalization:'denied',
+        analytics_storage: 'denied',
+      });
     }
     setVisible(false);
   }

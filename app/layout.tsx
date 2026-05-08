@@ -9,7 +9,7 @@ import { SITE_URL, SITE_NAME, SITE_DESCRIPTION, OG_IMAGE, COMPANY, BLOCK_INDEXIN
 import './globals.css';
 
 const GTM_ID = 'GTM-NRN8B8C';
-const GA_ID  = 'G-SXXHPR7C8E';
+const GA_ID  = 'G-03MEXQ4XPP';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -99,6 +99,21 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <Footer />
           <CookieConsent />
         </ThemeRegistry>
+        {/* Consent Mode v2 — musi być przed GTM/GA */}
+        <Script id="consent-init" strategy="beforeInteractive">{`
+          window.dataLayer=window.dataLayer||[];
+          function gtag(){window.dataLayer.push(arguments);}
+          try{
+            var c=localStorage.getItem('mp-consent');
+            if(c==='all'){
+              gtag('consent','default',{ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted',analytics_storage:'granted'});
+            } else {
+              gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});
+            }
+          }catch(e){
+            gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});
+          }
+        `}</Script>
         {/* Google Tag Manager — afterInteractive nie blokuje renderowania */}
         <Script id="gtm" strategy="afterInteractive">{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_ID}');`}</Script>
         {/* Google Analytics 4 */}
