@@ -25,8 +25,20 @@ const EJS_SERVICE  = 'service_aso22qi';
 const EJS_TEMPLATE = 'template_ppuo1ll';
 const EJS_KEY      = 'IAq3TNyMDLA3SxC62';
 
-const DAYS = [
-  'Środa, 10 czerwca 2026',
+// ─── Schedule ──────────────────────────────────────────────────────────────────
+const SLOTS = ['9:00', '12:00', '14:00'];
+
+const SCHEDULE = [
+  { id: '2026-06-08', dayName: 'Pn', date: '8 cze' },
+  { id: '2026-06-09', dayName: 'Wt', date: '9 cze' },
+  { id: '2026-06-10', dayName: 'Śr', date: '10 cze' },
+  { id: '2026-06-11', dayName: 'Cz', date: '11 cze' },
+  { id: '2026-06-12', dayName: 'Pt', date: '12 cze' },
+  { id: '2026-06-15', dayName: 'Pn', date: '15 cze' },
+  { id: '2026-06-16', dayName: 'Wt', date: '16 cze' },
+  { id: '2026-06-17', dayName: 'Śr', date: '17 cze' },
+  { id: '2026-06-18', dayName: 'Cz', date: '18 cze' },
+  { id: '2026-06-19', dayName: 'Pt', date: '19 cze' },
 ];
 
 const INTERESTS = [
@@ -43,12 +55,14 @@ interface RegForm {
   email: string;
   interest: string;
   headcount: string;
+  day: string;
+  slot: string;
   consent: boolean;
 }
 
 type SubmitState = 'idle' | 'loading' | 'success' | 'error';
 
-const EMPTY: RegForm = { name: '', company: '', email: '', interest: '', headcount: '', consent: false };
+const EMPTY: RegForm = { name: '', company: '', email: '', interest: '', headcount: '', day: '', slot: '', consent: false };
 
 // ─── Shared MUI field styles ────────────────────────────────────────────────────
 const fieldSx = {
@@ -78,31 +92,6 @@ function Bullet({ text, dark = false }: { text: string; dark?: boolean }) {
       <Box sx={{ width: 5, height: 5, borderRadius: '50%', bgcolor: ACCENT, flexShrink: 0, mt: '8px' }} />
       <Typography sx={{ fontSize: '0.88rem', lineHeight: 1.65, color: dark ? 'rgba(255,255,255,0.65)' : 'var(--dim-68)' }}>
         {text}
-      </Typography>
-    </Box>
-  );
-}
-
-function ImgSlot({ label, dark = false, aspectRatio = '4/3' }: { label: string; dark?: boolean; aspectRatio?: string }) {
-  return (
-    <Box sx={{
-      width: '100%',
-      aspectRatio,
-      bgcolor: dark ? 'rgba(255,255,255,0.04)' : 'var(--surface-04)',
-      border: `1px dashed ${dark ? 'rgba(255,255,255,0.1)' : 'var(--dim-12)'}`,
-      borderRadius: '6px',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      gap: 1,
-      p: 3,
-    }}>
-      <Box component="svg" viewBox="0 0 40 40" fill="none" sx={{ width: 36, height: 36, opacity: 0.25, color: dark ? '#fff' : 'currentColor' }}>
-        <path d="M20 4C11.16 4 4 11.16 4 20s7.16 16 16 16 16-7.16 16-16S28.84 4 20 4zm-2 22v-8l8 4-8 4z" fill="currentColor" />
-      </Box>
-      <Typography sx={{ fontSize: '0.6rem', fontWeight: 600, letterSpacing: '0.12em', textAlign: 'center', color: dark ? 'rgba(255,255,255,0.28)' : 'var(--dim-28)', textTransform: 'uppercase', maxWidth: 220 }}>
-        {label}
       </Typography>
     </Box>
   );
@@ -153,6 +142,98 @@ function AnchorBtn({ href, children, outline = false }: { href: string; children
   );
 }
 
+// ─── Slot picker ────────────────────────────────────────────────────────────────
+function SlotPicker({
+  selectedDay,
+  selectedSlot,
+  onDay,
+  onSlot,
+  errorDay,
+  errorSlot,
+}: {
+  selectedDay: string;
+  selectedSlot: string;
+  onDay: (id: string) => void;
+  onSlot: (slot: string) => void;
+  errorDay?: string;
+  errorSlot?: string;
+}) {
+  return (
+    <Box sx={{ mb: 3.5, pb: 3.5, borderBottom: `1px solid ${BORDER}` }}>
+      <Typography sx={{ fontSize: '0.6rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: errorDay ? '#f87171' : 'var(--dim-42)', mb: 1.25 }}>
+        Wybierz dzień *
+      </Typography>
+      <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 1, mb: errorDay ? 0.5 : 0 }}>
+        {SCHEDULE.map(({ id, dayName, date }) => {
+          const active = selectedDay === id;
+          return (
+            <Box
+              key={id}
+              onClick={() => onDay(id)}
+              sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                py: 1.25,
+                px: 0.5,
+                borderRadius: '3px',
+                border: `1px solid ${active ? ACCENT : 'var(--dim-10)'}`,
+                bgcolor: active ? `${ACCENT}12` : 'var(--surface-03)',
+                cursor: 'pointer',
+                transition: 'all 0.12s',
+                '&:hover': { borderColor: active ? ACCENT : 'var(--dim-22)' },
+              }}
+            >
+              <Typography sx={{ fontSize: '0.58rem', fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase', color: active ? ACCENT : 'var(--dim-38)', lineHeight: 1.2 }}>
+                {dayName}
+              </Typography>
+              <Typography sx={{ fontSize: '0.78rem', fontWeight: active ? 700 : 500, color: active ? ACCENT : 'var(--dim-62)', mt: 0.3, lineHeight: 1.2, textAlign: 'center' }}>
+                {date}
+              </Typography>
+            </Box>
+          );
+        })}
+      </Box>
+      {errorDay && <FormHelperText error sx={{ ml: 0, mt: 0.5 }}>{errorDay}</FormHelperText>}
+
+      {selectedDay && (
+        <Box sx={{ mt: 2.5 }}>
+          <Typography sx={{ fontSize: '0.6rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: errorSlot ? '#f87171' : 'var(--dim-42)', mb: 1.25 }}>
+            Wybierz godzinę *
+          </Typography>
+          <Box sx={{ display: 'flex', gap: 1.5, flexWrap: 'wrap' }}>
+            {SLOTS.map(slot => {
+              const active = selectedSlot === slot;
+              return (
+                <Box
+                  key={slot}
+                  onClick={() => onSlot(slot)}
+                  sx={{
+                    px: 3,
+                    py: 1.25,
+                    borderRadius: '3px',
+                    border: `1px solid ${active ? ACCENT : 'var(--dim-10)'}`,
+                    bgcolor: active ? `${ACCENT}12` : 'var(--surface-03)',
+                    cursor: 'pointer',
+                    transition: 'all 0.12s',
+                    '&:hover': { borderColor: active ? ACCENT : 'var(--dim-22)' },
+                  }}
+                >
+                  <Typography sx={{ fontSize: '0.92rem', fontWeight: active ? 700 : 500, color: active ? ACCENT : 'var(--dim-62)', letterSpacing: '0.02em' }}>
+                    {slot}
+                  </Typography>
+                </Box>
+              );
+            })}
+          </Box>
+          {errorSlot && <FormHelperText error sx={{ ml: 0, mt: 0.5 }}>{errorSlot}</FormHelperText>}
+        </Box>
+      )}
+    </Box>
+  );
+}
+
 // ─── Registration form ──────────────────────────────────────────────────────────
 function RegFormSection() {
   const [form, setForm] = useState<RegForm>(EMPTY);
@@ -161,8 +242,10 @@ function RegFormSection() {
 
   function validate() {
     const e: Partial<Record<keyof RegForm, string>> = {};
-    if (!form.name.trim())    e.name    = 'Imię i nazwisko jest wymagane';
-    if (!form.company.trim()) e.company = 'Nazwa firmy jest wymagana';
+    if (!form.day)             e.day     = 'Wybierz dzień';
+    if (form.day && !form.slot) e.slot   = 'Wybierz godzinę';
+    if (!form.name.trim())     e.name    = 'Imię i nazwisko jest wymagane';
+    if (!form.company.trim())  e.company = 'Nazwa firmy jest wymagana';
     if (!form.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
       e.email = 'Podaj poprawny adres email';
     if (!form.consent) e.consent = 'Zgoda jest wymagana';
@@ -177,10 +260,22 @@ function RegFormSection() {
     };
   }
 
+  function pickDay(id: string) {
+    setForm(prev => ({ ...prev, day: id, slot: '' }));
+    setErrors(prev => ({ ...prev, day: undefined, slot: undefined }));
+  }
+
+  function pickSlot(slot: string) {
+    setForm(prev => ({ ...prev, slot }));
+    if (errors.slot) setErrors(prev => ({ ...prev, slot: undefined }));
+  }
+
   async function submit(ev: React.FormEvent) {
     ev.preventDefault();
     if (!validate()) return;
     setState('loading');
+    const dayEntry = SCHEDULE.find(d => d.id === form.day);
+    const dayLabel = dayEntry ? `${dayEntry.dayName}, ${dayEntry.date} 2026` : form.day;
     try {
       await emailjs.send(
         EJS_SERVICE, EJS_TEMPLATE,
@@ -189,7 +284,7 @@ function RegFormSection() {
           firma:      form.company,
           user_email: form.email,
           phone:      form.headcount ? `${form.headcount} os.` : '–',
-          produkt:    'REJESTRACJA — Coboty w Akcji · Środa, 10 czerwca 2026',
+          produkt:    `REJESTRACJA — Coboty w Akcji · ${dayLabel} · godz. ${form.slot}`,
           message:    `Obszar zainteresowania: ${form.interest || 'nie podano'}`,
         },
         { publicKey: EJS_KEY },
@@ -221,6 +316,15 @@ function RegFormSection() {
 
   return (
     <Box component="form" onSubmit={submit} noValidate>
+      <SlotPicker
+        selectedDay={form.day}
+        selectedSlot={form.slot}
+        onDay={pickDay}
+        onSlot={pickSlot}
+        errorDay={errors.day}
+        errorSlot={errors.slot}
+      />
+
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' }, gap: 2.5, mb: 2.5 }}>
         <TextField label="Imię i nazwisko *" value={form.name} onChange={field('name')} error={!!errors.name} helperText={errors.name} sx={fieldSx} fullWidth />
         <TextField label="Firma *" value={form.company} onChange={field('company')} error={!!errors.company} helperText={errors.company} sx={fieldSx} fullWidth />
@@ -296,16 +400,14 @@ export default function CobotsOpenDayPage() {
         position: 'relative',
         overflow: 'hidden',
       }}>
-        {/* subtle radial glow */}
         <Box sx={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 70% 70% at 75% 50%, rgba(232,97,10,0.07) 0%, transparent 65%)', pointerEvents: 'none' }} />
 
         <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1, py: { xs: 10, md: 14 } }}>
           <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', lg: '1fr 1fr' }, gap: { xs: 8, lg: 10 }, alignItems: 'center' }}>
 
-            {/* Left — headline */}
             <Box>
               <Typography sx={{ fontSize: '0.6rem', fontWeight: 700, letterSpacing: '0.24em', textTransform: 'uppercase', color: ACCENT, mb: 3.5 }}>
-                Dni otwarte MadejPak + DOBOT · 10 czerwca 2026
+                Dni otwarte MadejPak + DOBOT · 8–19 czerwca 2026
               </Typography>
               <Typography
                 component="h1"
@@ -325,12 +427,11 @@ export default function CobotsOpenDayPage() {
                 Zobacz, jak automatyzacja realnie pracuje w produkcji — nie na filmie, nie na slajdach. Na działającym sprzęcie, w warunkach zbliżonych do Twojej linii.
               </Typography>
               <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2 }}>
-                <AnchorBtn href="#rejestracja">Zarejestruj się</AnchorBtn>
+                <AnchorBtn href="#rejestracja">Zarezerwuj termin</AnchorBtn>
                 <AnchorBtn href="#program" outline>Zobacz program</AnchorBtn>
               </Box>
             </Box>
 
-            {/* Right — DOBOT CR product photo (transparent bg) */}
             <Box sx={{ display: { xs: 'none', lg: 'block' } }}>
               <Box sx={{ position: 'relative', width: '100%', aspectRatio: '3/2' }}>
                 <Image src="/images/cobots/cr20a-transparent.png" alt="DOBOT CR — cobot przemysłowy" fill style={{ objectFit: 'contain', objectPosition: 'center center', transform: 'scale(2.03)', transformOrigin: 'center center' }} sizes="45vw" />
@@ -347,7 +448,7 @@ export default function CobotsOpenDayPage() {
         <Container maxWidth="lg">
           <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: { xs: 4, md: 6 }, alignItems: 'center' }}>
             {[
-              { label: 'Termin', value: '10 czerwca 2026', note: 'Środa' },
+              { label: 'Terminy', value: '8–19 czerwca 2026', note: '10 dni roboczych, pn–pt' },
               { label: 'Lokalizacja', value: 'k. Bochni', note: 'Siedziba MadejPak, Małopolska' },
               { label: 'Pokazy', value: 'CR20A + Nova 5', note: 'Dwa coboty DOBOT' },
               { label: 'Wstęp', value: 'Bezpłatny', note: 'Rejestracja wymagana' },
@@ -615,7 +716,7 @@ export default function CobotsOpenDayPage() {
             <Typography sx={{ fontSize: { xs: '0.9rem', md: '1rem' }, color: 'rgba(255,255,255,0.38)', lineHeight: 1.75, maxWidth: 480 }}>
               Na wydarzeniu omówimy wycenę i ROI dla konkretnych zastosowań — przynieś swój case, wyliczymy razem.
             </Typography>
-            <AnchorBtn href="#rejestracja">Zarejestruj się</AnchorBtn>
+            <AnchorBtn href="#rejestracja">Zarezerwuj termin</AnchorBtn>
           </Box>
         </Container>
       </Box>
@@ -627,15 +728,16 @@ export default function CobotsOpenDayPage() {
         <Container maxWidth="lg">
           <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: { xs: 7, md: 12 }, alignItems: 'start' }}>
             <Box>
-              <Label>Miejsce i termin</Label>
+              <Label>Miejsce i terminy</Label>
               <Typography component="h2" sx={{ fontSize: { xs: '2rem', md: '2.75rem' }, fontWeight: 800, lineHeight: 1.1, letterSpacing: '-0.035em', color: '#fff', mb: 4 }}>
-                Małopolska.<br />10 czerwca 2026.
+                Małopolska.<br />8–19 czerwca 2026.
               </Typography>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2.5 }}>
                 {[
                   { label: 'Adres', val: 'Dziewin 333, 32-708 Dziewin' },
-                  { label: 'Data', val: '10 czerwca 2026 · Środa' },
-                  { label: 'Czas trwania', val: 'ok. 2–3 godziny na grupę' },
+                  { label: 'Terminy', val: '8–19 czerwca 2026 · pn–pt' },
+                  { label: 'Godziny', val: '9:00 / 12:00 / 14:00' },
+                  { label: 'Czas trwania', val: 'ok. 2 godziny na grupę' },
                   { label: 'Wstęp', val: 'Bezpłatny · Po rejestracji' },
                 ].map(({ label, val }) => (
                   <Box key={label}>
@@ -649,7 +751,10 @@ export default function CobotsOpenDayPage() {
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
               <Box sx={{ px: 3.5, py: 3.5, bgcolor: ACCENT, borderRadius: '4px', display: 'inline-block' }}>
                 <Typography sx={{ fontSize: { xs: '2rem', md: '2.75rem' }, fontWeight: 800, color: '#fff', letterSpacing: '-0.03em', lineHeight: 1.1 }}>
-                  Środa,<br />10 czerwca 2026
+                  8–19 czerwca<br />2026
+                </Typography>
+                <Typography sx={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.75)', mt: 1.5, fontWeight: 600 }}>
+                  Poniedziałek – Piątek<br />9:00 · 12:00 · 14:00
                 </Typography>
               </Box>
               <Box
@@ -657,7 +762,7 @@ export default function CobotsOpenDayPage() {
                 href="#rejestracja"
                 sx={{ display: 'inline-flex', alignItems: 'center', px: 3, py: 1.5, border: '1.5px solid rgba(255,255,255,0.25)', borderRadius: '3px', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.07em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.7)', textDecoration: 'none', transition: 'all 0.15s', '&:hover': { borderColor: '#fff', color: '#fff' }, alignSelf: 'flex-start' }}
               >
-                Zarejestruj się →
+                Zarezerwuj termin →
               </Box>
             </Box>
           </Box>
@@ -673,10 +778,10 @@ export default function CobotsOpenDayPage() {
             <Box>
               <Label>Rejestracja</Label>
               <Typography component="h2" sx={{ fontSize: { xs: '1.75rem', md: '2.25rem' }, fontWeight: 800, lineHeight: 1.15, letterSpacing: '-0.03em', color: 'var(--dim-85)', mb: 2 }}>
-                Zarezerwuj<br />swoje miejsce.
+                Zarezerwuj<br />swój termin.
               </Typography>
               <Typography sx={{ fontSize: '0.9rem', color: 'var(--dim-52)', lineHeight: 1.8, mb: 3.5 }}>
-                Rejestracja jest bezpłatna. Liczba miejsc w każdym dniu jest ograniczona. Po zapisie wyślemy potwierdzenie z dokładnymi informacjami.
+                Wybierz dzień i godzinę — rejestracja jest bezpłatna. Liczba miejsc w każdym terminie jest ograniczona. Po zapisie wyślemy potwierdzenie.
               </Typography>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
                 {[
@@ -797,7 +902,7 @@ export default function CobotsOpenDayPage() {
                 Następny krok:<br />roboty humanoidalne.
               </Typography>
               <Typography sx={{ fontSize: '0.95rem', color: 'var(--dim-55)', lineHeight: 1.85, mb: 3.5 }}>
-                Planujemy wdrożenie integracji robotów humanoidalnych DOBOT ATOM do końca roku lub w roku 2026. ATOM to 28-stopniowy robot zaprojektowany do pracy w rzeczywistych warunkach przemysłowych — tam, gdzie cobot już nie wystarczy.
+                Planujemy wdrożenie integracji robotów humanoidalnych DOBOT ATOM w 2027 roku. ATOM to 28-stopniowy robot zaprojektowany do pracy w rzeczywistych warunkach przemysłowych — tam, gdzie cobot już nie wystarczy.
               </Typography>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5, mb: 4 }}>
                 {[
@@ -839,11 +944,11 @@ export default function CobotsOpenDayPage() {
                 Zostały ostatnie miejsca.
               </Typography>
               <Typography sx={{ fontSize: '0.95rem', color: 'rgba(255,255,255,0.45)', lineHeight: 1.75 }}>
-                Zarejestruj się teraz — potwierdzenie otrzymasz w ciągu 48h.
+                Zarezerwuj termin teraz — potwierdzenie otrzymasz w ciągu 48h.
               </Typography>
             </Box>
             <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, gap: 2, flexShrink: 0 }}>
-              <AnchorBtn href="#rejestracja">Zarejestruj się</AnchorBtn>
+              <AnchorBtn href="#rejestracja">Zarezerwuj termin</AnchorBtn>
               <Box
                 component="a"
                 href="tel:+48123454397"
