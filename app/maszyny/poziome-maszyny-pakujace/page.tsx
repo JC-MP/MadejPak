@@ -8,6 +8,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
+import LeadForm from './LeadForm';
 
 export const metadata: Metadata = {
   title: 'Poziome maszyny pakujące Flow Pack GSP – seria S i EVO | MadejPak',
@@ -72,6 +73,7 @@ interface MachineModel {
   products: string[];
   imageSrc: string;
   imageAlt: string;
+  href?: string;
 }
 
 function ModelCard({ model }: { model: MachineModel }) {
@@ -174,6 +176,17 @@ function ModelCard({ model }: { model: MachineModel }) {
             </Box>
           ))}
         </Box>
+
+        {model.href && (
+          <Box>
+            <Box component={Link} href={model.href}
+              sx={{ display: 'inline-flex', alignItems: 'center', gap: 0.75,
+                fontSize: '0.82rem', fontWeight: 700, color: ACCENT, textDecoration: 'none',
+                '&:hover': { textDecoration: 'underline' } }}>
+              Szczegóły modelu →
+            </Box>
+          </Box>
+        )}
       </Box>
     </Box>
   );
@@ -184,6 +197,7 @@ const MODELS: MachineModel[] = [
   {
     id: 'gsp45s',
     name: 'GSP 45 S',
+    href: '/maszyny/poziome-maszyny-pakujace/gsp-45-s',
     badge: 'Nowość',
     tagline: 'Kompaktowy flow pack — wszechstronny i łatwy w obsłudze',
     description:
@@ -200,6 +214,7 @@ const MODELS: MachineModel[] = [
   {
     id: 'gsp50s',
     name: 'GSP 50 S',
+    href: '/maszyny/poziome-maszyny-pakujace/gsp-50-s',
     tagline: 'Wszechstronny flow pack dla szerszego zakresu produktów',
     description:
       'Elektroniczna pozioma maszyna pakująca z ramą wspornikową — większy format niż GSP 45 S, równie prosta w obsłudze. Sprawdzona w branży spożywczej i niespożywczej. Obsługuje szeroki zakres kształtów i wymiarów produktu.',
@@ -215,6 +230,7 @@ const MODELS: MachineModel[] = [
   {
     id: 'gsp55s',
     name: 'GSP 55 S',
+    href: '/maszyny/poziome-maszyny-pakujace/gsp-55-s',
     badge: 'Najpopularniejsza',
     tagline: 'Wysoka wydajność i obsługa podajników wieloosiowych',
     description:
@@ -266,6 +282,7 @@ const MODELS: MachineModel[] = [
   {
     id: 'gsp65evo',
     name: 'GSP 65 EVO',
+    href: '/maszyny/poziome-maszyny-pakujace/gsp-65-evo',
     badge: 'Atmosfera modyfikowana',
     tagline: 'MAP i box motion — przemysłowe pakowanie hermetyczne',
     description:
@@ -336,8 +353,25 @@ export default function PoziomeMaszynyPage() {
       <Box sx={{ height: { xs: 64, lg: 72 } }} />
 
       {/* ── 1. HERO ────────────────────────────────────────────────── */}
-      <Box component="section" sx={{ bgcolor: BG, borderBottom: `1px solid ${BORDER}`, py: { xs: 10, md: 14 } }}>
-        <Container maxWidth="xl">
+      <Box component="section" sx={{ position: 'relative', overflow: 'hidden', bgcolor: BG, borderBottom: `1px solid ${BORDER}`, py: { xs: 10, md: 14 } }}>
+        {/* Zdjęcie GSP po prawej */}
+        <Box aria-hidden="true" sx={{
+          display: { xs: 'none', md: 'block' },
+          position: 'absolute', top: 0, right: 0,
+          width: '50%', height: '100%', zIndex: 0, pointerEvents: 'none',
+        }}>
+          <Box sx={{
+            position: 'absolute', inset: 0, zIndex: 1,
+            background: [
+              'linear-gradient(to right, var(--bg) 0%, color-mix(in srgb, var(--bg) 75%, transparent) 18%, color-mix(in srgb, var(--bg) 25%, transparent) 45%, transparent 100%)',
+              'linear-gradient(to bottom, color-mix(in srgb, var(--bg) 55%, transparent) 0%, transparent 20%, transparent 80%, color-mix(in srgb, var(--bg) 55%, transparent) 100%)',
+            ].join(', '),
+          }} />
+          <Image src="/images/machines/flowpack-gsp-55s-page.jpg" alt="" fill
+            sizes="50vw" style={{ objectFit: 'cover', opacity: 0.45 }} priority />
+        </Box>
+
+        <Container maxWidth="xl" sx={{ position: 'relative', zIndex: 1 }}>
           <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', lg: '1fr 380px' }, gap: { xs: 6, lg: 10 }, alignItems: 'end' }}>
             <Box>
               <Typography sx={{ fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.18em',
@@ -375,7 +409,8 @@ export default function PoziomeMaszynyPage() {
             <Box sx={{
               display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2,
               p: { xs: 3, md: 3.5 },
-              bgcolor: BG_CARD, border: `1px solid ${BORDER}`, borderRadius: '4px',
+              bgcolor: '#fff',
+              border: `1px solid ${BORDER}`, borderRadius: '4px',
             }}>
               <StatChip value="400" label="opakowań/min – max wydajność" />
               <StatChip value="8" label="modeli w ofercie GSP" />
@@ -456,6 +491,39 @@ export default function PoziomeMaszynyPage() {
         </Container>
       </Box>
 
+      {/* ── WIDEO ─────────────────────────────────────────────────── */}
+      <Box component="section" sx={{ bgcolor: BG_ALT, borderBottom: `1px solid ${BORDER}`, py: { xs: 9, md: 12 } }}>
+        <Container maxWidth="xl">
+          <Typography sx={{ fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.18em',
+            textTransform: 'uppercase', color: ACCENT, mb: 2 }}>
+            Maszyny w akcji
+          </Typography>
+          <Typography component="h2" sx={{
+            fontSize: { xs: '1.5rem', md: '2rem' }, fontWeight: 800,
+            letterSpacing: '-0.02em', color: 'var(--text)', mb: { xs: 6, md: 8 },
+          }}>
+            Zobacz jak działają maszyny GSP
+          </Typography>
+          <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 2.5 }}>
+            {['KwhZzYt-AlE', 'Ax-48tS95z8'].map(id => (
+              <Box key={id} sx={{
+                position: 'relative', paddingTop: '56.25%',
+                borderRadius: '4px', overflow: 'hidden',
+                border: `1px solid ${BORDER}`, bgcolor: '#000',
+              }}>
+                <iframe
+                  src={`https://www.youtube-nocookie.com/embed/${id}`}
+                  title={`Maszyna pakująca flow pack GSP – ${id}`}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 'none' }}
+                />
+              </Box>
+            ))}
+          </Box>
+        </Container>
+      </Box>
+
       {/* ── 3. MODELE ─────────────────────────────────────────────── */}
       <Box id="modele" component="section"
         sx={{ bgcolor: BG, borderBottom: `1px solid ${BORDER}`, py: { xs: 10, md: 14 }, scrollMarginTop: { xs: 64, lg: 72 } }}>
@@ -477,6 +545,8 @@ export default function PoziomeMaszynyPage() {
           </Stack>
         </Container>
       </Box>
+
+      <LeadForm />
 
       {/* ── 4. SEKTORY ────────────────────────────────────────────── */}
       <Box component="section" sx={{ bgcolor: BG_ALT, borderBottom: `1px solid ${BORDER}`, py: { xs: 9, md: 12 } }}>

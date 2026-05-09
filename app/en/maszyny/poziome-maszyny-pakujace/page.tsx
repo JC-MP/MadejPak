@@ -8,6 +8,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
+import LeadFormEn from './LeadFormEn';
 
 export const metadata: Metadata = {
   title: 'Horizontal Flow Wrap Packaging Machines GSP | MadejPak',
@@ -72,6 +73,7 @@ interface MachineModel {
   products: string[];
   imageSrc: string;
   imageAlt: string;
+  href?: string;
 }
 
 function ModelCard({ model }: { model: MachineModel }) {
@@ -169,6 +171,17 @@ function ModelCard({ model }: { model: MachineModel }) {
             </Box>
           ))}
         </Box>
+
+        {model.href && (
+          <Box>
+            <Box component={Link} href={model.href}
+              sx={{ display: 'inline-flex', alignItems: 'center', gap: 0.75,
+                fontSize: '0.82rem', fontWeight: 700, color: ACCENT, textDecoration: 'none',
+                '&:hover': { textDecoration: 'underline' } }}>
+              Model details →
+            </Box>
+          </Box>
+        )}
       </Box>
     </Box>
   );
@@ -178,6 +191,7 @@ const MODELS: MachineModel[] = [
   {
     id: 'gsp45s',
     name: 'GSP 45 S',
+    href: '/en/maszyny/poziome-maszyny-pakujace/gsp-45-s',
     badge: 'New model',
     tagline: 'Compact flow pack — versatile and easy to operate',
     description:
@@ -194,6 +208,7 @@ const MODELS: MachineModel[] = [
   {
     id: 'gsp50s',
     name: 'GSP 50 S',
+    href: '/en/maszyny/poziome-maszyny-pakujace/gsp-50-s',
     tagline: 'Versatile flow wrap for a wider range of products',
     description:
       'Electronic horizontal wrapper with cantilever frame — larger format than GSP 45 S, equally simple to operate. Proven in food and non-food industries. Handles a wide range of product shapes and sizes.',
@@ -209,6 +224,7 @@ const MODELS: MachineModel[] = [
   {
     id: 'gsp55s',
     name: 'GSP 55 S',
+    href: '/en/maszyny/poziome-maszyny-pakujace/gsp-55-s',
     badge: 'Most popular',
     tagline: 'High throughput and multi-axis loader support',
     description:
@@ -260,6 +276,7 @@ const MODELS: MachineModel[] = [
   {
     id: 'gsp65evo',
     name: 'GSP 65 EVO',
+    href: '/en/maszyny/poziome-maszyny-pakujace/gsp-65-evo',
     badge: 'Modified atmosphere',
     tagline: 'MAP and box motion — industrial hermetic packaging',
     description:
@@ -329,13 +346,29 @@ export default function HorizontalMachinesPage() {
       <Box sx={{ height: { xs: 64, lg: 72 } }} />
 
       {/* ── 1. HERO ── */}
-      <Box component="section" sx={{ bgcolor: BG, borderBottom: `1px solid ${BORDER}`, py: { xs: 10, md: 14 } }}>
-        <Container maxWidth="xl">
+      <Box component="section" sx={{ position: 'relative', overflow: 'hidden', bgcolor: BG, borderBottom: `1px solid ${BORDER}`, py: { xs: 10, md: 14 } }}>
+        <Box aria-hidden="true" sx={{
+          display: { xs: 'none', md: 'block' },
+          position: 'absolute', top: 0, right: 0,
+          width: '50%', height: '100%', zIndex: 0, pointerEvents: 'none',
+        }}>
+          <Box sx={{
+            position: 'absolute', inset: 0, zIndex: 1,
+            background: [
+              'linear-gradient(to right, var(--bg) 0%, color-mix(in srgb, var(--bg) 75%, transparent) 18%, color-mix(in srgb, var(--bg) 25%, transparent) 45%, transparent 100%)',
+              'linear-gradient(to bottom, color-mix(in srgb, var(--bg) 55%, transparent) 0%, transparent 20%, transparent 80%, color-mix(in srgb, var(--bg) 55%, transparent) 100%)',
+            ].join(', '),
+          }} />
+          <Image src="/images/machines/flowpack-gsp-55s-page.jpg" alt="" fill
+            sizes="50vw" style={{ objectFit: 'cover', opacity: 0.45 }} priority />
+        </Box>
+
+        <Container maxWidth="xl" sx={{ position: 'relative', zIndex: 1 }}>
           <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', lg: '1fr 380px' }, gap: { xs: 6, lg: 10 }, alignItems: 'end' }}>
             <Box>
               <Typography sx={{ fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.18em',
                 textTransform: 'uppercase', color: ACCENT, mb: 2.5 }}>
-                GSP — flow pack
+                GSP – Tecnopack Group — flow pack
               </Typography>
               <Typography component="h1" sx={{
                 fontSize: { xs: '2rem', md: '2.75rem', lg: '3.25rem' },
@@ -367,7 +400,8 @@ export default function HorizontalMachinesPage() {
             <Box sx={{
               display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2,
               p: { xs: 3, md: 3.5 },
-              bgcolor: BG_CARD, border: `1px solid ${BORDER}`, borderRadius: '4px',
+              bgcolor: '#fff',
+              border: `1px solid ${BORDER}`, borderRadius: '4px',
             }}>
               <StatChip value="400" label="packs/min – max throughput" />
               <StatChip value="8" label="GSP models in offer" />
@@ -378,7 +412,7 @@ export default function HorizontalMachinesPage() {
         </Container>
       </Box>
 
-      {/* ── Co to jest i do czego służy ── */}
+      {/* ── What is a flow pack ── */}
       <Box component="section" sx={{ py: { xs: 7, md: 10 }, borderBottom: `1px solid ${BORDER}` }}>
         <Container maxWidth="xl">
           <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: { xs: 5, md: 10 } }}>
@@ -448,6 +482,39 @@ export default function HorizontalMachinesPage() {
         </Container>
       </Box>
 
+      {/* ── VIDEOS ── */}
+      <Box component="section" sx={{ bgcolor: BG_ALT, borderBottom: `1px solid ${BORDER}`, py: { xs: 9, md: 12 } }}>
+        <Container maxWidth="xl">
+          <Typography sx={{ fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.18em',
+            textTransform: 'uppercase', color: ACCENT, mb: 2 }}>
+            Machines in action
+          </Typography>
+          <Typography component="h2" sx={{
+            fontSize: { xs: '1.5rem', md: '2rem' }, fontWeight: 800,
+            letterSpacing: '-0.02em', color: 'var(--text)', mb: { xs: 6, md: 8 },
+          }}>
+            See the GSP machines at work
+          </Typography>
+          <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 2.5 }}>
+            {['KwhZzYt-AlE', 'Ax-48tS95z8'].map(id => (
+              <Box key={id} sx={{
+                position: 'relative', paddingTop: '56.25%',
+                borderRadius: '4px', overflow: 'hidden',
+                border: `1px solid ${BORDER}`, bgcolor: '#000',
+              }}>
+                <iframe
+                  src={`https://www.youtube-nocookie.com/embed/${id}`}
+                  title={`GSP flow pack packaging machine – ${id}`}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 'none' }}
+                />
+              </Box>
+            ))}
+          </Box>
+        </Container>
+      </Box>
+
       {/* ── 3. MODELS ── */}
       <Box id="models" component="section"
         sx={{ bgcolor: BG, borderBottom: `1px solid ${BORDER}`, py: { xs: 10, md: 14 }, scrollMarginTop: { xs: 64, lg: 72 } }}>
@@ -460,7 +527,7 @@ export default function HorizontalMachinesPage() {
             fontSize: { xs: '1.5rem', md: '2rem' }, fontWeight: 800,
             letterSpacing: '-0.02em', color: 'var(--text)', mb: { xs: 6, md: 8 }, maxWidth: 560,
           }}>
-            GSP series – flow wrap machines at MadejPak
+            GSP – Tecnopack Group machines at MadejPak
           </Typography>
           <Stack spacing={3}>
             {MODELS.map((model) => (
@@ -469,6 +536,8 @@ export default function HorizontalMachinesPage() {
           </Stack>
         </Container>
       </Box>
+
+      <LeadFormEn />
 
       {/* ── 4. SECTORS ── */}
       <Box component="section" sx={{ bgcolor: BG_ALT, borderBottom: `1px solid ${BORDER}`, py: { xs: 9, md: 12 } }}>
@@ -508,35 +577,35 @@ export default function HorizontalMachinesPage() {
         </Container>
       </Box>
 
-      {/* ── 5. PACKAGING TYPES ── */}
+      {/* ── 5. PACK TYPES ── */}
       <Box component="section" sx={{ bgcolor: BG, borderBottom: `1px solid ${BORDER}`, py: { xs: 9, md: 12 } }}>
         <Container maxWidth="xl">
           <Typography sx={{ fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.18em',
             textTransform: 'uppercase', color: ACCENT, mb: 2 }}>
-            Packaging types
+            Pack types
           </Typography>
           <Typography component="h2" sx={{
             fontSize: { xs: '1.5rem', md: '2rem' }, fontWeight: 800,
             letterSpacing: '-0.02em', color: 'var(--text)', mb: { xs: 6, md: 7 },
           }}>
-            Flow pack packaging formats
+            Flow pack formats
           </Typography>
           <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: 'repeat(3, 1fr)' }, gap: 2.5 }}>
             {[
               {
                 name: 'Pillow bag',
-                desc: 'Classic flow pack packaging — a sealed film bag with side, top and bottom seams. Simple to produce, economical in film use. The most popular format for food and consumer goods.',
-                folie: 'PP, OPP, PE, metallic laminates',
+                desc: 'Classic flow pack — sealed film bag with longitudinal and cross seals. Simple to produce, film-efficient. The most popular format for food and consumer goods.',
+                films: 'PP, OPP, PE, metallic laminates',
               },
               {
-                name: 'Gusseted bag',
-                desc: 'Packaging with a side or bottom gusset — increased volume with the same film consumption. Used for irregularly shaped products or those requiring greater package capacity.',
-                folie: 'PP, OPP, multi-layer films',
+                name: 'Gusseted pack',
+                desc: 'Pack with side or bottom gusset — increased volume with the same film consumption. Used for irregularly shaped products or those requiring larger packaging capacity.',
+                films: 'PP, OPP, multi-layer films',
               },
               {
-                name: 'Shrink film packaging',
-                desc: 'Product wrapped in heat-shrink film that tightly shrinks around the product after passing through a shrink tunnel. Used in multipack packaging and for products displayed through the packaging.',
-                folie: 'POF (polyolefin), PE shrink',
+                name: 'Shrink wrap',
+                desc: 'Product wrapped in heat-shrink film that contracts tightly around the product after passing through a shrink tunnel. Used for group packaging and see-through product display.',
+                films: 'POF (polyolefin), PE shrink',
               },
             ].map((item) => (
               <Box key={item.name} sx={{
@@ -558,7 +627,7 @@ export default function HorizontalMachinesPage() {
                     Films
                   </Typography>
                   <Typography sx={{ fontSize: '0.78rem', color: TEXT_DIM }}>
-                    {item.folie}
+                    {item.films}
                   </Typography>
                 </Box>
               </Box>
@@ -582,7 +651,7 @@ export default function HorizontalMachinesPage() {
             }}>
               <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', mb: 2.5 }}>
                 <Typography sx={{ fontSize: '1.2rem', fontWeight: 800, color: 'var(--text)', letterSpacing: '-0.02em' }}>
-                  GSP – Tecno Pack
+                  GSP – Tecnopack Group
                 </Typography>
                 <Typography sx={{ fontSize: '0.65rem', fontWeight: 600, letterSpacing: '0.1em',
                   textTransform: 'uppercase', color: 'var(--dim-28)' }}>
@@ -590,14 +659,14 @@ export default function HorizontalMachinesPage() {
                 </Typography>
               </Box>
               <Typography sx={{ fontSize: '0.875rem', color: TEXT_DIM, lineHeight: 1.7, mb: 3 }}>
-                GSP (General System Pack) is an Italian manufacturer of horizontal packaging machines
-                (flow wrappers) with extensive experience in food, pharmaceutical and industrial sectors.
-                The modular machine design allows rapid adaptation to changing production formats.
+                GSP (General System Pack) is an Italian manufacturer of horizontal flow wrappers
+                with decades of experience in the food, pharmaceutical and industrial sectors.
+                The modular machine design enables fast adaptation to changing production formats.
               </Typography>
               <Stack spacing={1}>
                 {[
-                  'Multi-axis PLC-controlled machines with touch screens',
-                  'Supports heat-seal and cold-seal films',
+                  'Multi-axis machines with PLC control and touchscreen',
+                  'Heat-seal and cold-seal film support',
                   'Automatic and manual feeding systems',
                   'CE certification, INOX versions for food industry',
                 ].map((item) => (
@@ -626,18 +695,18 @@ export default function HorizontalMachinesPage() {
               borderRadius: '4px',
             }}>
               <Typography sx={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--text)', mb: 2 }}>
-                Flow pack machine selection guide
+                Choosing the right flow pack machine
               </Typography>
               <Typography sx={{ fontSize: '0.875rem', color: TEXT_DIM, lineHeight: 1.7, mb: 2.5 }}>
-                We select the right GSP model based on product type, throughput and film format.
-                Key parameters are product shape and dimensions, required line speed and packaging type.
+                The right horizontal machine is selected based on product, throughput and film format.
+                Key parameters are product shape and dimensions, required line speed and film type.
               </Typography>
               <Stack spacing={1.5}>
                 {[
                   { label: 'Extended shelf life', val: 'GSP 65 EVO / GSP 600 TR BB-E (MAP)' },
-                  { label: 'Clean shelf appearance', val: 'GSP 55 S BB / GSP 65 EVO BB' },
-                  { label: 'High throughput line', val: 'GSP 75 S (cantable sealing)' },
-                  { label: 'Automation entry point', val: 'GSP 45 S / GSP 50 S' },
+                  { label: 'Shelf appearance', val: 'GSP 55 S BB / GSP 65 EVO BB' },
+                  { label: 'High line throughput', val: 'GSP 75 S (cantable sealing units)' },
+                  { label: 'Entry into automation', val: 'GSP 45 S / GSP 50 S' },
                 ].map((r) => (
                   <Box key={r.label} sx={{
                     display: 'flex', justifyContent: 'space-between', alignItems: 'center',
@@ -674,7 +743,7 @@ export default function HorizontalMachinesPage() {
                 Looking for a horizontal machine for your line?
               </Typography>
               <Typography sx={{ fontSize: { xs: '0.9rem', md: '0.95rem' }, color: TEXT_DIM, lineHeight: 1.75, maxWidth: 460 }}>
-                We will help select the right GSP model for your product, throughput and packaging requirements.
+                We will help you select the right GSP model for your product, throughput and packaging requirements.
               </Typography>
             </Box>
             <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} sx={{ flexShrink: 0 }}>
