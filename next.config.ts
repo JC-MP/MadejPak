@@ -20,6 +20,7 @@ const nextConfig: NextConfig = {
       { source: '/rodzaje-maszyn/wagi-wieloglowicowe/:path*',  destination: '/maszyny/wazenie-i-dozowanie',      permanent: true },
       { source: '/rodzaje-maszyn/systemy-paletyzacji/:path*',  destination: '/maszyny/paletyzacja',              permanent: true },
       { source: '/rodzaje-maszyn/:path*',                      destination: '/maszyny',                          permanent: true },
+      { source: '/rodzaje_maszyn/:path*',                      destination: '/maszyny',                          permanent: true },
 
       // ── stare 404: pozostałe ──────────────────────────────────────────────────
       { source: '/maszyny-etykietujace',      destination: '/maszyny',                          permanent: true },
