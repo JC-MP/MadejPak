@@ -5,7 +5,7 @@ import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 export const metadata = {
   title: 'Partnerzy technologiczni | MadejPak',
   description:
-    'Sprawdzone technologie i zweryfikowani partnerzy — Concetti, Essegi, GSP, Technowrapp oraz liderzy w robotyzacji. MadejPak realizuje kompleksowe projekty integracji linii pakujących.',
+    'Sprawdzone technologie i zweryfikowani partnerzy — Concetti, Essegi, GSP, Technowrapp, Vimco oraz liderzy w robotyzacji. MadejPak realizuje kompleksowe projekty integracji linii pakujących.',
   alternates: {
     canonical: `${SITE_URL}/partnerzy`,
     languages: {
@@ -17,7 +17,7 @@ export const metadata = {
   openGraph: {
     url:         `${SITE_URL}/partnerzy`,
     title:       'Partnerzy technologiczni | MadejPak',
-    description: 'Sprawdzone technologie i zweryfikowani partnerzy — Concetti, Essegi, GSP, Technowrapp, DOBOT, KUKA. MadejPak realizuje kompleksowe projekty integracji linii pakujących.',
+    description: 'Sprawdzone technologie i zweryfikowani partnerzy — Concetti, Essegi, GSP, Technowrapp, Vimco, KUKA. MadejPak realizuje kompleksowe projekty integracji linii pakujących.',
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Partnerzy technologiczni – MadejPak' }],
   },
 };

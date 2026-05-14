@@ -81,6 +81,22 @@ export const PARTNERS: Partner[] = [
     cta: { label: 'Zapytaj o wdrożenie', href: '/kontakt' },
   },
   {
+    id: 'vimco',
+    name: 'Vimco',
+    logoSrc: 'https://vimco.it/wp-content/uploads/2021/11/cropped-Logo_VIMCO.png',
+    category: 'Pakowanie wtórne / End-of-line',
+    headline: 'Kompletne linie końca produkcji — kartoniarka, wrap-around, box erecting',
+    description:
+      'Vimco to włoski producent maszyn do pakowania wtórnego z ponad 40-letnim doświadczeniem. Specjalizuje się w projektowaniu i produkcji kompletnych linii końca produkcji dla branży spożywczej i niespożywczej — od kartoniarki po zintegrowany system końca linii.',
+    areas: [
+      'Pakowanie wtórne i kartoniarki',
+      'Box erecting i wrap-around',
+      'Top-load — załadunek od góry',
+      'Kompletne linie end-of-line turnkey',
+    ],
+    cta: { label: 'Zapytaj o wdrożenie', href: '/kontakt' },
+  },
+  {
     id: 'dobot',
     hidden: true, // HIDDEN: przywróć usuwając tę linię
     name: 'DOBOT',

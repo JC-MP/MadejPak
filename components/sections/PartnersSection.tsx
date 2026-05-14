@@ -290,8 +290,8 @@ export default function PartnersSection() {
           <Typography
             sx={{ fontSize: '0.85rem', color: 'var(--dim-45)', lineHeight: 1.7, maxWidth: 440 }}
           >
-            Czterech głównych partnerów technologicznych: Concetti, Essegi, GSP / Tecno Pack,
-            Technowrapp — plus roboty przemysłowe KUKA do paletyzacji i handlingu.
+            Partnerzy technologiczni: Concetti, Essegi, GSP / Tecno Pack, Technowrapp, Vimco —
+            plus roboty przemysłowe KUKA do paletyzacji i handlingu.
           </Typography>
         </Container>
       </Box>

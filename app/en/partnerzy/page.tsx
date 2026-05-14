@@ -83,6 +83,22 @@ const PARTNERS_EN = [
     cta: { label: 'Ask about implementation', href: '/en/kontakt' },
   },
   {
+    id: 'vimco',
+    name: 'Vimco',
+    logoSrc: 'https://vimco.it/wp-content/uploads/2021/11/cropped-Logo_VIMCO.png',
+    category: 'Secondary packaging / End-of-line',
+    headline: 'Complete end-of-line systems — case erecting, wrap-around, top-load',
+    description:
+      'Vimco is an Italian manufacturer of secondary packaging machines with over 40 years of experience. It specialises in the design and production of complete end-of-line systems for food and non-food industries — from case erectors to fully integrated end-of-line solutions.',
+    areas: [
+      'Secondary packaging and case packers',
+      'Box erecting and wrap-around',
+      'Top-load — loading from above',
+      'Complete end-of-line turnkey systems',
+    ],
+    cta: { label: 'Ask about implementation', href: '/en/kontakt' },
+  },
+  {
     id: 'kuka',
     name: 'KUKA',
     logoSrc: '/logos/partnerzy/kuka.png',
@@ -331,8 +347,8 @@ export default function EnPartnerzyPage() {
             <Typography
               sx={{ fontSize: '0.85rem', color: 'var(--dim-45)', lineHeight: 1.7, maxWidth: 440 }}
             >
-              Four main technology partners: Concetti, Essegi, GSP / Tecno Pack,
-              Technowrapp — plus KUKA industrial robots for palletising and handling.
+              Technology partners: Concetti, Essegi, GSP / Tecno Pack, Technowrapp, Vimco —
+              plus KUKA industrial robots for palletising and handling.
             </Typography>
           </Container>
         </Box>
