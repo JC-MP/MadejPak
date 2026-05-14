@@ -59,6 +59,8 @@ const jsonLd = {
       name: 'Coboty w Akcji — Dni Otwarte MadejPak + DOBOT',
       description: DESCRIPTION,
       url: PAGE_URL,
+      startDate:           '2026-06-08T09:00:00+02:00',
+      endDate:             '2026-06-19T16:00:00+02:00',
       eventStatus:         'https://schema.org/EventScheduled',
       eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
       isAccessibleForFree: true,
