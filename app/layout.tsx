@@ -10,6 +10,7 @@ import './globals.css';
 
 const GTM_ID = 'GTM-NRN8B8C';
 const GA_ID  = 'G-03MEXQ4XPP';
+const AW_ID  = 'AW-18172689985';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -116,9 +117,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         `}</Script>
         {/* Google Tag Manager — afterInteractive nie blokuje renderowania */}
         <Script id="gtm" strategy="afterInteractive">{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_ID}');`}</Script>
-        {/* Google Analytics 4 */}
+        {/* Google Analytics 4 + Google Ads */}
         <Script strategy="afterInteractive" src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
-        <Script id="ga4" strategy="afterInteractive">{`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');`}</Script>
+        <Script id="ga4" strategy="afterInteractive">{`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');gtag('config','${AW_ID}');`}</Script>
       </body>
     </html>
   );
