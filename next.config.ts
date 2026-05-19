@@ -6,6 +6,7 @@ const nextConfig: NextConfig = {
       // ── istniejące ────────────────────────────────────────────────────────────
       { source: '/maszyny_poziome',     destination: '/maszyny/poziome-maszyny-pakujace', permanent: true },
       { source: '/contact',             destination: '/kontakt',                           permanent: true },
+      { source: '/oferta',               destination: '/maszyny',                           permanent: true },
       { source: '/oferta/:path*',       destination: '/maszyny',                           permanent: true },
       { source: '/systemy_paletyzacji', destination: '/maszyny/paletyzacja',               permanent: true },
       { source: '/maszyny_wagi',        destination: '/maszyny/wazenie-i-dozowanie',       permanent: true },
@@ -23,6 +24,8 @@ const nextConfig: NextConfig = {
       { source: '/rodzaje_maszyn/:path*',                      destination: '/maszyny',                          permanent: true },
 
       // ── stare 404: pozostałe ──────────────────────────────────────────────────
+      { source: '/kontrahenci',                            destination: '/partnerzy',                        permanent: true },
+      { source: '/maszyny-pakujace-systemy-paletyzacji/:path*', destination: '/maszyny',                   permanent: true },
       { source: '/maszyny-etykietujace',      destination: '/maszyny',                          permanent: true },
       { source: '/kariera',                   destination: '/o-firmie',                         permanent: true },
       { source: '/emerito',                   destination: '/partnerzy',                        permanent: true },
