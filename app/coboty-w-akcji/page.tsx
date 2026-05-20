@@ -292,6 +292,7 @@ function RegFormSection() {
       setState('success');
       setForm(EMPTY);
       (window as any).gtag?.('event', 'coboty_rejestracja', { day: form.day, slot: form.slot });
+      (window as any).gtag?.('event', 'conversion', { send_to: 'AW-18172689985/f3L8CJHMua8cEMH8tNlD' });
     } catch {
       setState('error');
     }
