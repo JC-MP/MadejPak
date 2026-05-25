@@ -58,11 +58,26 @@ interface RegForm {
   day: string;
   slot: string;
   consent: boolean;
+  marketingConsent: boolean;
 }
 
 type SubmitState = 'idle' | 'loading' | 'success' | 'error';
 
-const EMPTY: RegForm = { name: '', company: '', email: '', interest: '', headcount: '', day: '', slot: '', consent: false };
+const EMPTY: RegForm = { name: '', company: '', email: '', interest: '', headcount: '', day: '', slot: '', consent: false, marketingConsent: false };
+
+// ─── Helpers ────────────────────────────────────────────────────────────────────
+function grantMarketingConsent() {
+  try { localStorage.setItem('mp-consent', 'all'); } catch { /* ignore */ }
+  const w = window as any;
+  if (typeof w.gtag === 'function') {
+    w.gtag('consent', 'update', {
+      ad_storage:         'granted',
+      ad_user_data:       'granted',
+      ad_personalization: 'granted',
+      analytics_storage:  'granted',
+    });
+  }
+}
 
 // ─── Shared MUI field styles ────────────────────────────────────────────────────
 const fieldSx = {
@@ -274,9 +289,14 @@ function RegFormSection() {
     ev.preventDefault();
     if (!validate()) return;
     setState('loading');
+
+    // 1️⃣ Consent update MUSI być przed zdarzeniami Google Ads
+    if (form.marketingConsent) grantMarketingConsent();
+
     const dayEntry = SCHEDULE.find(d => d.id === form.day);
     const dayLabel = dayEntry ? `${dayEntry.dayName}, ${dayEntry.date} 2026` : form.day;
     try {
+      // 2️⃣ Wysyłka EmailJS
       await emailjs.send(
         EJS_SERVICE, EJS_TEMPLATE,
         {
@@ -285,15 +305,15 @@ function RegFormSection() {
           user_email: form.email,
           phone:      form.headcount ? `${form.headcount} os.` : '–',
           produkt:    `REJESTRACJA — Coboty w Akcji · ${dayLabel} · godz. ${form.slot}`,
-          message:    `Obszar zainteresowania: ${form.interest || 'nie podano'}`,
+          message:    `Obszar zainteresowania: ${form.interest || 'nie podano'}\nZgoda marketing: ${form.marketingConsent ? 'TAK' : 'NIE'}`,
         },
         { publicKey: EJS_KEY },
       );
       setState('success');
       setForm(EMPTY);
-      // GA4 — zdarzenie własne
+      // 3️⃣ GA4 — zdarzenie własne (zawsze)
       (window as any).gtag?.('event', 'coboty_rejestracja', { day: form.day, slot: form.slot });
-      // Google Ads CHD (Choluj Design) — kampania Coboty w Akcji
+      // 4️⃣ Google Ads CHD — konwersja (consent już zaktualizowany powyżej)
       (window as any).gtag?.('event', 'conversion', {
         send_to:  'AW-18172696218/oF1RCKLJjLMcEJqttdlD',
         value:     500,
@@ -344,6 +364,7 @@ function RegFormSection() {
         <TextField label="Liczba osób (opcjonalne)" value={form.headcount} onChange={field('headcount')} sx={fieldSx} fullWidth inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }} />
       </Box>
 
+      {/* Zgoda RODO — wymagana */}
       <FormControlLabel
         control={
           <Checkbox
@@ -355,12 +376,30 @@ function RegFormSection() {
         }
         label={
           <Typography sx={{ fontSize: '0.77rem', color: 'var(--dim-50)', lineHeight: 1.6 }}>
-            Wyrażam zgodę na przetwarzanie moich danych osobowych przez PPHU MadejPak Sp. z o.o. w celu organizacji dni otwartych. Administratorem danych jest PPHU MadejPak Sp. z o.o., Dziewin 333, 32-708 Dziewin.
+            Wyrażam zgodę na przetwarzanie moich danych osobowych przez PPHU MadejPak Sp. z o.o. w celu organizacji dni otwartych. Administratorem danych jest PPHU MadejPak Sp. z o.o., Dziewin 333, 32-708 Dziewin. <Box component="span" sx={{ color: 'var(--dim-35)' }}>(wymagane)</Box>
           </Typography>
         }
         sx={{ alignItems: 'flex-start', mb: 0.5, mr: 0 }}
       />
       {errors.consent && <FormHelperText error sx={{ ml: 0, mb: 1.5 }}>{errors.consent}</FormHelperText>}
+
+      {/* Zgoda marketingowa — opcjonalna, odblokowuje śledzenie konwersji Google Ads */}
+      <FormControlLabel
+        control={
+          <Checkbox
+            checked={form.marketingConsent}
+            onChange={e => setForm(prev => ({ ...prev, marketingConsent: e.target.checked }))}
+            sx={{ color: 'var(--dim-30)', '&.Mui-checked': { color: ACCENT }, pt: 0 }}
+            size="small"
+          />
+        }
+        label={
+          <Typography sx={{ fontSize: '0.77rem', color: 'var(--dim-50)', lineHeight: 1.6 }}>
+            Wyrażam zgodę na używanie plików cookies analitycznych i marketingowych w celu analizy ruchu i mierzenia skuteczności reklam (Google Analytics, Google Ads). <Box component="span" sx={{ color: 'var(--dim-35)' }}>(opcjonalne)</Box>
+          </Typography>
+        }
+        sx={{ alignItems: 'flex-start', mb: 0.5, mr: 0, mt: 1 }}
+      />
 
       <Box sx={{ mt: 3, display: 'flex', alignItems: 'center', gap: 3, flexWrap: 'wrap' }}>
         <Box
