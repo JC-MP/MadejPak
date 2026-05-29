@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
+import { GeistSans } from 'geist/font/sans';
 import { SITE_URL, OG_IMAGE, COMPANY } from '@/lib/seo.config';
+import CobotyConsentGate from '@/components/ui/CobotyConsentGate';
 
 const TITLE       = 'Coboty w Akcji – Automatyzacja Pakowania i Paletyzacji | MadejPak';
 const DESCRIPTION = 'Zobacz roboty współpracujące w praktyce. Pokazy paletyzacji i pakowania na żywo — DOBOT CR20A, Nova 5. Zarejestruj się na dni otwarte MadejPak. Czerwiec 2026, Małopolska.';
@@ -108,12 +110,40 @@ const jsonLd = {
 
 export default function CobotyLayout({ children }: { children: React.ReactNode }) {
   return (
-    <>
+    <div className={GeistSans.className}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      {/*
+        Scoped CSS tylko dla coboty page.
+        W light mode dark-sekcje są ciemnym grafitem (#1c1c22) zamiast pure black (#0f0f10)
+        żeby kontrast między sekcjami nie był zbyt agresywny.
+        W dark mode zostają bez zmian.
+      */}
+      <style>{`
+        /* Coboty page — dark-section tokens */
+        :root {
+          --cd-bg:     #f5f5f7;
+          --cd-bg2:    #ececef;
+          --cd-text:   rgba(0,0,0,0.88);
+          --cd-dim:    rgba(0,0,0,0.52);
+          --cd-mute:   rgba(0,0,0,0.30);
+          --cd-border: rgba(0,0,0,0.09);
+          --cd-surf:   rgba(0,0,0,0.04);
+        }
+        [data-theme="dark"] {
+          --cd-bg:     #0f0f10;
+          --cd-bg2:    #18181a;
+          --cd-text:   #ffffff;
+          --cd-dim:    rgba(255,255,255,0.48);
+          --cd-mute:   rgba(255,255,255,0.28);
+          --cd-border: rgba(255,255,255,0.08);
+          --cd-surf:   rgba(255,255,255,0.04);
+        }
+      `}</style>
+      <CobotyConsentGate />
       {children}
-    </>
+    </div>
   );
 }

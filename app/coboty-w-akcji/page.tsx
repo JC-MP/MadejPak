@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
@@ -16,9 +16,13 @@ import emailjs from '@emailjs/browser';
 
 // ─── Design tokens ─────────────────────────────────────────────────────────────
 const ACCENT  = '#E8610A';
-const DARK    = '#0f0f10';
-const DARK2   = '#18181a';
+const DARK    = 'var(--cd-bg)';   // light: #f5f5f7, dark: #0f0f10
+const DARK2   = 'var(--cd-bg2)';  // light: #ececef, dark: #18181a
 const BORDER  = 'var(--border)';
+// Kolory tekstu w "ciemnych" sekcjach — adaptują się do trybu
+const CD_TEXT  = 'var(--cd-text)';
+const CD_DIM   = 'var(--cd-dim)';
+const CD_MUTE  = 'var(--cd-mute)';
 
 // ─── EmailJS ────────────────────────────────────────────────────────────────────
 const EJS_SERVICE  = 'service_aso22qi';
@@ -92,6 +96,29 @@ const fieldSx = {
   '& .MuiInputLabel-root.Mui-focused': { color: ACCENT },
 };
 
+// ─── Scroll reveal ──────────────────────────────────────────────────────────────
+function Reveal({ children, delay = 0, style }: { children: React.ReactNode; delay?: number; style?: React.CSSProperties }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const io = new IntersectionObserver(([e]) => { if (e.isIntersecting) { setVisible(true); io.disconnect(); } }, { threshold: 0.12 });
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+  return (
+    <div ref={ref} style={{
+      opacity: visible ? 1 : 0,
+      transform: visible ? 'none' : 'translateY(22px)',
+      transition: `opacity 0.55s ease ${delay}ms, transform 0.55s ease ${delay}ms`,
+      ...style,
+    }}>
+      {children}
+    </div>
+  );
+}
+
 // ─── Small atoms ────────────────────────────────────────────────────────────────
 function Label({ children }: { children: React.ReactNode }) {
   return (
@@ -103,9 +130,9 @@ function Label({ children }: { children: React.ReactNode }) {
 
 function Bullet({ text, dark = false }: { text: string; dark?: boolean }) {
   return (
-    <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 1.5, py: 0.85, borderBottom: `1px solid ${dark ? 'rgba(255,255,255,0.08)' : BORDER}`, '&:last-child': { borderBottom: 'none' } }}>
+    <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 1.5, py: 0.85, borderBottom: `1px solid ${dark ? 'var(--cd-border)' : BORDER}`, '&:last-child': { borderBottom: 'none' } }}>
       <Box sx={{ width: 5, height: 5, borderRadius: '50%', bgcolor: ACCENT, flexShrink: 0, mt: '8px' }} />
-      <Typography sx={{ fontSize: '0.88rem', lineHeight: 1.65, color: dark ? 'rgba(255,255,255,0.65)' : 'var(--dim-68)' }}>
+      <Typography sx={{ fontSize: '0.88rem', lineHeight: 1.65, color: dark ? CD_DIM : 'var(--dim-68)' }}>
         {text}
       </Typography>
     </Box>
@@ -114,7 +141,7 @@ function Bullet({ text, dark = false }: { text: string; dark?: boolean }) {
 
 function YtEmbed({ videoId, dark = false }: { videoId: string; dark?: boolean }) {
   return (
-    <Box sx={{ width: '100%', aspectRatio: '16/9', borderRadius: '6px', overflow: 'hidden', bgcolor: dark ? 'rgba(0,0,0,0.35)' : '#111' }}>
+    <Box sx={{ width: '100%', aspectRatio: '16/9', borderRadius: '6px', overflow: 'hidden', bgcolor: dark ? 'var(--cd-surf)' : '#111' }}>
       <Box
         component="iframe"
         src={`https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1&color=white`}
@@ -138,17 +165,17 @@ function AnchorBtn({ href, children, outline = false }: { href: string; children
         px: 3.5,
         py: 1.5,
         bgcolor: outline ? 'transparent' : ACCENT,
-        border: `1.5px solid ${outline ? 'rgba(255,255,255,0.35)' : 'transparent'}`,
+        border: outline ? '1.5px solid var(--cd-border)' : '1.5px solid transparent',
         borderRadius: '3px',
         fontSize: '0.82rem',
         fontWeight: 700,
         letterSpacing: '0.07em',
         textTransform: 'uppercase',
-        color: '#fff',
+        color: outline ? CD_DIM : '#fff',
         textDecoration: 'none',
         transition: 'all 0.15s ease',
         '&:hover': outline
-          ? { borderColor: '#fff', bgcolor: 'rgba(255,255,255,0.08)' }
+          ? { borderColor: CD_TEXT, bgcolor: 'var(--cd-surf)', color: CD_TEXT }
           : { bgcolor: '#D45509' },
       }}
     >
@@ -453,9 +480,13 @@ export default function CobotsOpenDayPage() {
           <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', lg: '1fr 1fr' }, gap: { xs: 8, lg: 10 }, alignItems: 'center' }}>
 
             <Box>
-              <Typography sx={{ fontSize: '0.6rem', fontWeight: 700, letterSpacing: '0.24em', textTransform: 'uppercase', color: ACCENT, mb: 3.5 }}>
-                Dni otwarte MadejPak + DOBOT · 8–19 czerwca 2026
-              </Typography>
+              {/* Live badge */}
+              <Box sx={{ display: 'inline-flex', alignItems: 'center', gap: 1, px: 1.5, py: 0.65, border: `1px solid rgba(232,97,10,0.35)`, borderRadius: '3px', mb: 3.5 }}>
+                <Box sx={{ width: 6, height: 6, borderRadius: '50%', bgcolor: ACCENT, flexShrink: 0, animation: 'livePulse 2s infinite', '@keyframes livePulse': { '0%,100%': { opacity: 1 }, '50%': { opacity: 0.25 } } }} />
+                <Typography sx={{ fontSize: '0.58rem', fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: ACCENT, lineHeight: 1 }}>
+                  Dni otwarte · 8–19 czerwca 2026 · k. Bochni
+                </Typography>
+              </Box>
               <Typography
                 component="h1"
                 sx={{
@@ -463,14 +494,14 @@ export default function CobotsOpenDayPage() {
                   fontWeight: 800,
                   lineHeight: 0.95,
                   letterSpacing: '-0.04em',
-                  color: '#fff',
+                  color: CD_TEXT,
                   mb: 3.5,
                 }}
               >
                 Coboty<br />
                 <Box component="span" sx={{ color: ACCENT }}>w akcji.</Box>
               </Typography>
-              <Typography sx={{ fontSize: { xs: '1rem', md: '1.1rem' }, color: 'rgba(255,255,255,0.55)', lineHeight: 1.75, maxWidth: 480, mb: 5.5 }}>
+              <Typography sx={{ fontSize: { xs: '1rem', md: '1.1rem' }, color: CD_DIM, lineHeight: 1.75, maxWidth: 480, mb: 5.5 }}>
                 Zobacz, jak automatyzacja realnie pracuje w produkcji — nie na filmie, nie na slajdach. Na działającym sprzęcie, w warunkach zbliżonych do Twojej linii.
               </Typography>
               <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2 }}>
@@ -486,6 +517,12 @@ export default function CobotsOpenDayPage() {
             </Box>
           </Box>
         </Container>
+
+        {/* Scroll hint */}
+        <Box sx={{ position: 'absolute', bottom: 32, left: '50%', transform: 'translateX(-50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1, opacity: 0.35 }}>
+          <Typography sx={{ fontSize: '0.55rem', fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', color: CD_MUTE }}>Przewiń</Typography>
+          <Box sx={{ width: 1, height: 40, bgcolor: CD_MUTE, animation: 'scrollLine 1.8s ease infinite', '@keyframes scrollLine': { '0%': { transform: 'scaleY(0)', transformOrigin: 'top' }, '50%': { transform: 'scaleY(1)', transformOrigin: 'top' }, '51%': { transformOrigin: 'bottom' }, '100%': { transform: 'scaleY(0)', transformOrigin: 'bottom' } } }} />
+        </Box>
       </Box>
 
       {/* ════════════════════════════════════════════════════════
@@ -527,6 +564,7 @@ export default function CobotsOpenDayPage() {
       <Box sx={{ py: { xs: 10, md: 16 } }}>
         <Container maxWidth="lg">
           <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: { xs: 7, md: 12 }, alignItems: 'center' }}>
+            <Reveal>
             <Box>
               <Label>DOBOT Nova 5 · 5 kg · zasięg 850 mm</Label>
               <Typography component="h2" sx={{ fontSize: { xs: '2.25rem', md: '3rem', lg: '3.5rem' }, fontWeight: 800, lineHeight: 1.05, letterSpacing: '-0.035em', color: 'var(--dim-85)', mb: 3 }}>
@@ -541,7 +579,8 @@ export default function CobotsOpenDayPage() {
                 <Bullet text="Automatyczne podawanie do maszyny flow-pack" />
               </Box>
             </Box>
-            <YtEmbed videoId="FleAPh89MJo" />
+            </Reveal>
+            <Reveal delay={120}><YtEmbed videoId="FleAPh89MJo" /></Reveal>
           </Box>
         </Container>
       </Box>
@@ -552,15 +591,18 @@ export default function CobotsOpenDayPage() {
       <Box sx={{ bgcolor: DARK2, py: { xs: 10, md: 16 } }}>
         <Container maxWidth="lg">
           <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: { xs: 7, md: 12 }, alignItems: 'center' }}>
-            <Box sx={{ order: { xs: 2, md: 1 } }}>
-              <YtEmbed videoId="e_vA7AjN0UQ" dark />
-            </Box>
+            <Reveal delay={120} style={{ order: 2 }}>
+              <Box sx={{ order: { xs: 2, md: 1 } }}>
+                <YtEmbed videoId="e_vA7AjN0UQ" dark />
+              </Box>
+            </Reveal>
+            <Reveal style={{ order: 1 }}>
             <Box sx={{ order: { xs: 1, md: 2 } }}>
               <Label>DOBOT CR20A · 20 kg · zasięg 1700 mm</Label>
-              <Typography component="h2" sx={{ fontSize: { xs: '2.25rem', md: '3rem', lg: '3.5rem' }, fontWeight: 800, lineHeight: 1.05, letterSpacing: '-0.035em', color: '#fff', mb: 3 }}>
+              <Typography component="h2" sx={{ fontSize: { xs: '2.25rem', md: '3rem', lg: '3.5rem' }, fontWeight: 800, lineHeight: 1.05, letterSpacing: '-0.035em', color: CD_TEXT, mb: 3 }}>
                 Paletyzacja.<br />Stabilnie,<br />całą dobę.
               </Typography>
-              <Typography sx={{ fontSize: '0.95rem', color: 'rgba(255,255,255,0.52)', lineHeight: 1.85, mb: 3.5 }}>
+              <Typography sx={{ fontSize: '0.95rem', color: CD_DIM, lineHeight: 1.85, mb: 3.5 }}>
                 Kartony, worki, ciężkie elementy — CR20A składa palety z dokładnością ±0,05 mm przez 24h bez przerwy. Bez zwolnień lekarskich.
               </Typography>
               <Box>
@@ -569,6 +611,7 @@ export default function CobotsOpenDayPage() {
                 <Bullet text="Zastąpienie ciężkiej pracy manualnej" dark />
               </Box>
             </Box>
+            </Reveal>
           </Box>
         </Container>
       </Box>
@@ -614,10 +657,10 @@ export default function CobotsOpenDayPage() {
       ════════════════════════════════════════════════════════ */}
       <Box sx={{ bgcolor: DARK, py: { xs: 12, md: 18 } }}>
         <Container maxWidth="md">
-          <Typography sx={{ fontSize: { xs: '1.85rem', md: '3rem', lg: '3.75rem' }, fontWeight: 800, lineHeight: 1.12, letterSpacing: '-0.035em', color: '#fff', textAlign: 'center', mb: 2.5 }}>
+          <Typography sx={{ fontSize: { xs: '1.85rem', md: '3rem', lg: '3.75rem' }, fontWeight: 800, lineHeight: 1.12, letterSpacing: '-0.035em', color: CD_TEXT, textAlign: 'center', mb: 2.5 }}>
             Automatyzacja, którą możesz wdrożyć bez przebudowy całej produkcji.
           </Typography>
-          <Typography sx={{ fontSize: { xs: '0.92rem', md: '1rem' }, color: 'rgba(255,255,255,0.4)', textAlign: 'center', lineHeight: 1.75 }}>
+          <Typography sx={{ fontSize: { xs: '0.92rem', md: '1rem' }, color: CD_DIM, textAlign: 'center', lineHeight: 1.75 }}>
             Zwrot z inwestycji w ciągu 12 miesięcy. Wdrożenie w tydzień, nie w miesiące.
           </Typography>
         </Container>
@@ -656,36 +699,56 @@ export default function CobotsOpenDayPage() {
       {/* ════════════════════════════════════════════════════════
           6. PROGRAM — NA ŻYWO
       ════════════════════════════════════════════════════════ */}
-      <Box id="program" sx={{ bgcolor: 'var(--bg-alt)', py: { xs: 10, md: 14 }, borderTop: `1px solid ${BORDER}`, borderBottom: `1px solid ${BORDER}`, scrollMarginTop: '80px' }}>
+      <Box id="program" sx={{ bgcolor: DARK, py: { xs: 10, md: 14 }, scrollMarginTop: '80px' }}>
         <Container maxWidth="lg">
-          <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: { xs: 6, md: 12 }, alignItems: 'start' }}>
-            <Box>
-              <Label>Program pokazów</Label>
-              <Typography component="h2" sx={{ fontSize: { xs: '1.75rem', md: '2.25rem' }, fontWeight: 800, lineHeight: 1.15, letterSpacing: '-0.03em', color: 'var(--dim-85)', mb: 2 }}>
-                Nie prezentacja.<br />Realna praca maszyn.
+          <Reveal>
+            <Box sx={{ mb: { xs: 7, md: 10 }, maxWidth: 680 }}>
+              <Typography sx={{ fontSize: '0.58rem', fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: ACCENT, mb: 2.5 }}>
+                Program pokazów
               </Typography>
-              <Typography sx={{ fontSize: '0.9rem', color: 'var(--dim-52)', lineHeight: 1.8 }}>
+              <Typography component="h2" sx={{ fontSize: { xs: '2rem', md: '3rem', lg: '3.75rem' }, fontWeight: 800, lineHeight: 1.05, letterSpacing: '-0.035em', color: CD_TEXT, mb: 2.5 }}>
+                Nie prezentacja.<br />
+                <Box component="span" sx={{ color: CD_DIM }}>Realna praca maszyn.</Box>
+              </Typography>
+              <Typography sx={{ fontSize: '0.92rem', color: CD_DIM, lineHeight: 1.8, maxWidth: 520 }}>
                 Każdy pokaz odbywa się na działającym sprzęcie, w warunkach zbliżonych do produkcji. Możesz zadawać pytania, patrzeć z bliska, prosić o powtórzenie.
               </Typography>
             </Box>
-            <Box sx={{ bgcolor: 'var(--bg)', border: `1px solid ${BORDER}`, borderRadius: '4px', overflow: 'hidden' }}>
-              {[
-                { n: '01', title: 'Paletyzacja', desc: 'CR20A układa kartony i worki na palety — w pełni automatycznie.' },
-                { n: '02', title: 'Pick & place', desc: 'Nova 5 przenosi produkty między stanowiskami z precyzją ±0,05 mm.' },
-                { n: '03', title: 'Pakowanie z flowpackiem', desc: 'Nova 5 podaje produkty do maszyny flow-pack bez operatora przy podawaniu.' },
-                { n: '04', title: 'Programowanie cobota', desc: 'Zobaczysz, jak w kilka minut zmienić ścieżkę ruchu bez znajomości kodowania.' },
-              ].map(({ n, title, desc }, idx, arr) => (
-                <Box key={n} sx={{ display: 'flex', gap: 3, px: 3.5, py: 3, borderBottom: idx < arr.length - 1 ? `1px solid ${BORDER}` : 'none', alignItems: 'flex-start' }}>
-                  <Typography sx={{ fontSize: '0.6rem', fontWeight: 700, color: ACCENT, letterSpacing: '0.1em', mt: '3px', flexShrink: 0, width: 22 }}>
+          </Reveal>
+
+          {/* 2×2 editorial grid */}
+          <Box sx={{
+            display: 'grid',
+            gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' },
+            borderTop: '1px solid var(--cd-border)',
+            borderLeft: '1px solid var(--cd-border)',
+          }}>
+            {[
+              { n: '01 · Pokaz', title: 'Paletyzacja', desc: 'CR20A układa kartony i worki na palety — w pełni automatycznie.' },
+              { n: '02 · Pokaz', title: 'Pick & place', desc: 'Nova 5 przenosi produkty między stanowiskami z precyzją ±0,05 mm.' },
+              { n: '03 · Pokaz', title: 'Pakowanie z flowpackiem', desc: 'Nova 5 podaje produkty do maszyny flow-pack bez operatora przy podawaniu.' },
+              { n: '04 · Pokaz', title: 'Programowanie cobota', desc: 'Zobaczysz, jak w kilka minut zmienić ścieżkę ruchu bez znajomości kodowania.' },
+            ].map(({ n, title, desc }, i) => (
+              <Reveal key={n} delay={i * 80}>
+                <Box sx={{
+                  px: { xs: 3.5, md: 5 },
+                  py: { xs: 4, md: 5.5 },
+                  borderRight: '1px solid var(--cd-border)',
+                  borderBottom: '1px solid var(--cd-border)',
+                  height: '100%',
+                }}>
+                  <Typography sx={{ fontSize: '0.55rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: ACCENT, mb: 2.5 }}>
                     {n}
                   </Typography>
-                  <Box>
-                    <Typography sx={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--dim-85)', mb: 0.5, lineHeight: 1.3 }}>{title}</Typography>
-                    <Typography sx={{ fontSize: '0.82rem', color: 'var(--dim-52)', lineHeight: 1.65 }}>{desc}</Typography>
-                  </Box>
+                  <Typography sx={{ fontSize: { xs: '1.25rem', md: '1.6rem' }, fontWeight: 800, color: CD_TEXT, lineHeight: 1.15, letterSpacing: '-0.02em', mb: 1.5 }}>
+                    {title}
+                  </Typography>
+                  <Typography sx={{ fontSize: '0.85rem', color: CD_DIM, lineHeight: 1.75 }}>
+                    {desc}
+                  </Typography>
                 </Box>
-              ))}
-            </Box>
+              </Reveal>
+            ))}
           </Box>
         </Container>
       </Box>
@@ -727,10 +790,10 @@ export default function CobotsOpenDayPage() {
         <Container maxWidth="lg">
           <Box sx={{ mb: { xs: 6, md: 10 } }}>
             <Label>Koszt wdrożenia</Label>
-            <Typography component="h2" sx={{ fontSize: { xs: '2.5rem', md: '3.5rem', lg: '4.5rem' }, fontWeight: 800, lineHeight: 1.0, letterSpacing: '-0.04em', color: '#fff', mb: 2.5 }}>
+            <Typography component="h2" sx={{ fontSize: { xs: '2.5rem', md: '3.5rem', lg: '4.5rem' }, fontWeight: 800, lineHeight: 1.0, letterSpacing: '-0.04em', color: CD_TEXT, mb: 2.5 }}>
               Tańsze niż myślisz.
             </Typography>
-            <Typography sx={{ fontSize: { xs: '0.95rem', md: '1.05rem' }, color: 'rgba(255,255,255,0.45)', lineHeight: 1.8, maxWidth: 520 }}>
+            <Typography sx={{ fontSize: { xs: '0.95rem', md: '1.05rem' }, color: CD_DIM, lineHeight: 1.8, maxWidth: 520 }}>
               Cobot to nie milionowa inwestycja. To sprzęt, który zwraca się w ciągu roku — i od tej chwili pracuje za darmo.
             </Typography>
           </Box>
@@ -752,15 +815,15 @@ export default function CobotsOpenDayPage() {
                 body: 'Cobot nie bierze urlopu, nie choruje i nie potrzebuje nadgodzin. Jednorazowy koszt zamiast comiesięcznych wydatków przez kolejne lata.',
               },
             ].map(({ icon, title, body }) => (
-              <Box key={title} sx={{ bgcolor: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '4px', p: { xs: 3, md: 4 } }}>
+              <Box key={title} sx={{ bgcolor: 'var(--cd-surf)', border: '1px solid var(--cd-border)', borderRadius: '4px', p: { xs: 3, md: 4 } }}>
                 <Typography sx={{ fontSize: '1.5rem', color: ACCENT, mb: 2, lineHeight: 1 }}>{icon}</Typography>
-                <Typography sx={{ fontSize: '0.95rem', fontWeight: 700, color: '#fff', mb: 1.25, lineHeight: 1.3 }}>{title}</Typography>
-                <Typography sx={{ fontSize: '0.83rem', color: 'rgba(255,255,255,0.48)', lineHeight: 1.8 }}>{body}</Typography>
+                <Typography sx={{ fontSize: '0.95rem', fontWeight: 700, color: CD_TEXT, mb: 1.25, lineHeight: 1.3 }}>{title}</Typography>
+                <Typography sx={{ fontSize: '0.83rem', color: CD_DIM, lineHeight: 1.8 }}>{body}</Typography>
               </Box>
             ))}
           </Box>
-          <Box sx={{ mt: 6, pt: 5, borderTop: '1px solid rgba(255,255,255,0.07)', display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, alignItems: { xs: 'flex-start', sm: 'center' }, justifyContent: 'space-between', gap: 3 }}>
-            <Typography sx={{ fontSize: { xs: '0.9rem', md: '1rem' }, color: 'rgba(255,255,255,0.38)', lineHeight: 1.75, maxWidth: 480 }}>
+          <Box sx={{ mt: 6, pt: 5, borderTop: '1px solid var(--cd-border)', display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, alignItems: { xs: 'flex-start', sm: 'center' }, justifyContent: 'space-between', gap: 3 }}>
+            <Typography sx={{ fontSize: { xs: '0.9rem', md: '1rem' }, color: CD_MUTE, lineHeight: 1.75, maxWidth: 480 }}>
               Na wydarzeniu omówimy wycenę i ROI dla konkretnych zastosowań — przynieś swój case, wyliczymy razem.
             </Typography>
             <AnchorBtn href="#rejestracja">Zarezerwuj termin</AnchorBtn>
@@ -776,7 +839,7 @@ export default function CobotsOpenDayPage() {
           <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: { xs: 7, md: 12 }, alignItems: 'start' }}>
             <Box>
               <Label>Miejsce i terminy</Label>
-              <Typography component="h2" sx={{ fontSize: { xs: '2rem', md: '2.75rem' }, fontWeight: 800, lineHeight: 1.1, letterSpacing: '-0.035em', color: '#fff', mb: 4 }}>
+              <Typography component="h2" sx={{ fontSize: { xs: '2rem', md: '2.75rem' }, fontWeight: 800, lineHeight: 1.1, letterSpacing: '-0.035em', color: CD_TEXT, mb: 4 }}>
                 Małopolska.<br />8–19 czerwca 2026.
               </Typography>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2.5 }}>
@@ -788,8 +851,8 @@ export default function CobotsOpenDayPage() {
                   { label: 'Wstęp', val: 'Bezpłatny · Po rejestracji' },
                 ].map(({ label, val }) => (
                   <Box key={label}>
-                    <Typography sx={{ fontSize: '0.57rem', fontWeight: 700, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', mb: 0.4 }}>{label}</Typography>
-                    <Typography sx={{ fontSize: '0.95rem', fontWeight: 600, color: 'rgba(255,255,255,0.75)', lineHeight: 1.4 }}>{val}</Typography>
+                    <Typography sx={{ fontSize: '0.57rem', fontWeight: 700, letterSpacing: '0.16em', textTransform: 'uppercase', color: CD_MUTE, mb: 0.4 }}>{label}</Typography>
+                    <Typography sx={{ fontSize: '0.95rem', fontWeight: 600, color: CD_TEXT, lineHeight: 1.4 }}>{val}</Typography>
                   </Box>
                 ))}
               </Box>
@@ -807,7 +870,7 @@ export default function CobotsOpenDayPage() {
               <Box
                 component="a"
                 href="#rejestracja"
-                sx={{ display: 'inline-flex', alignItems: 'center', px: 3, py: 1.5, border: '1.5px solid rgba(255,255,255,0.25)', borderRadius: '3px', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.07em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.7)', textDecoration: 'none', transition: 'all 0.15s', '&:hover': { borderColor: '#fff', color: '#fff' }, alignSelf: 'flex-start' }}
+                sx={{ display: 'inline-flex', alignItems: 'center', px: 3, py: 1.5, border: '1.5px solid var(--cd-border)', borderRadius: '3px', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.07em', textTransform: 'uppercase', color: CD_DIM, textDecoration: 'none', transition: 'all 0.15s', '&:hover': { borderColor: CD_TEXT, color: CD_TEXT }, alignSelf: 'flex-start' }}
               >
                 Zarezerwuj termin →
               </Box>
@@ -987,10 +1050,10 @@ export default function CobotsOpenDayPage() {
         <Container maxWidth="lg">
           <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, justifyContent: 'space-between', alignItems: { xs: 'flex-start', md: 'center' }, gap: 5 }}>
             <Box sx={{ maxWidth: 540 }}>
-              <Typography component="h2" sx={{ fontSize: { xs: '1.75rem', md: '2.5rem' }, fontWeight: 800, lineHeight: 1.12, letterSpacing: '-0.03em', color: '#fff', mb: 1.5 }}>
+              <Typography component="h2" sx={{ fontSize: { xs: '1.75rem', md: '2.5rem' }, fontWeight: 800, lineHeight: 1.12, letterSpacing: '-0.03em', color: CD_TEXT, mb: 1.5 }}>
                 Zostały ostatnie miejsca.
               </Typography>
-              <Typography sx={{ fontSize: '0.95rem', color: 'rgba(255,255,255,0.45)', lineHeight: 1.75 }}>
+              <Typography sx={{ fontSize: '0.95rem', color: CD_DIM, lineHeight: 1.75 }}>
                 Zarezerwuj termin teraz — potwierdzenie otrzymasz w ciągu 48h.
               </Typography>
             </Box>
@@ -999,7 +1062,7 @@ export default function CobotsOpenDayPage() {
               <Box
                 component="a"
                 href="tel:+48123454397"
-                sx={{ display: 'inline-flex', alignItems: 'center', px: 3.5, py: 1.5, border: '1.5px solid rgba(255,255,255,0.22)', borderRadius: '3px', fontSize: '0.82rem', fontWeight: 700, letterSpacing: '0.06em', color: 'rgba(255,255,255,0.6)', textDecoration: 'none', transition: 'all 0.15s', '&:hover': { borderColor: 'rgba(255,255,255,0.5)', color: '#fff' } }}
+                sx={{ display: 'inline-flex', alignItems: 'center', px: 3.5, py: 1.5, border: '1.5px solid var(--cd-border)', borderRadius: '3px', fontSize: '0.82rem', fontWeight: 700, letterSpacing: '0.06em', color: CD_DIM, textDecoration: 'none', transition: 'all 0.15s', '&:hover': { borderColor: CD_TEXT, color: CD_TEXT } }}
               >
                 +48 12 345 43 97
               </Box>

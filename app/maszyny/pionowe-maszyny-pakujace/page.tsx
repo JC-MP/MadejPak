@@ -1,27 +1,150 @@
 import React from 'react';
+import Image from 'next/image';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
+import { SITE_URL, OG_IMAGE, COMPANY } from '@/lib/seo.config';
+import LeadForm from './LeadForm';
+
+const PAGE_URL = `${SITE_URL}/maszyny/pionowe-maszyny-pakujace`;
 
 export const metadata: Metadata = {
-  title: 'Pionowe maszyny pakujące VFFS – pakowanie produktów sypkich | MadejPak',
+  title: 'Pionowe Maszyny Pakujące VFFS – Essegi F700, F1000, F1200, F8004S | MadejPak',
   description:
-    'Pionowe maszyny pakujące VFFS (form-fill-seal) do pakowania produktów sypkich, granulowanych, proszkowych i płynnych. Linia do pakowania kartonów, torebek i saszetek. Essegi i Concetti.',
+    'Pionowe maszyny pakujące VFFS Essegi do produktów sypkich, granulowanych i proszkowych. Modele F700 (50 g–3 kg), F1000 (1–25 kg), F1200 (5–50 kg), F8004S (4-side seal). Dostawa i integracja — MadejPak.',
   keywords: [
-    'VFFS', 'pionowe maszyny pakujące', 'maszyna pakująca produkty sypkie',
-    'pakowanie produktów sypkich', 'pakowanie proszków', 'pakowanie granulatów',
-    'form-fill-seal', 'linia do pakowania torebek', 'automat pakujący sypkie',
+    // intencja zakupowa
+    'pionowe maszyny pakujące', 'VFFS', 'pionowa maszyna pakująca',
+    'maszyna VFFS', 'automat pakujący sypkie', 'maszyna form-fill-seal',
+    'linia do pakowania torebek', 'maszyna do pakowania worków',
+    // modele Essegi
+    'Essegi VFFS', 'Essegi F700', 'Essegi F1000', 'Essegi F1200', 'Essegi F8004S',
+    'Essegi maszyna pakująca', 'maszyna Essegi Polska',
+    // produkty
+    'pakowanie produktów sypkich', 'pakowanie mąki', 'pakowanie kawy',
+    'pakowanie granulatów', 'pakowanie proszków', 'pakowanie przypraw',
+    'pakowanie makaronu', 'pakowanie pasz', 'pakowanie worków 25 kg',
+    // techniczne
+    'form-fill-seal pionowy', 'maszyna do torebek pillow bag',
+    'maszyna zgrzewająca worki', 'maszyna do pakowania z folii',
+    // integracja
+    'linia pakująca z wagą', 'waga wielogłowicowa VFFS',
+    'integrator maszyn pakujących Polska', 'MadejPak maszyny pakujące',
+    // long-tail
+    'ile kosztuje maszyna VFFS', 'maszyna pakująca do 25 kg',
+    'pionowa maszyna pakująca dla małej firmy',
+    'automatyczne pakowanie produktów sypkich',
   ],
-  alternates: { canonical: `${SITE_URL}/maszyny/pionowe-maszyny-pakujace` },
+  robots: { index: true, follow: true },
+  alternates: { canonical: PAGE_URL },
   openGraph: {
-    url:         `${SITE_URL}/maszyny/pionowe-maszyny-pakujace`,
-    title:       'Pionowe maszyny pakujące VFFS | MadejPak',
-    description: 'Pionowe maszyny pakujące VFFS (form-fill-seal) dla produktów sypkich, granulowanych, proszkowych i płynnych. Essegi i Concetti — dostawa i integracja przez MadejPak.',
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Pionowe maszyny pakujące – MadejPak' }],
+    type:        'website',
+    url:         PAGE_URL,
+    siteName:    'MadejPak',
+    title:       'Pionowe Maszyny Pakujące VFFS Essegi – F700, F1000, F1200, F8004S | MadejPak',
+    description: 'Maszyny VFFS Essegi do pakowania produktów sypkich i granulowanych. Zakres 50 g–50 kg, wydajność do 70 szt./min. Autoryzowany partner Essegi w Polsce — MadejPak.',
+    images: [{ url: `${SITE_URL}/images/interpack/essegi-2.jpg`, width: 1200, height: 800, alt: 'Essegi VFFS — pionowe maszyny pakujące MadejPak' }],
+    locale:      'pl_PL',
   },
+  twitter: {
+    card:        'summary_large_image',
+    title:       'Pionowe Maszyny Pakujące VFFS Essegi | MadejPak',
+    description: 'F700, F1000, F1200, F8004S — maszyny VFFS do produktów sypkich 50 g–50 kg. Autoryzowany partner Essegi w Polsce.',
+    images:      [`${SITE_URL}/images/interpack/essegi-2.jpg`],
+  },
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'ItemList',
+      name: 'Pionowe maszyny pakujące VFFS Essegi',
+      description: 'Rodzina pionowych maszyn pakujących VFFS Essegi dostępnych przez MadejPak — autoryzowanego partnera w Polsce.',
+      url: PAGE_URL,
+      numberOfItems: 4,
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          item: {
+            '@type': 'Product',
+            name: 'Essegi F700',
+            description: 'Kompaktowa maszyna VFFS do żywności i drobnych granulatów. Zakres 50 g–3 kg, format do 320×420 mm, do 70 szt./min.',
+            url: `${PAGE_URL}/essegi-f700`,
+            image: `${SITE_URL}/images/interpack/essegi-1.jpg`,
+            brand: { '@type': 'Brand', name: 'Essegi' },
+            offers: { '@type': 'Offer', priceCurrency: 'PLN', availability: 'https://schema.org/InStock', seller: { '@type': 'Organization', name: COMPANY.name, url: COMPANY.url } },
+          },
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          item: {
+            '@type': 'Product',
+            name: 'Essegi F1000',
+            description: 'Maszyna VFFS do proszków i granulatów przemysłowych 1–25 kg. Wersje Standard, EcoFocus, Motion SU&SO.',
+            url: `${PAGE_URL}/essegi-f1000`,
+            image: `${SITE_URL}/images/interpack/essegi-2.jpg`,
+            brand: { '@type': 'Brand', name: 'Essegi' },
+            offers: { '@type': 'Offer', priceCurrency: 'PLN', availability: 'https://schema.org/InStock', seller: { '@type': 'Organization', name: COMPANY.name, url: COMPANY.url } },
+          },
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          item: {
+            '@type': 'Product',
+            name: 'Essegi F1200 / F1300',
+            description: 'Maszyna VFFS do dużych worków 5–50 kg. Format do 980×570 mm, rolka folii 1180 mm.',
+            url: `${PAGE_URL}/essegi-f1200`,
+            image: `${SITE_URL}/images/interpack/essegi-3.jpg`,
+            brand: { '@type': 'Brand', name: 'Essegi' },
+            offers: { '@type': 'Offer', priceCurrency: 'PLN', availability: 'https://schema.org/InStock', seller: { '@type': 'Organization', name: COMPANY.name, url: COMPANY.url } },
+          },
+        },
+        {
+          '@type': 'ListItem',
+          position: 4,
+          item: {
+            '@type': 'Product',
+            name: 'Essegi F8004S',
+            description: 'Maszyna VFFS z czterostronnym zgrzewem (4-side seal). Opakowania 50 g–5 kg, do 70 szt./min. Snacki, kawa, słodycze.',
+            url: `${PAGE_URL}/essegi-f8004s`,
+            image: `${SITE_URL}/images/interpack/essegi-1.jpg`,
+            brand: { '@type': 'Brand', name: 'Essegi' },
+            offers: { '@type': 'Offer', priceCurrency: 'PLN', availability: 'https://schema.org/InStock', seller: { '@type': 'Organization', name: COMPANY.name, url: COMPANY.url } },
+          },
+        },
+      ],
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'MadejPak',                       item: SITE_URL },
+        { '@type': 'ListItem', position: 2, name: 'Maszyny',                        item: `${SITE_URL}/maszyny` },
+        { '@type': 'ListItem', position: 3, name: 'Pionowe maszyny pakujące VFFS',  item: PAGE_URL },
+      ],
+    },
+    {
+      '@type': 'LocalBusiness',
+      '@id':   `${SITE_URL}/#organization`,
+      name:    COMPANY.name,
+      url:     COMPANY.url,
+      telephone: COMPANY.phone,
+      email:   COMPANY.email,
+      address: {
+        '@type':           'PostalAddress',
+        streetAddress:     COMPANY.address.streetAddress,
+        addressLocality:   COMPANY.address.addressLocality,
+        postalCode:        COMPANY.address.postalCode,
+        addressRegion:     COMPANY.address.addressRegion,
+        addressCountry:    COMPANY.address.addressCountry,
+      },
+    },
+  ],
 };
 
 // ─── Design tokens ──────────────────────────────────────────────────────────
@@ -66,6 +189,7 @@ const ESSEGI_SERIES = [
       { label: 'Max. format worka', value: '320 × 420 mm' },
     ],
     dosing: ['Dozownik kubkowy (DT)', 'Wagowy wibro-kanałowy (B/V-K)', 'Pionowy dozownik ślimakowy (DV5000)'],
+    href: '/maszyny/pionowe-maszyny-pakujace/essegi-f700',
   },
   {
     model: 'F1000',
@@ -78,6 +202,7 @@ const ESSEGI_SERIES = [
       { label: 'Dozowanie', value: 'Taśmowe, podwójno-ślimakowe, objętościowe' },
     ],
     dosing: ['Wagowy taśmowy (B/N-K)', 'Podwójny dozownik ślimakowy (B-2C)', 'Objętościowy taśmowy (DT10)', 'Dozownik do cieczy'],
+    href: '/maszyny/pionowe-maszyny-pakujace/essegi-f1000',
   },
   {
     model: 'F1200 / F1300',
@@ -90,6 +215,7 @@ const ESSEGI_SERIES = [
       { label: 'Dozowanie', value: 'Objętościowy podajnik taśmowy (DTS80)' },
     ],
     dosing: ['Objętościowy podajnik taśmowy DTS80'],
+    href: '/maszyny/pionowe-maszyny-pakujace/essegi-f1200',
   },
   {
     model: 'F8004S',
@@ -101,6 +227,7 @@ const ESSEGI_SERIES = [
       { label: 'Przeznaczenie', value: 'Wysoka wydajność, produkcja ciągła' },
     ],
     dosing: ['Systemy wagowe dedykowane do dużych wydajności'],
+    href: '/maszyny/pionowe-maszyny-pakujace/essegi-f8004s',
   },
   {
     model: 'W1200 Fluid',
@@ -113,6 +240,7 @@ const ESSEGI_SERIES = [
       { label: 'Dozowanie', value: 'Dedykowany dozownik do cieczy' },
     ],
     dosing: ['Dozownik do cieczy'],
+    href: null,
   },
 ];
 
@@ -145,6 +273,7 @@ const BAG_TYPES = [
 export default function PionoweMaszynyPage() {
   return (
     <Box sx={{ bgcolor: BG, minHeight: '100vh', color: 'var(--text)' }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Box sx={{ height: { xs: 64, lg: 72 } }} />
 
       {/* ── Hero ── */}
@@ -154,10 +283,11 @@ export default function PionoweMaszynyPage() {
             sx={{
               display: 'grid',
               gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' },
-              gap: { xs: 5, md: 10 },
-              alignItems: 'end',
+              gap: { xs: 6, md: 10 },
+              alignItems: 'center',
             }}
           >
+            {/* Left: heading + text + buttons */}
             <Box>
               <Typography
                 sx={{
@@ -179,21 +309,19 @@ export default function PionoweMaszynyPage() {
                   lineHeight: 1.1,
                   letterSpacing: '-0.03em',
                   color: 'var(--dim-85)',
+                  mb: 3,
                 }}
               >
                 Pionowe maszyny
                 <br />
                 pakujące VFFS
               </Typography>
-            </Box>
-
-            <Box>
               <Typography
                 sx={{
                   fontSize: { xs: '0.95rem', md: '1.05rem' },
                   lineHeight: 1.8,
                   color: TEXT_DIM,
-                  mb: 3,
+                  mb: 3.5,
                 }}
               >
                 Maszyny VFFS (Vertical Form-Fill-Seal) formują opakowanie z rolki folii, dozują
@@ -217,7 +345,7 @@ export default function PionoweMaszynyPage() {
                     fontWeight: 700,
                     letterSpacing: '0.06em',
                     textTransform: 'uppercase',
-                    color: 'var(--text)',
+                    color: '#fff',
                     textDecoration: 'none',
                     transition: 'background-color 0.15s ease',
                     '&:hover': { bgcolor: '#D45509' },
@@ -227,8 +355,8 @@ export default function PionoweMaszynyPage() {
                   <ArrowRight />
                 </Box>
                 <Box
-                  component={Link}
-                  href="/maszyny/partnerzy"
+                  component="a"
+                  href="#modele"
                   sx={{
                     display: 'inline-flex',
                     alignItems: 'center',
@@ -250,9 +378,32 @@ export default function PionoweMaszynyPage() {
                     },
                   }}
                 >
-                  Wszystkie maszyny
+                  Zobacz maszyny
                   <ArrowRight />
                 </Box>
+              </Box>
+            </Box>
+
+            {/* Right: machine photo — portrait, ~50% column width */}
+            <Box sx={{ display: { xs: 'none', md: 'flex' }, justifyContent: 'center', alignItems: 'center' }}>
+              <Box
+                sx={{
+                  position: 'relative',
+                  width: 280,
+                  height: 380,
+                  borderRadius: '4px',
+                  overflow: 'hidden',
+                  flexShrink: 0,
+                }}
+              >
+                <Image
+                  src="/images/interpack/essegi-2.jpg"
+                  alt="Essegi — pionowa maszyna pakująca VFFS"
+                  fill
+                  sizes="280px"
+                  style={{ objectFit: 'cover' }}
+                  priority
+                />
               </Box>
             </Box>
           </Box>
@@ -567,6 +718,85 @@ export default function PionoweMaszynyPage() {
                         </Typography>
                       </Box>
                     ))}
+                  </Box>
+                  {series.href && (
+                    <Box
+                      component={Link}
+                      href={series.href}
+                      sx={{
+                        mt: 2.5,
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: 1,
+                        fontSize: '0.72rem',
+                        fontWeight: 700,
+                        letterSpacing: '0.08em',
+                        textTransform: 'uppercase',
+                        color: ACCENT,
+                        textDecoration: 'none',
+                        '&:hover': { opacity: 0.8 },
+                      }}
+                    >
+                      Zobacz szczegóły <ArrowRight />
+                    </Box>
+                  )}
+                </Box>
+              </Box>
+            ))}
+          </Box>
+        </Container>
+      </Box>
+
+      {/* ── Podstrony modeli ── */}
+      <Box id="modele" sx={{ bgcolor: BG, borderBottom: `1px solid ${BORDER}`, py: { xs: 8, md: 12 } }}>
+        <Container maxWidth="lg">
+          <Typography sx={{ fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: ACCENT, mb: 2 }}>
+            Szczegóły techniczne
+          </Typography>
+          <Typography variant="h2" sx={{ fontSize: { xs: '1.4rem', md: '1.75rem' }, fontWeight: 700, lineHeight: 1.2, letterSpacing: '-0.02em', mb: 6 }}>
+            Wybierz model i sprawdź pełne dane
+          </Typography>
+          <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr', lg: 'repeat(4, 1fr)' }, gap: 2 }}>
+            {[
+              { model: 'Essegi F700', range: '50 g – 3 kg', speed: 'do 70 szt./min', tag: 'Food & granulaty', href: '/maszyny/pionowe-maszyny-pakujace/essegi-f700', img: '/images/interpack/essegi-1.jpg' },
+              { model: 'Essegi F1000', range: '1 – 25 kg', speed: 'do 22 szt./min', tag: 'Proszki, granulaty', href: '/maszyny/pionowe-maszyny-pakujace/essegi-f1000', img: '/images/interpack/essegi-2.jpg' },
+              { model: 'Essegi F1200', range: '5 – 50 kg', speed: 'do 22 szt./min', tag: 'Duże worki bulk', href: '/maszyny/pionowe-maszyny-pakujace/essegi-f1200', img: '/images/interpack/essegi-3.jpg' },
+              { model: 'Essegi F8004S', range: '50 g – 5 kg', speed: 'do 70 szt./min', tag: 'Zgrzew 4-stronny', href: '/maszyny/pionowe-maszyny-pakujace/essegi-f8004s', img: '/images/interpack/essegi-1.jpg' },
+            ].map(({ model, range, speed, tag, href, img }) => (
+              <Box
+                key={model}
+                component={Link}
+                href={href}
+                sx={{
+                  display: 'flex', flexDirection: 'column',
+                  bgcolor: BG_CARD, border: `1px solid ${BORDER}`,
+                  borderRadius: '4px', overflow: 'hidden', textDecoration: 'none',
+                  transition: 'border-color 0.15s ease, box-shadow 0.15s ease',
+                  '&:hover': { borderColor: ACCENT, boxShadow: `0 0 0 1px ${ACCENT}` },
+                  '&:hover .model-card-img': { transform: 'scale(1.04)' },
+                }}
+              >
+                {/* Zdjęcie */}
+                <Box sx={{ position: 'relative', aspectRatio: '3/4', overflow: 'hidden', bgcolor: '#f0f0f0' }}>
+                  <Image
+                    src={img}
+                    alt={model}
+                    fill
+                    sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 25vw"
+                    className="model-card-img"
+                    style={{ objectFit: 'cover', transition: 'transform 0.35s ease' }}
+                  />
+                </Box>
+                {/* Treść */}
+                <Box sx={{ p: 2.5, display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+                  <Box sx={{ px: 1, py: 0.35, bgcolor: `${ACCENT}15`, border: `1px solid ${ACCENT}40`, borderRadius: '3px', fontSize: '0.62rem', fontWeight: 600, color: ACCENT, letterSpacing: '0.06em', textTransform: 'uppercase', mb: 2, alignSelf: 'flex-start' }}>
+                    {tag}
+                  </Box>
+                  <Typography sx={{ fontSize: '1.05rem', fontWeight: 800, color: 'var(--dim-85)', letterSpacing: '-0.03em', mb: 0.5 }}>{model}</Typography>
+                  <Typography sx={{ fontSize: '0.8rem', color: TEXT_DIM, mb: 0.25 }}>{range}</Typography>
+                  <Typography sx={{ fontSize: '0.8rem', color: TEXT_DIM, mb: 2.5 }}>{speed}</Typography>
+                  <Box sx={{ mt: 'auto', display: 'inline-flex', alignItems: 'center', gap: 1, fontSize: '0.75rem', fontWeight: 700, color: ACCENT, letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+                    Szczegóły <ArrowRight />
                   </Box>
                 </Box>
               </Box>
@@ -1242,6 +1472,9 @@ export default function PionoweMaszynyPage() {
           </Box>
         </Container>
       </Box>
+
+      {/* ── Lead Form ── */}
+      <LeadForm />
 
       {/* ── Breadcrumb ── */}
       <Box sx={{ bgcolor: 'var(--bg-alt)', borderTop: `1px solid var(--border)` }}>
