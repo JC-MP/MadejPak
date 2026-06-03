@@ -2,9 +2,10 @@ import type { Metadata } from 'next';
 import { GeistSans } from 'geist/font/sans';
 import { SITE_URL, OG_IMAGE, COMPANY } from '@/lib/seo.config';
 import CobotyConsentGate from '@/components/ui/CobotyConsentGate';
+import CobotyConversion from '@/components/ui/CobotyConversion';
 
 const TITLE       = 'Coboty w Akcji – Automatyzacja Pakowania i Paletyzacji | MadejPak';
-const DESCRIPTION = 'Zobacz roboty współpracujące w praktyce. Pokazy paletyzacji i pakowania na żywo — DOBOT CR20A, Nova 5. Zarejestruj się na dni otwarte MadejPak. Czerwiec 2026, Małopolska.';
+const DESCRIPTION = 'Zobacz roboty współpracujące w praktyce. Pokazy paletyzacji i pakowania na żywo — DOBOT CR20A, Nova 5 + stanowisko paletyzacji. Zarejestruj się na dni otwarte MadejPak. 15–26 czerwca 2026, Małopolska.';
 const PAGE_URL    = `${SITE_URL}/coboty-w-akcji`;
 
 export const metadata: Metadata = {
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
     'robot pick and place', 'robot do układania na palecie',
     'robot do pakowania żywności', 'automatyzacja linii pakującej',
     // brandowe
-    'DOBOT', 'dobot cobot', 'DOBOT Nova 5', 'DOBOT CR20A',
+    'DOBOT', 'dobot cobot', 'DOBOT Nova 5', 'DOBOT CR20A', 'stanowisko paletyzacji DOBOT',
     // eventowe
     'coboty w akcji', 'dni otwarte automatyzacja',
     'pokaz robotów przemysłowych', 'demo robotów współpracujących',
@@ -41,14 +42,14 @@ export const metadata: Metadata = {
     url:         PAGE_URL,
     siteName:    'MadejPak',
     title:       'Coboty w Akcji – Automatyzacja Pakowania i Paletyzacji | MadejPak',
-    description: 'Zobacz roboty współpracujące w praktyce. Pokazy paletyzacji i pakowania na żywo — DOBOT CR20A, Nova 5. Dni otwarte MadejPak, Czerwiec 2026.',
+    description: 'Zobacz roboty współpracujące w praktyce. Pokazy paletyzacji i pakowania na żywo — DOBOT CR20A, Nova 5 + stanowisko paletyzacji. Dni otwarte MadejPak, 15–26 czerwca 2026.',
     images: [{ url: `${SITE_URL}/images/cobots/cr20a-transparent.png`, width: 480, height: 720, alt: 'DOBOT CR — cobot przemysłowy | Coboty w Akcji MadejPak' }],
     locale: 'pl_PL',
   },
   twitter: {
     card:        'summary_large_image',
-    title:       'Coboty w Akcji — Dni Otwarte MadejPak + DOBOT | Czerwiec 2026',
-    description: 'Pokazy robotów współpracujących DOBOT na żywo. Paletyzacja, pick & place, automatyzacja pakowania. Dni otwarte MadejPak, Czerwiec 2026.',
+    title:       'Coboty w Akcji — Dni Otwarte MadejPak + DOBOT | 15–26 czerwca 2026',
+    description: 'Pokazy robotów współpracujących DOBOT na żywo. Paletyzacja, pick & place, stanowisko paletyzacji CR20A. Dni otwarte MadejPak, 15–26 czerwca 2026, Małopolska.',
     images:      [`${SITE_URL}/images/cobots/cr20a-transparent.png`],
   },
 };
@@ -61,8 +62,8 @@ const jsonLd = {
       name: 'Coboty w Akcji — Dni Otwarte MadejPak + DOBOT',
       description: DESCRIPTION,
       url: PAGE_URL,
-      startDate:           '2026-06-08T09:00:00+02:00',
-      endDate:             '2026-06-19T16:00:00+02:00',
+      startDate:           '2026-06-15T09:00:00+02:00',
+      endDate:             '2026-06-26T16:00:00+02:00',
       eventStatus:         'https://schema.org/EventScheduled',
       eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
       isAccessibleForFree: true,
@@ -143,6 +144,7 @@ export default function CobotyLayout({ children }: { children: React.ReactNode }
         }
       `}</style>
       <CobotyConsentGate />
+      <CobotyConversion />
       {children}
     </div>
   );

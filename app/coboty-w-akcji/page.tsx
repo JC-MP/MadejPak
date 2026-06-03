@@ -33,16 +33,16 @@ const EJS_KEY      = 'IAq3TNyMDLA3SxC62';
 const SLOTS = ['9:00', '12:00', '14:00'];
 
 const SCHEDULE = [
-  { id: '2026-06-08', dayName: 'Pn', date: '8 cze' },
-  { id: '2026-06-09', dayName: 'Wt', date: '9 cze' },
-  { id: '2026-06-10', dayName: 'Śr', date: '10 cze' },
-  { id: '2026-06-11', dayName: 'Cz', date: '11 cze' },
-  { id: '2026-06-12', dayName: 'Pt', date: '12 cze' },
   { id: '2026-06-15', dayName: 'Pn', date: '15 cze' },
   { id: '2026-06-16', dayName: 'Wt', date: '16 cze' },
   { id: '2026-06-17', dayName: 'Śr', date: '17 cze' },
   { id: '2026-06-18', dayName: 'Cz', date: '18 cze' },
   { id: '2026-06-19', dayName: 'Pt', date: '19 cze' },
+  { id: '2026-06-22', dayName: 'Pn', date: '22 cze' },
+  { id: '2026-06-23', dayName: 'Wt', date: '23 cze' },
+  { id: '2026-06-24', dayName: 'Śr', date: '24 cze' },
+  { id: '2026-06-25', dayName: 'Cz', date: '25 cze' },
+  { id: '2026-06-26', dayName: 'Pt', date: '26 cze' },
 ];
 
 const INTERESTS = [
@@ -484,7 +484,7 @@ export default function CobotsOpenDayPage() {
               <Box sx={{ display: 'inline-flex', alignItems: 'center', gap: 1, px: 1.5, py: 0.65, border: `1px solid rgba(232,97,10,0.35)`, borderRadius: '3px', mb: 3.5 }}>
                 <Box sx={{ width: 6, height: 6, borderRadius: '50%', bgcolor: ACCENT, flexShrink: 0, animation: 'livePulse 2s infinite', '@keyframes livePulse': { '0%,100%': { opacity: 1 }, '50%': { opacity: 0.25 } } }} />
                 <Typography sx={{ fontSize: '0.58rem', fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: ACCENT, lineHeight: 1 }}>
-                  Dni otwarte · 8–19 czerwca 2026 · k. Bochni
+                  Dni otwarte · 15–26 czerwca 2026 · k. Bochni
                 </Typography>
               </Box>
               <Typography
@@ -532,9 +532,9 @@ export default function CobotsOpenDayPage() {
         <Container maxWidth="lg">
           <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: { xs: 4, md: 6 }, alignItems: 'center' }}>
             {[
-              { label: 'Terminy', value: '8–19 czerwca 2026', note: '10 dni roboczych, pn–pt' },
+              { label: 'Terminy', value: '15–26 czerwca 2026', note: '10 dni roboczych, pn–pt' },
               { label: 'Lokalizacja', value: 'k. Bochni', note: 'Siedziba MadejPak, Małopolska' },
-              { label: 'Pokazy', value: 'CR20A + Nova 5', note: 'Dwa coboty DOBOT' },
+              { label: 'Pokazy', value: 'CR20A + Nova 5 + stanowisko', note: 'Trzy coboty DOBOT' },
               { label: 'Wstęp', value: 'Bezpłatny', note: 'Rejestracja wymagana' },
             ].map(({ label, value, note }) => (
               <Box key={label}>
@@ -617,7 +617,68 @@ export default function CobotsOpenDayPage() {
       </Box>
 
       {/* ════════════════════════════════════════════════════════
-          3c. INTEGRACJA
+          3c. CO ZOBACZYSZ — Stanowisko paletyzacji CR20A (light bg)
+      ════════════════════════════════════════════════════════ */}
+      <Box sx={{ py: { xs: 10, md: 16 }, borderTop: `1px solid ${BORDER}` }}>
+        <Container maxWidth="lg">
+          <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: { xs: 7, md: 12 }, alignItems: 'center' }}>
+            <Reveal delay={120}>
+              <Box sx={{ bgcolor: 'var(--bg-card)', border: `1px solid ${BORDER}`, borderRadius: '8px', overflow: 'hidden' }}>
+                <Image
+                  src="/images/cobots/maszynaDobot.png"
+                  alt="DOBOT CR20A stanowisko paletyzacji"
+                  width={600}
+                  height={600}
+                  style={{ width: '100%', height: 'auto', display: 'block' }}
+                />
+                <Box sx={{ p: 3, borderTop: `1px solid ${BORDER}` }}>
+                  <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 2 }}>
+                    {[
+                      { val: '20 kg', label: 'Udźwig' },
+                      { val: '1700 mm', label: 'Zasięg' },
+                      { val: '13 szt./min', label: 'Wydajność' },
+                    ].map(({ val, label }) => (
+                      <Box key={label} sx={{ textAlign: 'center' }}>
+                        <Typography sx={{ fontSize: '1.1rem', fontWeight: 800, color: ACCENT, letterSpacing: '-0.02em', lineHeight: 1 }}>{val}</Typography>
+                        <Typography sx={{ fontSize: '0.68rem', color: 'var(--dim-42)', mt: 0.4, textTransform: 'uppercase', letterSpacing: '0.08em' }}>{label}</Typography>
+                      </Box>
+                    ))}
+                  </Box>
+                </Box>
+              </Box>
+            </Reveal>
+            <Reveal>
+              <Box>
+                <Label>Stanowisko paletyzacji DOBOT · CR20A · 20 kg · zasięg 1700 mm</Label>
+                <Typography component="h2" sx={{ fontSize: { xs: '2.25rem', md: '3rem', lg: '3.5rem' }, fontWeight: 800, lineHeight: 1.05, letterSpacing: '-0.035em', color: 'var(--dim-85)', mb: 3 }}>
+                  Gotowe stanowisko.<br />Podłącz i paletyzuj.
+                </Typography>
+                <Typography sx={{ fontSize: '0.95rem', color: 'var(--dim-58)', lineHeight: 1.85, mb: 3.5 }}>
+                  Kompletne stanowisko paletyzacji oparte na DOBOT CR20A — robot, chwytaki próżniowe, detekcja palety i modułowa podstawa w jednym pakiecie. Do 13 kartonów na minutę w trybie podwójnego ssania, bez potrzeby programowania od zera.
+                </Typography>
+                <Box>
+                  <Bullet text="Kompletny zestaw gotowy do uruchomienia" />
+                  <Bullet text="Elastyczny uchwyt próżniowy do różnych formatów kartonów" />
+                  <Bullet text="Prosta konfiguracja wzorów paletyzacji bez znajomości robotyki" />
+                </Box>
+                <Box sx={{ mt: 3.5, width: '100%', aspectRatio: '16/9', borderRadius: '6px', overflow: 'hidden', bgcolor: '#111' }}>
+                  <Box
+                    component="iframe"
+                    src="https://player.vimeo.com/video/1022443278?color=e8610a&title=0&byline=0&portrait=0"
+                    title="DOBOT CR20A stanowisko paletyzacji"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowFullScreen
+                    sx={{ width: '100%', height: '100%', border: 'none', display: 'block' }}
+                  />
+                </Box>
+              </Box>
+            </Reveal>
+          </Box>
+        </Container>
+      </Box>
+
+      {/* ════════════════════════════════════════════════════════
+          3d. INTEGRACJA
       ════════════════════════════════════════════════════════ */}
       <Box sx={{ bgcolor: 'var(--bg-alt)', py: { xs: 10, md: 14 }, borderTop: `1px solid ${BORDER}`, borderBottom: `1px solid ${BORDER}` }}>
         <Container maxWidth="lg">
@@ -725,7 +786,7 @@ export default function CobotsOpenDayPage() {
           }}>
             {[
               { n: '01 · Pokaz', title: 'Paletyzacja', desc: 'CR20A układa kartony i worki na palety — w pełni automatycznie.' },
-              { n: '02 · Pokaz', title: 'Pick & place', desc: 'Nova 5 przenosi produkty między stanowiskami z precyzją ±0,05 mm.' },
+              { n: '02 · Pokaz', title: 'Przenośne stanowisko paletyzacji', desc: 'Kompletne stanowisko CR20A z chwytakami próżniowymi — gotowe do uruchomienia bez programowania od zera.' },
               { n: '03 · Pokaz', title: 'Pakowanie z flowpackiem', desc: 'Nova 5 podaje produkty do maszyny flow-pack bez operatora przy podawaniu.' },
               { n: '04 · Pokaz', title: 'Programowanie cobota', desc: 'Zobaczysz, jak w kilka minut zmienić ścieżkę ruchu bez znajomości kodowania.' },
             ].map(({ n, title, desc }, i) => (
@@ -840,12 +901,12 @@ export default function CobotsOpenDayPage() {
             <Box>
               <Label>Miejsce i terminy</Label>
               <Typography component="h2" sx={{ fontSize: { xs: '2rem', md: '2.75rem' }, fontWeight: 800, lineHeight: 1.1, letterSpacing: '-0.035em', color: CD_TEXT, mb: 4 }}>
-                Małopolska.<br />8–19 czerwca 2026.
+                Małopolska.<br />15–26 czerwca 2026.
               </Typography>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2.5 }}>
                 {[
                   { label: 'Adres', val: 'Dziewin 333, 32-708 Dziewin' },
-                  { label: 'Terminy', val: '8–19 czerwca 2026 · pn–pt' },
+                  { label: 'Terminy', val: '15–26 czerwca 2026 · pn–pt' },
                   { label: 'Godziny', val: '9:00 / 12:00 / 14:00' },
                   { label: 'Czas trwania', val: 'ok. 2 godziny na grupę' },
                   { label: 'Wstęp', val: 'Bezpłatny · Po rejestracji' },
@@ -861,7 +922,7 @@ export default function CobotsOpenDayPage() {
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
               <Box sx={{ px: 3.5, py: 3.5, bgcolor: ACCENT, borderRadius: '4px', display: 'inline-block' }}>
                 <Typography sx={{ fontSize: { xs: '2rem', md: '2.75rem' }, fontWeight: 800, color: '#fff', letterSpacing: '-0.03em', lineHeight: 1.1 }}>
-                  8–19 czerwca<br />2026
+                  15–26 czerwca<br />2026
                 </Typography>
                 <Typography sx={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.75)', mt: 1.5, fontWeight: 600 }}>
                   Poniedziałek – Piątek<br />9:00 · 12:00 · 14:00
