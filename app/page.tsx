@@ -46,7 +46,7 @@ import CobotsBanner from '@/components/sections/CobotsBanner';
 export default function HomePage() {
   return (
     <main>
-      {/* Baner Coboty w Akcji — Dni Otwarte MadejPak + DOBOT, znika po 19 czerwca 2026 */}
+      {/* Baner Coboty w Akcji — Dni Otwarte MadejPak + DOBOT, znika po 26 czerwca 2026 */}
       <CobotsBanner />
 
 {/* 1. Hero — kim jesteśmy, wideo, liczby */}

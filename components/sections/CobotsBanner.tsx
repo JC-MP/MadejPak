@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 import Link from 'next/link';
 
 const ACCENT = '#E8610A';
-const HIDE_AFTER = new Date('2026-06-20');
+const HIDE_AFTER = new Date('2026-06-27');
 
 export default function CobotsBanner() {
   if (new Date() >= HIDE_AFTER) return null;
@@ -33,9 +33,9 @@ export default function CobotsBanner() {
             <Box sx={{ width: 8, height: 8, borderRadius: '50%', bgcolor: ACCENT, flexShrink: 0, animation: 'cobot-banner-pulse 2s infinite' }} />
             <Typography sx={{ fontSize: { xs: '0.82rem', md: '0.88rem' }, color: 'var(--dim-75)', lineHeight: 1.4 }}>
               <Box component="span" sx={{ fontWeight: 700, color: ACCENT }}>Coboty w Akcji</Box>
-              {' '}— Dni Otwarte MadejPak + DOBOT · 8–19 czerwca 2026, Dziewin.{' '}
+              {' '}— Dni Otwarte MadejPak + DOBOT · 15–26 czerwca 2026, Dziewin.{' '}
               <Box component="span" sx={{ color: 'var(--dim-52)' }}>
-                Pokazy na żywo: paletyzacja CR20A, pick&place Nova 5.
+                Pokazy na żywo: paletyzacja CR20A, Nova 5, stanowisko paletyzacji.
               </Box>
             </Typography>
           </Box>
