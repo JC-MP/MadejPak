@@ -44,3 +44,25 @@ export const COMPANY = {
     'https://www.linkedin.com/company/madejpak',  // TODO: uzupełnić jeśli istnieje
   ],
 };
+
+// ─── Kompetencje (JSON-LD knowsAbout) ─────────────────────────────────────────
+export const KNOWS_ABOUT = [
+  'Projektowanie linii pakujących',
+  'Automatyzacja pakowania',
+  'Robotyzacja pakowania',
+  'Integracja linii produkcyjnych',
+  'Systemy paletyzacji',
+  'Flow pack / maszyny poziome',
+  'Maszyny pionowe VFFS',
+  'Workowanie i Big Bag',
+  'Serwis maszyn pakujących',
+  'Własna produkcja maszyn i chwytaków',
+];
+
+// ─── Wybrani klienci (E-E-A-T / SEO — firmy, dla których realizowaliśmy wdrożenia) ─
+// Rozpoznawalne marki; pełna lista widoczna na stronie w pasku „Zaufali nam".
+export const NOTABLE_CLIENTS = [
+  'Synthos', 'Qemetica', 'Solbet', 'Siarkopol', 'Grupa Azoty',
+  'Makarony Polskie', 'Gold Drop', 'ESAB', 'Bolsius', 'PCO Group',
+  'Planta', 'Certech', 'Lazur', 'Dankoal',
+];

@@ -77,9 +77,11 @@ function PartnerLogo({ partner }: { partner: Partner }) {
 function PartnerCard({ partner }: { partner: Partner }) {
   return (
     <Box
+      id={partner.id}
       sx={{
         display: 'flex',
         flexDirection: 'column',
+        scrollMarginTop: { xs: 80, md: 96 },
         bgcolor: BG_CARD,
         border: `1px solid ${BORDER}`,
         borderTop: `2px solid var(--dim-10)`,

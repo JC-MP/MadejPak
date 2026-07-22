@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
-import { SITE_URL, SITE_NAME, OG_IMAGE, BLOCK_INDEXING } from '@/lib/seo.config';
+import { SITE_URL, SITE_NAME, OG_IMAGE, NOTABLE_CLIENTS, BLOCK_INDEXING } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
   title: {
@@ -8,7 +8,13 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_NAME}`,
   },
   description:
-    'MadejPak designs and integrates packaging lines, implements automation and robotics, and delivers custom packaging machinery for industrial production.',
+    'MadejPak designs and integrates packaging lines, implements automation and robotics, and delivers custom packaging machinery for industrial production. Trusted by Synthos, Solbet, Siarkopol, Makarony Polskie and Gold Drop.',
+  keywords: [
+    'MadejPak', 'packaging line integrator', 'packaging automation',
+    'packaging robotics', 'packaging machines', 'flow pack', 'VFFS',
+    'palletising systems', 'packaging line service', 'end of line',
+    ...NOTABLE_CLIENTS,
+  ],
 
   robots: BLOCK_INDEXING
     ? { index: false, follow: false }

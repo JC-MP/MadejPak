@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
-import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
+import { SITE_URL, OG_IMAGE, NOTABLE_CLIENTS } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
   title: 'MadejPak – Integrator linii pakujących i automatyzacja pakowania',
   description:
-    'MadejPak projektuje i integruje linie pakujące, wdraża automatyzację i robotyzację pakowania oraz zapewnia serwis maszyn pakujących. 25 lat doświadczenia, 200+ wdrożeń w przemyśle spożywczym, chemicznym i innych branżach.',
+    'MadejPak projektuje i integruje linie pakujące, wdraża automatyzację i robotyzację pakowania oraz zapewnia serwis maszyn pakujących. 25 lat doświadczenia i 200+ wdrożeń — zaufali nam m.in. Synthos, Solbet, Siarkopol, Makarony Polskie i Gold Drop.',
   keywords: [
     'MadejPak', 'Madej Pak', 'Madej',
     'integrator linii pakujących', 'integracja linii pakujących',
@@ -13,6 +13,8 @@ export const metadata: Metadata = {
     'automat do pakowania', 'pakowanie zbiorcze',
     'serwis maszyn pakujących', 'modernizacja linii pakujących',
     'systemy paletyzacji', 'flow pack', 'VFFS',
+    'realizacje MadejPak', 'wdrożenia pakowanie',
+    ...NOTABLE_CLIENTS,
   ],
   alternates: {
     canonical: `${SITE_URL}/`,
@@ -32,12 +34,11 @@ export const metadata: Metadata = {
 };
 
 import HeroSection from '@/components/sections/HeroSection';
-// HIDDEN: przywróć importy gdy sekcje zostaną odkomentowane
-// import ClientsSection from '@/components/sections/ClientsSection';
+import ClientsSection from '@/components/sections/ClientsSection';
 import WhyMadejPakSection from '@/components/sections/WhyMadejPakSection';
 import SolutionsSection from '@/components/sections/SolutionsSection';
 // import FeaturedCasesSection from '@/components/sections/FeaturedCasesSection';
-// import PartnersStripSection from '@/components/sections/PartnersStripSection';
+import PartnersStripSection from '@/components/sections/PartnersStripSection';
 import ServiceTeaserSection from '@/components/sections/ServiceTeaserSection';
 import EventsSection from '@/components/sections/EventsSection';
 
@@ -52,8 +53,8 @@ export default function HomePage() {
 {/* 1. Hero — kim jesteśmy, wideo, liczby */}
       <HeroSection />
 
-      {/* HIDDEN: przywróć usuwając komentarze */}
-      {/* <ClientsSection /> */}
+      {/* Pasek logo klientów — przewijany marquee */}
+      <ClientsSection />
 
       {/* 2. Dlaczego MadejPak — differentiator vs zwykły dystrybutor */}
       <WhyMadejPakSection />
@@ -63,7 +64,9 @@ export default function HomePage() {
 
       {/* HIDDEN: przywróć usuwając komentarze */}
       {/* <FeaturedCasesSection /> */}
-      {/* <PartnersStripSection /> */}
+
+      {/* Pasek logo partnerów technologicznych */}
+      <PartnersStripSection />
 
       {/* 6. Serwis — strategiczny kierunek firmy */}
       <ServiceTeaserSection />

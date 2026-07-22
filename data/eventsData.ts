@@ -5,6 +5,7 @@ export interface TradeEvent {
   name: string;
   dateLabel: string;
   dateStart: string;      // YYYY-MM-DD, do sortowania
+  dateEnd?: string;       // YYYY-MM-DD; dla wydarzeń wielodniowych. Brak = jednodniowe (= dateStart)
   city: string;
   venue?: string;
   country: string;
@@ -16,7 +17,10 @@ export interface TradeEvent {
   highlights?: string[];
   invitationUrl?: string; // link do dedykowanej strony zaproszenia / rejestracji
   eventType: EventType;
-  status: 'upcoming' | 'past';
+  // Opcjonalny ręczny override statusu. Domyślnie status liczony jest z dat
+  // (getEventStatus). Używane np. dla Coboty — rolling-kampania, której dateStart
+  // to celowo data KOŃCA (trzyma wpis na górze listy), więc auto-liczenie by nie zadziałało.
+  status?: 'ongoing' | 'upcoming' | 'past';
 }
 
 export const EVENTS: TradeEvent[] = [
@@ -24,15 +28,15 @@ export const EVENTS: TradeEvent[] = [
   {
     id: 'dni-otwarte-coboty-2026',
     name: 'Dni Otwarte MadejPak — Coboty w Akcji',
-    dateLabel: '10 czerwca 2026',
-    dateStart: '2026-06-10',
+    dateLabel: 'do 31 sierpnia 2026',
+    dateStart: '2026-08-31',   // koniec kampanii — trzyma wpis na górze listy do końca wakacji
     city: 'Dziewin',
     venue: 'Siedziba MadejPak',
     country: 'Polska',
     zajawka:
-      'Pokazy cobotów DOBOT na żywo — paletyzacja CR20A, pick & place Nova 5, integracja z flowpackiem. 10 czerwca 2026. Bezpłatna rejestracja, ograniczona liczba miejsc.',
+      'Pokazy cobotów DOBOT na żywo — paletyzacja CR20A, pick & place Nova 5, integracja z flowpackiem. Trwa do 31 sierpnia 2026, termin do uzgodnienia. Bezpłatna rejestracja, ograniczona liczba miejsc.',
     opis:
-      'Dni Otwarte MadejPak + DOBOT to wydarzenie dla właścicieli firm, kierowników produkcji i inżynierów, którzy chcą zobaczyć na żywo jak coboty pracują w realnych warunkach produkcyjnych. DOBOT CR20A (20 kg, zasięg 1700 mm) pokaże możliwości paletyzacji kartonów i worków, a Nova 5 (5 kg, zasięg 850 mm) zademonstruje precyzyjny pick & place i automatyczne podawanie do maszyny flow-pack. Wstęp bezpłatny, rejestracja obowiązkowa.',
+      'Dni Otwarte MadejPak + DOBOT to wydarzenie dla właścicieli firm, kierowników produkcji i inżynierów, którzy chcą zobaczyć na żywo jak coboty pracują w realnych warunkach produkcyjnych. DOBOT CR20A (20 kg, zasięg 1700 mm) pokaże możliwości paletyzacji kartonów i worków, a Nova 5 (5 kg, zasięg 850 mm) zademonstruje precyzyjny pick & place i automatyczne podawanie do maszyny flow-pack. Wstęp bezpłatny, rejestracja obowiązkowa — pokazy prowadzimy w dni robocze do 31 sierpnia 2026, w terminie uzgodnionym indywidualnie.',
     highlights: [
       'DOBOT CR20A — paletyzacja kartonów i worków, praca 24/7',
       'DOBOT Nova 5 — pick & place produktów, integracja z flowpackiem',
@@ -41,7 +45,7 @@ export const EVENTS: TradeEvent[] = [
     ],
     invitationUrl: '/coboty-w-akcji',
     eventType: 'dni-otwarte',
-    status: 'upcoming',
+    status: 'ongoing',
   },
   {
     id: 'interpack-2026',
@@ -65,7 +69,6 @@ export const EVENTS: TradeEvent[] = [
       'Vimco — maszyny do pakowania wtórnego, box erecting, wrap-around, top-load (Halle 13 / C59)',
     ],
     eventType: 'targi',
-    status: 'upcoming',
   },
 
   // ─── 2025 ────────────────────────────────────────────────────────────────
@@ -81,7 +84,6 @@ export const EVENTS: TradeEvent[] = [
     opis:
       'MAINTENANCE & SYMAS® to wydarzenie branżowe skupiające dostawców i producentów z obszaru utrzymania ruchu, diagnostyki i automatyki przemysłowej. MadejPak uczestniczył w targach w Krakowie w październiku 2025.',
     eventType: 'targi',
-    status: 'past',
   },
   {
     id: 'taropak-2025',
@@ -102,7 +104,6 @@ export const EVENTS: TradeEvent[] = [
       'Konsultacje z zespołem ekspertów',
     ],
     eventType: 'targi',
-    status: 'past',
   },
   {
     id: 'ipack-ima-2025',
@@ -119,7 +120,6 @@ export const EVENTS: TradeEvent[] = [
     partners: ['Concetti', 'Essegi', 'Tecno Pack Group – GSP'],
     teamNote: 'Przedstawiciele MadejPak obecni 28–29 maja 2025',
     eventType: 'targi',
-    status: 'past',
   },
   {
     id: 'iba-2025',
@@ -135,7 +135,6 @@ export const EVENTS: TradeEvent[] = [
       'IBA to kluczowe wydarzenie dla branży piekarniczej, cukierniczej i producentów przekąsek. MadejPak uczestniczył w targach przy stoisku partnera technologicznego Tecno Pack S.p.A. — producenta maszyn pakujących dla sektora spożywczego.',
     partners: ['Tecno Pack S.p.A.'],
     eventType: 'targi',
-    status: 'past',
   },
 
   // ─── 2024 ────────────────────────────────────────────────────────────────
@@ -151,7 +150,6 @@ export const EVENTS: TradeEvent[] = [
     opis:
       'Dni Otwarte MadejPak 2024 odbyły się 22 maja w siedzibie firmy w Dziewinie. Wydarzenie umożliwiło klientom i partnerom zapoznanie się z ofertą firmy, obejrzenie maszyn i rozwiązań oraz bezpośrednią rozmowę z zespołem MadejPak.',
     eventType: 'dni-otwarte',
-    status: 'past',
   },
 
   // ─── 2023 ────────────────────────────────────────────────────────────────
@@ -167,7 +165,6 @@ export const EVENTS: TradeEvent[] = [
     opis:
       'Dni Otwarte MadejPak 2023 odbyły się 15 i 16 listopada w siedzibie firmy w Dziewinie. Wydarzenie było okazją do zapoznania się z aktualną ofertą maszyn i rozwiązań pakujących oraz spotkania z ekspertami MadejPak.',
     eventType: 'dni-otwarte',
-    status: 'past',
   },
   {
     id: 'warsaw-industry-automatica-2023',
@@ -188,7 +185,6 @@ export const EVENTS: TradeEvent[] = [
       'Pozioma maszyna pakująca General System Pack',
     ],
     eventType: 'targi',
-    status: 'past',
   },
   {
     id: 'warsaw-pack-2023',
@@ -203,7 +199,6 @@ export const EVENTS: TradeEvent[] = [
       'MadejPak uczestniczył w targach Warsaw Pack 2023 w Warszawie. Stoisko B3.01 na hali B.',
     boothInfo: 'Stoisko B3.01, Hala B',
     eventType: 'targi',
-    status: 'past',
   },
 
   // ─── 2022 ────────────────────────────────────────────────────────────────
@@ -220,7 +215,6 @@ export const EVENTS: TradeEvent[] = [
       'Na FoodTech Expo 2022 MadejPak prezentował maszyny pakujące i systemy paletyzacji we współpracy z partnerami technologicznymi. Oferta obejmowała poziome maszyny pakujące General System Pack, pionowe maszyny Essegi oraz linie pakujące Concetti.',
     partners: ['General System Pack', 'Essegi', 'Concetti'],
     eventType: 'targi',
-    status: 'past',
   },
 
   // ─── 2021 ────────────────────────────────────────────────────────────────
@@ -238,7 +232,6 @@ export const EVENTS: TradeEvent[] = [
       'MadejPak uczestniczył w Taropak 2021 na Międzynarodowych Targach Poznańskich. Stoisko nr 76 w Pawilonie 6.',
     boothInfo: 'Stoisko 76, Pawilon 6',
     eventType: 'targi',
-    status: 'past',
   },
 
   // ─── 2019 ────────────────────────────────────────────────────────────────
@@ -254,6 +247,21 @@ export const EVENTS: TradeEvent[] = [
     opis:
       'MadejPak uczestniczył w targach Bakepol 2019 w Krakowie — branżowym wydarzeniu skierowanym do sektora piekarniczego i cukierniczego.',
     eventType: 'targi',
-    status: 'past',
   },
 ];
+
+
+// ─── Status wyliczany z dat ───────────────────────────────────────────────────
+// Zwraca 'ongoing' | 'upcoming' | 'past'. event.status (jeśli ustawiony) ma
+// pierwszeństwo jako ręczny override. Porównanie na stringach YYYY-MM-DD.
+export function getEventStatus(
+  event: TradeEvent,
+  now: Date = new Date(),
+): 'ongoing' | 'upcoming' | 'past' {
+  if (event.status) return event.status;
+  const today = now.toISOString().slice(0, 10);
+  const end = event.dateEnd ?? event.dateStart;
+  if (today < event.dateStart) return 'upcoming';
+  if (today > end) return 'past';
+  return 'ongoing';
+}

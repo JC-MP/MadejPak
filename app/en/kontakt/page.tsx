@@ -136,6 +136,18 @@ export default function ContactEnPage() {
   const formLoadTime             = useRef<number>(0);
   useEffect(() => { formLoadTime.current = Date.now(); }, []);
 
+  // ── Prefill from the "Ask about this machine" link (?machine=Name) ────────
+  useEffect(() => {
+    const machine = new URLSearchParams(window.location.search).get('machine');
+    if (machine) {
+      setForm((prev) => ({
+        ...prev,
+        inquiryType: prev.inquiryType || 'Packaging machine',
+        message: prev.message || `I'm interested in the machine: ${machine}.\n\n`,
+      }));
+    }
+  }, []);
+
   const handleChange = (field: keyof FormFields) =>
     (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
       setForm((prev) => ({ ...prev, [field]: e.target.value }));

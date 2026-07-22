@@ -111,7 +111,7 @@ export default function CobotyConsentGate() {
           fontSize: '0.6rem', fontWeight: 700, letterSpacing: '0.22em',
           textTransform: 'uppercase', color: ACCENT, mb: { xs: 3, md: 4 },
         }}>
-          MadejPak · Coboty w Akcji · 15–26 czerwca 2026
+          MadejPak · Coboty w Akcji · do 31 sierpnia 2026
         </Typography>
 
         {/* headline */}

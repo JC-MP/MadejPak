@@ -165,6 +165,18 @@ export default function ContactPage() {
   const formLoadTime             = useRef<number>(0);
   useEffect(() => { formLoadTime.current = Date.now(); }, []);
 
+  // ── Prefill z linku „Zapytaj o tę maszynę" (?maszyna=Nazwa) ──────────────
+  useEffect(() => {
+    const maszyna = new URLSearchParams(window.location.search).get('maszyna');
+    if (maszyna) {
+      setForm((prev) => ({
+        ...prev,
+        inquiryType: prev.inquiryType || 'Maszyna pakująca',
+        message: prev.message || `Interesuje mnie maszyna: ${maszyna}.\n\n`,
+      }));
+    }
+  }, []);
+
   // ── Field handlers ────────────────────────────────────────────────────────
   const handleChange = (field: keyof FormFields) =>
     (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {

@@ -19,7 +19,7 @@ export const PARTNERS: Partner[] = [
   {
     id: 'concetti',
     name: 'Concetti',
-    logoSrc: 'https://link-pack.com/wp-content/uploads/2021/06/Concetti-logo.png',
+    logoSrc: '/logos/partnerzy/concetti.png?v=2',
     category: 'Workowanie i koniec linii',
     headline: 'Workownice i linie workujące dla przemysłu',
     description:
@@ -98,7 +98,6 @@ export const PARTNERS: Partner[] = [
   },
   {
     id: 'dobot',
-    hidden: true, // HIDDEN: przywróć usuwając tę linię
     name: 'DOBOT',
     logoSrc: '/logos/partnerzy/dobot.png',
     category: 'Kolaboratywna robotyzacja',

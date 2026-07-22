@@ -1,6 +1,8 @@
 import type { MetadataRoute } from 'next';
 import { SITE_URL } from '@/lib/seo.config';
 import { REALIZACJE } from '@/data/realizacjeData';
+import { MADEJPAK_MACHINES } from '@/data/madejpakMachinesData';
+import { MADEJPAK_MACHINES_EN } from '@/data/madejpakMachinesDataEn';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -92,5 +94,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority:        0.7,
     }));
 
-  return [...staticRoutes, ...realizacjeRoutes, ...enStaticRoutes, ...enRealizacjeRoutes];
+
+  // ─── Podstrony maszyn własnych MadejPak ────────────────────────────────────
+  const madejpakMachineRoutes: MetadataRoute.Sitemap = MADEJPAK_MACHINES.map((m) => ({
+    url:             `${SITE_URL}/maszyny/madejpak/${m.id}`,
+    lastModified:    now,
+    changeFrequency: 'monthly' as const,
+    priority:        0.7,
+  }));
+
+  const enMadejpakMachineRoutes: MetadataRoute.Sitemap = MADEJPAK_MACHINES_EN.map((m) => ({
+    url:             `${SITE_URL}/en/maszyny/madejpak/${m.id}`,
+    lastModified:    now,
+    changeFrequency: 'monthly' as const,
+    priority:        0.7,
+  }));
+
+  return [...staticRoutes, ...realizacjeRoutes, ...enStaticRoutes, ...enRealizacjeRoutes, ...madejpakMachineRoutes, ...enMadejpakMachineRoutes];
 }

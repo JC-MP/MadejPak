@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import Link from 'next/link';
-import { EVENTS, type TradeEvent } from '@/data/eventsData';
+import { EVENTS, getEventStatus, type TradeEvent } from '@/data/eventsData';
 
 // ─── Design tokens ────────────────────────────────────────────────────────────
 const ACCENT       = '#E8610A';
@@ -363,14 +363,17 @@ function TrustBar() {
 // ─── EventCard ────────────────────────────────────────────────────────────────
 
 function EventCard({ event }: { event: TradeEvent }) {
+  const status = getEventStatus(event);
   return (
     <Box
       sx={{
         display: 'flex',
         flexDirection: 'column',
-        bgcolor: BG_CARD,
-        border: `1px solid ${BORDER}`,
-        borderTop: '2px solid var(--surface-08)',
+        bgcolor: status === 'ongoing'
+          ? `color-mix(in srgb, ${ACCENT} 6%, var(--bg-card))`
+          : BG_CARD,
+        border: `1px solid ${status === 'ongoing' ? `color-mix(in srgb, ${ACCENT} 30%, transparent)` : BORDER}`,
+        borderTop: `2px solid ${status === 'ongoing' ? ACCENT : 'var(--surface-08)'}`,
         borderRadius: '4px',
         overflow: 'hidden',
         transition: 'border-color 0.2s ease',
@@ -406,18 +409,36 @@ function EventCard({ event }: { event: TradeEvent }) {
         </Typography>
         <Box
           sx={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: 0.6,
             px: 1.25,
             py: 0.35,
-            border: `1px solid ${BORDER}`,
             borderRadius: '2px',
             fontSize: '0.6rem',
-            fontWeight: 600,
+            fontWeight: 700,
             letterSpacing: '0.1em',
             textTransform: 'uppercase',
-            color: 'var(--dim-28)',
+            ...(status === 'ongoing'
+              ? { bgcolor: ACCENT, color: '#fff', border: `1px solid ${ACCENT}` }
+              : status === 'upcoming'
+              ? { color: 'var(--dim-55)', border: `1px solid ${BORDER}` }
+              : { color: 'var(--dim-28)', border: `1px solid ${BORDER}` }),
           }}
         >
-          {event.status === 'past' ? 'Past' : 'Upcoming'}
+          {status === 'ongoing' && (
+            <Box
+              sx={{
+                width: 6,
+                height: 6,
+                borderRadius: '50%',
+                bgcolor: '#fff',
+                animation: 'eventPulse 1.6s ease-in-out infinite',
+                '@keyframes eventPulse': { '0%,100%': { opacity: 1 }, '50%': { opacity: 0.3 } },
+              }}
+            />
+          )}
+          {status === 'ongoing' ? 'Now on' : status === 'upcoming' ? 'Upcoming' : 'Past'}
         </Box>
       </Box>
 

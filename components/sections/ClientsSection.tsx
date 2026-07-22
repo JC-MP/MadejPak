@@ -1,3 +1,5 @@
+'use client';
+
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
@@ -7,18 +9,44 @@ const ACCENT  = '#E8610A';
 const BORDER  = 'var(--border)';
 
 const CLIENTS = [
-  { name: 'Agrigem',          src: '/logos/klienci/agrigem.png',              href: 'https://www.agrigem.pl' },
-  { name: 'Aleuro',           src: '/logos/klienci/aleuro.png',               href: 'https://www.aleuro.pl' },
-  { name: 'Certech',          src: '/logos/klienci/certech.jpg',              href: 'https://www.certech.pl' },
-  { name: 'ESAB',             src: '/logos/klienci/esab.png',                 href: 'https://www.esab.pl' },
-  { name: 'Eurowafel',        src: '/logos/klienci/eurowafel.png',            href: 'https://www.eurowafel.pl' },
-  { name: 'Gold Drop',        src: '/logos/klienci/golddrop.png',             href: 'https://www.golddrop.pl' },
-  { name: 'Lazur',            src: '/logos/klienci/lazur.png',                href: 'https://www.lazur.com.pl' },
-  { name: 'Makarony Polskie', src: '/logos/klienci/makarony-polskie.svg',     href: 'https://www.makaronypolskie.pl' },
-  { name: 'PCO',              src: '/logos/klienci/pco.svg',                  href: 'https://www.pco.pl' },
-  { name: 'Siarkopol',        src: '/logos/klienci/siarkopol.png',            href: 'https://www.siarkopol.pl' },
-  { name: 'Solbet',           src: '/logos/klienci/solbet.png',               href: 'https://www.solbet.pl' },
-  { name: 'York',             src: '/logos/klienci/york.png',                 href: 'https://www.york.com' },
+  { name: 'Agrigem',            src: '/logos/klienci/agrigem.png',            href: 'https://agrigem.pl' },
+  { name: 'Aleuro',             src: '/logos/klienci/aleuro.png',             href: 'https://www.aleuro.pl' },
+  { name: 'Andruty Kaliskie',   src: '/logos/klienci/andruty-kaliskie.png',   href: 'https://kaliskieandruty.pl' },
+  { name: 'Certech',            src: '/logos/klienci/certech.png',            href: 'https://www.certech.com.pl' },
+  { name: 'ESAB',               src: '/logos/klienci/esab.png',               href: 'https://www.esab.pl' },
+  { name: 'Eurowafel',          src: '/logos/klienci/eurowafel.png',          href: 'https://eurowafel.pl/' },
+  { name: 'Gold Drop',          src: '/logos/klienci/golddrop.png',           href: 'https://www.golddrop.eu/' },
+  { name: 'Lazur',              src: '/logos/klienci/lazur.png',              href: 'https://lazur.pl/' },
+  { name: 'Makarony Polskie',   src: '/logos/klienci/makarony-polskie.svg',   href: 'https://makaronypolskie.pl/' },
+  { name: 'PCO',                src: '/logos/klienci/pco.svg',                href: 'https://www.pco-group.com.pl/produkty/popcorn/' },
+  { name: 'Siarkopol',          src: '/logos/klienci/siarkopol.png',          href: 'https://siarkopol.grupaazoty.com/' },
+  { name: 'Skawa',              src: '/logos/klienci/skawa.png',              href: 'https://skawa.com.pl/' },
+  { name: 'Solbet',             src: '/logos/klienci/solbet.png',             href: 'https://www.solbet.pl/' },
+  { name: 'Admit',              src: '/logos/klienci/admit.png',              href: 'https://admit.pl/' },
+  { name: 'Alexpol',            src: '/logos/klienci/alexpol.png',            href: 'https://alex-pol.pl/' },
+  { name: 'As Babuni',          src: '/logos/klienci/as-babuni.svg',          href: 'https://asbabuni.pl/' },
+  { name: 'Astra',              src: '/logos/klienci/astra.png',              href: 'https://www.astrapolska.pl/' },
+  { name: 'Axpal',              src: '/logos/klienci/axpal.svg',              href: 'https://axpal.pl/' },
+  { name: 'Bolsius',            src: '/logos/klienci/bolsius.png',            href: 'https://www.bolsius.com' },
+  { name: 'Brapta',             src: '/logos/klienci/brapta.png',             href: 'https://brapta.com.pl/' },
+  { name: 'Ciech Sarzyna',      src: '/logos/klienci/ciech-sarzyna.png',      href: 'https://www.opolagra.pl/wystawcy/ciech-sarzyna/' },
+  { name: 'Cmolfruit',          src: '/logos/klienci/cmolfruit.png',          href: 'http://www.cmol-frut.pl/' },
+  { name: 'Dankoal',            src: '/logos/klienci/jednorazowegrile.png',   href: 'https://www.dancoal.pl/' },
+  { name: 'Dobis',              src: '/logos/klienci/dobis.png',              href: 'https://www.dobis.com.pl/' },
+  { name: 'Europol',            src: '/logos/klienci/europol.png',            href: 'https://pelletdopieca.pl/' },
+  { name: 'Gala',               src: '/logos/klienci/gala.png',               href: '' },
+  { name: 'Gryf Stevedring',    src: '/logos/klienci/gryfstevedring.png',     href: 'https://www.gryfstevedoring.pl/' },
+  { name: 'Jonex',              src: '/logos/klienci/jonex.png',              href: 'https://www.jonex.pl/index.php/pl/' },
+  { name: 'Laboratoria Natury', src: '/logos/klienci/laboratoria-natury.svg', href: 'https://laboratorianatury.pl' },
+  { name: 'Pawbol',             src: '/logos/klienci/pawbol.png',             href: 'https://pawbol.com.pl' },
+  { name: 'Planta',             src: '/logos/klienci/planta.webp',             href: 'https://www.planta.pl/pl/' },
+  { name: 'Plastrol',           src: '/logos/klienci/plastrol.svg',           href: 'https://plastrol.pl/' },
+  { name: 'Promotor',           src: '/logos/klienci/promotor.png',           href: 'https://www.promotor.store' },
+  { name: 'Qemetica',           src: '/logos/klienci/qemetica.svg',           href: 'https://qemetica.com/' },
+  { name: 'Sekpol',             src: '/logos/klienci/sekpol.png',             href: 'https://kominkowybrykiet.pl/' },
+  { name: 'Synergio',           src: '/logos/klienci/synergio.svg',           href: 'https://www.synergio.pl/' },
+  { name: 'Synthos',            src: '/logos/klienci/synthos.svg',            href: 'https://www.synthosgroup.com' },
+  { name: 'Timex',              src: '/logos/klienci/timex.png',              href: '' },
 ];
 
 // Duplicate for seamless loop
@@ -48,19 +76,7 @@ export default function ClientsSection() {
             flexWrap: 'wrap',
           }}
         >
-          <Box>
-            <Typography
-              sx={{
-                fontSize: '0.7rem',
-                fontWeight: 700,
-                letterSpacing: '0.18em',
-                textTransform: 'uppercase',
-                color: ACCENT,
-                mb: 1.5,
-              }}
-            >
-              Referencje
-            </Typography>
+          <Box sx={{ maxWidth: 560 }}>
             <Typography
               component="h2"
               sx={{
@@ -71,7 +87,17 @@ export default function ClientsSection() {
                 lineHeight: 1.15,
               }}
             >
-              Zaufali nam
+              <Box component="span" sx={{ color: ACCENT }}>Zaufali</Box> nam
+            </Typography>
+            <Typography
+              sx={{
+                mt: 1.5,
+                fontSize: { xs: '0.9rem', md: '0.95rem' },
+                color: 'var(--dim-58)',
+                lineHeight: 1.6,
+              }}
+            >
+              Marki, które zautomatyzowały pakowanie i koniec linii z MadejPak — od przemysłu spożywczego, przez chemię, po produkcję ciężką.
             </Typography>
           </Box>
 
@@ -134,10 +160,9 @@ export default function ClientsSection() {
           {TRACK.map((client, i) => (
             <Box
               key={i}
-              component="a"
-              href={client.href}
-              target="_blank"
-              rel="noopener noreferrer"
+              {...(client.href
+                ? { component: 'a', href: client.href, target: '_blank', rel: 'noopener noreferrer' }
+                : {})}
               aria-label={client.name}
               sx={{
                 flexShrink: 0,
@@ -146,8 +171,9 @@ export default function ClientsSection() {
                 justifyContent: 'center',
                 px: { xs: 2, md: 3 },
                 py: 1,
-                height: 56,
+                height: 64,
                 textDecoration: 'none',
+                cursor: client.href ? 'pointer' : 'default',
                 filter: 'var(--client-logo-filter)',
                 opacity: 'var(--client-logo-opacity)',
                 transition: 'opacity 0.2s ease, filter 0.2s ease',
@@ -161,10 +187,22 @@ export default function ClientsSection() {
                 component="img"
                 src={client.src}
                 alt={client.name}
+                onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
+                  // Brak pliku logo → pokaż nazwę firmy zamiast zepsutego obrazka
+                  const el = e.currentTarget;
+                  if (el.dataset.fallback) return;
+                  el.dataset.fallback = '1';
+                  el.style.display = 'none';
+                  const span = document.createElement('span');
+                  span.textContent = client.name;
+                  span.style.cssText =
+                    'font-size:1rem;font-weight:700;letter-spacing:-0.01em;color:var(--dim-75);white-space:nowrap;';
+                  el.parentElement?.appendChild(span);
+                }}
                 sx={{
-                  height: { xs: 28, md: 36 },
+                  height: { xs: 36, md: 46 },
                   width: 'auto',
-                  maxWidth: 120,
+                  maxWidth: 150,
                   objectFit: 'contain',
                   display: 'block',
                 }}

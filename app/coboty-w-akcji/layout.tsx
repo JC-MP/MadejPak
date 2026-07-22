@@ -5,7 +5,7 @@ import CobotyConsentGate from '@/components/ui/CobotyConsentGate';
 import CobotyConversion from '@/components/ui/CobotyConversion';
 
 const TITLE       = 'Coboty w Akcji – Automatyzacja Pakowania i Paletyzacji | MadejPak';
-const DESCRIPTION = 'Zobacz roboty współpracujące w praktyce. Pokazy paletyzacji i pakowania na żywo — DOBOT CR20A, Nova 5 + stanowisko paletyzacji. Zarejestruj się na dni otwarte MadejPak. 15–26 czerwca 2026, Małopolska.';
+const DESCRIPTION = 'Zobacz roboty współpracujące w praktyce. Pokazy paletyzacji i pakowania na żywo — DOBOT CR20A, Nova 5 + stanowisko paletyzacji. Zarejestruj się na dni otwarte MadejPak. Trwa do 31 sierpnia 2026, Małopolska.';
 const PAGE_URL    = `${SITE_URL}/coboty-w-akcji`;
 
 export const metadata: Metadata = {
@@ -42,14 +42,14 @@ export const metadata: Metadata = {
     url:         PAGE_URL,
     siteName:    'MadejPak',
     title:       'Coboty w Akcji – Automatyzacja Pakowania i Paletyzacji | MadejPak',
-    description: 'Zobacz roboty współpracujące w praktyce. Pokazy paletyzacji i pakowania na żywo — DOBOT CR20A, Nova 5 + stanowisko paletyzacji. Dni otwarte MadejPak, 15–26 czerwca 2026.',
+    description: 'Zobacz roboty współpracujące w praktyce. Pokazy paletyzacji i pakowania na żywo — DOBOT CR20A, Nova 5 + stanowisko paletyzacji. Dni otwarte MadejPak, do 31 sierpnia 2026.',
     images: [{ url: `${SITE_URL}/images/cobots/cr20a-transparent.png`, width: 480, height: 720, alt: 'DOBOT CR — cobot przemysłowy | Coboty w Akcji MadejPak' }],
     locale: 'pl_PL',
   },
   twitter: {
     card:        'summary_large_image',
-    title:       'Coboty w Akcji — Dni Otwarte MadejPak + DOBOT | 15–26 czerwca 2026',
-    description: 'Pokazy robotów współpracujących DOBOT na żywo. Paletyzacja, pick & place, stanowisko paletyzacji CR20A. Dni otwarte MadejPak, 15–26 czerwca 2026, Małopolska.',
+    title:       'Coboty w Akcji — Dni Otwarte MadejPak + DOBOT | do 31 sierpnia 2026',
+    description: 'Pokazy robotów współpracujących DOBOT na żywo. Paletyzacja, pick & place, stanowisko paletyzacji CR20A. Dni otwarte MadejPak, do 31 sierpnia 2026, Małopolska.',
     images:      [`${SITE_URL}/images/cobots/cr20a-transparent.png`],
   },
 };
@@ -63,7 +63,7 @@ const jsonLd = {
       description: DESCRIPTION,
       url: PAGE_URL,
       startDate:           '2026-06-15T09:00:00+02:00',
-      endDate:             '2026-06-26T16:00:00+02:00',
+      endDate:             '2026-08-31T16:00:00+02:00',
       eventStatus:         'https://schema.org/EventScheduled',
       eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
       isAccessibleForFree: true,

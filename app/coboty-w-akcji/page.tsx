@@ -32,18 +32,34 @@ const EJS_KEY      = 'IAq3TNyMDLA3SxC62';
 // ─── Schedule ──────────────────────────────────────────────────────────────────
 const SLOTS = ['9:00', '12:00', '14:00'];
 
-const SCHEDULE = [
-  { id: '2026-06-15', dayName: 'Pn', date: '15 cze' },
-  { id: '2026-06-16', dayName: 'Wt', date: '16 cze' },
-  { id: '2026-06-17', dayName: 'Śr', date: '17 cze' },
-  { id: '2026-06-18', dayName: 'Cz', date: '18 cze' },
-  { id: '2026-06-19', dayName: 'Pt', date: '19 cze' },
-  { id: '2026-06-22', dayName: 'Pn', date: '22 cze' },
-  { id: '2026-06-23', dayName: 'Wt', date: '23 cze' },
-  { id: '2026-06-24', dayName: 'Śr', date: '24 cze' },
-  { id: '2026-06-25', dayName: 'Cz', date: '25 cze' },
-  { id: '2026-06-26', dayName: 'Pt', date: '26 cze' },
-];
+// Kampania trwa do końca wakacji — termin ustalamy indywidualnie,
+// dlatego zamiast sztywnej listy dni mamy wybór daty z ograniczeniem zakresu.
+const CAMPAIGN_END = '2026-08-31';
+
+const DAY_NAMES   = ['Nd', 'Pn', 'Wt', 'Śr', 'Cz', 'Pt', 'So'];
+const MONTH_SHORT = ['sty', 'lut', 'mar', 'kwi', 'maj', 'cze', 'lip', 'sie', 'wrz', 'paź', 'lis', 'gru'];
+
+/** Najwcześniejszy możliwy termin — dzień po dzisiejszym, w granicach kampanii. */
+function earliestDay() {
+  const d = new Date();
+  d.setDate(d.getDate() + 1);
+  const iso = d.toISOString().slice(0, 10);
+  return iso > CAMPAIGN_END ? CAMPAIGN_END : iso;
+}
+
+/** '2026-08-14' → 'Pt, 14 sie 2026' */
+function formatDay(iso: string) {
+  if (!iso) return '';
+  const d = new Date(`${iso}T12:00:00`);
+  if (Number.isNaN(d.getTime())) return iso;
+  return `${DAY_NAMES[d.getDay()]}, ${d.getDate()} ${MONTH_SHORT[d.getMonth()]} ${d.getFullYear()}`;
+}
+
+/** Weekend odpada — pokazy prowadzimy w dni robocze. */
+function isWeekend(iso: string) {
+  const day = new Date(`${iso}T12:00:00`).getDay();
+  return day === 0 || day === 6;
+}
 
 const INTERESTS = [
   'Paletyzacja',
@@ -203,41 +219,23 @@ function SlotPicker({
   return (
     <Box sx={{ mb: 3.5, pb: 3.5, borderBottom: `1px solid ${BORDER}` }}>
       <Typography sx={{ fontSize: '0.6rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: errorDay ? '#f87171' : 'var(--dim-42)', mb: 1.25 }}>
-        Wybierz dzień *
+        Preferowany termin *
       </Typography>
-      <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 1, mb: errorDay ? 0.5 : 0 }}>
-        {SCHEDULE.map(({ id, dayName, date }) => {
-          const active = selectedDay === id;
-          return (
-            <Box
-              key={id}
-              onClick={() => onDay(id)}
-              sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-                py: 1.25,
-                px: 0.5,
-                borderRadius: '3px',
-                border: `1px solid ${active ? ACCENT : 'var(--dim-10)'}`,
-                bgcolor: active ? `${ACCENT}12` : 'var(--surface-03)',
-                cursor: 'pointer',
-                transition: 'all 0.12s',
-                '&:hover': { borderColor: active ? ACCENT : 'var(--dim-22)' },
-              }}
-            >
-              <Typography sx={{ fontSize: '0.58rem', fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase', color: active ? ACCENT : 'var(--dim-38)', lineHeight: 1.2 }}>
-                {dayName}
-              </Typography>
-              <Typography sx={{ fontSize: '0.78rem', fontWeight: active ? 700 : 500, color: active ? ACCENT : 'var(--dim-62)', mt: 0.3, lineHeight: 1.2, textAlign: 'center' }}>
-                {date}
-              </Typography>
-            </Box>
-          );
-        })}
-      </Box>
-      {errorDay && <FormHelperText error sx={{ ml: 0, mt: 0.5 }}>{errorDay}</FormHelperText>}
+      <TextField
+        type="date"
+        value={selectedDay}
+        onChange={e => onDay(e.target.value)}
+        error={!!errorDay}
+        helperText={errorDay ?? 'Dni robocze, do 31 sierpnia 2026 — termin potwierdzamy mailowo.'}
+        inputProps={{ min: earliestDay(), max: CAMPAIGN_END }}
+        sx={fieldSx}
+        fullWidth
+      />
+      {selectedDay && !errorDay && (
+        <Typography sx={{ fontSize: '0.78rem', color: 'var(--dim-62)', mt: 0.75 }}>
+          Wybrany dzień: <strong style={{ color: ACCENT }}>{formatDay(selectedDay)}</strong>
+        </Typography>
+      )}
 
       {selectedDay && (
         <Box sx={{ mt: 2.5 }}>
@@ -284,8 +282,10 @@ function RegFormSection() {
 
   function validate() {
     const e: Partial<Record<keyof RegForm, string>> = {};
-    if (!form.day)             e.day     = 'Wybierz dzień';
-    if (form.day && !form.slot) e.slot   = 'Wybierz godzinę';
+    if (!form.day)                          e.day  = 'Wybierz preferowany termin';
+    else if (form.day > CAMPAIGN_END)        e.day  = 'Termin poza czasem trwania wydarzenia (do 31 sierpnia 2026)';
+    else if (isWeekend(form.day))            e.day  = 'Pokazy prowadzimy w dni robocze — wybierz dzień od poniedziałku do piątku';
+    if (form.day && !form.slot)              e.slot = 'Wybierz godzinę';
     if (!form.name.trim())     e.name    = 'Imię i nazwisko jest wymagane';
     if (!form.company.trim())  e.company = 'Nazwa firmy jest wymagana';
     if (!form.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
@@ -320,8 +320,7 @@ function RegFormSection() {
     // 1️⃣ Consent update MUSI być przed zdarzeniami Google Ads
     if (form.marketingConsent) grantMarketingConsent();
 
-    const dayEntry = SCHEDULE.find(d => d.id === form.day);
-    const dayLabel = dayEntry ? `${dayEntry.dayName}, ${dayEntry.date} 2026` : form.day;
+    const dayLabel = formatDay(form.day) || form.day;
     try {
       // 2️⃣ Wysyłka EmailJS
       await emailjs.send(
@@ -484,7 +483,7 @@ export default function CobotsOpenDayPage() {
               <Box sx={{ display: 'inline-flex', alignItems: 'center', gap: 1, px: 1.5, py: 0.65, border: `1px solid rgba(232,97,10,0.35)`, borderRadius: '3px', mb: 3.5 }}>
                 <Box sx={{ width: 6, height: 6, borderRadius: '50%', bgcolor: ACCENT, flexShrink: 0, animation: 'livePulse 2s infinite', '@keyframes livePulse': { '0%,100%': { opacity: 1 }, '50%': { opacity: 0.25 } } }} />
                 <Typography sx={{ fontSize: '0.58rem', fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: ACCENT, lineHeight: 1 }}>
-                  Dni otwarte · 15–26 czerwca 2026 · k. Bochni
+                  Dni otwarte · do 31 sierpnia 2026 · k. Bochni
                 </Typography>
               </Box>
               <Typography
@@ -532,7 +531,7 @@ export default function CobotsOpenDayPage() {
         <Container maxWidth="lg">
           <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: { xs: 4, md: 6 }, alignItems: 'center' }}>
             {[
-              { label: 'Terminy', value: '15–26 czerwca 2026', note: '10 dni roboczych, pn–pt' },
+              { label: 'Terminy', value: 'do 31 sierpnia 2026', note: 'dni robocze, termin do uzgodnienia' },
               { label: 'Lokalizacja', value: 'k. Bochni', note: 'Siedziba MadejPak, Małopolska' },
               { label: 'Pokazy', value: 'CR20A + Nova 5 + stanowisko', note: 'Trzy coboty DOBOT' },
               { label: 'Wstęp', value: 'Bezpłatny', note: 'Rejestracja wymagana' },
@@ -901,12 +900,12 @@ export default function CobotsOpenDayPage() {
             <Box>
               <Label>Miejsce i terminy</Label>
               <Typography component="h2" sx={{ fontSize: { xs: '2rem', md: '2.75rem' }, fontWeight: 800, lineHeight: 1.1, letterSpacing: '-0.035em', color: CD_TEXT, mb: 4 }}>
-                Małopolska.<br />15–26 czerwca 2026.
+                Małopolska.<br />Do 31 sierpnia 2026.
               </Typography>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2.5 }}>
                 {[
                   { label: 'Adres', val: 'Dziewin 333, 32-708 Dziewin' },
-                  { label: 'Terminy', val: '15–26 czerwca 2026 · pn–pt' },
+                  { label: 'Terminy', val: 'do 31 sierpnia 2026 · pn–pt' },
                   { label: 'Godziny', val: '9:00 / 12:00 / 14:00' },
                   { label: 'Czas trwania', val: 'ok. 2 godziny na grupę' },
                   { label: 'Wstęp', val: 'Bezpłatny · Po rejestracji' },
@@ -922,7 +921,7 @@ export default function CobotsOpenDayPage() {
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
               <Box sx={{ px: 3.5, py: 3.5, bgcolor: ACCENT, borderRadius: '4px', display: 'inline-block' }}>
                 <Typography sx={{ fontSize: { xs: '2rem', md: '2.75rem' }, fontWeight: 800, color: '#fff', letterSpacing: '-0.03em', lineHeight: 1.1 }}>
-                  15–26 czerwca<br />2026
+                  do 31 sierpnia<br />2026
                 </Typography>
                 <Typography sx={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.75)', mt: 1.5, fontWeight: 600 }}>
                   Poniedziałek – Piątek<br />9:00 · 12:00 · 14:00

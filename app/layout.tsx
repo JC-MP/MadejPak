@@ -5,7 +5,7 @@ import ThemeRegistry from '@/components/ThemeRegistry';
 import Header from '@/components/navigation/Header';
 import Footer from '@/components/Footer';
 import CookieConsent from '@/components/ui/CookieConsent';
-import { SITE_URL, SITE_NAME, SITE_DESCRIPTION, OG_IMAGE, COMPANY, BLOCK_INDEXING } from '@/lib/seo.config';
+import { SITE_URL, SITE_NAME, SITE_DESCRIPTION, OG_IMAGE, COMPANY, KNOWS_ABOUT, BLOCK_INDEXING } from '@/lib/seo.config';
 import './globals.css';
 
 const GTM_ID        = 'GTM-NRN8B8C';
@@ -72,6 +72,9 @@ const organizationSchema = {
   vatID:       COMPANY.vatID,
   sameAs:      COMPANY.sameAs,
   description: SITE_DESCRIPTION,
+  slogan:      'Integrator linii pakujących — projektujemy, budujemy i serwisujemy własne maszyny.',
+  knowsAbout:  KNOWS_ABOUT,
+  areaServed:  { '@type': 'Country', name: 'Poland' },
 };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {

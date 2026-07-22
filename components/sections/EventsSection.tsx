@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Link from 'next/link';
-import { EVENTS, type TradeEvent } from '@/data/eventsData';
+import { EVENTS, getEventStatus, type TradeEvent } from '@/data/eventsData';
 
 // ─── Design tokens ──────────────────────────────────────────────────────────
 const BG_CARD  = 'var(--bg-card)';
@@ -11,6 +11,13 @@ const BG_ALT   = 'var(--bg-alt)';
 const ACCENT   = '#E8610A';
 const BORDER   = 'var(--border)';
 const TEXT_DIM = 'var(--dim-72)';
+
+// Statusy wydarzeń: trwa (pomarańczowy), nadchodzące (szary), zakończone (wygaszony)
+const STATUS_BADGE = {
+  ongoing:  { label: 'Trwa',        sx: { bgcolor: ACCENT, color: '#fff', border: `1px solid ${ACCENT}` } },
+  upcoming: { label: 'Nadchodzące', sx: { color: 'var(--dim-55)', border: `1px solid ${BORDER}` } },
+  past:     { label: 'Zakończone',  sx: { color: 'var(--dim-28)', border: `1px solid ${BORDER}` } },
+} as const;
 
 function ArrowRight() {
   return (
@@ -33,14 +40,17 @@ function ArrowRight() {
 }
 
 function EventCard({ event }: { event: TradeEvent }) {
+  const status = getEventStatus(event);
   return (
     <Box
       sx={{
         display: 'flex',
         flexDirection: 'column',
-        bgcolor: BG_CARD,
-        border: `1px solid ${BORDER}`,
-        borderTop: '2px solid var(--surface-08)',
+        bgcolor: status === 'ongoing'
+          ? `color-mix(in srgb, ${ACCENT} 6%, var(--bg-card))`
+          : BG_CARD,
+        border: `1px solid ${status === 'ongoing' ? `color-mix(in srgb, ${ACCENT} 30%, transparent)` : BORDER}`,
+        borderTop: `2px solid ${status === 'ongoing' ? ACCENT : 'var(--surface-08)'}`,
         borderRadius: '4px',
         overflow: 'hidden',
         transition: 'border-color 0.2s ease',
@@ -77,18 +87,32 @@ function EventCard({ event }: { event: TradeEvent }) {
         </Typography>
         <Box
           sx={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: 0.6,
             px: 1.25,
             py: 0.35,
-            border: `1px solid ${BORDER}`,
             borderRadius: '2px',
             fontSize: '0.6rem',
-            fontWeight: 600,
+            fontWeight: 700,
             letterSpacing: '0.1em',
             textTransform: 'uppercase',
-            color: 'var(--dim-28)',
+            ...STATUS_BADGE[status].sx,
           }}
         >
-          {event.status === 'past' ? 'Zakończone' : 'Nadchodzące'}
+          {status === 'ongoing' && (
+            <Box
+              sx={{
+                width: 6,
+                height: 6,
+                borderRadius: '50%',
+                bgcolor: '#fff',
+                animation: 'eventPulse 1.6s ease-in-out infinite',
+                '@keyframes eventPulse': { '0%,100%': { opacity: 1 }, '50%': { opacity: 0.3 } },
+              }}
+            />
+          )}
+          {STATUS_BADGE[status].label}
         </Box>
       </Box>
 

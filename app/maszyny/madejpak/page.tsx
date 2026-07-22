@@ -3,8 +3,10 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Link from 'next/link';
+import Image from 'next/image';
 import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
+import { MADEJPAK_MACHINES as MACHINES, MADEJPAK_GROUPS as GROUPS } from '@/data/madejpakMachinesData';
 
 export const metadata: Metadata = {
   title: 'Maszyny MadejPak – własne urządzenia do pakowania, transportu i automatyzacji',
@@ -26,6 +28,8 @@ const BG_ALT  = 'var(--bg-alt)';
 const ACCENT  = '#E8610A';
 const BORDER  = 'var(--border)';
 const TEXT_DIM = 'var(--dim-72)';
+// Tło pod wizualizacje — stałe, ciemne w obu motywach, dopasowane do renderów
+const RENDER_BG = '#111113';
 
 // ─── Icons ──────────────────────────────────────────────────────────────────
 function ArrowRight() {
@@ -34,6 +38,27 @@ function ArrowRight() {
       sx={{ width: 13, height: 13, flexShrink: 0, transition: 'transform 0.15s ease' }}>
       <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor"
         strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    </Box>
+  );
+}
+
+// Plakietka „film" na karcie maszyny z youtubeId
+function VideoBadge({ label }: { label: string }) {
+  return (
+    <Box
+      sx={{
+        position: 'absolute', top: 10, left: 10, zIndex: 1,
+        display: 'inline-flex', alignItems: 'center', gap: 0.75,
+        bgcolor: 'rgba(0,0,0,0.72)', color: '#fff',
+        px: 1.25, py: 0.5, borderRadius: 1,
+        fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.04em',
+        backdropFilter: 'blur(4px)',
+      }}
+    >
+      <Box component="svg" viewBox="0 0 12 12" aria-hidden="true" sx={{ width: 9, height: 9, color: ACCENT }}>
+        <path d="M2 1.5v9l8-4.5-8-4.5z" fill="currentColor" />
+      </Box>
+      {label}
     </Box>
   );
 }
@@ -232,142 +257,17 @@ function IconChwytak() {
 }
 
 const MACHINE_ICONS: Record<string, React.ReactNode> = {
-  'desztaplery':           <IconDesztapler />,
-  'podajniki-zabierakowe': <IconPodajnikZabierakowy />,
-  'podajniki-tasmowe':     <IconPodajnikTasmowy />,
-  'podajniki-rolkowe':     <IconPodajnikRolkowy />,
-  'felcarka':              <IconFelcarka />,
-  'liczenie-paluszki':     <IconLiczeniePaluszki />,
-  'chwytaki':              <IconChwytak />,
+  'desztaplery-palet':        <IconDesztapler />,
+  'podajniki-zabierakowe':    <IconPodajnikZabierakowy />,
+  'podajniki-tasmowe':        <IconPodajnikTasmowy />,
+  'podajniki-paletowe':       <IconPodajnikRolkowy />,
+  'felcarki':                 <IconFelcarka />,
+  'liczenie-i-pakowanie':     <IconLiczeniePaluszki />,
+  'chwytaki-i-manipulatory':  <IconChwytak />,
 };
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 
-const MACHINES = [
-  {
-    id: 'desztaplery',
-    group: 'Systemy podawania i rozdzielania',
-    name: 'Desztaplery',
-    desc: 'Urządzenia do automatycznego rozdzielania i podawania detali, opakowań lub elementów ułożonych w stosie. Zapewniają stabilne i powtarzalne podanie produktu do kolejnego etapu procesu — bez udziału operatora.',
-    applications: [
-      'Podawanie opakowań jednostkowych',
-      'Separacja elementów ze stosu',
-      'Przygotowanie produktu do transportu lub pakowania',
-    ],
-    benefits: [
-      'Automatyzacja ręcznego rozdzielania',
-      'Stabilny przepływ produktu bez przestojów',
-      'Łatwa integracja z linią i automatyką',
-    ],
-    imagePlaceholder: true,
-  },
-  {
-    id: 'podajniki-zabierakowe',
-    group: 'Systemy podawania i rozdzielania',
-    name: 'Podajniki zabierakowe',
-    desc: 'Podajniki do kontrolowanego transportu produktów wymagających pozycjonowania, taktowania lub synchronizacji z kolejnym etapem procesu. Prowadzą produkt w uporządkowany, powtarzalny sposób.',
-    applications: [
-      'Transport produktów jednostkowych z zachowaniem odstępów',
-      'Taktowanie procesu i synchronizacja maszyn',
-      'Podawanie do pakowaczek, robotów lub układów odbioru',
-    ],
-    benefits: [
-      'Powtarzalne pozycjonowanie produktu',
-      'Kontrola nad przepływem i rytmem linii',
-      'Możliwość dopasowania geometrii do wyrobu',
-    ],
-    imagePlaceholder: true,
-  },
-  {
-    id: 'podajniki-tasmowe',
-    group: 'Systemy transportu produktu',
-    name: 'Podajniki taśmowe',
-    desc: 'Uniwersalne systemy transportu do przemieszczania produktów pomiędzy stanowiskami produkcyjnymi i pakującymi. Wykonywane w różnych konfiguracjach, dostosowanych do rodzaju produktu, wydajności i układu linii.',
-    applications: [
-      'Transport międzyoperacyjny w linii',
-      'Odbiór produktu z wyjścia maszyny',
-      'Zasilanie kolejnych etapów i stanowisk',
-    ],
-    benefits: [
-      'Elastyczna konfiguracja trasy i geometrii',
-      'Prosta integracja z istniejącą linią',
-      'Wykonanie pod konkretny układ hali',
-    ],
-    imagePlaceholder: true,
-  },
-  {
-    id: 'podajniki-rolkowe',
-    group: 'Systemy transportu produktu',
-    name: 'Podajniki rolkowe',
-    desc: 'Rozwiązania do transportu opakowań zbiorczych, kartonów, tacek i innych produktów wymagających stabilnego przemieszczania. Sprawdzają się na odcinkach prostych, w buforowaniu i przekazywaniu między stacjami.',
-    applications: [
-      'Transport kartonów i opakowań zbiorczych',
-      'Buforowanie produktów między stanowiskami',
-      'Integracja z liniami pakowania i paletyzacji',
-    ],
-    benefits: [
-      'Trwała konstrukcja do cięższych produktów',
-      'Możliwość rozbudowy o elementy automatyki',
-      'Praca z napędem lub grawitacyjnie',
-    ],
-    imagePlaceholder: true,
-  },
-  {
-    id: 'felcarka',
-    group: 'Maszyny specjalne',
-    name: 'Felcarki i stanowiska specjalne',
-    desc: 'Urządzenia do realizacji określonych operacji formowania lub zamykania elementów opakowania, projektowane zgodnie z wymaganiami procesu. Stosowane tam, gdzie wymagana jest powtarzalność, dokładność i integracja z dalszym etapem produkcji.',
-    applications: [
-      'Operacje technologiczne związane z formowaniem opakowania',
-      'Domykanie lub przygotowanie elementu do dalszego procesu',
-      'Stanowiska specjalne w liniach pakujących',
-    ],
-    benefits: [
-      'Dopasowanie do konkretnego produktu i procesu',
-      'Powtarzalność operacji i ograniczenie braków',
-      'Praca jako samodzielny moduł lub element linii',
-    ],
-    imagePlaceholder: true,
-  },
-  {
-    id: 'liczenie-paluszki',
-    group: 'Maszyny specjalne',
-    name: 'Maszyna do liczenia i pakowania paluszków',
-    desc: 'Specjalistyczne rozwiązanie zaprojektowane do automatycznego odliczania i pakowania paluszków w zadanej ilości. Łączy funkcję dozowania ilościowego, kontroli oraz przekazania produktu do dalszego etapu pakowania.',
-    applications: [
-      'Produkty spożywcze wymagające zadanej liczby sztuk w opakowaniu',
-      'Procesy wymagające ilościowej kontroli dozowania',
-      'Linie nastawione na powtarzalność i ograniczenie pracy ręcznej',
-    ],
-    benefits: [
-      'Powtarzalne i dokładne odliczanie produktu',
-      'Automatyzacja procesu pakowania ilościowego',
-      'Ograniczenie błędów i strat w produkcji',
-    ],
-    imagePlaceholder: true,
-  },
-  {
-    id: 'chwytaki',
-    group: 'Chwytaki robotyczne',
-    name: 'Chwytaki customowe do robotów',
-    desc: 'Projektujemy i wykonujemy chwytaki dopasowane do konkretnego produktu, procesu i robota. Powstają z myślą o stabilnym pobieraniu, odkładaniu, grupowaniu lub orientowaniu produktów w zautomatyzowanych aplikacjach pick-and-place i paletyzacji.',
-    applications: [
-      'Pick-and-place i pakowanie robotyczne',
-      'Paletyzacja i depaletyzacja',
-      'Obsługa produktów o nietypowej geometrii',
-      'Stanowiska wieloasortymentowe i elastyczne',
-    ],
-    benefits: [
-      'Dopasowanie do konkretnego detalu i procesu',
-      'Poprawa niezawodności i powtarzalności aplikacji',
-      'Możliwość pracy w złożonych układach customowych',
-    ],
-    imagePlaceholder: true,
-  },
-];
-
-// Group machines by category
-const GROUPS = Array.from(new Set(MACHINES.map((m) => m.group)));
 
 const OWN_ITEMS = [
   'Podajniki taśmowe i rolkowe pod wymiar linii',
@@ -391,6 +291,15 @@ const ADVANTAGES = [
   { title: 'Doświadczenie integracyjne', desc: 'Każda maszyna może zostać przygotowana jako element większego układu technologicznego — zsynchronizowana z robotami, przenośnikami i systemami automatyki.' },
   { title: 'Rozwiązania customowe', desc: 'Realizujemy projekty dla niestandardowych produktów, geometrii i wymagań procesu — od chwytaków po kompletne stanowiska specjalne.' },
   { title: 'Serwis i rozwój instalacji', desc: 'Oferujemy serwis gwarancyjny i pogwarancyjny, modyfikacje pod nowe produkty oraz dalszą rozbudowę wdrożonych rozwiązań.' },
+];
+
+const PROCESS = [
+  { title: 'Zapytanie', desc: 'Opisujesz produkt, wydajność i układ linii. Im więcej szczegółów, tym szybsza i trafniejsza odpowiedź.' },
+  { title: 'Analiza procesu', desc: 'Wspólnie doprecyzowujemy wymagania, wąskie gardła i sposób wpięcia urządzenia w istniejącą linię.' },
+  { title: 'Projekt i wycena', desc: 'Przygotowujemy koncepcję maszyny dopasowaną do produktu oraz ofertę na kompletne rozwiązanie.' },
+  { title: 'Budowa', desc: 'Wykonujemy maszynę we własnym zakładzie — pełna kontrola nad konstrukcją, materiałami i jakością.' },
+  { title: 'Odbiór FAT', desc: 'Odbiór techniczny i testy z Twoim produktem jeszcze przed wysyłką maszyny do zakładu.' },
+  { title: 'Wdrożenie i serwis', desc: 'Montaż, uruchomienie w linii oraz serwis gwarancyjny i pogwarancyjny z dalszą rozbudową.' },
 ];
 
 const REALIZATIONS = [
@@ -460,10 +369,10 @@ export default function MaszynyMadejPakPage() {
             </Box>
             <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2 }}>
               {[
-                { num: '7+', label: 'typów maszyn własnych' },
+                { num: '9', label: 'typów maszyn własnych' },
                 { num: '100%', label: 'projektów realizowanych w Polsce' },
                 { num: '25+', label: 'lat na rynku maszyn pakujących' },
-                { num: 'FAT', label: 'odbiór techniczny przed każdą dostawą' },
+                { num: 'FAT', label: 'odbiór techniczny przed dostawą' },
               ].map((s) => (
                 <Box key={s.label} sx={{ bgcolor: BG_CARD, border: `1px solid ${BORDER}`, borderRadius: 2, p: 3 }}>
                   <Typography sx={{ fontSize: '1.75rem', fontWeight: 800, color: ACCENT, lineHeight: 1, mb: 0.5 }}>
@@ -499,10 +408,38 @@ export default function MaszynyMadejPakPage() {
               </Box>
               <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)' }, gap: 3 }}>
                 {MACHINES.filter((m) => m.group === group).map((m) => (
-                  <Box key={m.id} sx={{ bgcolor: BG_CARD, border: `1px solid ${BORDER}`, borderRadius: 2, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
-                    {/* Icon */}
-                    <Box sx={{ height: 180, bgcolor: BG_ALT, display: 'flex', alignItems: 'center', justifyContent: 'center', borderBottom: `1px solid ${BORDER}` }}>
-                      {MACHINE_ICONS[m.id] ?? null}
+                  <Box
+                    key={m.id}
+                    component={Link}
+                    href={`/maszyny/madejpak/${m.id}`}
+                    sx={{
+                      bgcolor: BG_CARD, border: `1px solid ${BORDER}`, borderRadius: 2, overflow: 'hidden',
+                      display: 'flex', flexDirection: 'column',
+                      textDecoration: 'none', color: 'var(--text)',
+                      transition: 'border-color 0.15s ease, transform 0.15s ease',
+                      '&:hover': { borderColor: ACCENT, transform: 'translateY(-2px)' },
+                      '&:hover .card-cta': { color: ACCENT },
+                    }}
+                  >
+                    {/* Wizualizacja — rendery są celowo ciemne (ochrona rozwiązań),
+                        więc kafelek zostaje ciemny niezależnie od motywu strony */}
+                    <Box sx={{ position: 'relative' }}>
+                      {m.image ? (
+                        <Box sx={{ position: 'relative', aspectRatio: '16 / 9', bgcolor: RENDER_BG, borderBottom: `1px solid ${BORDER}` }}>
+                          <Image
+                            src={m.image}
+                            alt={`${m.name} — wizualizacja maszyny MadejPak`}
+                            fill
+                            sizes="(max-width: 900px) 100vw, 50vw"
+                            style={{ objectFit: 'cover' }}
+                          />
+                        </Box>
+                      ) : (
+                        <Box sx={{ height: 180, bgcolor: BG_ALT, display: 'flex', alignItems: 'center', justifyContent: 'center', borderBottom: `1px solid ${BORDER}` }}>
+                          {MACHINE_ICONS[m.id] ?? null}
+                        </Box>
+                      )}
+                      {m.youtubeId && <VideoBadge label="Film" />}
                     </Box>
                     <Box sx={{ p: 4, flex: 1, display: 'flex', flexDirection: 'column' }}>
                       <Typography variant="h3" sx={{ fontSize: '1.2rem', fontWeight: 700, mb: 2 }}>
@@ -538,6 +475,12 @@ export default function MaszynyMadejPakPage() {
                             ))}
                           </Box>
                         </Box>
+                      </Box>
+                      <Box
+                        className="card-cta"
+                        sx={{ mt: 3, pt: 2.5, borderTop: `1px solid ${BORDER}`, display: 'inline-flex', alignItems: 'center', gap: 1, fontWeight: 600, fontSize: '0.85rem', color: TEXT_DIM, transition: 'color 0.15s ease' }}
+                      >
+                        Zobacz szczegóły <ArrowRight />
                       </Box>
                     </Box>
                   </Box>
@@ -735,8 +678,37 @@ export default function MaszynyMadejPakPage() {
         </Container>
       </Box>
 
+      {/* ── Jak wygląda współpraca ── */}
+      <Box sx={{ bgcolor: BG, borderBottom: `1px solid ${BORDER}` }}>
+        <Container maxWidth="lg" sx={{ py: { xs: 6, md: 10 } }}>
+          <Typography variant="h2" sx={{ fontSize: { xs: '1.6rem', md: '2rem' }, fontWeight: 700, mb: 2 }}>
+            Jak wygląda współpraca
+          </Typography>
+          <Typography variant="body1" sx={{ color: TEXT_DIM, mb: 6, maxWidth: 640 }}>
+            Od pierwszego zapytania po serwis — jeden partner odpowiedzialny za całość, bez przerzucania odpowiedzialności między dostawcami.
+          </Typography>
+          <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr', md: 'repeat(3, 1fr)' }, gap: 3 }}>
+            {PROCESS.map((step, i) => (
+              <Box key={step.title} sx={{ bgcolor: BG_CARD, border: `1px solid ${BORDER}`, borderRadius: 2, p: 3.5 }}>
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 1.75 }}>
+                  <Box sx={{ width: 34, height: 34, borderRadius: '50%', bgcolor: `color-mix(in srgb, ${ACCENT} 14%, transparent)`, color: ACCENT, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, fontSize: '0.9rem', flexShrink: 0 }}>
+                    {String(i + 1).padStart(2, '0')}
+                  </Box>
+                  <Typography variant="h3" sx={{ fontSize: '1.05rem', fontWeight: 700 }}>
+                    {step.title}
+                  </Typography>
+                </Box>
+                <Typography variant="body2" sx={{ color: TEXT_DIM, lineHeight: 1.7 }}>
+                  {step.desc}
+                </Typography>
+              </Box>
+            ))}
+          </Box>
+        </Container>
+      </Box>
+
       {/* ── CTA ── */}
-      <Box sx={{ bgcolor: BG }}>
+      <Box sx={{ bgcolor: BG_ALT }}>
         <Container maxWidth="lg" sx={{ py: { xs: 7, md: 10 } }}>
           <Box sx={{ bgcolor: BG_CARD, border: `1px solid ${BORDER}`, borderRadius: 3, p: { xs: 4, md: 6 }, display: 'flex', flexDirection: { xs: 'column', md: 'row' }, alignItems: { md: 'center' }, justifyContent: 'space-between', gap: 4 }}>
             <Box sx={{ maxWidth: 540 }}>

@@ -97,9 +97,12 @@ export default function PartnersStripSection() {
             {PARTNERS.map((p) => (
               <Box
                 key={p.id}
+                component={Link}
+                href={`/partnerzy#${p.id}`}
                 title={p.name}
+                aria-label={`${p.name} — poznaj partnera`}
                 sx={{
-                  height: { xs: 24, md: 28 },
+                  height: { xs: 34, md: 44 },
                   display: 'flex',
                   alignItems: 'center',
                 }}
@@ -121,11 +124,11 @@ export default function PartnersStripSection() {
                   sx={{
                     height: '100%',
                     width: 'auto',
-                    maxWidth: { xs: 80, md: 100 },
+                    maxWidth: { xs: 120, md: 150 },
                     objectFit: 'contain',
                     display: 'block',
                     filter: 'var(--logo-filter)',
-                    opacity: 0.6,
+                    opacity: 0.75,
                     transition: 'opacity 0.2s ease',
                     '&:hover': { opacity: 1 },
                   }}
