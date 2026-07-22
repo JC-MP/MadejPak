@@ -257,6 +257,7 @@ export const REALIZACJE: CaseStudy[] = [
   {
     slug: 'dobis',
     klient: 'Dobis',
+    url: 'https://www.dobis.com.pl/',
     logoPath: '/logos/klienci/dobis.png',
     branza: 'opakowania-fmcg',
     branzaLabel: 'Opakowania / FMCG',
@@ -441,6 +442,7 @@ export const REALIZACJE: CaseStudy[] = [
   {
     slug: 'agrigem',
     klient: 'Agrigem',
+    url: 'https://agrigem.pl',
     logoPath: '/logos/klienci/agrigem.png',
     branza: 'spozywcza',
     branzaLabel: 'Spożywcza / warzywa',
@@ -472,6 +474,7 @@ export const REALIZACJE: CaseStudy[] = [
   {
     slug: 'aleuro',
     klient: 'Aleuro',
+    url: 'https://www.aleuro.pl',
     logoPath: '/logos/klienci/aleuro.png',
     branza: 'spozywcza',
     branzaLabel: 'Spożywcza / produkty grillowe',
@@ -504,6 +507,7 @@ export const REALIZACJE: CaseStudy[] = [
   {
     slug: 'certech',
     klient: 'Certech',
+    url: 'https://www.certech.com.pl',
     logoPath: '/logos/klienci/certech.jpg',
     branza: 'opakowania-fmcg',
     branzaLabel: 'Opakowania / FMCG',
@@ -540,6 +544,7 @@ export const REALIZACJE: CaseStudy[] = [
   {
     slug: 'esab',
     klient: 'ESAB',
+    url: 'https://www.esab.pl',
     logoPath: '/logos/klienci/esab.png',
     branza: null,
     branzaLabel: 'Przemysł / spawalnictwo',
@@ -573,6 +578,7 @@ export const REALIZACJE: CaseStudy[] = [
   {
     slug: 'alexpol',
     klient: 'Alexpol',
+    url: 'https://alex-pol.pl/',
     logoPath: '/logos/klienci/alexpol.png',
     branza: 'spozywcza',
     branzaLabel: 'Spożywcza / lody i garmażerka',
@@ -606,6 +612,7 @@ export const REALIZACJE: CaseStudy[] = [
   {
     slug: 'axpal',
     klient: 'Axpal',
+    url: 'https://axpal.pl/',
     logoPath: '/logos/klienci/axpal.png',
     branza: 'spozywcza',
     branzaLabel: 'Spożywcza / przekąski',
@@ -640,6 +647,7 @@ export const REALIZACJE: CaseStudy[] = [
   {
     slug: 'bolsius',
     klient: 'Bolsius',
+    url: 'https://www.bolsius.com',
     logoPath: '/logos/klienci/bolsius.png',
     branza: 'opakowania-fmcg',
     branzaLabel: 'Opakowania / FMCG',
@@ -674,6 +682,7 @@ export const REALIZACJE: CaseStudy[] = [
   {
     slug: 'gala',
     klient: 'Gala',
+    url: 'https://piekarniagala.pl/pl/',
     logoPath: '/logos/klienci/gala.png',
     branza: 'spozywcza',
     branzaLabel: 'Spożywcza / piekarnictwo',
@@ -706,6 +715,7 @@ export const REALIZACJE: CaseStudy[] = [
   {
     slug: 'promotor',
     klient: 'Promotor',
+    url: 'https://www.promotor.store',
     logoPath: '/logos/klienci/promotor.png',
     branza: 'materialy-budowlane',
     branzaLabel: 'Materiały budowlane / zaprawy',
@@ -740,6 +750,7 @@ export const REALIZACJE: CaseStudy[] = [
   {
     slug: 'cmolfruit',
     klient: 'Cmolfruit',
+    url: 'http://www.cmol-frut.pl/',
     logoPath: '/logos/klienci/cmolfruit.png',
     branza: 'spozywcza',
     branzaLabel: 'Spożywcza / mrożonki',
@@ -771,6 +782,7 @@ export const REALIZACJE: CaseStudy[] = [
   {
     slug: 'gryfstevedring',
     klient: 'Gryf Stevedring',
+    url: 'https://www.gryfstevedoring.pl/',
     logoPath: '/logos/klienci/gryfstevedring.png',
     branza: 'materialy-budowlane',
     branzaLabel: 'Materiały budowlane / kruszywa',
@@ -805,6 +817,7 @@ export const REALIZACJE: CaseStudy[] = [
   {
     slug: 'jednorazowegrile',
     klient: 'Dankoal',
+    url: 'https://www.dancoal.pl/',
     logoPath: '/logos/klienci/jednorazowegrile.png',
     branza: 'opakowania-fmcg',
     branzaLabel: 'FMCG / produkty grillowe',
@@ -846,6 +859,7 @@ export const REALIZACJE: CaseStudy[] = [
   {
     slug: 'admit',
     klient: 'Admit',
+    url: 'https://admit.pl/',
     logoPath: '/logos/klienci/admit.png',
     branza: 'opakowania-fmcg',
     branzaLabel: 'Opakowania / FMCG',
@@ -877,6 +891,7 @@ export const REALIZACJE: CaseStudy[] = [
   {
     slug: 'astra',
     klient: 'Astra',
+    url: 'https://www.astrapolska.pl/',
     logoPath: '/logos/klienci/astra.png',
     branza: null,
     branzaLabel: 'Zabawki / artykuły plastyczne',
@@ -912,6 +927,7 @@ export const REALIZACJE: CaseStudy[] = [
   {
     slug: 'brapta',
     klient: 'Brapta',
+    url: 'https://brapta.com.pl/',
     logoPath: '/logos/klienci/brapta.png',
     branza: 'spozywcza',
     branzaLabel: 'Spożywcza / karma i nasiona',
@@ -941,6 +957,7 @@ export const REALIZACJE: CaseStudy[] = [
   {
     slug: 'as-babuni',
     klient: 'As Babuni',
+    url: 'https://asbabuni.pl/',
     logoPath: '/logos/klienci/as-babuni.png',
     branza: 'spozywcza',
     branzaLabel: 'Spożywcza / wyroby cukiernicze',
@@ -972,6 +989,7 @@ export const REALIZACJE: CaseStudy[] = [
   {
     slug: 'laboratoria-natury',
     klient: 'Laboratoria Natury',
+    url: 'https://laboratorianatury.pl',
     logoPath: '/logos/klienci/laboratoria-natury.png',
     branza: 'spozywcza',
     branzaLabel: 'Spożywcza / suplementy diety',
@@ -1008,6 +1026,7 @@ export const REALIZACJE: CaseStudy[] = [
   {
     slug: 'ciech-sarzyna',
     klient: 'Ciech Sarzyna',
+    url: 'https://sarzynachemical.pl/',
     logoPath: '/logos/klienci/ciech-sarzyna.png',
     branza: 'chemiczna',
     branzaLabel: 'Chemiczna / nawozy',
@@ -1037,6 +1056,7 @@ export const REALIZACJE: CaseStudy[] = [
   {
     slug: 'sekpol',
     klient: 'Sekpol',
+    url: 'https://www.secpol.pl/',
     logoPath: '/logos/klienci/sekpol.png',
     branza: 'spozywcza',
     branzaLabel: 'Spożywcza / wyroby cukiernicze',
@@ -1069,6 +1089,7 @@ export const REALIZACJE: CaseStudy[] = [
   {
     slug: 'synergio',
     klient: 'Synergio',
+    url: 'https://www.synergio.pl/',
     logoPath: '/logos/klienci/synergio.png',
     branza: null,
     branzaLabel: 'Energetyka / paliwa stałe',
@@ -1099,6 +1120,7 @@ export const REALIZACJE: CaseStudy[] = [
   {
     slug: 'planta',
     klient: 'Planta',
+    url: 'https://www.planta.pl/pl/',
     logoPath: '/logos/klienci/planta.png',
     branza: 'chemiczna',
     branzaLabel: 'Chemiczna / nawozy',
@@ -1138,6 +1160,7 @@ export const REALIZACJE: CaseStudy[] = [
   {
     slug: 'synthos',
     klient: 'Synthos',
+    url: 'https://www.synthosgroup.com',
     logoPath: '/logos/klienci/synthos.png',
     branza: 'chemiczna',
     branzaLabel: 'Chemiczna / nawozy',
@@ -1173,6 +1196,7 @@ export const REALIZACJE: CaseStudy[] = [
   {
     slug: 'qemetica',
     klient: 'Qemetica (dawniej Soda Ciech)',
+    url: 'https://qemetica.com/',
     logoPath: '/logos/klienci/qemetica.png',
     branza: 'chemiczna',
     branzaLabel: 'Chemiczna / chemia przemysłowa',
@@ -1236,6 +1260,7 @@ export const REALIZACJE: CaseStudy[] = [
   {
     slug: 'plastrol',
     klient: 'Plastrol',
+    url: 'https://plastrol.pl/',
     logoPath: '/logos/klienci/plastrol.png',
     branza: 'opakowania-fmcg',
     branzaLabel: 'Opakowania / FMCG',
@@ -1296,6 +1321,7 @@ export const REALIZACJE: CaseStudy[] = [
   {
     slug: 'jonex',
     klient: 'Jonex',
+    url: 'https://www.jonex.pl/index.php/pl/',
     logoPath: '/logos/klienci/jonex.png',
     branza: 'opakowania-fmcg',
     branzaLabel: 'Opakowania / FMCG',

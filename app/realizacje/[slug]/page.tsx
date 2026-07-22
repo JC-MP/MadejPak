@@ -435,7 +435,6 @@ export default async function RealizacjaPage({
                 </Box>
               )}
 
-              {/* HIDDEN: strona klienta — przywróć usuwając komentarz
               {item.url && (
                 <Box component="a" href={item.url} target="_blank" rel="noopener noreferrer" sx={{ display: 'inline-flex', alignItems: 'center', gap: 1, fontSize: '0.78rem', color: TEXT_DIM, textDecoration: 'none', transition: 'color 0.15s ease', '&:hover': { color: 'var(--dim-65)' } }}>
                   Strona klienta: {item.klient}
@@ -444,7 +443,6 @@ export default async function RealizacjaPage({
                   </Box>
                 </Box>
               )}
-              HIDDEN */}
             </Box>
           </Box>
         </Container>
