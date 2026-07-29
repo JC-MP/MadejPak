@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
+import TrustDifferentiator from '@/components/sections/TrustDifferentiator';
 
 export const metadata: Metadata = {
   title: 'Vertical VFFS Packaging Machines | MadejPak',
@@ -1048,6 +1049,9 @@ export default function PionoweMaszynyPageEn() {
           </Box>
         </Container>
       </Box>
+
+      {/* ── Why MadejPak (authorized integrator vs random importer) ── */}
+      <TrustDifferentiator lang="en" />
 
       {/* ── CTA ── */}
       <Box sx={{ py: { xs: 10, md: 14 } }}>

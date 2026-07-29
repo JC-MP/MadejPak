@@ -309,53 +309,52 @@ function TrustBar() {
   return (
     <Box
       sx={{
-        display: 'flex',
-        flexWrap: 'wrap',
-        gap: { xs: 3, sm: 4 },
-        alignItems: 'center',
+        pt: { xs: 4, md: 5 },
+        borderTop: `1px solid var(--surface-08)`,
       }}
     >
-      {METRICS.map((m) => (
-        <Box key={m.label} sx={{ display: 'flex', flexDirection: 'column', gap: 0.15 }}>
-          <Box sx={{ display: 'flex', alignItems: 'baseline', gap: 0.5 }}>
+      <Box
+        sx={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(2, max-content)',
+          columnGap: { xs: 5, md: 7 },
+          rowGap: { xs: 3, md: 3.5 },
+        }}
+      >
+        {METRICS.map((m) => (
+          <Box key={m.label}>
             <Typography
               sx={{
-                fontSize: { xs: '1.45rem', md: '1.6rem' },
+                fontSize: { xs: '1.25rem', md: '1.5rem' },
                 fontWeight: 800,
                 letterSpacing: '-0.03em',
-                color: 'var(--text)',
                 lineHeight: 1,
+                color: ACCENT,
+                mb: 0.5,
               }}
             >
               {m.value}
+              {m.unit && (
+                <Box component="span" sx={{ fontSize: '0.9em', ml: 0.25 }}>
+                  {m.unit}
+                </Box>
+              )}
             </Typography>
-            {m.unit && (
-              <Typography
-                sx={{
-                  fontSize: '0.75rem',
-                  fontWeight: 600,
-                  color: ACCENT,
-                  lineHeight: 1,
-                }}
-              >
-                {m.unit}
-              </Typography>
-            )}
+            <Typography
+              sx={{
+                fontSize: '0.68rem',
+                fontWeight: 500,
+                letterSpacing: '0.04em',
+                color: 'var(--dim-45)',
+                textTransform: 'uppercase',
+                lineHeight: 1,
+              }}
+            >
+              {m.label}
+            </Typography>
           </Box>
-          <Typography
-            sx={{
-              fontSize: '0.65rem',
-              fontWeight: 600,
-              letterSpacing: '0.08em',
-              textTransform: 'uppercase',
-              color: 'var(--dim-35)',
-              lineHeight: 1,
-            }}
-          >
-            {m.label}
-          </Typography>
-        </Box>
-      ))}
+        ))}
+      </Box>
     </Box>
   );
 }

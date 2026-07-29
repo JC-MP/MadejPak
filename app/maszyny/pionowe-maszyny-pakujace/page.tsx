@@ -7,6 +7,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE, COMPANY } from '@/lib/seo.config';
 import LeadForm from './LeadForm';
+import TrustDifferentiator from '@/components/sections/TrustDifferentiator';
 
 const PAGE_URL = `${SITE_URL}/maszyny/pionowe-maszyny-pakujace`;
 
@@ -1313,6 +1314,9 @@ export default function PionoweMaszynyPage() {
           </Box>
         </Container>
       </Box>
+
+      {/* ── Dlaczego MadejPak (autoryzowany przedstawiciel vs importer) ── */}
+      <TrustDifferentiator />
 
       {/* ── CTA ── */}
       <Box sx={{ py: { xs: 10, md: 14 } }}>

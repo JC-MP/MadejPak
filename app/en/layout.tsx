@@ -8,9 +8,10 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_NAME}`,
   },
   description:
-    'MadejPak designs and integrates packaging lines, implements automation and robotics, and delivers custom packaging machinery for industrial production. Trusted by Synthos, Solbet, Siarkopol, Makarony Polskie and Gold Drop.',
+    'MadejPak — authorized representative of Essegi and GSP in Poland and a packaging line integrator. We design, build and service machines. Trusted by Synthos, Solbet, Makarony Polskie and Gold Drop.',
   keywords: [
     'MadejPak', 'packaging line integrator', 'packaging automation',
+    'authorized representative Essegi', 'authorized representative GSP',
     'packaging robotics', 'packaging machines', 'flow pack', 'VFFS',
     'palletising systems', 'packaging line service', 'end of line',
     ...NOTABLE_CLIENTS,

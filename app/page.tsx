@@ -2,12 +2,14 @@ import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE, NOTABLE_CLIENTS } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'MadejPak – Integrator linii pakujących i automatyzacja pakowania',
+  title: 'MadejPak – Integrator linii pakujących i autoryzowany przedstawiciel Essegi i GSP',
   description:
-    'MadejPak projektuje i integruje linie pakujące, wdraża automatyzację i robotyzację pakowania oraz zapewnia serwis maszyn pakujących. 25 lat doświadczenia i 200+ wdrożeń — zaufali nam m.in. Synthos, Solbet, Siarkopol, Makarony Polskie i Gold Drop.',
+    'MadejPak — autoryzowany przedstawiciel Essegi i GSP w Polsce oraz integrator linii pakujących. Projektujemy, budujemy i serwisujemy maszyny. 25 lat, 200+ wdrożeń — zaufali nam m.in. Synthos, Solbet, Makarony Polskie i Gold Drop.',
   keywords: [
     'MadejPak', 'Madej Pak', 'Madej',
     'integrator linii pakujących', 'integracja linii pakujących',
+    'autoryzowany przedstawiciel Essegi', 'autoryzowany przedstawiciel GSP',
+    'wyłączny przedstawiciel Essegi', 'przedstawiciel GSP Polska',
     'automatyzacja pakowania', 'robotyzacja pakowania',
     'maszyny pakujące', 'linie pakujące', 'linia pakująca',
     'automat do pakowania', 'pakowanie zbiorcze',
@@ -26,15 +28,16 @@ export const metadata: Metadata = {
   },
   openGraph: {
     url:   SITE_URL,
-    title: 'MadejPak – Integrator linii pakujących i automatyzacja pakowania',
+    title: 'MadejPak – Integrator linii pakujących, autoryzowany przedstawiciel Essegi i GSP',
     description:
-      'MadejPak projektuje i integruje linie pakujące, wdraża automatyzację i robotyzację pakowania oraz zapewnia serwis maszyn pakujących. 25 lat doświadczenia, 200+ wdrożeń.',
+      'Autoryzowany przedstawiciel Essegi i GSP w Polsce oraz integrator linii pakujących. Projektujemy, budujemy i serwisujemy maszyny. 25 lat, 200+ wdrożeń.',
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'MadejPak – integrator linii pakujących' }],
   },
 };
 
 import HeroSection from '@/components/sections/HeroSection';
 import ClientsSection from '@/components/sections/ClientsSection';
+import TrustDifferentiator from '@/components/sections/TrustDifferentiator';
 import WhyMadejPakSection from '@/components/sections/WhyMadejPakSection';
 import SolutionsSection from '@/components/sections/SolutionsSection';
 // import FeaturedCasesSection from '@/components/sections/FeaturedCasesSection';
@@ -55,6 +58,9 @@ export default function HomePage() {
 
       {/* Pasek logo klientów — przewijany marquee */}
       <ClientsSection />
+
+      {/* Wyróżnik: autoryzowany przedstawiciel vs przypadkowy importer + dowód Skawa */}
+      <TrustDifferentiator />
 
       {/* 2. Dlaczego MadejPak — differentiator vs zwykły dystrybutor */}
       <WhyMadejPakSection />

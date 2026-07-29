@@ -65,4 +65,5 @@ export const NOTABLE_CLIENTS = [
   'Synthos', 'Qemetica', 'Solbet', 'Siarkopol', 'Grupa Azoty',
   'Makarony Polskie', 'Gold Drop', 'ESAB', 'Bolsius', 'PCO Group',
   'Planta', 'Certech', 'Lazur', 'Dankoal',
+  'Unitop', 'Dr Marcus', 'Cykoria', 'Skawa',
 ];

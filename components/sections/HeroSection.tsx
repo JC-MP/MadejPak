@@ -140,11 +140,13 @@ function TrustBar() {
         borderTop: `1px solid var(--surface-08)`,
       }}
     >
-      <Stack
-        direction="row"
-        flexWrap="wrap"
-        useFlexGap
-        gap={{ xs: '24px 32px', md: '12px 40px' }}
+      <Box
+        sx={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(2, max-content)',
+          columnGap: { xs: 5, md: 7 },
+          rowGap: { xs: 3, md: 3.5 },
+        }}
       >
         {METRICS.map((m) => (
           <Box key={m.label}>
@@ -179,7 +181,7 @@ function TrustBar() {
             </Typography>
           </Box>
         ))}
-      </Stack>
+      </Box>
     </Box>
   );
 }
@@ -229,9 +231,9 @@ export default function HeroSection() {
             {/* Brand label */}
             <Typography
               sx={{
-                fontSize: '0.68rem',
-                fontWeight: 700,
-                letterSpacing: '0.22em',
+                fontSize: { xs: '1.5rem', md: '2rem' },
+                fontWeight: 800,
+                letterSpacing: '0.12em',
                 textTransform: 'uppercase',
                 color: ACCENT,
                 mb: { xs: 3, md: 4 },
