@@ -44,7 +44,7 @@ const CONTENT = {
     proofEyebrowAccent: 'wejdź do supermarketu',
     highlights: [
       { label: 'Wafle Skawa', sub: 'wyroby cukiernicze', slug: 'skawa' },
-      { label: 'Andruty kaliskie', sub: 'tradycyjne wafle', slug: '' },
+      { label: 'Andruty Kaliskie', sub: 'tradycyjne wafle', slug: '' },
       { label: 'Żwirek Super Benek', sub: 'Certech', slug: 'certech' },
       { label: 'Ser pleśniowy Lazur', sub: 'nabiał', slug: 'lazur' },
       { label: 'Makaron Makarony Polskie', sub: 'makarony', slug: 'makarony-polskie' },
