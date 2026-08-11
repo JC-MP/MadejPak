@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const url = `${SITE_URL}/maszyny/madejpak/${machine.id}`;
   return {
-    title: `${machine.name} | Maszyny MadejPak`,
+    title: machine.name,
     description: machine.desc,
     alternates: { canonical: url },
     openGraph: {

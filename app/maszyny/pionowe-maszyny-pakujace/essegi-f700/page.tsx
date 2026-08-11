@@ -11,7 +11,7 @@ import { SITE_URL, OG_IMAGE, COMPANY } from '@/lib/seo.config';
 import LeadForm from '../LeadForm';
 
 export const metadata: Metadata = {
-  title: 'Essegi F700 – pionowa maszyna pakująca VFFS 30–70 szt./min | MadejPak',
+  title: 'Essegi F700 – pionowa maszyna pakująca VFFS 30–70 szt./min',
   description:
     'Essegi F700 – kompaktowa maszyna VFFS do pakowania żywności i drobnych granulatów. 50 g–3 kg, worki pillow/stabilo, 30–70 szt./min. Dozownik kubkowy lub waga wibro-kanałowa.',
   keywords: [

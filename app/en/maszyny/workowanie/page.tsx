@@ -10,7 +10,7 @@ import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'Bagging & Bag Closing – Concetti | MadejPak',
+  title: 'Bagging & Bag Closing – Concetti',
   description:
     'Concetti bagging machines available from MadejPak — IGF open-mouth, CONTINUA FFS, big-bag filling. Bulk products, powders, granules, cement, fertilizers.',
   alternates: {

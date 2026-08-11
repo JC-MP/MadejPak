@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'Polityka Prywatności | MadejPak',
+  title: 'Polityka Prywatności',
   description: 'Polityka prywatności PPHU MadejPak Sp. z o.o. — informacje o przetwarzaniu danych osobowych zgodnie z RODO.',
   alternates: { canonical: `${SITE_URL}/polityka-prywatnosci` },
   openGraph: {

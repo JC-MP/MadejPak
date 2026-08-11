@@ -8,7 +8,7 @@ import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'Automatyzacja pakowania – eliminacja pracy ręcznej | MadejPak',
+  title: 'Automatyzacja pakowania – eliminacja pracy ręcznej',
   description: 'MadejPak automatyzuje pakowanie w zakładach produkcyjnych — flow pack, VFFS, systemy ważenia i dozowania, podawanie i etykietowanie. Od pojedynczego stanowiska po kompletną linię pakującą.',
   keywords: [
     'automatyzacja pakowania', 'automat do pakowania', 'linia pakująca automatyczna',

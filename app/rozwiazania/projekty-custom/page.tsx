@@ -8,7 +8,7 @@ import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'Niestandardowe maszyny pakujące – projekty custom | MadejPak',
+  title: 'Niestandardowe maszyny pakujące – projekty custom',
   description: 'MadejPak projektuje i buduje niestandardowe maszyny pakujące i stanowiska specjalne — gdy żadna maszyna z katalogu nie rozwiązuje problemu. Trudne produkty, specyficzne linie, ograniczona przestrzeń.',
   keywords: [
     'niestandardowe maszyny pakujące', 'projekt custom maszyna',

@@ -908,7 +908,7 @@ export default function ContactPage() {
                 25 lat doświadczenia w technologii pakowania
               </Typography>
               <Typography sx={{ fontSize: '0.875rem', color: 'var(--dim-65)' }}>
-                Obsługujemy przemysł produkcyjny od 1999 roku.
+                Obsługujemy przemysł produkcyjny od 2000 roku.
               </Typography>
             </Box>
 

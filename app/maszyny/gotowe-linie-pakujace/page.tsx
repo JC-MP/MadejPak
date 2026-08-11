@@ -8,7 +8,7 @@ import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'Gotowe linie pakujące – sprawdzone układy dla zakładów produkcyjnych | MadejPak',
+  title: 'Gotowe linie pakujące – sprawdzone układy dla zakładów produkcyjnych',
   description:
     'MadejPak wdraża gotowe linie pakujące i stanowiska paletyzacji oparte na realnych wdrożeniach. Linia do pakowania produktów sypkich, żywności lub chemikaliów — gotowa do uruchomienia.',
   keywords: [

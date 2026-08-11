@@ -7,7 +7,7 @@ import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'Packaging robotisation — cobots and industrial robots | MadejPak',
+  title: 'Packaging robotisation — cobots and industrial robots',
   description:
     'MadejPak integrates industrial robots and cobots from industry leaders into packaging lines. Pick-and-place, palletising, product handling — flexible workstation automation.',
   alternates: {

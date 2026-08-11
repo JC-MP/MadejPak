@@ -11,7 +11,7 @@ import { SITE_URL, OG_IMAGE, COMPANY } from '@/lib/seo.config';
 import LeadForm from '../LeadForm';
 
 export const metadata: Metadata = {
-  title: 'GSP 65 EVO – Maszyna Flow Pack MAP Box Motion | MadejPak',
+  title: 'GSP 65 EVO – Maszyna Flow Pack MAP Box Motion',
   description:
     'GSP 65 EVO – przemysłowa maszyna flow pack do pakowania MAP. Box motion, płukanie gazem N₂/CO₂, folia PE i poliolefinowa. Wersja BB. Szczelne opakowanie dla produktów długoterminowych.',
   keywords: [

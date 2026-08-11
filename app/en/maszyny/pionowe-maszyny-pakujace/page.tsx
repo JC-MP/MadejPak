@@ -8,7 +8,7 @@ import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 import TrustDifferentiator from '@/components/sections/TrustDifferentiator';
 
 export const metadata: Metadata = {
-  title: 'Vertical VFFS Packaging Machines | MadejPak',
+  title: 'Vertical VFFS Packaging Machines',
   description:
     'Vertical VFFS (form-fill-seal) packaging machines for free-flowing, granulated, powder and liquid products. Essegi and Concetti — supply and integration by MadejPak.',
   alternates: {

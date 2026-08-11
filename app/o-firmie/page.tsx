@@ -101,7 +101,7 @@ const ACTIVITIES = [
     href: '/realizacje',
   },
   {
-    num: '07',
+    num: '05',
     title: 'Modernizacje i serwis',
     body: 'Utrzymujemy sprawność maszyn i linii pakujących po wdrożeniu — serwis bieżący, przeglądy, modernizacje i wsparcie techniczne, również po zakończeniu okresu gwarancyjnego.',
     href: '/serwis',

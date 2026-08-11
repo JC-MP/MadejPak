@@ -7,7 +7,7 @@ import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'Conveying and end-of-line — conveyors and integration | MadejPak',
+  title: 'Conveying and end-of-line — conveyors and integration',
   description:
     'MadejPak designs and integrates internal transport systems, conveyors and end-of-line solutions for packaging lines. From packaging machine exit to a wrapped pallet ready for dispatch.',
   alternates: {

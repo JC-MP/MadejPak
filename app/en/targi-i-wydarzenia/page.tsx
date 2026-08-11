@@ -8,7 +8,7 @@ import { EVENTS, type TradeEvent } from '@/data/eventsData';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'Trade Shows & Events | MadejPak',
+  title: 'Trade Shows & Events',
   description:
     'MadejPak at industry trade shows: Taropak, IPACK-IMA, IBA, Warsaw Industry Automatica and more. Packaging technology, automation and robotics — presence at key industrial events.',
   alternates: {

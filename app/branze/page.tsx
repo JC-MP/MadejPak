@@ -11,7 +11,7 @@ import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'Linie pakujące dla branży spożywczej, chemicznej i kosmetycznej | MadejPak',
+  title: 'Linie pakujące dla branży spożywczej, chemicznej i kosmetycznej',
   description:
     'MadejPak projektuje linie pakujące dla przemysłu spożywczego, chemicznego, kosmetycznego i farmaceutycznego. Pakowanie nawozów, kosmetyków, żywności, proszków i granulatów.',
   keywords: [

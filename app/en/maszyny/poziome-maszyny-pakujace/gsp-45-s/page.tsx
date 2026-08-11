@@ -11,7 +11,7 @@ import { SITE_URL, OG_IMAGE, COMPANY } from '@/lib/seo.config';
 import LeadFormEn from '../LeadFormEn';
 
 export const metadata: Metadata = {
-  title: 'GSP 45 S – Cantilever Flow Pack Machine | MadejPak',
+  title: 'GSP 45 S – Cantilever Flow Pack Machine',
   description:
     'GSP 45 S – electronic horizontal flow pack machine with cantilever frame. Food and non-food packaging, fast format changeover, printer option for best-before dates. Compact and easy to operate.',
   keywords: [

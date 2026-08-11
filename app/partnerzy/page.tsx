@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata = {
-  title: 'Partnerzy technologiczni | MadejPak',
+  title: 'Partnerzy technologiczni',
   description:
     'Sprawdzone technologie i zweryfikowani partnerzy — Concetti, Essegi, GSP, Technowrapp, Vimco oraz liderzy w robotyzacji. MadejPak realizuje kompleksowe projekty integracji linii pakujących.',
   alternates: {

@@ -11,7 +11,7 @@ import { SITE_URL } from '@/lib/seo.config';
 const PAGE_URL = `${SITE_URL}/maszyny/pionowe-maszyny-pakujace/essegi-f8004s`;
 
 export const metadata: Metadata = {
-  title: 'Essegi F8004S – Maszyna VFFS z Czterostronnym Zgrzewem | MadejPak',
+  title: 'Essegi F8004S – Maszyna VFFS z Czterostronnym Zgrzewem',
   description:
     'Essegi F8004S — pionowa maszyna pakująca VFFS z czterostronnym zgrzewem (4-side seal). Worki 50 g–5 kg, format 360×560 mm, do 70 szt./min. Snacki, słodycze, kawa. Zapytaj MadejPak.',
   alternates: { canonical: PAGE_URL },

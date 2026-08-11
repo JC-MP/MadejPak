@@ -11,7 +11,7 @@ import { SITE_URL } from '@/lib/seo.config';
 const PAGE_URL = `${SITE_URL}/maszyny/pionowe-maszyny-pakujace/essegi-f1200`;
 
 export const metadata: Metadata = {
-  title: 'Essegi F1200 / F1300 – Duże Worki VFFS do 50 kg | MadejPak',
+  title: 'Essegi F1200 / F1300 – Duże Worki VFFS do 50 kg',
   description:
     'Essegi F1200 i F1300 — pionowe maszyny pakujące VFFS do worków 5–50 kg. Format do 980×570 mm, rolka folii 1180 mm, 10–22 szt./min. Produkty sypkie i granulowane. Zapytaj MadejPak.',
   alternates: { canonical: PAGE_URL },

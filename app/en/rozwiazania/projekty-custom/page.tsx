@@ -8,7 +8,7 @@ import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'Custom Projects | MadejPak',
+  title: 'Custom Projects',
   description: 'MadejPak executes custom machinery and packaging system projects — from robotic grippers to complete special-purpose workstations.',
   alternates: {
     canonical: `${SITE_URL}/en/rozwiazania/projekty-custom`,

@@ -11,7 +11,7 @@ import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'Maszyny partnerów technologicznych | MadejPak',
+  title: 'Maszyny partnerów technologicznych',
   description:
     'Katalog kategorii maszyn i technologii pakowania partnerów MadejPak — flow pack, VFFS, paletyzacja, robotyzacja, owijanie palet i więcej.',
   alternates: { canonical: `${SITE_URL}/maszyny/partnerzy` },

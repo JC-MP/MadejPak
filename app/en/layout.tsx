@@ -4,7 +4,7 @@ import { SITE_URL, SITE_NAME, OG_IMAGE, NOTABLE_CLIENTS, BLOCK_INDEXING } from '
 
 export const metadata: Metadata = {
   title: {
-    default: `${SITE_NAME} – Packaging Line Integration & Automation`,
+    default: 'Packaging machine manufacturer & line integrator',
     template: `%s | ${SITE_NAME}`,
   },
   description:

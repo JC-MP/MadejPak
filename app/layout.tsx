@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
 
   title: {
-    default: `${SITE_NAME} – Technologie pakowania i integracja linii produkcyjnych`,
+    default: 'Producent i integrator maszyn oraz linii pakujących',
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,

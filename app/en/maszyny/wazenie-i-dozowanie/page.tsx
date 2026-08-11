@@ -7,7 +7,7 @@ import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'Multihead weighers and dosing | MadejPak',
+  title: 'Multihead weighers and dosing',
   description:
     'Multihead weighers and dosing systems for packaging lines — weight-based and piece-count portioning, integration with VFFS machines and tray sealers. Concetti, Essegi.',
   alternates: {

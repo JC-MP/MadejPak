@@ -11,7 +11,7 @@ import { SITE_URL, OG_IMAGE, COMPANY } from '@/lib/seo.config';
 import LeadForm from '../LeadForm';
 
 export const metadata: Metadata = {
-  title: 'GSP 45 S – Maszyna Flow Pack Wspornikowa | MadejPak',
+  title: 'GSP 45 S – Maszyna Flow Pack Wspornikowa',
   description:
     'GSP 45 S – elektroniczna maszyna flow pack z budową wspornikową (cantilever). Pakowanie produktów spożywczych i niespożywczych, szybka zmiana formatu, opcja drukarki do daty ważności.',
   keywords: [

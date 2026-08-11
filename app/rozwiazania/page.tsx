@@ -8,7 +8,7 @@ import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'Integracja i automatyzacja linii pakujących – rozwiązania | MadejPak',
+  title: 'Integracja i automatyzacja linii pakujących – rozwiązania',
   description:
     'MadejPak integruje linie pakujące, automatyzuje i robotyzuje pakowanie oraz realizuje projekty custom dla zakładów produkcyjnych. Od analizy procesu po serwis i modernizację.',
   keywords: [

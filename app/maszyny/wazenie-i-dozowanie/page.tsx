@@ -7,7 +7,7 @@ import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'Wagi wielogłowicowe i systemy dozowania do linii pakujących | MadejPak',
+  title: 'Wagi wielogłowicowe i systemy dozowania do linii pakujących',
   description:
     'Wagi wielogłowicowe i systemy dozowania do pakowania produktów sypkich, spożywczych i chemicznych. Ważenie wagowe i sztukowe, integracja z maszyną VFFS i pakowaczką tacek.',
   keywords: [

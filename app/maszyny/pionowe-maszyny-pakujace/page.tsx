@@ -12,7 +12,7 @@ import TrustDifferentiator from '@/components/sections/TrustDifferentiator';
 const PAGE_URL = `${SITE_URL}/maszyny/pionowe-maszyny-pakujace`;
 
 export const metadata: Metadata = {
-  title: 'Pionowe Maszyny Pakujące VFFS – Essegi F700, F1000, F1200, F8004S | MadejPak',
+  title: 'Pionowe Maszyny Pakujące VFFS – Essegi F700, F1000, F1200, F8004S',
   description:
     'Pionowe maszyny pakujące VFFS Essegi do produktów sypkich, granulowanych i proszkowych. Modele F700 (50 g–3 kg), F1000 (1–25 kg), F1200 (5–50 kg), F8004S (4-side seal). Dostawa i integracja — MadejPak.',
   keywords: [

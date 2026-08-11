@@ -8,7 +8,7 @@ import type { Metadata } from 'next';
 import PrintButton from './PrintButton';
 
 export const metadata: Metadata = {
-  title: 'Zaproszenie — Interpack 2026 | MadejPak',
+  title: 'Zaproszenie — Interpack 2026',
   description: 'MadejPak zaprasza na targi Interpack 2026 w Düsseldorfie. Odwiedź nas i naszych partnerów: Tecno Pack, EsseGi, Concetti, Vimco — 7–13 maja 2026.',
   robots: { index: false, follow: false },
 };

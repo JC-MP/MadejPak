@@ -7,7 +7,7 @@ import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'Systemy paletyzacji – z robotem i warstwowa | MadejPak',
+  title: 'Systemy paletyzacji – z robotem i warstwowa',
   description:
     'MadejPak dobiera i integruje systemy paletyzacji dla linii pakujących — z robotem, warstwowe i cobotowe. Robot do paletyzacji worków, kartonów i opakowań zbiorczych.',
   keywords: [

@@ -7,7 +7,7 @@ import RealizacjeClientEn from '@/components/realizacje/RealizacjeClientEn';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'Case Studies | MadejPak',
+  title: 'Case Studies',
   description:
     'Packaging automation, palletizing, and production line integration projects for manufacturers in the food, chemical, and industrial sectors. MadejPak completed implementations.',
   alternates: {

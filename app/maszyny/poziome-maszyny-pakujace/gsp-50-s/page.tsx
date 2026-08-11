@@ -11,7 +11,7 @@ import { SITE_URL, OG_IMAGE, COMPANY } from '@/lib/seo.config';
 import LeadForm from '../LeadForm';
 
 export const metadata: Metadata = {
-  title: 'GSP 50 S – Maszyna Flow Pack 150 op./min | MadejPak',
+  title: 'GSP 50 S – Maszyna Flow Pack 150 op./min',
   description:
     'GSP 50 S – maszyna flow pack do 150 op./min. Produkty 10–250 mm szerokości, folie zgrzewalne i cold-seal, PLC z ekranem 7", pamięć programów. Pakowanie spożywcze i niespożywcze.',
   keywords: [

@@ -163,7 +163,7 @@ const PARTNER_SPECIALTY_EN: Record<string, string> = {
 };
 
 export const metadata: Metadata = {
-  title: 'Technology Partner Machines | MadejPak',
+  title: 'Technology Partner Machines',
   description:
     'Catalogue of machine categories and packaging technologies from MadejPak partners — flow pack, VFFS, palletising, robotics, pallet wrapping and more.',
   alternates: {

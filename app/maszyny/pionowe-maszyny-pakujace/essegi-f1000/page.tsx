@@ -11,7 +11,7 @@ import { SITE_URL } from '@/lib/seo.config';
 const PAGE_URL = `${SITE_URL}/maszyny/pionowe-maszyny-pakujace/essegi-f1000`;
 
 export const metadata: Metadata = {
-  title: 'Essegi F1000 – Pionowa Maszyna Pakująca VFFS do 25 kg | MadejPak',
+  title: 'Essegi F1000 – Pionowa Maszyna Pakująca VFFS do 25 kg',
   description:
     'Essegi F1000 — pionowa maszyna pakująca VFFS do produktów sypkich i granulowanych 1–25 kg. Wersje Standard, EcoFocus, Motion. Format do 470×680 mm, 10–22 szt./min. Zapytaj MadejPak.',
   alternates: { canonical: PAGE_URL },

@@ -10,7 +10,7 @@ import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'Pallet Wrappers – Technowrapp | MadejPak',
+  title: 'Pallet Wrappers – Technowrapp',
   description:
     'Automatic Technowrapp pallet wrappers — P60, B-series, Runner Arm, Twin Rings. Stretch wrapping, rotary table and rotary arm wrapping for packaging lines and end-of-line automation.',
   alternates: {

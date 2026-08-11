@@ -4,7 +4,7 @@ import { SITE_URL, OG_IMAGE, COMPANY } from '@/lib/seo.config';
 import CobotyConsentGate from '@/components/ui/CobotyConsentGate';
 import CobotyConversion from '@/components/ui/CobotyConversion';
 
-const TITLE       = 'Coboty w Akcji – Automatyzacja Pakowania i Paletyzacji | MadejPak';
+const TITLE       = 'Coboty w Akcji – Automatyzacja Pakowania i Paletyzacji';
 const DESCRIPTION = 'Zobacz roboty współpracujące w praktyce. Pokazy paletyzacji i pakowania na żywo — DOBOT CR20A, Nova 5 + stanowisko paletyzacji. Zarejestruj się na dni otwarte MadejPak. Trwa do 31 sierpnia 2026, Małopolska.';
 const PAGE_URL    = `${SITE_URL}/coboty-w-akcji`;
 

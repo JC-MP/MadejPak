@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'Serwis i modernizacja maszyn pakujących – gwarancja i pogwarancja | MadejPak',
+  title: 'Serwis i modernizacja maszyn pakujących – gwarancja i pogwarancja',
   description:
     'Serwis gwarancyjny i pogwarancyjny maszyn pakujących, modernizacja istniejącej linii pakującej, tele-serwis, części zamienne i planowe przeglądy. Szybkie wsparcie techniczne.',
   keywords: [

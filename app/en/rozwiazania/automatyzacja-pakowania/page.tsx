@@ -8,7 +8,7 @@ import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'Packaging Automation | MadejPak',
+  title: 'Packaging Automation',
   description: 'MadejPak automates packaging processes — from single workstations to complete lines. We reduce manual labor and increase process stability.',
   alternates: {
     canonical: `${SITE_URL}/en/rozwiazania/automatyzacja-pakowania`,

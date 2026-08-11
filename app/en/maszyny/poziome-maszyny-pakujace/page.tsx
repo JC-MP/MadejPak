@@ -11,7 +11,7 @@ import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 import LeadFormEn from './LeadFormEn';
 
 export const metadata: Metadata = {
-  title: 'Horizontal Flow Wrap Packaging Machines GSP | MadejPak',
+  title: 'Horizontal Flow Wrap Packaging Machines GSP',
   description:
     'Horizontal flow wrap packaging machines GSP from MadejPak. S series (45, 50, 55, 75) and EVO series (MAP, box motion). Food, cosmetics and industrial packaging — standard to modified atmosphere.',
   alternates: {

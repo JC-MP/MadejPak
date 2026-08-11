@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'Informacje Prawne | MadejPak',
+  title: 'Informacje Prawne',
   description: 'Informacje prawne dotyczące PPHU MadejPak Sp. z o.o. — dane rejestrowe, odpowiedzialność, własność intelektualna.',
   alternates: { canonical: `${SITE_URL}/informacje-prawne` },
   openGraph: {

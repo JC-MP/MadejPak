@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'Polityka Cookies | MadejPak',
+  title: 'Polityka Cookies',
   description: 'Polityka plików cookies serwisu madejpak.pl — informacje o rodzajach cookies i sposobach zarządzania nimi.',
   alternates: { canonical: `${SITE_URL}/polityka-cookies` },
   openGraph: {

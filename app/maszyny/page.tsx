@@ -10,7 +10,7 @@ import MachineSelector from '@/components/sections/MachineSelector';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'Maszyny pakujące – flow pack, VFFS, paletyzacja, workowanie | MadejPak',
+  title: 'Maszyny pakujące – flow pack, VFFS, paletyzacja, workowanie',
   description:
     'Maszyny pakujące MadejPak: flow pack, VFFS (maszyny pionowe), workowanie, systemy paletyzacji, owijarki do palet, transport wewnętrzny i dozowanie. Dobieramy, dostarczamy i integrujemy w linię.',
   keywords: [

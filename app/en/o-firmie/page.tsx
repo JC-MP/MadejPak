@@ -100,7 +100,7 @@ const ACTIVITIES = [
     href: '/en/realizacje',
   },
   {
-    num: '07',
+    num: '05',
     title: 'Modernisations & Service',
     body: 'We maintain the performance of machines and packaging lines after implementation — ongoing service, inspections, modernisations and technical support, including post-warranty periods.',
     href: '/en/serwis',

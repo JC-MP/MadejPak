@@ -10,7 +10,7 @@ import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'Owijarki do palet – Technowrapp | MadejPak',
+  title: 'Owijarki do palet – Technowrapp',
   description:
     'Automatyczne owijarki do palet Technowrapp — P60, B-series, Runner Arm, Twin Rings. Stretch wrapping, owijanie rotacyjne i ramieniowe dla linii pakujących i koniec linii.',
   alternates: { canonical: `${SITE_URL}/maszyny/owijarki-do-palet` },

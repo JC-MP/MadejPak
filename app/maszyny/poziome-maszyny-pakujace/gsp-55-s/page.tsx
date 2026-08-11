@@ -11,7 +11,7 @@ import { SITE_URL, OG_IMAGE, COMPANY } from '@/lib/seo.config';
 import LeadForm from '../LeadForm';
 
 export const metadata: Metadata = {
-  title: 'GSP 55 S – Kompaktowa Maszyna Flow Pack | MadejPak',
+  title: 'GSP 55 S – Kompaktowa Maszyna Flow Pack',
   description:
     'GSP 55 S – kompaktowa maszyna flow pack do 150 op./min. Budowa wspornikowa, 3 pary kół zgrzewających, folie hot-seal i cold-seal, zapamiętywanie receptur. Pakowanie przemysłowe.',
   keywords: [

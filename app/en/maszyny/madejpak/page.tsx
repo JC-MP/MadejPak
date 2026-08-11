@@ -9,7 +9,7 @@ import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 import { MADEJPAK_MACHINES_EN as MACHINES, MADEJPAK_GROUPS_EN as GROUPS } from '@/data/madejpakMachinesDataEn';
 
 export const metadata: Metadata = {
-  title: 'MadejPak Machines – own packaging, transport and automation equipment',
+  title: 'In-house machines – own packaging, transport and automation equipment',
   description:
     'MadejPak designs and builds its own machines for product packaging and transport: destacklers, feeders, robotic grippers and custom solutions for industry.',
   alternates: {

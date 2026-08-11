@@ -11,7 +11,7 @@ import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 import LeadForm from './LeadForm';
 
 export const metadata: Metadata = {
-  title: 'Poziome maszyny pakujące Flow Pack GSP – seria S i EVO | MadejPak',
+  title: 'Poziome maszyny pakujące Flow Pack GSP – seria S i EVO',
   description:
     'Poziome maszyny pakujące flow pack GSP w ofercie MadejPak. Serie S (45, 50, 55, 75) i EVO (MAP). Pakowanie żywności, kosmetyków i produktów przemysłowych w folię — do 400 op./min.',
   keywords: [

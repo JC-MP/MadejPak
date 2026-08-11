@@ -7,7 +7,7 @@ import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'Transport wewnętrzny i koniec linii pakującej – przenośniki | MadejPak',
+  title: 'Transport wewnętrzny i koniec linii pakującej – przenośniki',
   description:
     'MadejPak projektuje i integruje transport wewnętrzny, przenośniki i koniec linii pakującej. Od wyjścia maszyny pakującej po owiniętą paletę — owijarki, etykieciarki, systemy sortowania.',
   keywords: [

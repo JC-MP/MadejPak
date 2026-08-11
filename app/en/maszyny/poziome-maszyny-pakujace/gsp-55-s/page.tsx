@@ -11,7 +11,7 @@ import { SITE_URL, OG_IMAGE, COMPANY } from '@/lib/seo.config';
 import LeadFormEn from '../LeadFormEn';
 
 export const metadata: Metadata = {
-  title: 'GSP 55 S – Compact Industrial Flow Pack Machine | MadejPak',
+  title: 'GSP 55 S – Compact Industrial Flow Pack Machine',
   description:
     'GSP 55 S – compact flow pack machine up to 150 packs/min. Cantilever frame, 3 pairs of longitudinal sealing wheels, hot-seal and cold-seal films, recipe memory. Industrial packaging.',
   keywords: [

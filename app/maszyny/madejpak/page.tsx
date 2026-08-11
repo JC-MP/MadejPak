@@ -9,7 +9,7 @@ import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 import { MADEJPAK_MACHINES as MACHINES, MADEJPAK_GROUPS as GROUPS } from '@/data/madejpakMachinesData';
 
 export const metadata: Metadata = {
-  title: 'Maszyny MadejPak – własne urządzenia do pakowania, transportu i automatyzacji',
+  title: 'Maszyny własnej produkcji – urządzenia do pakowania, transportu i automatyzacji',
   description:
     'MadejPak projektuje i buduje własne maszyny do pakowania i transportu produktu: desztaplery, podajniki, chwytaki robotyczne oraz rozwiązania customowe dla przemysłu.',
   alternates: { canonical: `${SITE_URL}/maszyny/madejpak` },

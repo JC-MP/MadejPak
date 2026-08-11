@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE, NOTABLE_CLIENTS } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'MadejPak – Integrator linii pakujących i autoryzowany przedstawiciel Essegi i GSP',
+  title: 'MadejPak – Producent i integrator maszyn oraz linii pakujących',
   description:
-    'MadejPak — autoryzowany przedstawiciel Essegi i GSP w Polsce oraz integrator linii pakujących. Projektujemy, budujemy i serwisujemy maszyny. 25 lat, 200+ wdrożeń — zaufali nam m.in. Synthos, Solbet, Makarony Polskie i Gold Drop.',
+    'Polski producent i integrator maszyn oraz kompletnych linii pakujących. Automatyzacja, robotyzacja, własne rozwiązania, serwis i magazyn części w Polsce. 25 lat, 200+ wdrożeń.',
   keywords: [
     'MadejPak', 'Madej Pak', 'Madej',
     'integrator linii pakujących', 'integracja linii pakujących',
@@ -28,9 +28,9 @@ export const metadata: Metadata = {
   },
   openGraph: {
     url:   SITE_URL,
-    title: 'MadejPak – Integrator linii pakujących, autoryzowany przedstawiciel Essegi i GSP',
+    title: 'MadejPak – Producent i integrator maszyn oraz linii pakujących',
     description:
-      'Autoryzowany przedstawiciel Essegi i GSP w Polsce oraz integrator linii pakujących. Projektujemy, budujemy i serwisujemy maszyny. 25 lat, 200+ wdrożeń.',
+      'Polski producent i integrator maszyn oraz kompletnych linii pakujących. Automatyzacja, robotyzacja, własne rozwiązania, serwis i magazyn części w Polsce.',
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'MadejPak – integrator linii pakujących' }],
   },
 };

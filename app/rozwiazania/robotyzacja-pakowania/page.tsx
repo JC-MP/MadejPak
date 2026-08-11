@@ -8,7 +8,7 @@ import type { Metadata } from 'next';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
-  title: 'Robotyzacja pakowania – roboty i coboty w liniach pakujących | MadejPak',
+  title: 'Robotyzacja pakowania – roboty i coboty w liniach pakujących',
   description: 'MadejPak wdraża roboty przemysłowe i coboty w liniach pakujących — pick-and-place, paletyzacja robotyczna, robot do paletyzacji worków i kartonów. Integracja z istniejącą linią.',
   keywords: [
     'robotyzacja pakowania', 'robot do pakowania', 'paletyzacja robotyczna',
