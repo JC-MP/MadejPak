@@ -17,7 +17,7 @@ export const SITE_URL = 'https://madejpak.pl';
 // ─── Dane firmy ───────────────────────────────────────────────────────────────
 export const SITE_NAME = 'MadejPak';
 export const SITE_DESCRIPTION =
-  'Projektujemy i integrujemy linie pakujące, wdrażamy automatykę i robotyzację oraz dostarczamy maszyny dla przemysłu.';
+  'Polski producent i integrator linii pakujących. Budujemy własne maszyny i integrujemy rozwiązania renomowanych producentów (m.in. Essegi, GSP) w kompletne linie — automatyzacja, robotyzacja, serwis posprzedażowy i magazyn części zamiennych.';
 
 // ─── OG image default ─────────────────────────────────────────────────────────
 export const OG_IMAGE = `${SITE_URL}/og-image.jpg`;
@@ -41,7 +41,8 @@ export const COMPANY = {
     addressCountry:  'PL',
   },
   sameAs: [
-    'https://www.linkedin.com/company/madejpak',  // TODO: uzupełnić jeśli istnieje
+    'https://www.linkedin.com/company/madejpak',
+    'https://www.facebook.com/MadejPak',
   ],
 };
 

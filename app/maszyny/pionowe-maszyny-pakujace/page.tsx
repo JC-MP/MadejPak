@@ -77,7 +77,7 @@ const jsonLd = {
             url: `${PAGE_URL}/essegi-f700`,
             image: `${SITE_URL}/images/interpack/essegi-1.jpg`,
             brand: { '@type': 'Brand', name: 'Essegi' },
-            offers: { '@type': 'Offer', priceCurrency: 'PLN', availability: 'https://schema.org/InStock', seller: { '@type': 'Organization', name: COMPANY.name, url: COMPANY.url } },
+            manufacturer: { '@type': 'Organization', name: 'Essegi' },
           },
         },
         {
@@ -90,7 +90,7 @@ const jsonLd = {
             url: `${PAGE_URL}/essegi-f1000`,
             image: `${SITE_URL}/images/interpack/essegi-2.jpg`,
             brand: { '@type': 'Brand', name: 'Essegi' },
-            offers: { '@type': 'Offer', priceCurrency: 'PLN', availability: 'https://schema.org/InStock', seller: { '@type': 'Organization', name: COMPANY.name, url: COMPANY.url } },
+            manufacturer: { '@type': 'Organization', name: 'Essegi' },
           },
         },
         {
@@ -103,7 +103,7 @@ const jsonLd = {
             url: `${PAGE_URL}/essegi-f1200`,
             image: `${SITE_URL}/images/interpack/essegi-3.jpg`,
             brand: { '@type': 'Brand', name: 'Essegi' },
-            offers: { '@type': 'Offer', priceCurrency: 'PLN', availability: 'https://schema.org/InStock', seller: { '@type': 'Organization', name: COMPANY.name, url: COMPANY.url } },
+            manufacturer: { '@type': 'Organization', name: 'Essegi' },
           },
         },
         {
@@ -116,7 +116,7 @@ const jsonLd = {
             url: `${PAGE_URL}/essegi-f8004s`,
             image: `${SITE_URL}/images/interpack/essegi-1.jpg`,
             brand: { '@type': 'Brand', name: 'Essegi' },
-            offers: { '@type': 'Offer', priceCurrency: 'PLN', availability: 'https://schema.org/InStock', seller: { '@type': 'Organization', name: COMPANY.name, url: COMPANY.url } },
+            manufacturer: { '@type': 'Organization', name: 'Essegi' },
           },
         },
       ],
@@ -1314,6 +1314,9 @@ export default function PionoweMaszynyPage() {
           </Box>
         </Container>
       </Box>
+
+      {/* ── Dlaczego MadejPak (autoryzowany przedstawiciel vs importer) ── */}
+      <TrustDifferentiator />
 
       {/* ── Dlaczego MadejPak (autoryzowany przedstawiciel vs importer) ── */}
       <TrustDifferentiator />

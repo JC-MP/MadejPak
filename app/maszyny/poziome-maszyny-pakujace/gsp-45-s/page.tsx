@@ -42,12 +42,6 @@ const productSchema = {
   description: 'Elektroniczna pozioma maszyna pakująca flow pack z budową wspornikową (cantilever). Produkty spożywcze i niespożywcze.',
   brand: { '@type': 'Brand', name: 'GSP – Grupa Tecnopack' },
   manufacturer: { '@type': 'Organization', name: 'GSP – Grupa Tecnopack' },
-  offers: {
-    '@type': 'Offer',
-    seller: { '@type': 'Organization', name: COMPANY.name, url: COMPANY.url },
-    areaServed: 'PL',
-    availability: 'https://schema.org/InStock',
-  },
 };
 
 // ─── Design tokens ───────────────────────────────────────────────────────────

@@ -141,8 +141,29 @@ export default async function RealizacjaPage({
 
   if (!item || item.status !== 'pelne') notFound();
 
+  // VideoObject tylko gdy mamy realny film + datę publikacji (wymóg Google);
+  // film jest widoczny na stronie, więc schema zgadza się z treścią.
+  const videoLd = item.youtubeId && item.videoUploadDate ? {
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    name: item.tytul,
+    description: item.zajawka,
+    thumbnailUrl: [`https://i.ytimg.com/vi/${item.youtubeId}/hqdefault.jpg`],
+    uploadDate: item.videoUploadDate,
+    contentUrl: `https://www.youtube.com/watch?v=${item.youtubeId}`,
+    embedUrl: `https://www.youtube-nocookie.com/embed/${item.youtubeId}`,
+    publisher: {
+      '@type': 'Organization',
+      name: 'MadejPak',
+      logo: { '@type': 'ImageObject', url: `${SITE_URL}/MadejPakLogo.svg` },
+    },
+  } : null;
+
   return (
     <Box sx={{ bgcolor: BG, minHeight: '100vh', color: 'var(--text)' }}>
+      {videoLd && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoLd) }} />
+      )}
       {/* Nav spacer */}
       <Box sx={{ height: { xs: 64, lg: 72 } }} />
 

@@ -204,6 +204,14 @@ export default async function RealizacjaEnPage({ params }: { params: Promise<{ s
                   </Box>
                 </Box>
               )}
+              {item.url && (
+                <Box component="a" href={item.url} target="_blank" rel="noopener noreferrer" sx={{ display: 'inline-flex', alignItems: 'center', gap: 1, fontSize: '0.78rem', color: TEXT_DIM, textDecoration: 'none', transition: 'color 0.15s ease', '&:hover': { color: 'var(--dim-65)' } }}>
+                  Client website: {item.klient}
+                  <Box component="svg" viewBox="0 0 16 16" fill="none" aria-hidden="true" sx={{ width: 11, height: 11 }}>
+                    <path d="M6 3H3v10h10v-3M9 3h4v4M13 3l-6 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </Box>
+                </Box>
+              )}
             </Box>
           </Box>
         </Container>

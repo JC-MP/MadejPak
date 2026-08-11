@@ -109,7 +109,7 @@ export default function PartnersStripSection() {
               >
                 <Box
                   component="img"
-                  src={p.logoSrc}
+                  src={`${p.logoSrc}?v=2`}
                   alt={p.name}
                   onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
                     // Fallback to text when logo file not present yet

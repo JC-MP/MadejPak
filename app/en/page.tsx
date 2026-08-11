@@ -8,6 +8,8 @@ import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import Link from 'next/link';
 import { EVENTS, getEventStatus, type TradeEvent } from '@/data/eventsData';
+import ClientsSection from '@/components/sections/ClientsSection';
+import TrustDifferentiator from '@/components/sections/TrustDifferentiator';
 
 // ─── Design tokens ────────────────────────────────────────────────────────────
 const ACCENT       = '#E8610A';
@@ -673,6 +675,12 @@ export default function EnHomePage() {
           }}
         />
       </Box>
+
+      {/* Client logo strip */}
+      <ClientsSection lang="en" />
+
+      {/* Authorized integrator vs random importer + product highlights */}
+      <TrustDifferentiator lang="en" />
 
       {/* ── WHY MADEJPAK ─────────────────────────────────────────────────── */}
       <Box

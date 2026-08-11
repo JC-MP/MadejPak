@@ -42,12 +42,6 @@ const productSchema = {
   description: 'Przemysłowa maszyna flow pack do pakowania w atmosferze modyfikowanej (MAP). Box motion, płukanie gazem N₂/CO₂, folia PE i poliolefinowa.',
   brand: { '@type': 'Brand', name: 'GSP – Grupa Tecnopack' },
   manufacturer: { '@type': 'Organization', name: 'GSP – Grupa Tecnopack' },
-  offers: {
-    '@type': 'Offer',
-    seller: { '@type': 'Organization', name: COMPANY.name, url: COMPANY.url },
-    areaServed: 'PL',
-    availability: 'https://schema.org/InStock',
-  },
 };
 
 // ─── Design tokens ───────────────────────────────────────────────────────────

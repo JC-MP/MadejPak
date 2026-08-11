@@ -34,12 +34,6 @@ const productSchema = {
   description: 'Kompaktowa pionowa maszyna VFFS do produktów spożywczych i granulatów. 50 g–3 kg, 30–70 szt./min.',
   brand: { '@type': 'Brand', name: 'Essegi' },
   manufacturer: { '@type': 'Organization', name: 'ESSEGI 2 s.r.l.' },
-  offers: {
-    '@type': 'Offer',
-    seller: { '@type': 'Organization', name: COMPANY.name, url: COMPANY.url },
-    areaServed: 'PL',
-    availability: 'https://schema.org/InStock',
-  },
 };
 
 const BG      = 'var(--bg)';

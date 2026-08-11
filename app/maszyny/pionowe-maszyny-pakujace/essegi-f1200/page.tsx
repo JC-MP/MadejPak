@@ -38,12 +38,6 @@ const jsonLd = {
       category: 'Pionowe maszyny pakujące VFFS',
       image: `${SITE_URL}/images/interpack/essegi-3.jpg`,
       url: PAGE_URL,
-      offers: {
-        '@type': 'Offer',
-        priceCurrency: 'PLN',
-        availability: 'https://schema.org/InStock',
-        seller: { '@type': 'Organization', name: 'PPHU MadejPak Sp. z o.o.', url: SITE_URL },
-      },
     },
     {
       '@type': 'BreadcrumbList',

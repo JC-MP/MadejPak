@@ -53,6 +53,7 @@ export const metadata: Metadata = {
 const organizationSchema = {
   '@context':    'https://schema.org',
   '@type':       ['Organization', 'LocalBusiness'],
+  '@id':         `${SITE_URL}/#organization`,
   name:          COMPANY.name,
   legalName:     COMPANY.legalName,
   url:           COMPANY.url,
@@ -77,6 +78,17 @@ const organizationSchema = {
   areaServed:  { '@type': 'Country', name: 'Poland' },
 };
 
+// ─── JSON-LD WebSite ──────────────────────────────────────────────────────────
+const websiteSchema = {
+  '@context':  'https://schema.org',
+  '@type':     'WebSite',
+  '@id':       `${SITE_URL}/#website`,
+  name:        SITE_NAME,
+  url:         SITE_URL,
+  inLanguage:  ['pl-PL', 'en'],
+  publisher:   { '@id': `${SITE_URL}/#organization` },
+};
+
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const headersList = await headers();
   const pathname = headersList.get('x-pathname') ?? '';
@@ -89,6 +101,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
       <body style={{ margin: 0, padding: 0 }}>

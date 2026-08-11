@@ -23,7 +23,7 @@ const CLIENTS = [
   { name: 'Brapta',                src: '/logos/klienci/brapta.png',                href: 'https://brapta.com.pl/' },
   { name: 'Celpap',                src: '/logos/klienci/celpap.png',                href: 'https://celpap.pl/' },
   { name: 'Certech',               src: '/logos/klienci/certech.png',               href: 'https://www.certech.com.pl' },
-  { name: 'Ciech Sarzyna',         src: '/logos/klienci/ciech-sarzyna.png?v=2',     href: 'https://sarzynachemical.pl/' },
+  { name: 'Ciech Sarzyna',         src: '/logos/klienci/ciech-sarzyna.png',         href: 'https://sarzynachemical.pl/' },
   { name: 'Cykoria',               src: '/logos/klienci/cykoria.png',               href: 'https://www.cykoria.pl/' },
   { name: 'Dankoal',               src: '/logos/klienci/jednorazowegrile.png',      href: 'https://www.dancoal.pl/' },
   { name: 'Dars Cosmetics',        src: '/logos/klienci/dars-cosmetics.png',        href: 'https://dars.pl/' },
@@ -79,7 +79,21 @@ const CLIENTS = [
 // Duplicate for seamless loop
 const TRACK = [...CLIENTS, ...CLIENTS];
 
-export default function ClientsSection() {
+const LABELS = {
+  pl: {
+    accent: 'Zaufali', rest: ' nam',
+    subtitle: 'Marki, które zautomatyzowały pakowanie i koniec linii z MadejPak — od przemysłu spożywczego, przez chemię, po produkcję ciężką.',
+    linkHref: '/realizacje', linkText: 'Zobacz realizacje →',
+  },
+  en: {
+    accent: 'Trusted', rest: ' by leading brands',
+    subtitle: 'Brands that automated their packaging and end-of-line with MadejPak — from food, through chemicals, to heavy industry.',
+    linkHref: '/en/realizacje', linkText: 'See case studies →',
+  },
+} as const;
+
+export default function ClientsSection({ lang = 'pl' }: { lang?: 'pl' | 'en' }) {
+  const L = LABELS[lang];
   return (
     <Box
       component="section"
@@ -114,7 +128,7 @@ export default function ClientsSection() {
                 lineHeight: 1.15,
               }}
             >
-              <Box component="span" sx={{ color: ACCENT }}>Zaufali</Box> nam
+              <Box component="span" sx={{ color: ACCENT }}>{L.accent}</Box>{L.rest}
             </Typography>
             <Typography
               sx={{
@@ -124,13 +138,13 @@ export default function ClientsSection() {
                 lineHeight: 1.6,
               }}
             >
-              Marki, które zautomatyzowały pakowanie i koniec linii z MadejPak — od przemysłu spożywczego, przez chemię, po produkcję ciężką.
+              {L.subtitle}
             </Typography>
           </Box>
 
           <Box
             component={Link}
-            href="/realizacje"
+            href={L.linkHref}
             sx={{
               fontSize: '0.82rem',
               fontWeight: 600,
@@ -142,7 +156,7 @@ export default function ClientsSection() {
               '&:hover': { textDecoration: 'underline' },
             }}
           >
-            Zobacz realizacje →
+            {L.linkText}
           </Box>
         </Box>
       </Container>
@@ -212,7 +226,7 @@ export default function ClientsSection() {
             >
               <Box
                 component="img"
-                src={client.src}
+                src={`${client.src}?v=2`}
                 alt={client.name}
                 onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
                   // Brak pliku logo → pokaż nazwę firmy zamiast zepsutego obrazka

@@ -38,7 +38,7 @@ function PartnerLogo({ partner }: { partner: Partner }) {
     return (
       <Box
         component="img"
-        src={partner.logoSrc}
+        src={`${partner.logoSrc}?v=2`}
         alt={partner.name}
         onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
           e.currentTarget.style.display = 'none';

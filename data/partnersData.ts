@@ -19,7 +19,7 @@ export const PARTNERS: Partner[] = [
   {
     id: 'concetti',
     name: 'Concetti',
-    logoSrc: '/logos/partnerzy/concetti.png?v=2',
+    logoSrc: '/logos/partnerzy/concetti.png',
     category: 'Workowanie i koniec linii',
     headline: 'Workownice i linie workujące dla przemysłu',
     description:
