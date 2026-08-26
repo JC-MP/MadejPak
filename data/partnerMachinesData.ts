@@ -31,8 +31,8 @@ export const MACHINE_CATEGORIES: MachineCategory[] = [
       'Integracja z ważeniem i transportem produktu',
     ],
     partners: ['GSP / Tecno Pack'],
-    imageSrc: '/images/machines/flowpack.jpg',
-    imageAlt: 'Pozioma maszyna pakująca flow pack',
+    imageSrc: '/images/machines/flowpack-gsp45s.jpg',
+    imageAlt: 'GSP 45 S — pozioma maszyna pakująca flow pack',
     cta: { label: 'Zobacz maszyny flow pack', href: '/maszyny/poziome-maszyny-pakujace' },
   },
   {
