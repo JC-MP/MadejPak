@@ -28,15 +28,15 @@ export const EVENTS: TradeEvent[] = [
   {
     id: 'dni-otwarte-coboty-2026',
     name: 'Dni Otwarte MadejPak — Coboty w Akcji',
-    dateLabel: 'do 31 sierpnia 2026',
-    dateStart: '2026-08-31',   // koniec kampanii — trzyma wpis na górze listy do końca wakacji
+    dateLabel: 'termin do uzgodnienia',
+    dateStart: '2026-12-31',   // pokazy trwają bez daty końca — wysoka data trzyma wpis na górze listy
     city: 'Dziewin',
     venue: 'Siedziba MadejPak',
     country: 'Polska',
     zajawka:
-      'Pokazy cobotów DOBOT na żywo — paletyzacja CR20A, pick & place Nova 5, integracja z flowpackiem. Trwa do 31 sierpnia 2026, termin do uzgodnienia. Bezpłatna rejestracja, ograniczona liczba miejsc.',
+      'Pokazy cobotów DOBOT na żywo — paletyzacja CR20A, pick & place Nova 5, integracja z flowpackiem. Zapraszamy na bieżąco, termin do uzgodnienia. Bezpłatna rejestracja, ograniczona liczba miejsc.',
     opis:
-      'Dni Otwarte MadejPak + DOBOT to wydarzenie dla właścicieli firm, kierowników produkcji i inżynierów, którzy chcą zobaczyć na żywo jak coboty pracują w realnych warunkach produkcyjnych. DOBOT CR20A (20 kg, zasięg 1700 mm) pokaże możliwości paletyzacji kartonów i worków, a Nova 5 (5 kg, zasięg 850 mm) zademonstruje precyzyjny pick & place i automatyczne podawanie do maszyny flow-pack. Wstęp bezpłatny, rejestracja obowiązkowa — pokazy prowadzimy w dni robocze do 31 sierpnia 2026, w terminie uzgodnionym indywidualnie.',
+      'Dni Otwarte MadejPak + DOBOT to wydarzenie dla właścicieli firm, kierowników produkcji i inżynierów, którzy chcą zobaczyć na żywo jak coboty pracują w realnych warunkach produkcyjnych. DOBOT CR20A (20 kg, zasięg 1700 mm) pokaże możliwości paletyzacji kartonów i worków, a Nova 5 (5 kg, zasięg 850 mm) zademonstruje precyzyjny pick & place i automatyczne podawanie do maszyny flow-pack. Wstęp bezpłatny, rejestracja obowiązkowa — pokazy prowadzimy w dni robocze, w terminie uzgodnionym indywidualnie (mamy maszynę na stanie, zapraszamy na bieżąco).',
     highlights: [
       'DOBOT CR20A — paletyzacja kartonów i worków, praca 24/7',
       'DOBOT Nova 5 — pick & place produktów, integracja z flowpackiem',
@@ -68,6 +68,28 @@ export const EVENTS: TradeEvent[] = [
       'Concetti — workowanie pet food IMF āles, Big Bag, C-LAB, serwis CHECK (Halle 12 / B10)',
       'Vimco — maszyny do pakowania wtórnego, box erecting, wrap-around, top-load (Halle 13 / C59)',
     ],
+    eventType: 'targi',
+  },
+  {
+    id: 'maintenance-symas-2026',
+    name: 'MAINTENANCE & SYMAS® 2026',
+    dateLabel: '14–15 października 2026',
+    dateStart: '2026-10-14',
+    dateEnd: '2026-10-15',
+    city: 'Kraków',
+    venue: 'EXPO Kraków',
+    country: 'Polska',
+    zajawka:
+      'MadejPak na targach utrzymania ruchu i automatyki przemysłowej. Stoisko B33 — z pionową maszyną pakującą Essegi F1000 na żywo. Zapraszamy!',
+    opis:
+      '17. Międzynarodowe Targi Obróbki, Magazynowania i Transportu Materiałów Sypkich i Masowych (SYMAS) oraz 17. Międzynarodowe Targi Utrzymania Ruchu, Planowania i Optymalizacji Produkcji (MAINTENANCE) to jedne z najważniejszych w Polsce wydarzeń dla przemysłu sypkiego i utrzymania ruchu. MadejPak będzie obecny na stoisku B33, gdzie na żywo zaprezentujemy pionową maszynę pakującą Essegi F1000 oraz porozmawiamy o automatyzacji, robotyzacji i integracji linii pakujących. Zapraszamy 14–15 października 2026 w EXPO Kraków.',
+    boothInfo: 'Stoisko B33',
+    highlights: [
+      'Pionowa maszyna pakująca Essegi F1000 — na żywo na stoisku',
+      'Rozmowy o automatyzacji i integracji linii pakujących',
+      'Konsultacje z zespołem inżynierów MadejPak',
+    ],
+    invitationUrl: '/zaproszenie-symas-2026',
     eventType: 'targi',
   },
 
