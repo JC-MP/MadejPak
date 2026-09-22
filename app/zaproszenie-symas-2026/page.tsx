@@ -9,9 +9,9 @@ import { SITE_URL } from '@/lib/seo.config';
 import PrintButton from '../zaproszenie-interpack-2026/PrintButton';
 
 export const metadata: Metadata = {
-  title: 'Zaproszenie — MAINTENANCE & SYMAS 2026',
+  title: 'Zaproszenie — SYMAS & MAINTENANCE 2026',
   description:
-    'MadejPak zaprasza na targi MAINTENANCE & SYMAS 2026 w Krakowie. Stoisko B33 — pionowa maszyna pakująca Essegi F1000 na żywo. 14–15 października 2026, EXPO Kraków.',
+    'MadejPak zaprasza na targi SYMAS & MAINTENANCE 2026 w Krakowie. Stoisko B33 — pionowa maszyna pakująca Essegi F1000 na żywo. 14–15 października 2026, EXPO Kraków.',
   alternates: { canonical: `${SITE_URL}/zaproszenie-symas-2026` },
   robots: { index: true, follow: true },
 };
@@ -91,12 +91,17 @@ export default function SymasInvitationPage() {
           {/* delikatna linia akcentu u góry */}
           <Box sx={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: `linear-gradient(90deg, ${ACCENT}, color-mix(in srgb, ${ACCENT} 30%, transparent))`, '@media print': { display: 'none' } }} />
           <Container maxWidth="lg">
+            {/* Co-branding: MadejPak × oficjalne logo targów */}
+            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 3, flexWrap: 'wrap', pb: { xs: 4, md: 5 }, mb: { xs: 6, md: 8 }, borderBottom: `1px solid ${BORDER}` }}>
+              <Box sx={{ position: 'relative', width: { xs: 190, md: 250 }, height: { xs: 49, md: 65 }, flexShrink: 0 }}>
+                <Image src="/MadejPakLogo.svg" alt="MadejPak" fill style={{ objectFit: 'contain', objectPosition: 'left center' }} sizes="250px" priority />
+              </Box>
+              <Box sx={{ position: 'relative', width: { xs: 150, md: 196 }, height: { xs: 37, md: 49 }, flexShrink: 0 }}>
+                <Image src="/images/targi/symas-2026-logo.png" alt="SYMAS & MAINTENANCE 2026" fill style={{ objectFit: 'contain', objectPosition: 'right center' }} sizes="196px" />
+              </Box>
+            </Box>
             <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: { xs: 6, md: 10 }, alignItems: 'end' }}>
               <Box>
-                <Box sx={{ mb: 3, '@media print': { mb: 2 } }}>
-                  <Image src="/MadejPakLogo.svg" alt="MadejPak" width={182} height={47} style={{ objectFit: 'contain', objectPosition: 'left' }} />
-                </Box>
-
                 <Box sx={{ display: 'inline-flex', alignItems: 'center', gap: 1, px: 1.5, py: 0.6, mb: 2.5, borderRadius: '100px', bgcolor: `color-mix(in srgb, ${ACCENT} 12%, transparent)`, border: `1px solid color-mix(in srgb, ${ACCENT} 30%, transparent)` }}>
                   <Box sx={{ width: 6, height: 6, borderRadius: '50%', bgcolor: ACCENT }} />
                   <Typography sx={{ fontSize: '0.6rem', fontWeight: 700, letterSpacing: '0.16em', textTransform: 'uppercase', color: ACCENT }}>
@@ -107,9 +112,9 @@ export default function SymasInvitationPage() {
                   variant="h1"
                   sx={{ fontSize: { xs: '2.3rem', md: '3.25rem', lg: '3.75rem' }, fontWeight: 800, lineHeight: 1.05, letterSpacing: '-0.03em', color: 'var(--dim-85)', mb: 3 }}
                 >
-                  MAINTENANCE
+                  SYMAS
                   <br />
-                  &amp; SYMAS <Box component="span" sx={{ color: ACCENT }}>2026</Box>
+                  &amp; MAINTENANCE <Box component="span" sx={{ color: ACCENT }}>2026</Box>
                 </Typography>
                 {/* chipsy: data · miejsce · stoisko */}
                 <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1.25, mb: 2.5 }}>
@@ -134,7 +139,7 @@ export default function SymasInvitationPage() {
 
               <Box>
                 <Typography sx={{ fontSize: { xs: '1rem', md: '1.1rem' }, fontWeight: 800, lineHeight: 1.5, color: 'var(--dim-85)', mb: 1.5 }}>
-                  Mamy przyjemność zaprosić Państwa na targi utrzymania ruchu i automatyki przemysłowej MAINTENANCE &amp; SYMAS 2026.
+                  Mamy przyjemność zaprosić Państwa na targi utrzymania ruchu i automatyki przemysłowej SYMAS &amp; MAINTENANCE 2026.
                 </Typography>
                 <Typography sx={{ fontSize: { xs: '0.93rem', md: '1rem' }, lineHeight: 1.85, color: TEXT_DIM, mb: 1.5 }}>
                   Odwiedź nasze stoisko <b>B33</b>, gdzie na żywo zaprezentujemy pionową maszynę pakującą <b>Essegi F1000</b> oraz porozmawiamy o automatyzacji, robotyzacji i integracji kompletnych linii pakujących.
@@ -372,7 +377,7 @@ export default function SymasInvitationPage() {
                   Kontakt
                 </Typography>
                 <Typography variant="h2" sx={{ fontSize: { xs: '1.5rem', md: '2rem' }, fontWeight: 800, lineHeight: 1.15, letterSpacing: '-0.025em', mb: 2.5 }}>
-                  Planujesz wizytę<br />na MAINTENANCE &amp; SYMAS?
+                  Planujesz wizytę<br />na SYMAS &amp; MAINTENANCE?
                 </Typography>
                 <Typography sx={{ fontSize: '0.9rem', lineHeight: 1.8, color: TEXT_DIM, mb: 4 }}>
                   Skontaktuj się z nami wcześniej — umówimy spotkanie na stoisku B33, przygotujemy materiały dopasowane do Twojej branży i odpowiemy na pytania.
@@ -444,7 +449,7 @@ export default function SymasInvitationPage() {
                     </Typography>
                   </Box>
                   {[
-                    { label: 'MAINTENANCE & SYMAS 2026', val: 'EXPO Kraków' },
+                    { label: 'SYMAS & MAINTENANCE 2026', val: 'EXPO Kraków' },
                     { label: 'Stoisko', val: 'B33' },
                     { label: 'Na żywo', val: 'Essegi F1000' },
                     { label: 'Termin', val: '14–15.10.2026' },
@@ -465,7 +470,7 @@ export default function SymasInvitationPage() {
                   </Box>
                   {[
                     { label: 'Rejestracja gości', desc: 'Bezpłatny wstęp branżowy po rejestracji online', href: REGISTRATION_URL },
-                    { label: 'Strona targów', desc: 'MAINTENANCE & SYMAS — program i godziny', href: 'https://symas.krakow.pl/' },
+                    { label: 'Strona targów', desc: 'SYMAS & MAINTENANCE — program i godziny', href: 'https://symas.krakow.pl/' },
                     { label: 'Dojazd — EXPO Kraków', desc: 'ul. Galicyjska 9, 31-586 Kraków', href: 'https://www.google.com/maps/search/?api=1&query=EXPO+Krak%C3%B3w+ul.+Galicyjska+9' },
                   ].map(({ label, desc, href }, idx, arr) => (
                     <Box key={label} component="a" href={href} target="_blank" rel="noopener noreferrer" sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', px: 3.5, py: 1.75, borderBottom: idx < arr.length - 1 ? `1px solid ${BORDER}` : 'none', textDecoration: 'none', transition: 'background-color 0.15s ease', '&:hover': { bgcolor: 'var(--surface-03)' } }}>
@@ -503,7 +508,7 @@ export default function SymasInvitationPage() {
                   Nasze stoisko
                 </Typography>
                 <Typography sx={{ fontSize: '0.78rem', color: '#444', lineHeight: 1.8 }}>
-                  MAINTENANCE &amp; SYMAS 2026<br />
+                  SYMAS &amp; MAINTENANCE 2026<br />
                   EXPO Kraków · Stoisko B33<br />
                   14–15.10.2026 · śr 9–16, czw 9–15<br />
                   Na żywo: Essegi F1000
@@ -536,7 +541,7 @@ export default function SymasInvitationPage() {
               <Box
                 component="img"
                 src="/images/targi/symas-2026-banner.jpg"
-                alt="MAINTENANCE & SYMAS 2026 — 14–15 października 2026, EXPO Kraków"
+                alt="SYMAS & MAINTENANCE 2026 — 14–15 października 2026, EXPO Kraków"
                 sx={{ width: '100%', height: 'auto', display: 'block' }}
               />
             </Box>

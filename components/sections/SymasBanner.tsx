@@ -16,7 +16,7 @@ export default function SymasBanner() {
   return (
     <Box
       component="section"
-      aria-label="Zaproszenie na targi MAINTENANCE & SYMAS 2026"
+      aria-label="Zaproszenie na targi SYMAS & MAINTENANCE 2026"
       sx={{
         bgcolor: `${ACCENT}0D`,
         borderBottom: '1px solid rgba(232,97,10,0.22)',
@@ -35,7 +35,7 @@ export default function SymasBanner() {
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
             <Box sx={{ width: 8, height: 8, borderRadius: '50%', bgcolor: ACCENT, flexShrink: 0, animation: 'symas-banner-pulse 2s infinite' }} />
             <Typography sx={{ fontSize: { xs: '0.82rem', md: '0.88rem' }, color: 'var(--dim-75)', lineHeight: 1.4 }}>
-              <Box component="span" sx={{ fontWeight: 700, color: ACCENT }}>MAINTENANCE &amp; SYMAS 2026</Box>
+              <Box component="span" sx={{ fontWeight: 700, color: ACCENT }}>SYMAS &amp; MAINTENANCE 2026</Box>
               {' '}— 14–15 października, EXPO Kraków · stoisko&nbsp;B33.{' '}
               <Box component="span" sx={{ color: 'var(--dim-52)' }}>
                 Na żywo: pionowa maszyna pakująca Essegi F1000.

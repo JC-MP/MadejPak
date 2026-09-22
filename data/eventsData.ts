@@ -72,7 +72,7 @@ export const EVENTS: TradeEvent[] = [
   },
   {
     id: 'maintenance-symas-2026',
-    name: 'MAINTENANCE & SYMAS® 2026',
+    name: 'SYMAS® & MAINTENANCE 2026',
     dateLabel: '14–15 października 2026',
     dateStart: '2026-10-14',
     dateEnd: '2026-10-15',
