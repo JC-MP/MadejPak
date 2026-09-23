@@ -35,15 +35,6 @@ export const metadata: Metadata = {
   },
 };
 
-const productSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Product',
-  name: 'GSP 55 S',
-  description: 'Kompaktowa elektroniczna maszyna flow pack do 150 op./min. Budowa wspornikowa, folie hot-seal i cold-seal, zapamiętywanie receptur.',
-  brand: { '@type': 'Brand', name: 'GSP – Grupa Tecnopack' },
-  manufacturer: { '@type': 'Organization', name: 'GSP – Grupa Tecnopack' },
-};
-
 // ─── Design tokens ───────────────────────────────────────────────────────────
 const BG       = 'var(--bg)';
 const BG_CARD  = 'var(--bg-card)';
@@ -169,11 +160,6 @@ const ZASTOSOWANIA = [
 export default function Gsp55SPage() {
   return (
     <main>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
-      />
-
       <Box sx={{ height: { xs: 64, lg: 72 } }} />
 
       {/* ── HERO ─────────────────────────────────────────────────── */}

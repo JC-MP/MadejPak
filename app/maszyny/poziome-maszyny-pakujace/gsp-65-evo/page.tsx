@@ -35,15 +35,6 @@ export const metadata: Metadata = {
   },
 };
 
-const productSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Product',
-  name: 'GSP 65 EVO',
-  description: 'Przemysłowa maszyna flow pack do pakowania w atmosferze modyfikowanej (MAP). Box motion, płukanie gazem N₂/CO₂, folia PE i poliolefinowa.',
-  brand: { '@type': 'Brand', name: 'GSP – Grupa Tecnopack' },
-  manufacturer: { '@type': 'Organization', name: 'GSP – Grupa Tecnopack' },
-};
-
 // ─── Design tokens ───────────────────────────────────────────────────────────
 const BG      = 'var(--bg)';
 const BG_CARD = 'var(--bg-card)';
@@ -131,11 +122,6 @@ const ZASTOSOWANIA = [
 export default function Gsp65EvoPage() {
   return (
     <main>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
-      />
-
       <Box sx={{ height: { xs: 64, lg: 72 } }} />
 
       {/* ── HERO ─────────────────────────────────────────────────── */}

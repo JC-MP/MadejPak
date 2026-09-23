@@ -47,6 +47,7 @@ import EventsSection from '@/components/sections/EventsSection';
 
 import CobotsBanner from '@/components/sections/CobotsBanner';
 import SymasBanner from '@/components/sections/SymasBanner';
+import SymasPopup from '@/components/sections/SymasPopup';
 
 export default function HomePage() {
   return (
@@ -54,8 +55,11 @@ export default function HomePage() {
       {/* Baner Coboty w Akcji — Dni Otwarte MadejPak + DOBOT, znika po 26 czerwca 2026 */}
       <CobotsBanner />
 
-      {/* Baner targów MAINTENANCE & SYMAS 2026 — linkuje do zaproszenia, znika po 16.10.2026 */}
+      {/* Baner targów SYMAS & MAINTENANCE 2026 — linkuje do zaproszenia, znika po 16.10.2026 */}
       <SymasBanner />
+
+      {/* Wyskakujące okienko targów SYMAS — po 3 s, raz na sesję, znika po 16.10.2026 */}
+      <SymasPopup />
 
 {/* 1. Hero — kim jesteśmy, wideo, liczby */}
       <HeroSection />
