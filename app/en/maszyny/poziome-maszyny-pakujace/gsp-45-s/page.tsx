@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
-import { SITE_URL, OG_IMAGE, COMPANY } from '@/lib/seo.config';
+import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 import LeadFormEn from '../LeadFormEn';
 
 export const metadata: Metadata = {
@@ -32,21 +32,6 @@ export const metadata: Metadata = {
     title:       'GSP 45 S – Cantilever Flow Pack Machine | MadejPak',
     description: 'Electronic flow pack machine with cantilever frame. Food and non-food packaging, fast format changeover, rich options.',
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'GSP 45 S – flow pack machine – MadejPak' }],
-  },
-};
-
-const productSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Product',
-  name: 'GSP 45 S',
-  description: 'Electronic horizontal flow pack machine with cantilever frame. Food and non-food packaging.',
-  brand: { '@type': 'Brand', name: 'GSP – Tecnopack Group' },
-  manufacturer: { '@type': 'Organization', name: 'GSP – Tecnopack Group' },
-  offers: {
-    '@type': 'Offer',
-    seller: { '@type': 'Organization', name: COMPANY.name, url: COMPANY.url },
-    areaServed: 'PL',
-    availability: 'https://schema.org/InStock',
   },
 };
 
@@ -151,11 +136,6 @@ const APPLICATIONS = [
 export default function Gsp45SEnPage() {
   return (
     <main>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
-      />
-
       <Box sx={{ height: { xs: 64, lg: 72 } }} />
 
       {/* ── HERO ─────────────────────────────────────────────────── */}

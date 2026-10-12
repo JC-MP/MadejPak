@@ -13,14 +13,14 @@ const PAGE_URL = `${SITE_URL}/maszyny/pionowe-maszyny-pakujace/essegi-f1200`;
 export const metadata: Metadata = {
   title: 'Essegi F1200 / F1300 – Duże Worki VFFS do 50 kg',
   description:
-    'Essegi F1200 i F1300 — pionowe maszyny pakujące VFFS do worków 5–50 kg. Format do 980×570 mm, rolka folii 1180 mm, 10–22 szt./min. Produkty sypkie i granulowane. Zapytaj MadejPak.',
+    'Essegi F1200 i F1300 — pionowe maszyny pakujące VFFS do worków 5–50 kg. Format worka do 980×570 mm, folia do 1180 mm szerokości, 10–22 szt./min. Produkty sypkie i granulowane. Zapytaj MadejPak.',
   alternates: { canonical: PAGE_URL },
   openGraph: {
     type: 'website',
     url: PAGE_URL,
     siteName: 'MadejPak',
     title: 'Essegi F1200 / F1300 – Duże Worki VFFS | MadejPak',
-    description: 'VFFS do 50 kg — mąka, pasza, granulat. Format 980×570 mm, rolka 1180 mm, 10–22 szt./min.',
+    description: 'VFFS do 50 kg — mąka, pasza, granulat. Format worka 980×570 mm, folia do 1180 mm, 10–22 szt./min.',
     locale: 'pl_PL',
     images: [{ url: `${SITE_URL}/images/interpack/essegi-3.jpg`, width: 1200, height: 800, alt: 'Essegi F1200 duże worki VFFS' }],
   },
@@ -29,16 +29,6 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
-    {
-      '@type': 'Product',
-      name: 'Essegi F1200 / F1300',
-      description: 'Pionowe maszyny pakujące VFFS do dużych worków 5–50 kg. Przeznaczone do produktów sypkich: mąki, paszy, granulatu, soli. Format do 980×570 mm.',
-      brand: { '@type': 'Brand', name: 'Essegi' },
-      manufacturer: { '@type': 'Organization', name: 'Essegi' },
-      category: 'Pionowe maszyny pakujące VFFS',
-      image: `${SITE_URL}/images/interpack/essegi-3.jpg`,
-      url: PAGE_URL,
-    },
     {
       '@type': 'BreadcrumbList',
       itemListElement: [
@@ -73,8 +63,8 @@ function StatChip({ value, label }: { value: string; label: string }) {
 }
 
 const STRENGTHS = [
-  { title: 'Format na duże worki', desc: 'Szerokość folii do 980 mm i długość worka do 570 mm — pakowanie produktów w workach 5–50 kg w jednym cyklu.' },
-  { title: 'Rolka folii 1180 mm', desc: 'Duży magazyn folii (rolka do 1180 mm) pozwala na długą pracę bez przestojów przy zmianach rolki.' },
+  { title: 'Format na duże worki', desc: 'Maksymalny format worka 980 × 570 mm (F1300: 1080 × 670 mm) — pakowanie produktów w workach 5–50 kg w jednym cyklu.' },
+  { title: 'Folia do 1180 mm szerokości', desc: 'Szeroka rolka folii (do 1180 mm, w F1300 do 1280 mm) pozwala formować duże worki — od pasz i nawozów po ziemię i korę.' },
   { title: 'Wersje MEC i SYNCRO', desc: 'Napęd mechaniczny (MEC) do 14 szt./min lub serwomechanizm SYNCRO do 22 szt./min — dobieramy do wymagań linii.' },
   { title: 'Wytrzymała rama', desc: 'Rama z profili stalowych malowanych proszkowo, opcjonalnie ze stali nierdzewnej — do środowisk wilgotnych i spożywczych.' },
   { title: 'Precyzyjny zgrzew', desc: 'Regulowane szczęki termozgrzewające z kontrolą temperatury — szczelny i estetyczny zgrzew na grubszych foliach PP/PE.' },
@@ -92,9 +82,11 @@ const USE_CASES = [
 
 const SPECS: { label: string; value: string }[] = [
   { label: 'Zakres wagowy', value: '5 – 50 kg' },
-  { label: 'Maks. szerokość folii', value: '980 mm' },
-  { label: 'Maks. długość worka', value: '570 mm' },
-  { label: 'Maks. średnica rolki', value: '1 180 mm' },
+  { label: 'Maks. format worka', value: '980 × 570 mm (F1300: 1080 × 670 mm)' },
+  { label: 'Maks. szerokość folii (rolka)', value: '1 180 mm (F1300: 1 280 mm)' },
+  { label: 'Dozowanie objętościowe DTS80', value: '10 – 80 l (ziemia, kora, torf)' },
+  { label: 'Wydajność z DTS80', value: 'MEC 14–18 · SYNCRO 18–24 szt./min' },
+  { label: 'F1300 Motion SU&SO', value: 'do 30 szt./min' },
   { label: 'Wydajność MEC', value: '10 – 14 szt./min' },
   { label: 'Wydajność SYNCRO', value: '18 – 22 szt./min' },
   { label: 'Typy worków', value: 'Poduszka, z bocznymi fałdami' },
@@ -141,14 +133,14 @@ export default function EssegiF1200Page() {
               Essegi F1200 / F1300
             </Typography>
             <Typography sx={{ fontSize: { xs: '1rem', md: '1.15rem' }, color: 'rgba(255,255,255,0.72)', lineHeight: 1.7, mb: 4, maxWidth: 540 }}>
-              Pionowa maszyna pakująca VFFS do dużych worków 5–50&nbsp;kg. Format do 980×570&nbsp;mm,
-              rolka folii do 1180&nbsp;mm — idealna do workowni mąki, paszy i granulatu.
+              Pionowa maszyna pakująca VFFS do dużych worków 5–50&nbsp;kg. Format worka do 980×570&nbsp;mm,
+              folia do 1180&nbsp;mm szerokości — idealna do workowni mąki, paszy i granulatu.
             </Typography>
 
             <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 2, mb: 4, borderTop: '1px solid rgba(255,255,255,0.12)', borderBottom: '1px solid rgba(255,255,255,0.12)', py: 2.5 }}>
               <StatChip value="50 kg" label="maks. porcja" />
               <StatChip value="22" label="szt./min max" />
-              <StatChip value="980 mm" label="szer. folii" />
+              <StatChip value="1180 mm" label="szer. folii" />
               <StatChip value="30+" label="lat Essegi" />
             </Box>
 

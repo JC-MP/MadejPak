@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
-import { SITE_URL, OG_IMAGE, COMPANY } from '@/lib/seo.config';
+import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 import LeadForm from '../LeadForm';
 
 export const metadata: Metadata = {
@@ -25,15 +25,6 @@ export const metadata: Metadata = {
     description: 'Kompaktowa maszyna VFFS Essegi F700. 30–70 szt./min, 50 g–3 kg.',
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Essegi F700 – MadejPak' }],
   },
-};
-
-const productSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Product',
-  name: 'Essegi F700',
-  description: 'Kompaktowa pionowa maszyna VFFS do produktów spożywczych i granulatów. 50 g–3 kg, 30–70 szt./min.',
-  brand: { '@type': 'Brand', name: 'Essegi' },
-  manufacturer: { '@type': 'Organization', name: 'ESSEGI 2 s.r.l.' },
 };
 
 const BG      = 'var(--bg)';
@@ -103,7 +94,6 @@ const OPCJE = [
 export default function EssegiF700Page() {
   return (
     <main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
       <Box sx={{ height: { xs: 64, lg: 72 } }} />
 
       {/* HERO */}

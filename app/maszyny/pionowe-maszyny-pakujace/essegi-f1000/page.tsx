@@ -13,7 +13,7 @@ const PAGE_URL = `${SITE_URL}/maszyny/pionowe-maszyny-pakujace/essegi-f1000`;
 export const metadata: Metadata = {
   title: 'Essegi F1000 – Pionowa Maszyna Pakująca VFFS do 25 kg',
   description:
-    'Essegi F1000 — pionowa maszyna pakująca VFFS do produktów sypkich i granulowanych 1–25 kg. Wersje Standard, EcoFocus, Motion. Format do 470×680 mm, 10–22 szt./min. Zapytaj MadejPak.',
+    'Essegi F1000 — pionowa maszyna pakująca VFFS do produktów sypkich i granulowanych 1–25 kg. Wersje Standard, EcoFocus (pellet), Motion SU&SO. Format do 470×680 mm, do 30 szt./min. Zapytaj MadejPak.',
   alternates: { canonical: PAGE_URL },
   openGraph: {
     type: 'website',
@@ -29,16 +29,6 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
-    {
-      '@type': 'Product',
-      name: 'Essegi F1000',
-      description: 'Pionowa maszyna pakująca VFFS do produktów sypkich i granulowanych o masie 1–25 kg. Dostępna w wersjach Standard, EcoFocus i Motion SU&SO.',
-      brand: { '@type': 'Brand', name: 'Essegi' },
-      manufacturer: { '@type': 'Organization', name: 'Essegi' },
-      category: 'Pionowe maszyny pakujące VFFS',
-      image: `${SITE_URL}/images/interpack/essegi-2.jpg`,
-      url: PAGE_URL,
-    },
     {
       '@type': 'BreadcrumbList',
       itemListElement: [
@@ -73,8 +63,8 @@ function StatChip({ value, label }: { value: string; label: string }) {
 }
 
 const STRENGTHS = [
-  { title: 'Wersja EcoFocus', desc: 'Specjalne szczęki termozgrzewające skupiają ciepło precyzyjnie — oszczędność energii i lepsza jakość spoiny.' },
-  { title: 'Wersja Motion SU&SO', desc: 'System poruszania folii góra–dół (SU) i obrotu (SO) eliminuje naprężenia i fałdy — idealna dla trudnych materiałów foliowych.' },
+  { title: 'Wersja EcoFocus — pod pellet', desc: 'Konfiguracja zaprojektowana dla pelletu drzewnego i podobnych produktów: worki 5–15 kg, waga taśmowa B/N-K40 i taśma odbiorcza, 7–10 worków/min.' },
+  { title: 'Wersja Motion SU&SO', desc: 'Folia napędzana silnikiem brushless z płynną regulacją prędkości, a zespół zgrzewający porusza się na wózku zsynchronizowanym z folią — do 30 worków/min.' },
   { title: 'Szeroki zakres wagowy', desc: 'Format od 1 do 25 kg — jeden model obsługuje zarówno małe opakowania półkilogramowe, jak i duże worki do 25 kg.' },
   { title: 'Stabilne dozowanie', desc: 'Integracja z wagami wielogłowicowymi GSP i innymi systemami podawania zapewnia powtarzalność porcji.' },
   { title: 'Łatwa zmiana formatu', desc: 'Szybka regulacja szerokości formy i długości zgrzewu — zmiana produktu w kilkanaście minut.' },
@@ -92,18 +82,20 @@ const USE_CASES = [
 
 const SPECS: { label: string; value: string }[] = [
   { label: 'Zakres wagowy', value: '1 – 25 kg' },
-  { label: 'Maks. szerokość folii', value: '470 mm' },
-  { label: 'Maks. długość worka', value: '680 mm' },
+  { label: 'Maks. format worka', value: '470 × 680 mm (Motion: 470 × 700 mm)' },
+  { label: 'Maks. szerokość folii (rolka)', value: '980 mm' },
   { label: 'Wydajność MEC', value: '10 – 14 szt./min' },
   { label: 'Wydajność SYNCRO', value: '16 – 22 szt./min' },
+  { label: 'Wydajność Motion SU&SO', value: 'do 30 szt./min' },
+  { label: 'EcoFocus (pellet 5–15 kg)', value: '7 – 10 szt./min' },
   { label: 'Wersje', value: 'Standard / EcoFocus / Motion SU&SO' },
   { label: 'Napęd zgrzewu', value: 'Serwomotor (opcja: pneumatyczny)' },
   { label: 'Zasilanie', value: '400 V / 50 Hz' },
 ];
 
 const OPTIONS = [
-  'Specjalne szczęki EcoFocus (skupione ciepło)',
-  'System Motion SU i/lub SO',
+  'Konfiguracja EcoFocus pod pellet (waga B/N-K40 + taśma odbiorcza)',
+  'Wersja Motion SU&SO — ruch ciągły folii, do 30 szt./min',
   'Drukarka daty (termotransfer / inkjet)',
   'Czujnik szczelności worka',
   'Moduł odgazowujący (kawa, herbata)',
@@ -142,12 +134,12 @@ export default function EssegiF1000Page() {
             </Typography>
             <Typography sx={{ fontSize: { xs: '1rem', md: '1.15rem' }, color: 'rgba(255,255,255,0.72)', lineHeight: 1.7, mb: 4, maxWidth: 540 }}>
               Pionowa maszyna pakująca VFFS do produktów sypkich i granulowanych w zakresie 1–25&nbsp;kg.
-              Dostępna w wersjach EcoFocus i Motion SU&SO — dla wymagających materiałów foliowych.
+              Dostępna w wersjach EcoFocus (pellet 5–15 kg) i Motion SU&SO (do 30 szt./min).
             </Typography>
 
             <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 2, mb: 4, borderTop: '1px solid rgba(255,255,255,0.12)', borderBottom: '1px solid rgba(255,255,255,0.12)', py: 2.5 }}>
               <StatChip value="25 kg" label="maks. porcja" />
-              <StatChip value="22" label="szt./min max" />
+              <StatChip value="30" label="szt./min max (Motion)" />
               <StatChip value="3" label="wersje" />
               <StatChip value="30+" label="lat Essegi" />
             </Box>
@@ -179,7 +171,7 @@ export default function EssegiF1000Page() {
               </Typography>
               <Typography sx={{ fontSize: '0.95rem', color: DIM, lineHeight: 1.8 }}>
                 Essegi F1000 sprawdza się wszędzie tam, gdzie standardowe maszyny VFFS są zbyt małe — przy workowaniu mąki, pasz, granulatu lub produktów chemicznych w opakowaniach od 1 do 25 kg.
-                Wersja EcoFocus zapewnia niższe koszty energii i lepszą jakość spoiny, a Motion SU&SO pozwala pakować nawet z trudną folią.
+                Wersja EcoFocus to gotowa konfiguracja pod pellet 5–15 kg, a Motion SU&SO — z ruchem ciągłym folii — osiąga do 30 worków na minutę.
               </Typography>
             </Box>
             <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 1.5 }}>

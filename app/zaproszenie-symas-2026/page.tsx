@@ -55,6 +55,27 @@ function Icon({ name, size = 20 }: { name: string; size?: number }) {
   }
 }
 
+// Ściąga na stoisko — od tych pytań zaczynamy rozmowę
+const QUESTIONS = [
+  { q: 'Co pakujesz?', a: 'Produkt i jego właściwości — granulat, proszek, pellet, pylenie, wilgotność.' },
+  { q: 'W jakiej gramaturze?', a: 'Masa lub objętość worka i rodzaj opakowania — folia z rolki czy gotowe worki.' },
+  { q: 'Ile worków na godzinę?', a: 'Wymagana wydajność i liczba zmian — oraz co dzieje się z workiem dalej.' },
+];
+
+const RANGE = [
+  { name: 'Essegi F700', spec: '50 g – 3 kg · żywność, drobne granulaty', href: '/maszyny/pionowe-maszyny-pakujace/essegi-f700' },
+  { name: 'Essegi F1000', spec: '1–25 kg · pellet, nawozy, granulaty, proszki', href: '/maszyny/pionowe-maszyny-pakujace/essegi-f1000' },
+  { name: 'Essegi F1200 / F1300', spec: '5–50 kg · pasze, chemia, ziemia i kora', href: '/maszyny/pionowe-maszyny-pakujace/essegi-f1200' },
+  { name: 'Concetti FFS', spec: 'worki przemysłowe 10–50 kg · do 2000 worków/h', href: '/maszyny/pionowe-maszyny-pakujace#concetti' },
+];
+
+const CASES = [
+  { name: 'Europol', desc: 'Linia pakowania i paletyzacji pelletu — F1000 + robot KUKA', href: '/realizacje/europol' },
+  { name: 'Planta', desc: 'Linia nawozów: zasobnik, Essegi, paletyzacja KUKA', href: '/realizacje/planta' },
+  { name: 'Ciech Sarzyna', desc: 'Essegi F1000 do pakowania nawozów', href: '/realizacje/ciech-sarzyna' },
+  { name: 'Qemetica', desc: 'Chlorek wapnia w trudnych warunkach środowiskowych', href: '/realizacje/qemetica' },
+];
+
 const HIGHLIGHTS = [
   { title: 'Essegi F1000 na żywo', desc: 'Pionowa maszyna pakująca VFFS do produktów sypkich, granulowanych i proszkowych — zobacz ją w pracy na stoisku.' },
   { title: 'Automatyzacja i robotyzacja', desc: 'Porozmawiamy o automatyzacji pakowania, paletyzacji i integracji robotów w kompletne linie produkcyjne.' },
@@ -242,6 +263,90 @@ export default function SymasInvitationPage() {
                   <Typography sx={{ fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.04em', color: '#fff' }}>Essegi F1000</Typography>
                 </Box>
               </Box>
+            </Box>
+          </Container>
+        </Box>
+
+        {/* ── Przygotuj się do rozmowy ── */}
+        <Box className="sym-avoid" sx={{ borderTop: `1px solid ${BORDER}`, py: { xs: 8, md: 12 }, '@media print': { py: 4 } }}>
+          <Container maxWidth="lg">
+            <Typography sx={{ fontSize: '0.6rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: ACCENT, mb: 1.5 }}>
+              Przygotuj się do rozmowy
+            </Typography>
+            <Typography variant="h2" sx={{ fontSize: { xs: '1.4rem', md: '1.85rem' }, fontWeight: 800, letterSpacing: '-0.025em', color: 'var(--dim-85)', lineHeight: 1.2, mb: 1.5, maxWidth: 620 }}>
+              Trzy pytania, od których zaczniemy
+            </Typography>
+            <Typography sx={{ fontSize: '0.95rem', lineHeight: 1.8, color: TEXT_DIM, mb: { xs: 4, md: 5 }, maxWidth: 640 }}>
+              Z tymi danymi dobierzemy na stoisku kierunek — model Essegi albo system Concetti, razem
+              z dozowaniem, transportem worków i paletyzacją.
+            </Typography>
+            <Box
+              component={Link}
+              href="/maszyny/pionowe-maszyny-pakujace#problemy"
+              sx={{
+                display: 'inline-flex', alignItems: 'center', gap: 1, mt: -2, mb: { xs: 4, md: 5 },
+                px: 2, py: 1, borderRadius: '3px', border: `1px solid ${BORDER}`, bgcolor: BG_CARD,
+                fontSize: '0.84rem', color: 'var(--dim-75)', textDecoration: 'none',
+                transition: 'border-color 0.15s ease, color 0.15s ease',
+                '&:hover': { borderColor: ACCENT, color: ACCENT },
+                '@media print': { display: 'none' },
+              }}
+            >
+              <Box component="span" sx={{ fontWeight: 700 }}>Masz już linię?</Box>
+              Problem z wagą, pyleniem albo wydajnością — zobacz, od czego zaczynamy diagnozę
+              <Icon name="arrow" size={14} />
+            </Box>
+
+            <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: 'repeat(3, 1fr)' }, gap: { xs: 2, md: 3 }, mb: { xs: 6, md: 8 }, '@media print': { gridTemplateColumns: 'repeat(3, 1fr)', gap: '12px', mb: 3 } }}>
+              {QUESTIONS.map((item, i) => (
+                <Box key={item.q} className="sym-card" sx={{ p: { xs: 3, md: 3.5 }, bgcolor: BG_CARD, border: `1px solid ${BORDER}`, borderRadius: '4px', '@media print': { p: 2 } }}>
+                  <Typography sx={{ fontSize: '2rem', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em', color: ACCENT, mb: 1.5 }}>
+                    {i + 1}
+                  </Typography>
+                  <Typography variant="h3" sx={{ fontSize: '1.05rem', fontWeight: 800, color: 'var(--dim-85)', mb: 0.75 }}>
+                    {item.q}
+                  </Typography>
+                  <Typography sx={{ fontSize: '0.86rem', lineHeight: 1.65, color: TEXT_DIM }}>{item.a}</Typography>
+                </Box>
+              ))}
+            </Box>
+
+            <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: { xs: 4, md: 6 }, '@media print': { display: 'none' } }}>
+              {[
+                { title: 'Gama maszyn pionowych', items: RANGE.map((r) => ({ name: r.name, desc: r.spec, href: r.href })) },
+                { title: 'Zobacz nasze realizacje', items: CASES },
+              ].map((col) => (
+                <Box key={col.title} sx={{ bgcolor: BG_CARD, border: `1px solid ${BORDER}`, borderRadius: '4px', overflow: 'hidden' }}>
+                  <Box sx={{ px: 3.5, py: 2.25, borderBottom: `1px solid ${BORDER}` }}>
+                    <Typography sx={{ fontSize: '0.6rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: TEXT_DIM }}>
+                      {col.title}
+                    </Typography>
+                  </Box>
+                  {col.items.map((it, idx) => (
+                    <Box
+                      key={it.name}
+                      component={Link}
+                      href={it.href}
+                      sx={{
+                        display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 2,
+                        px: 3.5, py: 1.75, textDecoration: 'none',
+                        borderBottom: idx < col.items.length - 1 ? `1px solid ${BORDER}` : 'none',
+                        transition: 'background-color 0.15s ease',
+                        '&:hover': { bgcolor: 'var(--surface-03)' },
+                        '&:hover .arr': { color: ACCENT, transform: 'translateX(2px)' },
+                      }}
+                    >
+                      <Box>
+                        <Typography sx={{ fontSize: '0.9rem', fontWeight: 700, color: 'var(--dim-85)', mb: 0.2 }}>{it.name}</Typography>
+                        <Typography sx={{ fontSize: '0.76rem', color: TEXT_DIM, lineHeight: 1.5 }}>{it.desc}</Typography>
+                      </Box>
+                      <Box className="arr" sx={{ color: 'var(--dim-45)', display: 'flex', transition: 'all 0.15s ease' }}>
+                        <Icon name="arrow" size={16} />
+                      </Box>
+                    </Box>
+                  ))}
+                </Box>
+              ))}
             </Box>
           </Container>
         </Box>

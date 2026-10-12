@@ -95,14 +95,15 @@ const ESSEGI_SERIES = [
   },
   {
     model: 'F8004S',
-    label: 'F8004S — Industrial version',
-    scope: 'High throughput, industrial production',
-    desc: 'Industrial VFFS machine for applications requiring high output and continuous process operation. Designed for large production volumes with demanding weighing systems.',
-    products: ['Bulk products', 'Industrial production volumes'],
+    label: 'F8004S — Stabilo bags',
+    scope: 'Food, grains, pet food — packs with a regular shape',
+    desc: 'VFFS machine for 50 g – 5 kg packs with four corner seals (Stabilo). The bag gets a regular, box-like shape — it stands better and looks good on the shelf. Pillow, square bottom and Stabilo formats.',
+    products: ['Coffee, snacks, confectionery', 'Grains, seeds, rice', 'Pet food'],
     params: [
-      { label: 'Application', value: 'High throughput, continuous production' },
+      { label: 'Range', value: '50 g – 5 kg' },
+      { label: 'Max. bag size', value: '360 × 560 mm' },
     ],
-    dosing: ['Weighing systems dedicated to high throughput'],
+    dosing: ['Vibratory (B/V-K) or multihead weigher', 'Twin-auger weigher (B/2C)'],
   },
   {
     model: 'W1200 Fluid',
@@ -138,9 +139,10 @@ const SECTORS = [
 ];
 
 const BAG_TYPES = [
-  { name: 'Pillow bag', desc: 'Standard bag with front and back seal — the most popular format for free-flowing and granulated products.' },
-  { name: 'Gusseted bag', desc: 'Bag with side gusset — greater capacity at a similar film format, better shelf stability.' },
-  { name: 'Block bottom', desc: 'Bag with a flat, rectangular base — stands upright on shelf, professional packaging appearance.' },
+  { name: 'Pillow', desc: 'One longitudinal and two transverse seals. The simplest format — often enough for granules, salt or pellets.' },
+  { name: 'Gusset', desc: 'The sides of the bag are folded in. Once filled, the bag has a more regular shape and stacks more easily on a pallet.' },
+  { name: 'Stabilo — 4 corner seals', desc: 'Extra seals on the corners give the bag a box-like shape — important for appearance and display, e.g. pet food or coffee.' },
+  { name: 'Square bottom', desc: 'A formed base lets the bag stand steadily. It is still a film bag — it needs the right forming tools.' },
 ];
 
 // ─── Page ────────────────────────────────────────────────────────────────────
@@ -580,16 +582,17 @@ export default function PionoweMaszynyPageEn() {
                 for industrial bags
               </Typography>
               <Typography sx={{ fontSize: '0.85rem', lineHeight: 1.7, color: TEXT_DIM }}>
-                Industrial applications — open-mouth bags and large formats.
+                Industrial bagging from PE tubular film — high throughput and difficult products.
               </Typography>
             </Box>
 
             <Box>
               <Typography sx={{ fontSize: '0.9rem', lineHeight: 1.8, color: TEXT_DIM, mb: 3.5 }}>
                 Concetti supplies FFS (Form-Fill-Seal) systems for industrial bagging
-                from polyethylene tubular film. Concetti solutions complement the Essegi
-                machine offering in the large-bag segment (25–50 kg) and bulk bagging —
-                including for chemical, construction and agri-food industries.
+                from polyethylene tubular film — bags from 10 to 50 kg, depending on the system
+                and product. It is a different design from Essegi vertical VFFS machines: the bag
+                is formed in a horizontal, multi-station process. Concetti also offers machines
+                for pre-made open-mouth bags, big-bag systems and palletisers.
               </Typography>
 
               <Box
@@ -602,15 +605,15 @@ export default function PionoweMaszynyPageEn() {
                 {[
                   {
                     model: 'FFS-E',
-                    desc: 'Bagging from polyethylene tubular film. Durable and robust packaging for industrial products.',
+                    desc: 'For free-flowing granules — plastics, fertilisers, salt. Bags 10–40 kg, up to 2,000 bags/h.',
                   },
                   {
                     model: 'CONTINUA',
-                    desc: 'FFS system in standard configuration. Continuous high-throughput bagging process.',
+                    desc: 'For products that are harder to dose — aerated and dusty. Several output versions matched to the product.',
                   },
                   {
-                    model: 'CONTINUA 6x',
-                    desc: 'Six-station configuration — six parallel bagging positions for maximum throughput.',
+                    model: 'CONTINUA Six Station',
+                    desc: 'For cement and fine premixes. Product de-aeration and compaction, seal-area cleaning. Bags 10–40 kg, up to 800 bags/h.',
                   },
                 ].map((m) => (
                   <Box
@@ -781,7 +784,7 @@ export default function PionoweMaszynyPageEn() {
             <Box
               sx={{
                 display: 'grid',
-                gridTemplateColumns: { xs: '1fr', sm: 'repeat(3, 1fr)' },
+                gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)' },
                 gap: 2.5,
               }}
             >
@@ -952,7 +955,7 @@ export default function PionoweMaszynyPageEn() {
                 name: 'Concetti',
                 country: 'Italy',
                 scope: 'FFS systems, bagging, palletising',
-                desc: 'Concetti designs complete bagging lines and FFS systems for industrial bagging from tubular polyethylene film. Concetti FFS-E and CONTINUA solutions handle open-mouth bags and large formats (25–50 kg) for chemical, construction and agri-food industries.',
+                desc: 'Concetti designs complete bagging lines: FFS systems from PE tubular film (FFS-E, CONTINUA — bags 10–50 kg depending on the system), machines for pre-made open-mouth bags, big-bag systems and palletisers — for the chemical, construction and agri-food industries.',
                 href: 'https://www.concetti.com',
               },
             ].map((p) => (
@@ -1176,9 +1179,9 @@ export default function PionoweMaszynyPageEn() {
                 'Essegi F700 — food, 50 g – 3 kg, max 320×420 mm',
                 'Essegi F1000 — powders, granulates, building materials',
                 'Essegi F1200/F1300 — soil, bark, compost (large formats)',
-                'Essegi F8004S — industrial throughput',
+                'Essegi F8004S — Stabilo bags, 50 g – 5 kg',
                 'Essegi W1200 Fluid — liquid products',
-                'Concetti FFS-E / CONTINUA — industrial bags 25–50 kg',
+                'Concetti FFS-E / CONTINUA — industrial bags 10–50 kg',
               ].map((item) => (
                 <Box
                   key={item}

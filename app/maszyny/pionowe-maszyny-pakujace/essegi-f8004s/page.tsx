@@ -11,34 +11,24 @@ import { SITE_URL } from '@/lib/seo.config';
 const PAGE_URL = `${SITE_URL}/maszyny/pionowe-maszyny-pakujace/essegi-f8004s`;
 
 export const metadata: Metadata = {
-  title: 'Essegi F8004S – Maszyna VFFS z Czterostronnym Zgrzewem',
+  title: 'Essegi F8004S – Maszyna VFFS z Workiem Stabilo',
   description:
-    'Essegi F8004S — pionowa maszyna pakująca VFFS z czterostronnym zgrzewem (4-side seal). Worki 50 g–5 kg, format 360×560 mm, do 70 szt./min. Snacki, słodycze, kawa. Zapytaj MadejPak.',
+    'Essegi F8004S — pionowa maszyna pakująca VFFS z czterema zgrzewami narożnymi (worek Stabilo). Worki 50 g–5 kg, format do 360×560 mm, do 70 szt./min. Snacki, słodycze, kawa. Zapytaj MadejPak.',
   alternates: { canonical: PAGE_URL },
   openGraph: {
     type: 'website',
     url: PAGE_URL,
     siteName: 'MadejPak',
-    title: 'Essegi F8004S – VFFS z Czterostronnym Zgrzewem | MadejPak',
-    description: '4-side seal VFFS 50 g–5 kg. Snacki, kawa, słodycze. Format 360×560 mm, do 70 szt./min.',
+    title: 'Essegi F8004S – VFFS z Workiem Stabilo | MadejPak',
+    description: 'VFFS z 4 zgrzewami narożnymi (Stabilo), 50 g–5 kg. Snacki, kawa, słodycze. Format 360×560 mm, do 70 szt./min.',
     locale: 'pl_PL',
-    images: [{ url: `${SITE_URL}/images/interpack/essegi-1.jpg`, width: 1200, height: 800, alt: 'Essegi F8004S maszyna VFFS czterostronny zgrzew' }],
+    images: [{ url: `${SITE_URL}/images/interpack/essegi-1.jpg`, width: 1200, height: 800, alt: 'Essegi F8004S maszyna VFFS z narożnymi zgrzewami Stabilo' }],
   },
 };
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
-    {
-      '@type': 'Product',
-      name: 'Essegi F8004S',
-      description: 'Pionowa maszyna pakująca VFFS z czterostronnym zgrzewem (4-side seal). Opakowania 50 g–5 kg, format do 360×560 mm, wydajność do 70 szt./min. Przeznaczona do snacków, słodyczy, kawy, herbaty, suplementów.',
-      brand: { '@type': 'Brand', name: 'Essegi' },
-      manufacturer: { '@type': 'Organization', name: 'Essegi' },
-      category: 'Pionowe maszyny pakujące VFFS',
-      image: `${SITE_URL}/images/interpack/essegi-1.jpg`,
-      url: PAGE_URL,
-    },
     {
       '@type': 'BreadcrumbList',
       itemListElement: [
@@ -73,7 +63,7 @@ function StatChip({ value, label }: { value: string; label: string }) {
 }
 
 const STRENGTHS = [
-  { title: 'Czterostronny zgrzew', desc: 'Format „flat pouch" z czterema spoinami — estetyczny wygląd opakowania premium, szczelność ze wszystkich stron.' },
+  { title: 'Cztery zgrzewy narożne (Stabilo)', desc: 'Dodatkowe zgrzewy na czterech narożnikach usztywniają worek — opakowanie lepiej stoi, ma regularny kształt i dobrze prezentuje się na półce.' },
   { title: 'Duża wydajność', desc: 'W wersji SYNCRO do 70 szt./min — maszyna przeznaczona do wydajnych linii snackowych i kawowych.' },
   { title: 'Szeroka gama formatów', desc: 'Format worka 360×560 mm pokrywa całe spektrum małych opakowań konsumenckich — od saszetek 50 g do toreb 5 kg.' },
   { title: 'Precyzyjna kontrola atmosfery', desc: 'Możliwość pakowania w atmosferze ochronnej (MAP, azot) — przedłuża termin przydatności do spożycia snacków i kawy.' },
@@ -92,12 +82,12 @@ const USE_CASES = [
 
 const SPECS: { label: string; value: string }[] = [
   { label: 'Zakres wagowy', value: '50 g – 5 kg' },
-  { label: 'Maks. szerokość folii', value: '360 mm' },
-  { label: 'Maks. długość worka', value: '560 mm' },
-  { label: 'Typ zgrzewu', value: '4-side seal (czterostronny)' },
+  { label: 'Maks. format worka', value: '360 × 560 mm' },
+  { label: 'Maks. szerokość folii (rolka)', value: '780 mm' },
+  { label: 'Zgrzewy narożne', value: '4 (worek Stabilo)' },
   { label: 'Wydajność PN', value: '20 – 40 szt./min' },
   { label: 'Wydajność SYNCRO', value: '40 – 70 szt./min' },
-  { label: 'Typy worków', value: 'Flat pouch, poduszka, z gazem' },
+  { label: 'Typy worków', value: 'Poduszka, płaskie dno, Stabilo' },
   { label: 'Zasilanie', value: '400 V / 50 Hz' },
 ];
 
@@ -123,7 +113,7 @@ export default function EssegiF8004SPage() {
         <Box sx={{ position: 'absolute', inset: 0 }}>
           <Image
             src="/images/interpack/essegi-1.jpg"
-            alt="Essegi F8004S maszyna VFFS czterostronny zgrzew"
+            alt="Essegi F8004S maszyna VFFS z narożnymi zgrzewami Stabilo"
             fill
             sizes="100vw"
             style={{ objectFit: 'cover', opacity: 0.45 }}
@@ -141,7 +131,7 @@ export default function EssegiF8004SPage() {
               Essegi F8004S
             </Typography>
             <Typography sx={{ fontSize: { xs: '1rem', md: '1.15rem' }, color: 'rgba(255,255,255,0.72)', lineHeight: 1.7, mb: 4, maxWidth: 540 }}>
-              Pionowa maszyna pakująca VFFS z czterostronnym zgrzewem (4-side seal). Idealna do snacków,
+              Pionowa maszyna pakująca VFFS z czterema zgrzewami narożnymi (Stabilo). Idealna do snacków,
               kawy i słodyczy — worki 50&nbsp;g–5&nbsp;kg z wydajnością do 70&nbsp;szt./min.
             </Typography>
 
@@ -179,7 +169,7 @@ export default function EssegiF8004SPage() {
               </Typography>
               <Typography sx={{ fontSize: '0.95rem', color: DIM, lineHeight: 1.8 }}>
                 Essegi F8004S to wybór producentów, którym zależy na estetyce opakowania i szczelności spoiny.
-                Czterostronny zgrzew tworzy równe, płaskie krawędzie ze wszystkich stron — niezbędne dla produktów premium: specialty coffee, snacków premium i suplementów diety.
+                Cztery zgrzewy narożne nadają workowi regularny, „pudełkowy” kształt — opakowanie lepiej stoi i dobrze prezentuje się na półce. Sprawdza się przy kawie, przekąskach premium i suplementach diety.
               </Typography>
             </Box>
             <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 1.5 }}>

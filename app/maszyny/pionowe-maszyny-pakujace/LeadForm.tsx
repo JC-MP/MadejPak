@@ -165,6 +165,7 @@ export default function LeadForm({ defaultModel = '' }: { defaultModel?: string 
             </TextField>
 
             <TextField fullWidth label="Dodatkowe informacje" multiline rows={3}
+              placeholder="Np. produkt, masa worka, wydajność (worki/h), folia z rolki czy gotowe worki"
               value={form.message} onChange={e => set('message', e.target.value)} sx={fieldSx} />
 
             <FormControlLabel
