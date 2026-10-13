@@ -75,7 +75,7 @@ const SPECS = [
   { label: 'Moc (PN)',               value: '4–6 kW' },
   { label: 'Moc (SYNCRO)',           value: '6–10 kW' },
   { label: 'Ruch zgrzewu (PN)',      value: 'Pneumatyczny' },
-  { label: 'Ruch zgrzewu (SYNCRO)', value: 'Silnik brushless' },
+  { label: 'Ruch zgrzewu (SYNCRO)', value: 'Serwonapęd (silnik bezszczotkowy)' },
   { label: 'Typy worków',           value: 'Pillow, square bottom, stabilo' },
   { label: 'Materiał ramy',         value: 'Stal malowana / nierdzewna 314–316' },
 ];

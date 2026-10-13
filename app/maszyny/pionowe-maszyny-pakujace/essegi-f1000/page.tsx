@@ -64,7 +64,7 @@ function StatChip({ value, label }: { value: string; label: string }) {
 
 const STRENGTHS = [
   { title: 'Wersja EcoFocus — pod pellet', desc: 'Konfiguracja zaprojektowana dla pelletu drzewnego i podobnych produktów: worki 5–15 kg, waga taśmowa B/N-K40 i taśma odbiorcza, 7–10 worków/min.' },
-  { title: 'Wersja Motion SU&SO', desc: 'Folia napędzana silnikiem brushless z płynną regulacją prędkości, a zespół zgrzewający porusza się na wózku zsynchronizowanym z folią — do 30 worków/min.' },
+  { title: 'Wersja Motion SU&SO', desc: 'Ciągły przesuw folii z płynną regulacją prędkości (serwonapęd), a zespół zgrzewu poprzecznego porusza się synchronicznie z folią — do 30 worków/min.' },
   { title: 'Szeroki zakres wagowy', desc: 'Format od 1 do 25 kg — jeden model obsługuje zarówno małe opakowania półkilogramowe, jak i duże worki do 25 kg.' },
   { title: 'Stabilne dozowanie', desc: 'Integracja z wagami wielogłowicowymi GSP i innymi systemami podawania zapewnia powtarzalność porcji.' },
   { title: 'Łatwa zmiana formatu', desc: 'Szybka regulacja szerokości formy i długości zgrzewu — zmiana produktu w kilkanaście minut.' },

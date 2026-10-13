@@ -13,9 +13,9 @@ import { REALIZACJE } from '@/data/realizacjeData';
 const PAGE_URL = `${SITE_URL}/maszyny/pionowe-maszyny-pakujace`;
 
 export const metadata: Metadata = {
-  title: 'Pionowe Maszyny Pakujące VFFS – Essegi F700, F1000, F1200, F8004S',
+  title: 'Pionowe maszyny pakujące VFFS Essegi – modele i dobór',
   description:
-    'Pionowe maszyny pakujące VFFS Essegi do produktów sypkich, granulowanych i proszkowych. Modele F700 (50 g–3 kg), F1000 (1–25 kg), F1200 (5–50 kg), F8004S (worek Stabilo). Dostawa i integracja — MadejPak.',
+    'Jak działa pionowa maszyna pakująca VFFS, rodzaje worków i dobór dozowania. Modele Essegi F700–F1400, od 50 g do 50 kg — dobór, integracja i serwis MadejPak.',
   keywords: [
     // intencja zakupowa
     'pionowe maszyny pakujące', 'VFFS', 'pionowa maszyna pakująca',
@@ -34,26 +34,37 @@ export const metadata: Metadata = {
     // integracja
     'linia pakująca z wagą', 'waga wielogłowicowa VFFS',
     'integrator maszyn pakujących Polska', 'MadejPak maszyny pakujące',
+    // poradnik
+    'jak działa maszyna VFFS', 'budowa maszyny pakującej', 'tubus formujący',
+    'worek pillow', 'worek gusset', 'worek stabilo', 'worek z płaskim dnem',
+    'folia do maszyny pakującej', 'dozowanie objętościowe', 'waga taśmowa',
+    'Essegi F1300', 'Essegi F1400 COMBINED', 'worek w kartonie bag-in-box',
     // long-tail
     'ile kosztuje maszyna VFFS', 'maszyna pakująca do 25 kg',
     'pionowa maszyna pakująca dla małej firmy',
     'automatyczne pakowanie produktów sypkich',
   ],
   robots: { index: true, follow: true },
-  alternates: { canonical: PAGE_URL },
+  alternates: {
+    canonical: PAGE_URL,
+    languages: {
+      pl: PAGE_URL,
+      en: `${SITE_URL}/en/maszyny/pionowe-maszyny-pakujace`,
+    },
+  },
   openGraph: {
     type:        'website',
     url:         PAGE_URL,
     siteName:    'MadejPak',
-    title:       'Pionowe Maszyny Pakujące VFFS Essegi – F700, F1000, F1200, F8004S | MadejPak',
-    description: 'Maszyny VFFS Essegi do pakowania produktów sypkich i granulowanych. Zakres 50 g–50 kg, wydajność do 70 szt./min. Autoryzowany partner Essegi w Polsce — MadejPak.',
+    title:       'Pionowe maszyny pakujące VFFS Essegi – jak działają i jak je dobrać | MadejPak',
+    description: 'Zasada działania VFFS, budowa maszyny, rodzaje worków i folii, dozowanie. Essegi F700–F1400 od 50 g do 50 kg — autoryzowany przedstawiciel Essegi w Polsce.',
     images: [{ url: `${SITE_URL}/images/interpack/essegi-2.jpg`, width: 1200, height: 800, alt: 'Essegi VFFS — pionowe maszyny pakujące MadejPak' }],
     locale:      'pl_PL',
   },
   twitter: {
     card:        'summary_large_image',
     title:       'Pionowe Maszyny Pakujące VFFS Essegi | MadejPak',
-    description: 'F700, F1000, F1200, F8004S — maszyny VFFS do produktów sypkich 50 g–50 kg. Autoryzowany partner Essegi w Polsce.',
+    description: 'Jak działa maszyna VFFS, rodzaje worków, dozowanie i dobór modelu. Essegi F700–F1400 od 50 g do 50 kg — MadejPak.',
     images:      [`${SITE_URL}/images/interpack/essegi-2.jpg`],
   },
 };
@@ -62,8 +73,8 @@ export const metadata: Metadata = {
 const FAQ = [
   { q: 'Ile worków na godzinę zrobi pionowa maszyna pakująca?', a: 'Katalogowo od kilku do 30 worków na minutę — zależnie od modelu i wersji. Na przykład F1000: MEC 10–14, SYNCRO 16–22, Motion do 30 worków/min. Realną wydajność dla Twojego produktu potwierdzamy po doborze dozowania i analizie końca linii: jeśli maszyna robi 20 worków/min, a paletyzacja 15, cała linia nie osiągnie 20 bez bufora.' },
   { q: 'Czym różni się dozowanie wagowe od objętościowego?', a: 'Waga odmierza masę netto, np. 15 kg. Dozownik objętościowy odmierza objętość, np. 20 l ziemi. Gdy gęstość produktu zmienia się z wilgotnością, ta sama objętość nie zawsze waży tyle samo — wtedy dobieramy ważenie.' },
-  { q: 'Czy szerokość folii to szerokość gotowego worka?', a: 'Nie. Płaska folia owija się wokół rury formującej i jest łączona zgrzewem wzdłużnym, więc wstęga jest szersza niż gotowy worek, a przy fałdach bocznych dochodzą zakładki. Ostateczny format ustalamy z rysunku opakowania.' },
-  { q: 'Czy na worku może być logo, data i numer partii?', a: 'Tak. Grafika jest na folii z nadrukiem, a fotokomórka pilnuje jej położenia względem cięcia. Dane zmienne — datę, partię, kod — nanosi drukarka zamontowana na maszynie.' },
+  { q: 'Czy szerokość folii to szerokość gotowego worka?', a: 'Nie. Płaska folia owija się wokół tubusa formującego i jest łączona zgrzewem wzdłużnym, więc wstęga jest szersza niż gotowy worek, a przy fałdach bocznych dochodzą zakładki. Ostateczny format ustalamy z rysunku opakowania.' },
+  { q: 'Czy na worku może być logo, data i numer partii?', a: 'Tak. Grafika jest na folii z nadrukiem, a fotokomórka znacznika nadruku pilnuje jej położenia względem zgrzewu i cięcia. Dane zmienne — datę, partię, kod — nanosi drukarka zamontowana na maszynie.' },
   { q: 'Czy każda folia będzie pracować na maszynie?', a: 'Nie. Sprawdzamy strukturę i grubość folii, zgrzewalność, odporność na przebicie oraz wymagania, np. kontakt z żywnością. Dlatego prosimy o próbkę folii lub jej specyfikację od dostawcy.' },
   { q: 'Czy maszyna pionowa może zapakować worek do kartonu?', a: 'Standardowa maszyna VFFS formuje worek z folii. Do worka w kartonie (bag-in-box) służy Essegi F1400 COMBINED. Jeśli do kartonu mają trafiać gotowe worki, potrzebna jest osobna kartoniarka zbiorcza współpracująca z maszyną VFFS.' },
   { q: 'Czy można zautomatyzować tylko paletyzację, bez wymiany pakowaczki?', a: 'Tak. Koniec linii — odbiór, obracanie i spłaszczanie worków, robot lub cobot, paletyzację i owijanie palet — możemy zautomatyzować przy istniejącej maszynie pakującej.' },
@@ -72,10 +83,10 @@ const FAQ = [
 
 // Wersje maszyn Essegi — krótkie wyjaśnienie oznaczeń z tabel
 const VERSIONS = [
-  { name: 'PN', desc: 'Ruch grupy zgrzewającej realizowany pneumatycznie — w mniejszych seriach, np. F700.' },
+  { name: 'PN', desc: 'Ruch zespołu zgrzewającego realizują elementy pneumatyczne — w mniejszych modelach, np. F700.' },
   { name: 'MEC', desc: 'Napęd mechaniczny. W F1000 z jedną wagą taśmową: 10–14 worków/min.' },
-  { name: 'SYNCRO', desc: 'Grupa zgrzewająca z napędem brushless, przy dużych workach często z dwiema wagami — F1000: 16–22 worki/min.' },
-  { name: 'MOTION SU&SO', desc: 'Ruch ciągły folii i zespół zgrzewający jadący razem z nią — F1000: do 30 worków/min.' },
+  { name: 'SYNCRO', desc: 'Zespół zgrzewający z serwonapędem (silnik bezszczotkowy); może różnić się też układ ważenia — F1000 z dwiema wagami: 16–22 worki/min.' },
+  { name: 'MOTION SU&SO', desc: 'Ciągły przesuw folii; zespół zgrzewu poprzecznego porusza się synchronicznie z nią — F1000: do 30 worków/min.' },
   { name: 'EcoFocus', desc: 'Gotowa konfiguracja F1000 pod pellet 5–15 kg: waga B/N-K40 i taśma odbiorcza, 7–10 worków/min.' },
 ];
 
@@ -267,6 +278,69 @@ const SECTORS = [
   },
 ];
 
+// Grafiki (wzór: podręcznik handlowo-techniczny MadejPak/Essegi) — statyczny SVG, kolory z currentColor
+const VFFS_SCHEMA_SVG = `<path d="M126 10 H194 L172 52 H148 Z" stroke="currentColor" stroke-width="1.6" fill="currentColor" fill-opacity="0.07" stroke-linejoin="round"/><circle cx="150" cy="24" r="2.4" fill="#E8610A"/><circle cx="160" cy="31" r="2.4" fill="#E8610A"/><circle cx="170" cy="22" r="2.4" fill="#E8610A"/><circle cx="156" cy="40" r="2.4" fill="#E8610A"/><circle cx="166" cy="40" r="2.4" fill="#E8610A"/><circle cx="160" cy="24" r="2.4" fill="#E8610A"/><circle cx="55" cy="125" r="34" stroke="currentColor" stroke-width="1.6" fill="currentColor" fill-opacity="0.07"/><circle cx="55" cy="125" r="9" stroke="currentColor" stroke-width="1.6" fill="none"/><circle cx="108" cy="82" r="6" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M55 91 L108 76 L136 100" stroke="#E8610A" stroke-width="2" fill="none" stroke-linejoin="round"/><rect x="141" y="112" width="38" height="190" fill="currentColor" fill-opacity="0.07"/><rect x="148" y="52" width="24" height="250" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M126 98 H194 L178 118 H142 Z" stroke="currentColor" stroke-width="1.6" fill="currentColor" fill-opacity="0.07" stroke-linejoin="round"/><rect x="154" y="138" width="12" height="26" rx="2" fill="#E8610A"/><rect x="126" y="176" width="10" height="64" rx="4" stroke="currentColor" stroke-width="1.6" fill="currentColor" fill-opacity="0.07"/><rect x="184" y="176" width="10" height="64" rx="4" stroke="currentColor" stroke-width="1.6" fill="currentColor" fill-opacity="0.07"/><rect x="110" y="306" width="46" height="12" rx="2" fill="#E8610A"/><rect x="164" y="306" width="46" height="12" rx="2" fill="#E8610A"/><path d="M156 312 L164 308 L164 316 Z" fill="currentColor"/><path d="M140 330 H180 L184 344 V392 Q184 402 174 402 H146 Q136 402 136 392 V344 Z" stroke="currentColor" stroke-width="1.6" fill="currentColor" fill-opacity="0.07" stroke-linejoin="round"/><line x1="138" y1="337" x2="182" y2="337" stroke="currentColor" stroke-width="1.4"/><circle cx="150" cy="372" r="2.4" fill="#E8610A"/><circle cx="160" cy="380" r="2.4" fill="#E8610A"/><circle cx="170" cy="370" r="2.4" fill="#E8610A"/><circle cx="155" cy="390" r="2.4" fill="#E8610A"/><circle cx="166" cy="392" r="2.4" fill="#E8610A"/><circle cx="160" cy="362" r="2.4" fill="#E8610A"/><circle cx="146" cy="386" r="2.4" fill="#E8610A"/><circle cx="174" cy="384" r="2.4" fill="#E8610A"/><rect x="80" y="410" width="170" height="11" rx="5.5" stroke="currentColor" stroke-width="1.6" fill="currentColor" fill-opacity="0.07"/><circle cx="88" cy="415.5" r="3" fill="currentColor"/><circle cx="242" cy="415.5" r="3" fill="currentColor"/><rect x="240" y="150" width="56" height="42" rx="4" stroke="currentColor" stroke-width="1.6" fill="currentColor" fill-opacity="0.07"/><rect x="247" y="157" width="42" height="22" rx="2" fill="#E8610A" fill-opacity="0.3"/><line x1="268" y1="192" x2="268" y2="226" stroke="currentColor" stroke-width="1.6"/><line x1="136" y1="151" x2="154" y2="151" stroke="currentColor" stroke-width="1" stroke-dasharray="2 2"/><circle cx="22" cy="90" r="9" fill="#E8610A"/><text x="22" y="93.5" text-anchor="middle" font-size="10" font-weight="700" fill="#fff" font-family="Arial">1</text><circle cx="108" cy="62" r="9" fill="#E8610A"/><text x="108" y="65.5" text-anchor="middle" font-size="10" font-weight="700" fill="#fff" font-family="Arial">2</text><circle cx="214" cy="108" r="9" fill="#E8610A"/><text x="214" y="111.5" text-anchor="middle" font-size="10" font-weight="700" fill="#fff" font-family="Arial">3</text><circle cx="214" cy="208" r="9" fill="#E8610A"/><text x="214" y="211.5" text-anchor="middle" font-size="10" font-weight="700" fill="#fff" font-family="Arial">4</text><circle cx="122" cy="151" r="9" fill="#E8610A"/><text x="122" y="154.5" text-anchor="middle" font-size="10" font-weight="700" fill="#fff" font-family="Arial">5</text><circle cx="92" cy="312" r="9" fill="#E8610A"/><text x="92" y="315.5" text-anchor="middle" font-size="10" font-weight="700" fill="#fff" font-family="Arial">5</text><circle cx="228" cy="312" r="9" fill="#E8610A"/><text x="228" y="315.5" text-anchor="middle" font-size="10" font-weight="700" fill="#fff" font-family="Arial">6</text><circle cx="268" cy="138" r="9" fill="#E8610A"/><text x="268" y="141.5" text-anchor="middle" font-size="10" font-weight="700" fill="#fff" font-family="Arial">7</text>`;
+const BAG_SVG = {
+  pillow: `<rect x="12" y="6" width="76" height="118" rx="10" stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity="0.07"/><line x1="12" y1="22" x2="88" y2="22" stroke="currentColor" stroke-width="2"/><line x1="12" y1="108" x2="88" y2="108" stroke="currentColor" stroke-width="2"/><line x1="50" y1="22" x2="50" y2="108" stroke="currentColor" stroke-width="2" stroke-dasharray="3 4"/>`,
+  gusset: `<rect x="12" y="6" width="76" height="118" rx="10" stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity="0.07"/><line x1="12" y1="22" x2="88" y2="22" stroke="currentColor" stroke-width="2"/><line x1="12" y1="108" x2="88" y2="108" stroke="currentColor" stroke-width="2"/><line x1="28" y1="22" x2="28" y2="108" stroke="currentColor" stroke-width="2" stroke-dasharray="3 4"/><line x1="72" y1="22" x2="72" y2="108" stroke="currentColor" stroke-width="2" stroke-dasharray="3 4"/>`,
+  stabilo: `<rect x="12" y="6" width="76" height="118" rx="10" stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity="0.07"/><line x1="12" y1="22" x2="88" y2="22" stroke="currentColor" stroke-width="2"/><line x1="12" y1="108" x2="88" y2="108" stroke="currentColor" stroke-width="2"/><line x1="22" y1="12" x2="22" y2="118" stroke="#E8610A" stroke-width="2.4"/><line x1="78" y1="12" x2="78" y2="118" stroke="#E8610A" stroke-width="2.4"/>`,
+  square: `<rect x="12" y="6" width="76" height="118" rx="10" stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity="0.07"/><line x1="12" y1="22" x2="88" y2="22" stroke="currentColor" stroke-width="2"/><path d="M18 118 L32 98 H68 L82 118" stroke="#E8610A" stroke-width="2.4" fill="none" stroke-linejoin="round"/>`,
+};
+
+const PAGE_TOC = [
+  { label: 'Jak działa', href: '#jak-dziala' },
+  { label: 'Budowa maszyny', href: '#budowa' },
+  { label: 'Modele', href: '#modele' },
+  { label: 'Worki i folie', href: '#worki' },
+  { label: 'Kartony', href: '#karton' },
+  { label: 'Dozowanie', href: '#dozowanie' },
+  { label: 'Dobór maszyny', href: '#dobor' },
+  { label: 'Masz już linię?', href: '#problemy' },
+  { label: 'FAQ i słownik', href: '#faq' },
+];
+
+const VFFS_STEPS = [
+  { title: 'Dostarczanie produktu', desc: 'Produkt trafia z silosu, zasobnika lub instalacji transportowej do układu dozującego.' },
+  { title: 'Naważanie', desc: 'System wagowy odmierza zadaną porcję. Dla produktu sypkiego stosuje się często dozowanie zgrubne i dokładne.' },
+  { title: 'Formowanie worka', desc: 'Folia jest prowadzona po kołnierzu i tubusie formującym. Zespół zgrzewu wzdłużnego łączy jej krawędzie.' },
+  { title: 'Napełnianie', desc: 'Po wykonaniu dolnego zgrzewu odważona porcja spada kanałem zasypowym do worka.' },
+  { title: 'Zamykanie i odcinanie', desc: 'Zespół zgrzewu poprzecznego zamyka napełniony worek i wykonuje zgrzew dla kolejnego cyklu; układ tnący oddziela opakowania.' },
+  { title: 'Odbiór', desc: 'Przenośnik odbiorczy przekazuje worek do kontroli, spłaszczania i dalszego transportu lub paletyzacji.' },
+];
+
+const VFFS_PARTS = [
+  { name: 'Odwijak folii', desc: 'Utrzymuje rolkę i umożliwia kontrolowane odwijanie folii.' },
+  { name: 'Prowadzenie i centrowanie folii', desc: 'Zapewnia prawidłowe położenie folii przed formowaniem worka.' },
+  { name: 'Kołnierz i tubus formujący', desc: 'Nadają folii kształt rękawa; kanał zasypowy prowadzi produkt do opakowania.' },
+  { name: 'Układ przesuwu folii', desc: 'Przesuwa folię o długość opakowania — skokowo lub w sposób ciągły, zależnie od wersji.' },
+  { name: 'Zespoły zgrzewające', desc: 'Wykonują zgrzew wzdłużny i zgrzewy poprzeczne.' },
+  { name: 'Układ tnący', desc: 'Oddziela napełniony i zamknięty worek.' },
+  { name: 'PLC i panel operatorski HMI', desc: 'Sterowanie cyklem, nastawami, recepturami i sygnalizacją alarmów.' },
+];
+
+const FILMS = [
+  { material: 'PE / LDPE', props: 'Folia elastyczna, przeznaczona do zgrzewania.', example: 'Pellet, sól, nawozy' },
+  { material: 'Wielowarstwowa folia PE', props: 'Warstwy o różnych właściwościach wytrzymałościowych i zgrzewalności.', example: 'Worki poddawane większym obciążeniom' },
+  { material: 'PET/PE', props: 'Laminat z warstwą zewnętrzną i wewnętrzną warstwą zgrzewalną.', example: 'Wybrane produkty spożywcze' },
+  { material: 'Folia barierowa', props: 'Może ograniczać przenikanie tlenu, pary wodnej lub aromatów.', example: 'Produkty wrażliwe na warunki przechowywania' },
+];
+
+const GLOSSARY: { term: string; en: string | null; def: string }[] = [
+  { term: 'VFFS', en: 'Vertical Form Fill Seal', def: 'Pionowe formowanie, napełnianie i zgrzewanie opakowań z folii na rolce.' },
+  { term: 'Tubus i kołnierz formujący', en: 'forming tube / forming shoulder', def: 'Nadają płaskiej folii kształt rękawa; przez tubus produkt trafia do worka.' },
+  { term: 'Kanał zasypowy', en: 'filling chute', def: 'Droga, którą odważona porcja spada do formowanego worka.' },
+  { term: 'Szczęki zgrzewające', en: 'sealing jaws', def: 'Zespół zgrzewu poprzecznego — zamyka worek i tworzy dno następnego.' },
+  { term: 'Znacznik nadruku', en: 'registration mark', def: 'Znak na folii odczytywany przez fotokomórkę, dzięki któremu grafika jest zawsze w tym samym miejscu.' },
+  { term: 'Zgrzewanie impulsowe / hot-bar', en: 'impulse / hot-bar sealing', def: 'Element grzejny nagrzewany w cyklu albo listwy grzejne o stałej temperaturze roboczej.' },
+  { term: 'Gęstość nasypowa', en: 'bulk density', def: 'Masa produktu w jednostce objętości — decyduje o wielkości worka dla zadanej masy.' },
+  { term: 'Receptura', en: null, def: 'Zapis nastaw dla produktu i formatu: masa, długość worka, parametry zgrzewania.' },
+  { term: 'Przezbrojenie', en: 'changeover', def: 'Zmiana produktu lub formatu; może wymagać wymiany tubusa formującego.' },
+  { term: 'Wąskie gardło', en: 'bottleneck', def: 'Urządzenie lub etap, który ogranicza wydajność całej linii.' },
+  { term: 'OEE', en: 'Overall Equipment Effectiveness', def: 'Wskaźnik efektywności wyposażenia uwzględniający dostępność, wydajność i jakość.' },
+  { term: 'Waga kontrolna / kartoniarka zbiorcza', en: 'checkweigher / case packer', def: 'Kontrola masy gotowych worków / pakowanie kilku opakowań w karton zbiorczy.' },
+  { term: 'Bag-in-box', en: null, def: 'Worek foliowy umieszczony wewnątrz kartonu — np. w Essegi F1400 COMBINED.' },
+];
+
 // Czynniki doboru maszyny — treść dla klienta (bez obietnic wydajności)
 const SELECTION_FACTORS = [
   { title: 'Gęstość nasypowa', desc: 'Masa produktu na jednostkę objętości. Dwa worki po 15 kg — soli i lekkiej kory — wymagają zupełnie innych rozmiarów. Sama masa worka nie wystarcza do doboru maszyny.' },
@@ -322,17 +396,17 @@ const LINE_PROBLEMS = [
   { symptom: 'Waga „oszukuje”', check: 'Sprawdzamy, czy pracuje waga czy dozownik objętościowy, jak zmienia się gęstość produktu, jak działa podawanie zgrubne i dokładne oraz czy na pomiar nie wpływają drgania.' },
   { symptom: 'Pyli i nie zgrzewa', check: 'Odpowietrzanie, odciąg pyłu, czas opadania produktu, wysokość napełnienia i struktura folii — pył w strefie zgrzewu to częsta przyczyna nieszczelności.' },
   { symptom: 'Worek jest „nadmuchany”', check: 'Rozpoznajemy napowietrzenie produktu i powietrze w worku. Zagęszczanie lub usuwanie powietrza dobieramy po próbie na produkcie.' },
-  { symptom: 'Za dużo przezbrojeń', check: 'Liczymy receptury, gramatury i szerokości folii. Inna długość worka to zwykle zmiana ustawień, inna szerokość — często wymiana rury formującej.' },
+  { symptom: 'Za dużo przezbrojeń', check: 'Liczymy receptury, gramatury i szerokości folii. Inna długość worka to zwykle zmiana ustawień, inna szerokość — często wymiana tubusa formującego.' },
   { symptom: 'Worek źle leży na palecie', check: 'Format, fałdy boczne, spłaszczanie i orientowanie worka — a na końcu robotyzacja i stabilność palety.' },
   { symptom: 'Za mała wydajność', check: 'Szukamy wąskiego gardła: dozownik, szczęki zgrzewające, transport wyjściowy, paletyzacja albo zasilanie produktem.' },
 ];
 
 // Opcje z katalogu akcesoriów Essegi — dostępność zależy od modelu
 const MACHINE_OPTIONS = [
-  { group: 'Folia i nadruk', items: ['Fotokomórka nadruku', 'Centrowanie folii', 'Drukarka / znakowarka — data, partia, kod'] },
-  { group: 'Kształt worka', items: ['Fałdy boczne i płaskie dno', 'Cztery zgrzewy narożne Stabilo', 'Uchwyt w worku'] },
+  { group: 'Folia i nadruk', items: ['Fotokomórka znacznika nadruku', 'Automatyczne centrowanie folii', 'Drukarka / znakowarka — data, partia, kod'] },
+  { group: 'Kształt worka', items: ['Zakładki boczne i płaskie dno', 'Zgrzewy narożne Stabilo', 'Układ wykonywania uchwytów'] },
   { group: 'Odbiór i kontrola', items: ['Taśma wyjściowa, stół obrotowy', 'Obracanie i spłaszczanie worka', 'Waga kontrolna', 'Podawanie worka do kartonu'] },
-  { group: 'Obsługa', items: ['Podest i schody', 'Elektryczny podnośnik rolki folii', 'Wstrząsanie worka — osadzanie produktu'] },
+  { group: 'Obsługa', items: ['Podesty, schody, barierki', 'Podnośnik rolki folii', 'Stojaki na tubusy formujące', 'Układ wstrząsania worka'] },
 ];
 
 // Co MadejPak integruje wokół maszyny
@@ -343,11 +417,11 @@ const LINE_INTEGRATION = [
   { group: 'Sterowanie', desc: 'Integracja i komunikacja z urządzeniami, które już pracują w zakładzie.', href: '/maszyny/robotyzacja-pakowania', link: 'Robotyzacja' },
 ];
 
-const BAG_TYPES = [
-  { name: 'Pillow — poduszka', desc: 'Zgrzew wzdłużny i dwa poprzeczne. Najprostszy format — często wystarcza dla granulatów, soli czy pelletu.' },
-  { name: 'Gusset — fałdy boczne', desc: 'Boki worka są zaginane w zakładki. Po napełnieniu worek ma regularniejszy kształt i łatwiej układa się na palecie.' },
-  { name: 'Stabilo — 4 zgrzewy narożne', desc: 'Dodatkowe zgrzewy w narożnikach nadają workowi „pudełkowy” kształt — ważne dla wyglądu i ekspozycji, np. karmy czy kawy.' },
-  { name: 'Square bottom — płaskie dno', desc: 'Formowane dno pozwala workowi stabilnie stać. To nadal worek foliowy — wymaga odpowiedniego oprzyrządowania.' },
+const BAG_TYPES: { name: string; desc: string; svg: keyof typeof BAG_SVG }[] = [
+  { name: 'Pillow — worek poduszkowy', desc: 'Najprostszy typ worka VFFS: zgrzew wzdłużny i dwa poprzeczne. Stosowany m.in. do granulatów, soli i pelletu.', svg: 'pillow' },
+  { name: 'Gusset — zakładki boczne', desc: 'Zakładki zwiększają objętość i pomagają uzyskać regularniejszy kształt worka — korzystny również przy układaniu na palecie.', svg: 'gusset' },
+  { name: 'Stabilo — zgrzewy narożne', desc: 'Cztery dodatkowe zgrzewy narożne nadają opakowaniu regularny, zbliżony do prostopadłościanu kształt.', svg: 'stabilo' },
+  { name: 'Square bottom — płaskie dno', desc: 'Uformowane płaskie dno poprawia stabilność worka podczas ekspozycji. To nadal worek z folii, a nie karton.', svg: 'square' },
 ];
 
 // ─── Page ────────────────────────────────────────────────────────────────────
@@ -491,6 +565,39 @@ export default function PionoweMaszynyPage() {
         </Container>
       </Box>
 
+      {/* ── Na tej stronie ── */}
+      <Box component="nav" aria-label="Na tej stronie" sx={{ borderBottom: `1px solid ${BORDER}`, py: 2 }}>
+        <Container maxWidth="lg">
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, overflowX: 'auto', pb: 0.25, scrollbarWidth: 'none', '&::-webkit-scrollbar': { display: 'none' } }}>
+            <Typography sx={{ fontSize: '0.62rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--dim-45)', whiteSpace: 'nowrap', mr: 1 }}>
+              Na tej stronie
+            </Typography>
+            {PAGE_TOC.map((t) => (
+              <Box
+                key={t.href}
+                component="a"
+                href={t.href}
+                sx={{
+                  whiteSpace: 'nowrap',
+                  px: 1.5,
+                  py: 0.6,
+                  border: `1px solid ${BORDER}`,
+                  borderRadius: '100px',
+                  fontSize: '0.78rem',
+                  fontWeight: 600,
+                  color: 'var(--dim-75)',
+                  textDecoration: 'none',
+                  transition: 'border-color 0.15s ease, color 0.15s ease',
+                  '&:hover': { borderColor: ACCENT, color: ACCENT },
+                }}
+              >
+                {t.label}
+              </Box>
+            ))}
+          </Box>
+        </Container>
+      </Box>
+
       {/* ── Co to jest i do czego służy ── */}
       <Box sx={{ py: { xs: 7, md: 10 }, bgcolor: BG_ALT, borderBottom: `1px solid ${BORDER}` }}>
         <Container maxWidth="lg">
@@ -500,10 +607,20 @@ export default function PionoweMaszynyPage() {
                 Czym jest ta maszyna
               </Typography>
               <Typography variant="h2" sx={{ fontSize: { xs: '1.4rem', md: '1.75rem' }, fontWeight: 700, letterSpacing: '-0.02em', lineHeight: 1.2, mb: 3 }}>
-                Masz produkt sypki, proszkowy lub granulowany i chcesz go pakować w torebki?
+                Czym jest pionowa maszyna pakująca VFFS?
               </Typography>
-              <Typography sx={{ fontSize: '0.95rem', color: TEXT_DIM, lineHeight: 1.8 }}>
-                Pionowa maszyna pakująca pobiera folię z rolki, formuje z niej torebkę, dozuje do środka odmierzoną porcję produktu i zgrzewa opakowanie — wszystko automatycznie, w jednym cyklu. Na wyjściu masz gotowe, szczelne torebki w równych porcjach, gotowe do sprzedaży lub dalszego pakowania zbiorczego.
+              <Box sx={{ pl: 2.5, borderLeft: `3px solid ${ACCENT}`, mb: 3.5 }}>
+                <Typography sx={{ fontSize: { xs: '0.95rem', md: '1.02rem' }, fontWeight: 600, color: 'var(--dim-85)', lineHeight: 1.7 }}>
+                  VFFS (Vertical Form Fill Seal) to technologia, w której maszyna rozwija folię z rolki, formuje worek,
+                  napełnia go odmierzoną porcją produktu, wykonuje zgrzewy i oddziela gotowe opakowanie.
+                </Typography>
+              </Box>
+              <Typography variant="h3" sx={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--dim-85)', mb: 1 }}>
+                Co oznacza słowo „pionowa”?
+              </Typography>
+              <Typography sx={{ fontSize: '0.9rem', color: TEXT_DIM, lineHeight: 1.8 }}>
+                Produkt trafia do opakowania od góry, zwykle grawitacyjnie. Nie oznacza to, że wszystkie urządzenia w linii
+                stoją pionowo — podajniki, przenośniki i stanowisko paletyzacji mogą pracować w różnych kierunkach.
               </Typography>
             </Box>
             <Box>
@@ -511,10 +628,10 @@ export default function PionoweMaszynyPage() {
                 Kiedy to rozwiązanie jest dla Ciebie
               </Typography>
               {[
-                'Pakujesz ręcznie i chcesz to zautomatyzować — maszyna zastępuje kilka stanowisk i pracuje bez przerwy.',
-                'Potrzebujesz stałych porcji — każda torebka waży dokładnie tyle samo, bez odchyłek.',
-                'Twój produkt to coś sypkiego: mąka, cukier, kawa, granulat, proszek, kasza, nawóz, karma.',
-                'Chcesz różne formaty torebek — maszyna zmienia format bez wymiany całego oprzyrządowania.',
+                'Pakujesz ręcznie i chcesz to zautomatyzować — maszyna zastępuje kilka stanowisk i pracuje w ciągłym cyklu.',
+                'Potrzebujesz powtarzalnych porcji — odmierza je dobrany i zsynchronizowany z maszyną układ naważania lub dozowania.',
+                'Twój produkt to coś sypkiego: mąka, cukier, kawa, granulat, pellet, proszek, kasza, nawóz, karma.',
+                'Chcesz pakować różne formaty — zmiana długości worka to zwykle nastawy, inna szerokość może wymagać wymiany tubusa formującego.',
               ].map((text) => (
                 <Box key={text} sx={{ display: 'flex', alignItems: 'flex-start', gap: 1.5, mb: 2 }}>
                   <Box sx={{ width: 5, height: 5, borderRadius: '50%', bgcolor: ACCENT, mt: '8px', flexShrink: 0 }} />
@@ -526,99 +643,111 @@ export default function PionoweMaszynyPage() {
         </Container>
       </Box>
 
-      {/* ── Jak działa VFFS ── */}
-      <Box sx={{ py: { xs: 6, md: 8 }, borderBottom: `1px solid ${BORDER}` }}>
+      {/* ── Jak działa VFFS + budowa maszyny ── */}
+      <Box id="jak-dziala" sx={{ py: { xs: 8, md: 10 }, borderBottom: `1px solid ${BORDER}`, scrollMarginTop: '80px' }}>
         <Container maxWidth="lg">
+          <Box sx={{ mb: { xs: 4, md: 5 }, maxWidth: 720 }}>
+            <Typography sx={{ fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: ACCENT, mb: 2 }}>
+              Zasada działania
+            </Typography>
+            <Typography variant="h2" sx={{ fontSize: { xs: '1.4rem', md: '1.75rem' }, fontWeight: 700, lineHeight: 1.2, letterSpacing: '-0.02em' }}>
+              Jeden cykl — od produktu do gotowego worka
+            </Typography>
+          </Box>
+
+          <Box component="ol" sx={{ listStyle: 'none', m: 0, p: 0, display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' }, gap: 2, mb: { xs: 4, md: 5 } }}>
+            {VFFS_STEPS.map((step, i) => (
+              <Box key={step.title} component="li" sx={{ p: 3, bgcolor: BG_CARD, border: `1px solid ${BORDER}`, borderRadius: '4px' }}>
+                <Typography sx={{ fontSize: '1.6rem', fontWeight: 800, letterSpacing: '-0.03em', lineHeight: 1, color: ACCENT, mb: 1.5 }}>
+                  {String(i + 1).padStart(2, '0')}
+                </Typography>
+                <Typography variant="h3" sx={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--dim-85)', mb: 1 }}>
+                  {step.title}
+                </Typography>
+                <Typography sx={{ fontSize: '0.82rem', lineHeight: 1.65, color: TEXT_DIM }}>{step.desc}</Typography>
+              </Box>
+            ))}
+          </Box>
+
           <Box
             sx={{
+              p: { xs: 3, md: 3.5 },
+              mb: { xs: 8, md: 10 },
+              borderLeft: `3px solid ${ACCENT}`,
+              bgcolor: `color-mix(in srgb, ${ACCENT} 6%, var(--bg-card))`,
+              borderRadius: '4px',
+            }}
+          >
+            <Typography sx={{ fontSize: '0.92rem', fontWeight: 700, color: 'var(--dim-85)', mb: 0.75 }}>
+              Przykład: pakowanie 15 kg pelletu
+            </Typography>
+            <Typography sx={{ fontSize: '0.88rem', lineHeight: 1.75, color: TEXT_DIM }}>
+              Przenośnik taśmowy podaje pellet do zbiornika wagowego. Po naważeniu porcja trafia przez układ zasypowy do
+              worka formowanego z folii PE. Maszyna wykonuje zgrzew poprzeczny, odcina worek, a przenośnik odbiorczy
+              przekazuje go do następnych urządzeń — kontroli masy, spłaszczania i paletyzacji.
+            </Typography>
+          </Box>
+
+          {/* Budowa maszyny */}
+          <Box
+            id="budowa"
+            sx={{
+              scrollMarginTop: '80px',
               display: 'grid',
-              gridTemplateColumns: { xs: '1fr', md: '280px 1fr' },
-              gap: { xs: 4, md: 10 },
+              gridTemplateColumns: { xs: '1fr', md: '320px 1fr' },
+              gap: { xs: 4, md: 8 },
               alignItems: 'start',
             }}
           >
-            <Box>
-              <Typography
-                sx={{
-                  fontSize: '0.65rem',
-                  fontWeight: 700,
-                  letterSpacing: '0.18em',
-                  textTransform: 'uppercase',
-                  color: ACCENT,
-                  mb: 2,
-                }}
-              >
-                Zasada działania
-              </Typography>
-              <Typography
-                variant="h2"
-                sx={{
-                  fontSize: { xs: '1.3rem', md: '1.5rem' },
-                  fontWeight: 700,
-                  lineHeight: 1.25,
-                  letterSpacing: '-0.02em',
-                }}
-              >
-                Jeden cykl — od folii do gotowego worka
-              </Typography>
-            </Box>
-
             <Box
-              sx={{
-                display: 'grid',
-                gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', lg: 'repeat(4, 1fr)' },
-                gap: 2,
-              }}
-            >
-              {[
-                { n: '01', title: 'Formowanie', desc: 'Rolka folii jest prowadzona przez głowicę formującą, która nadaje jej kształt rury.' },
-                { n: '02', title: 'Zgrzew podłużny', desc: 'Folia jest zgrzewana wzdłuż — tworzy się zamknięty rękaw o zadanej średnicy.' },
-                { n: '03', title: 'Dozowanie', desc: 'Produkt jest podawany do wnętrza rękawa zgodnie z ustawionym systemem dozowania.' },
-                { n: '04', title: 'Zgrzew poprzeczny', desc: 'Worek jest zamykany od dołu i góry — cięty i wyrzucany jako gotowe opakowanie.' },
-              ].map((step) => (
-                <Box
-                  key={step.n}
-                  sx={{
-                    p: 2.5,
-                    bgcolor: BG_CARD,
-                    border: `1px solid ${BORDER}`,
-                    borderRadius: '4px',
-                  }}
-                >
-                  <Typography
-                    sx={{
-                      fontSize: '0.65rem',
-                      fontWeight: 700,
-                      color: ACCENT,
-                      letterSpacing: '0.1em',
-                      mb: 1.5,
-                    }}
-                  >
-                    {step.n}
-                  </Typography>
-                  <Typography
-                    sx={{
-                      fontSize: '0.88rem',
-                      fontWeight: 700,
-                      color: 'var(--dim-85)',
-                      mb: 1,
-                      lineHeight: 1.3,
-                    }}
-                  >
-                    {step.title}
-                  </Typography>
-                  <Typography sx={{ fontSize: '0.78rem', lineHeight: 1.65, color: TEXT_DIM }}>
-                    {step.desc}
-                  </Typography>
-                </Box>
-              ))}
+              component="svg"
+              viewBox="0 0 320 440"
+              role="img"
+              aria-label="Schemat budowy pionowej maszyny pakującej VFFS z numerami zespołów"
+              sx={{ display: 'block', width: '100%', maxWidth: 320, height: 'auto', mx: { xs: 'auto', md: 0 }, color: 'var(--dim-55)' }}
+              dangerouslySetInnerHTML={{ __html: VFFS_SCHEMA_SVG }}
+            />
+            <Box>
+              <Typography sx={{ fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: ACCENT, mb: 2 }}>
+                Budowa maszyny
+              </Typography>
+              <Typography variant="h2" sx={{ fontSize: { xs: '1.3rem', md: '1.5rem' }, fontWeight: 700, lineHeight: 1.25, letterSpacing: '-0.02em', mb: 3 }}>
+                Podstawowe zespoły pionowej maszyny pakującej
+              </Typography>
+              <Box component="ol" sx={{ listStyle: 'none', m: 0, p: 0, display: 'grid', gap: 1.5, mb: 4 }}>
+                {VFFS_PARTS.map((part, i) => (
+                  <Box key={part.name} component="li" sx={{ display: 'flex', gap: 1.75, alignItems: 'flex-start' }}>
+                    <Box sx={{ width: 22, height: 22, borderRadius: '50%', bgcolor: ACCENT, color: '#fff', fontSize: '0.72rem', fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, mt: '1px' }}>
+                      {i + 1}
+                    </Box>
+                    <Typography sx={{ fontSize: '0.86rem', lineHeight: 1.6, color: TEXT_DIM }}>
+                      <Box component="span" sx={{ fontWeight: 700, color: 'var(--dim-85)' }}>{part.name}</Box> — {part.desc}
+                    </Typography>
+                  </Box>
+                ))}
+              </Box>
+              <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)' }, gap: 2, mb: 3 }}>
+                {[
+                  { title: 'Przed maszyną', desc: 'Silos, zasobnik, przenośniki taśmowe lub ślimakowe, urządzenia przesiewające, waga albo dozownik.' },
+                  { title: 'Za maszyną', desc: 'Przenośnik odbiorczy, waga kontrolna, detektor metali (jeżeli wymagany), obracanie i spłaszczanie worków, robot paletyzujący, owijarka.' },
+                ].map((b) => (
+                  <Box key={b.title} sx={{ p: 2.5, bgcolor: BG_CARD, border: `1px solid ${BORDER}`, borderRadius: '4px' }}>
+                    <Typography variant="h3" sx={{ fontSize: '0.88rem', fontWeight: 700, color: 'var(--dim-85)', mb: 0.75 }}>{b.title}</Typography>
+                    <Typography sx={{ fontSize: '0.8rem', lineHeight: 1.65, color: TEXT_DIM }}>{b.desc}</Typography>
+                  </Box>
+                ))}
+              </Box>
+              <Typography sx={{ fontSize: '0.82rem', lineHeight: 1.7, color: 'var(--dim-55)' }}>
+                Maszyna pakująca sama nie gwarantuje wymaganej dokładności masy — za przygotowanie porcji odpowiada
+                dobrany i zsynchronizowany z nią układ dozowania lub ważenia.
+              </Typography>
             </Box>
           </Box>
         </Container>
       </Box>
 
       {/* ── Serie Essegi ── */}
-      <Box sx={{ bgcolor: BG_ALT, borderBottom: `1px solid ${BORDER}`, py: { xs: 8, md: 12 } }}>
+      <Box id="modele" sx={{ scrollMarginTop: '80px', bgcolor: BG_ALT, borderBottom: `1px solid ${BORDER}`, py: { xs: 8, md: 12 } }}>
         <Container maxWidth="lg">
           <Box sx={{ mb: { xs: 5, md: 7 } }}>
             <Typography
@@ -1139,7 +1268,7 @@ export default function PionoweMaszynyPage() {
       </Box>
 
       {/* ── Typy worków ── */}
-      <Box sx={{ py: { xs: 8, md: 10 }, borderBottom: `1px solid ${BORDER}` }}>
+      <Box id="worki" sx={{ scrollMarginTop: '80px', py: { xs: 8, md: 10 }, borderBottom: `1px solid ${BORDER}` }}>
         <Container maxWidth="lg">
           <Box
             sx={{
@@ -1191,7 +1320,13 @@ export default function PionoweMaszynyPage() {
                     borderRadius: '4px',
                   }}
                 >
-                  <Box sx={{ width: 24, height: 2, bgcolor: ACCENT, mb: 2.5, borderRadius: '1px' }} />
+                  <Box
+                    component="svg"
+                    viewBox="0 0 100 130"
+                    aria-hidden="true"
+                    sx={{ display: 'block', width: 56, height: 'auto', mb: 2, color: 'var(--dim-55)' }}
+                    dangerouslySetInnerHTML={{ __html: BAG_SVG[bag.svg] }}
+                  />
                   <Typography
                     sx={{
                       fontSize: '0.9rem',
@@ -1212,9 +1347,81 @@ export default function PionoweMaszynyPage() {
           </Box>
           <Typography sx={{ fontSize: '0.78rem', lineHeight: 1.7, color: 'var(--dim-55)', mt: 3, ml: { md: 'calc(280px + 80px)' } }}>
             Formaty w katalogu Essegi: F700 i F8004S — pillow, square bottom, Stabilo · F1000 z wagą taśmową — pillow, gusset,
-            Stabilo · F1000 z wagą ślimakową, EcoFocus, F1200, F1300 — pillow, gusset. Dostępny format wymaga
-            odpowiedniego oprzyrządowania maszyny.
+            Stabilo · F1000 z wagą ślimakową, EcoFocus, F1200, F1300 — pillow, gusset · F1400 COMBINED — pillow,
+            gusset (worek w kartonie). Format trzeba potwierdzić dla zespołu formującego i wyposażenia konkretnej maszyny.
           </Typography>
+
+          {/* Folia, nadruk i zgrzewanie */}
+          <Box
+            id="folie"
+            sx={{
+              mt: { xs: 6, md: 8 },
+              pt: { xs: 6, md: 8 },
+              borderTop: `1px solid ${BORDER}`,
+              scrollMarginTop: '80px',
+              display: 'grid',
+              gridTemplateColumns: { xs: '1fr', md: '280px 1fr' },
+              gap: { xs: 4, md: 10 },
+              alignItems: 'start',
+            }}
+          >
+            <Box>
+              <Typography sx={{ fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: ACCENT, mb: 2 }}>
+                Folie
+              </Typography>
+              <Typography variant="h2" sx={{ fontSize: { xs: '1.3rem', md: '1.5rem' }, fontWeight: 700, lineHeight: 1.25, letterSpacing: '-0.02em', mb: 2 }}>
+                Folia, nadruk i zgrzewanie
+              </Typography>
+              <Typography sx={{ fontSize: '0.85rem', lineHeight: 1.7, color: TEXT_DIM }}>
+                Folia powinna być zgodna z maszyną, produktem i wymaganiami odbiorcy opakowania.
+              </Typography>
+            </Box>
+            <Box>
+              <Box sx={{ border: `1px solid ${BORDER}`, borderRadius: '4px', overflow: 'hidden', mb: 3 }}>
+                {FILMS.map((f, idx) => (
+                  <Box
+                    key={f.material}
+                    sx={{
+                      display: 'grid',
+                      gridTemplateColumns: { xs: '1fr', sm: '0.9fr 1.6fr 1fr' },
+                      gap: { xs: 0.5, sm: 3 },
+                      px: 3,
+                      py: 1.75,
+                      bgcolor: BG_CARD,
+                      borderBottom: idx < FILMS.length - 1 ? `1px solid ${BORDER}` : 'none',
+                    }}
+                  >
+                    <Typography sx={{ fontSize: '0.86rem', fontWeight: 700, color: 'var(--dim-85)' }}>{f.material}</Typography>
+                    <Typography sx={{ fontSize: '0.82rem', lineHeight: 1.55, color: TEXT_DIM }}>{f.props}</Typography>
+                    <Typography sx={{ fontSize: '0.8rem', lineHeight: 1.55, color: 'var(--dim-55)' }}>{f.example}</Typography>
+                  </Box>
+                ))}
+              </Box>
+              <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: 'repeat(3, 1fr)' }, gap: 2, mb: 3 }}>
+                {[
+                  { title: 'Grubość', desc: 'Podaje się ją w mikrometrach: 100 µm = 0,10 mm. Grubsza folia nie zawsze oznacza lepszy worek — liczą się struktura, odporność na przebicie i wytrzymałość zgrzewu.' },
+                  { title: 'Zgrzewanie', desc: 'Impulsowe: element grzejny nagrzewa się w cyklu zgrzewania. Hot-bar: listwy grzejne utrzymują stałą temperaturę roboczą. Dobór zależy od folii, grubości i czasu cyklu.' },
+                  { title: 'Nadruk', desc: 'Pełną grafikę wykonuje dostawca folii. Fotokomórka znacznika nadruku pilnuje pozycji grafiki względem zgrzewu i cięcia, a drukarka na maszynie nanosi dane zmienne — datę, numer partii.' },
+                ].map((b) => (
+                  <Box key={b.title} sx={{ p: 2.5, bgcolor: BG_CARD, border: `1px solid ${BORDER}`, borderRadius: '4px' }}>
+                    <Typography variant="h3" sx={{ fontSize: '0.88rem', fontWeight: 700, color: 'var(--dim-85)', mb: 0.75 }}>{b.title}</Typography>
+                    <Typography sx={{ fontSize: '0.8rem', lineHeight: 1.65, color: TEXT_DIM }}>{b.desc}</Typography>
+                  </Box>
+                ))}
+              </Box>
+              <Box sx={{ p: { xs: 2.5, md: 3 }, borderLeft: `3px solid ${ACCENT}`, bgcolor: `color-mix(in srgb, ${ACCENT} 6%, var(--bg-card))`, borderRadius: '4px' }}>
+                <Typography sx={{ fontSize: '0.88rem', fontWeight: 700, color: 'var(--dim-85)', mb: 0.5 }}>Dlaczego szerokość folii ≠ szerokość worka?</Typography>
+                <Typography sx={{ fontSize: '0.82rem', lineHeight: 1.7, color: TEXT_DIM, mb: 1.25 }}>
+                  Płaska folia owija się wokół tubusa formującego. Na obwód worka wpływają kształt tubusa, zakładki boczne
+                  i zgrzew wzdłużny — dlatego format potwierdzamy na podstawie rysunku technicznego.
+                </Typography>
+                <Typography sx={{ fontSize: '0.78rem', lineHeight: 1.6, color: 'var(--dim-55)' }}>
+                  Do zapytania o folię przydadzą się: materiał i struktura, grubość [µm], szerokość [mm], średnica i masa rolki,
+                  rodzaj nadruku i znacznik nadruku, rysunek worka.
+                </Typography>
+              </Box>
+            </Box>
+          </Box>
 
           {/* Worek w kartonie czy kartonowanie zbiorcze */}
           <Box
@@ -1292,7 +1499,7 @@ export default function PionoweMaszynyPage() {
       </Box>
 
       {/* ── Integracja z ważeniem ── */}
-      <Box sx={{ bgcolor: BG_ALT, borderBottom: `1px solid ${BORDER}`, py: { xs: 8, md: 10 } }}>
+      <Box id="dozowanie" sx={{ scrollMarginTop: '80px', bgcolor: BG_ALT, borderBottom: `1px solid ${BORDER}`, py: { xs: 8, md: 10 } }}>
         <Container maxWidth="lg">
           <Box
             sx={{
@@ -1342,27 +1549,31 @@ export default function PionoweMaszynyPage() {
               >
                 {[
                   {
-                    title: 'Waga wibracyjna (B/V-K)',
+                    title: 'Waga z podawaniem wibracyjnym (B/V-K)',
                     desc: 'Kanały wibracyjne podają produkt do komór wagowych. Do drobnych granulatów i mieszanek w mniejszych porcjach — kawa, ryż, nasiona.',
                   },
                   {
-                    title: 'Waga dwuślimakowa (B/2C)',
+                    title: 'Waga ze ślimakami (B/2C-K)',
                     desc: 'Ślimaki podają proszek zgrubnie i dokładnie do układu ważącego. Do mąki, przypraw, mleka w proszku, cementu i premiksów.',
                   },
                   {
-                    title: 'Kubkowy objętościowy (DT)',
-                    desc: 'Odmierza stałą objętość kubkami — do regularnych granulatów, makaronów, fasoli. Masa porcji zależy od gęstości nasypowej produktu.',
+                    title: 'Dozownik kubkowy (DT)',
+                    desc: 'Odmierza stałą objętość kubkami — do ryżu, nasion, cukru i regularnych granulatów. Masa porcji zależy od gęstości nasypowej produktu.',
                   },
                   {
-                    title: 'Waga taśmowa (B/N-K)',
+                    title: 'Dozownik ślimakowy (DV5000)',
+                    desc: 'Dozuje porcję proszku obrotami ślimaka — do mniejszych porcji proszków. Znaczenie mają płynność, stan zasypu i wilgotność.',
+                  },
+                  {
+                    title: 'Waga z podajnikiem taśmowym (B/N-K)',
                     desc: 'Do granulatów i produktów sypkich — pellet, nawozy, sól, nasiona, materiały budowlane. Duże porcje, dozowanie zgrubne i dokładne.',
                   },
                   {
-                    title: 'Wielogłowicowy',
+                    title: 'Waga wielogłowicowa',
                     desc: 'Do mieszanek i produktów nieregularnych — orzechy, przekąski, mrożonki. Łączy porcje z wielu głowic, by trafić w zadaną masę.',
                   },
                   {
-                    title: 'Taśmowy objętościowy (DTS)',
+                    title: 'Dozownik taśmowy objętościowy (DTS)',
                     desc: 'Do ziemi, torfu, kory i kompostu — gdy o porcji decyduje objętość w litrach, a nie tylko masa.',
                   },
                 ].map((item) => (
@@ -1395,17 +1606,22 @@ export default function PionoweMaszynyPage() {
                   </Box>
                 ))}
               </Box>
-              <Typography sx={{ fontSize: '0.8rem', lineHeight: 1.7, color: 'var(--dim-55)', mt: 3 }}>
-                Wagi ważą produkt, dozowniki objętościowe odmierzają objętość — to nie jest zamiennik
-                dokładności wagowej. Przy wymaganej masie netto i zmiennej gęstości produktu dobieramy ważenie.
-              </Typography>
+              <Box sx={{ mt: 3, p: { xs: 2.5, md: 3 }, borderLeft: `3px solid ${ACCENT}`, bgcolor: 'var(--bg-card)', borderRadius: '4px' }}>
+                <Typography sx={{ fontSize: '0.88rem', fontWeight: 700, color: 'var(--dim-85)', mb: 0.5 }}>Naważanie czy dozowanie objętościowe?</Typography>
+                <Typography sx={{ fontSize: '0.82rem', lineHeight: 1.7, color: TEXT_DIM }}>
+                  Jeżeli wymaganie dotyczy 15 kg netto, podstawą doboru jest naważanie. Jeżeli produkt sprzedaje się np.
+                  w workach 20 l, właściwe może być dozowanie objętościowe — ale ta sama objętość przy różnej gęstości
+                  nasypowej nie ma stałej masy. Przykład: 15 kg pelletu przy gęstości 650 kg/m³ zajmuje ok. 23,1 l —
+                  to objętość samego produktu, nie wymiar worka.
+                </Typography>
+              </Box>
             </Box>
           </Box>
         </Container>
       </Box>
 
       {/* ── Jak dobieramy maszynę ── */}
-      <Box sx={{ py: { xs: 8, md: 10 }, borderBottom: `1px solid ${BORDER}` }}>
+      <Box id="dobor" sx={{ scrollMarginTop: '80px', py: { xs: 8, md: 10 }, borderBottom: `1px solid ${BORDER}` }}>
         <Container maxWidth="lg">
           <Box sx={{ mb: { xs: 5, md: 6 }, maxWidth: 720 }}>
             <Typography
@@ -1634,7 +1850,7 @@ export default function PionoweMaszynyPage() {
                 Opcje maszyny Essegi
               </Typography>
               <Typography sx={{ fontSize: '0.75rem', color: 'var(--dim-55)', mb: 2.5 }}>
-                Dostępność zależy od modelu i konfiguracji.
+                Opcja z katalogu nie musi pasować do każdego modelu — dobieramy ją do konfiguracji.
               </Typography>
               <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)' }, gap: 2.5 }}>
                 {MACHINE_OPTIONS.map((g) => (
@@ -1928,7 +2144,7 @@ export default function PionoweMaszynyPage() {
       </Box>
 
       {/* ── FAQ ── */}
-      <Box sx={{ bgcolor: BG_ALT, py: { xs: 8, md: 10 }, borderBottom: `1px solid ${BORDER}` }}>
+      <Box id="faq" sx={{ scrollMarginTop: '80px', bgcolor: BG_ALT, py: { xs: 8, md: 10 }, borderBottom: `1px solid ${BORDER}` }}>
         <Container maxWidth="lg">
           <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '280px 1fr' }, gap: { xs: 4, md: 10 }, alignItems: 'start' }}>
             <Box>
@@ -1975,6 +2191,41 @@ export default function PionoweMaszynyPage() {
                   <Typography sx={{ fontSize: '0.88rem', lineHeight: 1.75, color: TEXT_DIM, pb: 2.5, pr: { md: 6 } }}>
                     {f.a}
                   </Typography>
+                </Box>
+              ))}
+            </Box>
+          </Box>
+
+          {/* Słownik pojęć */}
+          <Box
+            sx={{
+              mt: { xs: 6, md: 8 },
+              pt: { xs: 6, md: 8 },
+              borderTop: `1px solid ${BORDER}`,
+              display: 'grid',
+              gridTemplateColumns: { xs: '1fr', md: '280px 1fr' },
+              gap: { xs: 4, md: 10 },
+              alignItems: 'start',
+            }}
+          >
+            <Box>
+              <Typography sx={{ fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: ACCENT, mb: 2 }}>
+                Słownik
+              </Typography>
+              <Typography variant="h2" sx={{ fontSize: { xs: '1.3rem', md: '1.5rem' }, fontWeight: 700, lineHeight: 1.25, letterSpacing: '-0.02em' }}>
+                Pojęcia, które usłyszysz od technologa
+              </Typography>
+            </Box>
+            <Box component="dl" sx={{ m: 0, display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)' }, columnGap: 4, rowGap: 2.5 }}>
+              {GLOSSARY.map((g) => (
+                <Box key={g.term}>
+                  <Box component="dt" sx={{ fontSize: '0.88rem', fontWeight: 700, color: 'var(--dim-85)', mb: 0.25 }}>
+                    {g.term}
+                    {g.en && (
+                      <Box component="span" sx={{ fontWeight: 500, color: 'var(--dim-55)' }}> · {g.en}</Box>
+                    )}
+                  </Box>
+                  <Box component="dd" sx={{ m: 0, fontSize: '0.82rem', lineHeight: 1.6, color: TEXT_DIM }}>{g.def}</Box>
                 </Box>
               ))}
             </Box>
