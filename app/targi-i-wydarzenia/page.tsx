@@ -4,7 +4,8 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import { EVENTS, type TradeEvent } from '@/data/eventsData';
+import { EVENTS, getEventStatus, type TradeEvent } from '@/data/eventsData';
+import CaseStudyVideo from '@/components/realizacje/CaseStudyVideo';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
@@ -181,6 +182,12 @@ function EventBlock({ event }: { event: TradeEvent }) {
           {event.opis}
         </Typography>
 
+        {event.youtubeId && (
+          <Box sx={{ mb: 3, maxWidth: 720 }}>
+            <CaseStudyVideo youtubeId={event.youtubeId} title={`Wideo — ${event.name}`} />
+          </Box>
+        )}
+
         {event.highlights && event.highlights.length > 0 && (
           <Box sx={{ mb: 3 }}>
             <Typography
@@ -289,7 +296,7 @@ function EventBlock({ event }: { event: TradeEvent }) {
                 '&:hover': { bgcolor: '#D45509' },
               }}
             >
-              Zarejestruj się
+              {getEventStatus(event) === 'past' ? 'Zobacz relację' : 'Zarejestruj się'}
               <ArrowRight />
             </Box>
           </Box>

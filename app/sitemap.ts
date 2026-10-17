@@ -82,6 +82,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/en/partnerzy`,                                    lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${SITE_URL}/en/serwis`,                                       lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${SITE_URL}/en/targi-i-wydarzenia`,                           lastModified: now, changeFrequency: 'weekly',  priority: 0.6 },
+    { url: `${SITE_URL}/en/zaproszenie-symas-2026`,                       lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${SITE_URL}/en/kontakt`,                                      lastModified: now, changeFrequency: 'yearly',  priority: 0.7 },
   ];
 

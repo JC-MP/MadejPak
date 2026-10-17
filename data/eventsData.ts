@@ -16,6 +16,7 @@ export interface TradeEvent {
   teamNote?: string;
   highlights?: string[];
   invitationUrl?: string; // link do dedykowanej strony zaproszenia / rejestracji
+  youtubeId?: string;     // film z wydarzenia (YouTube) — wyświetlany pod opisem na /targi-i-wydarzenia
   eventType: EventType;
   // Opcjonalny ręczny override statusu. Domyślnie status liczony jest z dat
   // (getEventStatus). Używane np. dla Coboty — rolling-kampania, której dateStart
@@ -56,12 +57,12 @@ export const EVENTS: TradeEvent[] = [
     venue: 'Messe Düsseldorf',
     country: 'Niemcy',
     zajawka:
-      'MadejPak na największych światowych targach branży pakowania. Odwiedź nas na stoiskach partnerów technologicznych w Düsseldorfie — cztery stoiska w trzech halach.',
+      'MadejPak na największych światowych targach branży pakowania — na stoiskach partnerów technologicznych w Düsseldorfie, cztery stoiska w trzech halach.',
     opis:
-      'Interpack 2026 to największe na świecie targi branży pakowania, odbywające się co trzy lata w Düsseldorfie. MadejPak będzie obecny na stoiskach czterech partnerów technologicznych: Tecno Pack (Halle 5 / F22), EsseGi (Halle 12 / D07), Concetti (Halle 12 / B10) i Vimco (Halle 13 / C59). Zapraszamy do odwiedzenia stoisk z nowościami maszyn pakujących, workujących i paletyzujących.',
+      'Interpack to największe na świecie targi branży pakowania, odbywające się co trzy lata w Düsseldorfie. Na Interpack 2026 MadejPak był obecny na stoiskach czterech partnerów technologicznych: Tecno Pack (Halle 5 / F22), EsseGi (Halle 12 / D07), Concetti (Halle 12 / B10) i Vimco (Halle 13 / C59), prezentujących nowości maszyn pakujących, workujących i paletyzujących.',
     partners: ['Tecno Pack / GSP', 'EsseGi', 'Concetti', 'Vimco'],
     boothInfo: 'Halle 5/F22 · Halle 12/D07 · Halle 12/B10 · Halle 13/C59',
-    teamNote: 'MadejPak obecny na stoiskach partnerów technologicznych. Bezpłatny bilet wstępu przez formularz Concetti.',
+    teamNote: 'MadejPak obecny na stoiskach partnerów technologicznych.',
     highlights: [
       'Tecno Pack / GSP — flow-pack, VFFS, paletyzacja robotyczna, autonomiczny wózek ATL (Halle 5 / F22)',
       'EsseGi — pionowe maszyny workujące serii EVO/Syncro i F-series, panel Siemens MTP1000 (Halle 12 / D07)',
@@ -80,16 +81,17 @@ export const EVENTS: TradeEvent[] = [
     venue: 'EXPO Kraków',
     country: 'Polska',
     zajawka:
-      'MadejPak na targach utrzymania ruchu i automatyki przemysłowej. Stoisko B33 — z pionową maszyną pakującą Essegi F1000 na żywo. Zapraszamy!',
+      'Dziękujemy za odwiedziny na stoisku B33! Na targach w Krakowie pokazaliśmy na żywo pionową maszynę pakującą Essegi F1000 — zobacz krótką relację wideo.',
     opis:
-      '17. Międzynarodowe Targi Obróbki, Magazynowania i Transportu Materiałów Sypkich i Masowych (SYMAS) oraz 17. Międzynarodowe Targi Utrzymania Ruchu, Planowania i Optymalizacji Produkcji (MAINTENANCE) to jedne z najważniejszych w Polsce wydarzeń dla przemysłu sypkiego i utrzymania ruchu. MadejPak będzie obecny na stoisku B33, gdzie na żywo zaprezentujemy pionową maszynę pakującą Essegi F1000 oraz porozmawiamy o automatyzacji, robotyzacji i integracji linii pakujących. Zapraszamy 14–15 października 2026 w EXPO Kraków.',
+      '17. Międzynarodowe Targi Obróbki, Magazynowania i Transportu Materiałów Sypkich i Masowych (SYMAS) oraz 17. Międzynarodowe Targi Utrzymania Ruchu, Planowania i Optymalizacji Produkcji (MAINTENANCE) odbyły się 14–15 października 2026 w EXPO Kraków. Na stoisku B33 pokazaliśmy na żywo pionową maszynę pakującą Essegi F1000 i rozmawialiśmy o automatyzacji, robotyzacji i integracji linii pakujących. Dziękujemy za wszystkie spotkania i nowe kontakty!',
     boothInfo: 'Stoisko B33',
     highlights: [
-      'Pionowa maszyna pakująca Essegi F1000 — na żywo na stoisku',
+      'Pionowa maszyna pakująca Essegi F1000 — pokaz na żywo przez oba dni targów',
       'Rozmowy o automatyzacji i integracji linii pakujących',
       'Konsultacje z zespołem inżynierów MadejPak',
     ],
-    invitationUrl: '/zaproszenie-symas-2026',
+    invitationUrl: '/zaproszenie-symas-2026', // po targach: relacja z wideo
+    youtubeId: 'fjyxXTrTmic',
     eventType: 'targi',
   },
 
@@ -165,7 +167,7 @@ export const EVENTS: TradeEvent[] = [
     name: 'Dni Otwarte MadejPak 2024',
     dateLabel: '22 maja 2024',
     dateStart: '2024-05-22',
-    city: 'Dziewina',
+    city: 'Dziewin',
     country: 'Polska',
     zajawka:
       'MadejPak zaprosił klientów i partnerów na Dni Otwarte w siedzibie firmy w Dziewinie — prezentacja rozwiązań i rozmowy z zespołem.',
@@ -180,7 +182,7 @@ export const EVENTS: TradeEvent[] = [
     name: 'Dni Otwarte MadejPak 2023',
     dateLabel: '15–16 listopada 2023',
     dateStart: '2023-11-15',
-    city: 'Dziewina',
+    city: 'Dziewin',
     country: 'Polska',
     zajawka:
       'Dwudniowe Dni Otwarte w siedzibie MadejPak w Dziewinie — prezentacja oferty i możliwość bezpośredniej rozmowy z zespołem.',

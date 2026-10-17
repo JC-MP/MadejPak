@@ -4,7 +4,9 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import { EVENTS, type TradeEvent } from '@/data/eventsData';
+import { getEventStatus, type TradeEvent } from '@/data/eventsData';
+import { EVENTS_EN } from '@/data/eventsDataEn';
+import CaseStudyVideo from '@/components/realizacje/CaseStudyVideo';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 
 export const metadata: Metadata = {
@@ -108,7 +110,7 @@ function EventBlock({ event }: { event: TradeEvent }) {
         </Typography>
         <Typography sx={{ fontSize: '0.78rem', color: TEXT_DIM, lineHeight: 1.5, mb: 0.5 }}>
           {event.city}
-          {event.country !== 'Polska' ? `, ${event.country}` : ''}
+          {event.country !== 'Poland' ? `, ${event.country}` : ''}
         </Typography>
         {event.venue && (
           <Typography sx={{ fontSize: '0.72rem', color: 'var(--dim-28)', lineHeight: 1.5 }}>
@@ -179,6 +181,27 @@ function EventBlock({ event }: { event: TradeEvent }) {
         <Typography sx={{ fontSize: '0.88rem', lineHeight: 1.8, color: TEXT_DIM, mb: 3 }}>
           {event.opis}
         </Typography>
+
+        {event.youtubeId && (
+          <Box sx={{ mb: 3, maxWidth: 720 }}>
+            <CaseStudyVideo youtubeId={event.youtubeId} title={`Video — ${event.name}`} />
+          </Box>
+        )}
+
+        {event.invitationUrl && (
+          <Box
+            component={Link}
+            href={event.invitationUrl}
+            sx={{
+              display: 'inline-flex', alignItems: 'center', gap: 1, mb: 3, px: 2.5, py: 1.1,
+              bgcolor: '#E8610A', borderRadius: '3px', fontSize: '0.75rem', fontWeight: 700,
+              letterSpacing: '0.06em', textTransform: 'uppercase', color: '#fff', textDecoration: 'none',
+              transition: 'background-color 0.15s ease', '&:hover': { bgcolor: '#D45509' },
+            }}
+          >
+            {getEventStatus(event) === 'past' ? 'View the recap' : 'Register'} →
+          </Box>
+        )}
 
         {event.highlights && event.highlights.length > 0 && (
           <Box sx={{ mb: 3 }}>
@@ -280,7 +303,7 @@ function groupByYear(events: TradeEvent[]): Map<number, TradeEvent[]> {
 }
 
 export default function TradeShowsPage() {
-  const sorted = [...EVENTS].sort(
+  const sorted = [...EVENTS_EN].sort(
     (a, b) => new Date(b.dateStart).getTime() - new Date(a.dateStart).getTime()
   );
   const byYear = groupByYear(sorted);

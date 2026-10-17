@@ -7,7 +7,8 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import Link from 'next/link';
-import { EVENTS, getEventStatus, type TradeEvent } from '@/data/eventsData';
+import { getEventStatus, type TradeEvent } from '@/data/eventsData';
+import { EVENTS_EN } from '@/data/eventsDataEn';
 import ClientsSection from '@/components/sections/ClientsSection';
 import TrustDifferentiator from '@/components/sections/TrustDifferentiator';
 
@@ -500,7 +501,7 @@ function EventCard({ event }: { event: TradeEvent }) {
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
 export default function EnHomePage() {
-  const sorted = [...EVENTS]
+  const sorted = [...EVENTS_EN]
     .sort((a, b) => new Date(b.dateStart).getTime() - new Date(a.dateStart).getTime())
     .slice(0, 4);
 

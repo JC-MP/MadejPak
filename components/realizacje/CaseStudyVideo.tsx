@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 
 const BORDER = 'var(--border)';
 
-export default function CaseStudyVideo({ youtubeId, src }: { youtubeId?: string; src?: string }) {
+export default function CaseStudyVideo({ youtubeId, src, title = 'Video' }: { youtubeId?: string; src?: string; title?: string }) {
   if (youtubeId) {
     return (
       <Box
@@ -21,7 +21,7 @@ export default function CaseStudyVideo({ youtubeId, src }: { youtubeId?: string;
         <Box
           component="iframe"
           src={`https://www.youtube-nocookie.com/embed/${youtubeId}`}
-          title="Video"
+          title={title}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
           sx={{
