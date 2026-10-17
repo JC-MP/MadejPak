@@ -43,6 +43,7 @@ export const COMPANY = {
   sameAs: [
     'https://www.linkedin.com/company/madejpak',
     'https://www.facebook.com/MadejPak',
+    'https://www.youtube.com/channel/UCwcfpye_Xm-noBzbH3k_1wQ',
   ],
 };
 

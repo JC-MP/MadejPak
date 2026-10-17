@@ -24,6 +24,7 @@ const COMPANY = {
   email:     'biuro@madejpak.pl',
   nip:       '868-198-64-42',
   linkedin:  'https://www.linkedin.com/company/madejpak/posts/?feedView=all',
+  youtube:   'https://www.youtube.com/channel/UCwcfpye_Xm-noBzbH3k_1wQ',
 };
 
 const NAV_COLS = [
@@ -193,6 +194,15 @@ export default function Footer() {
                 <Typography component="a" href={COMPANY.linkedin} target="_blank" rel="noopener noreferrer"
                   sx={{ ...linkSx,fontWeight: 900, '&:hover': { color: ACCENT } }}>
                   MadejPak
+                </Typography>
+              </Box>
+              <Box>
+                <Typography sx={{ fontSize: '0.7rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: DIM_LO, mb: 0.5 }}>
+                  YouTube
+                </Typography>
+                <Typography component="a" href={COMPANY.youtube} target="_blank" rel="noopener noreferrer"
+                  sx={{ ...linkSx,fontWeight: 900, '&:hover': { color: ACCENT } }}>
+                  @madejpak
                 </Typography>
               </Box>
             </Stack>
