@@ -172,7 +172,7 @@ export default function Gsp65EvoEnPage() {
               <StatChip value="MAP" label="modified atmosphere" />
               <StatChip value="Box motion" label="cross seal" />
               <StatChip value="N₂/CO₂" label="gas flushing" />
-              <StatChip value="BB" label="bottom brake option" />
+              <StatChip value="BB" label="bottom-reel version" />
             </Box>
             <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1.5}>
               <Button component={Link} href="#enquiry" variant="contained" disableElevation

@@ -13,11 +13,11 @@ import LeadFormEn from '../LeadFormEn';
 export const metadata: Metadata = {
   title: 'GSP 55 S – Compact Industrial Flow Pack Machine',
   description:
-    'GSP 55 S – compact flow pack machine up to 150 packs/min. Cantilever frame, 3 pairs of longitudinal sealing wheels, hot-seal and cold-seal films, recipe memory. Industrial packaging.',
+    'GSP 55 S – flow pack machine up to 200 packs/min. Cantilever frame, product 10–250 × 1–120 × 60–600 mm, hot-seal and cold-seal films, 5.7″ touch screen. Food and non-food packaging.',
   keywords: [
     'GSP 55 S', 'compact flow pack machine', 'cantilever flow wrap industrial',
     'hot seal cold seal flow pack', 'industrial packaging machine',
-    'flow pack 150 packs', 'GSP 55S',
+    'flow pack 200 packs', 'GSP 55S',
   ],
   alternates: {
     canonical: `${SITE_URL}/en/maszyny/poziome-maszyny-pakujace/gsp-55-s`,
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     url:         `${SITE_URL}/en/maszyny/poziome-maszyny-pakujace/gsp-55-s`,
     title:       'GSP 55 S – Compact Industrial Flow Pack Machine | MadejPak',
-    description: 'Compact flow pack machine up to 150 packs/min. 3 pairs of sealing wheels, hot-seal and cold-seal films, recipe memory.',
+    description: 'Flow pack machine up to 200 packs/min. Product 10–250 × 1–120 × 60–600 mm, hot-seal and cold-seal films, recipe memory.',
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'GSP 55 S – flow pack machine – MadejPak' }],
   },
 };
@@ -67,11 +67,11 @@ const FOR_WHO = [
   },
   {
     title: 'Plants packaging medium-sized products',
-    desc: 'Handles products up to 200 mm wide and 120 mm tall. Suitable for many food and non-food products requiring classic flow pack packaging.',
+    desc: 'Handles products 10–250 mm wide, up to 120 mm tall and 60–600 mm long. Suitable for many food and non-food products requiring classic flow pack packaging.',
   },
   {
     title: 'Companies requiring easy operation',
-    desc: 'Alphanumeric display panel with keyboard for straightforward parameter control. Recipe recall function makes returning to saved settings for repeat products quick and error-free.',
+    desc: '5.7″ touch-screen operator panel for straightforward parameter control. Recipe recall function makes returning to saved settings for repeat products quick and error-free.',
   },
   {
     title: 'Producers working with hot-seal and cold-seal films',
@@ -85,8 +85,8 @@ const ADVANTAGES = [
     desc: 'Industrial packaging quality in a compact footprint. A good choice for plants with limited production space.',
   },
   {
-    title: 'Up to 150 packs per minute',
-    desc: 'Achieves up to 150 packs/min depending on product, film and process settings.',
+    title: 'Up to 200 packs per minute',
+    desc: 'Achieves up to 200 packs/min depending on product, film and process settings.',
   },
   {
     title: 'Cantilever frame',
@@ -97,8 +97,8 @@ const ADVANTAGES = [
     desc: 'Longitudinal sealing unit with three pairs of wheels supports stable film guidance and repeatable seals.',
   },
   {
-    title: 'Three-motor control',
-    desc: 'Three motors managed by axis control ensure precise synchronisation and repeatable packaging process.',
+    title: 'PLC axis control',
+    desc: 'Machine axes controlled by the PLC ensure precise synchronisation and a repeatable packaging process.',
   },
   {
     title: 'Recipe memory',
@@ -128,18 +128,18 @@ const OPTIONS = [
 const SPECS: { label: string; value: string }[] = [
   { label: 'Frame type',                value: 'Cantilever' },
   { label: 'Longitudinal sealing',      value: '3 pairs of wheels' },
-  { label: 'Throughput',                value: 'up to 150 packs/min' },
-  { label: 'Max product width',         value: '200 mm' },
-  { label: 'Max product height',        value: '120 mm' },
-  { label: 'Max film width',            value: '520 mm' },
+  { label: 'Throughput',                value: 'up to 200 packs/min' },
+  { label: 'Product width',             value: '10–250 mm' },
+  { label: 'Product height',            value: '1–120 mm' },
+  { label: 'Product length',            value: '60–600 mm' },
+  { label: 'Film reel width',           value: '520 / 720 / 920 mm' },
   { label: 'Packaging materials',       value: 'Hot-seal and cold-seal' },
   { label: 'Machine weight',            value: '750 kg' },
-  { label: 'Number of motors',          value: '3' },
-  { label: 'Control',                   value: 'Axis control' },
-  { label: 'Operator panel',            value: 'Alphanumeric display + keyboard' },
+  { label: 'Control',                   value: 'PLC axis control' },
+  { label: 'Operator panel',            value: '5.7″ touch screen' },
   { label: 'Power supply',              value: '400 V, 50 Hz, 3 phases + N' },
   { label: 'Installed power',           value: '5 kW' },
-  { label: 'Compressed air',            value: '6 bar (dry, filtered)' },
+  { label: 'Compressed air',            value: '7 bar (dry, filtered)' },
   { label: 'Air consumption',           value: '20 NL/min' },
 ];
 
@@ -207,7 +207,7 @@ export default function Gsp55SEnPage() {
             </Typography>
             <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 2, mb: 4,
               borderTop: `1px solid ${BORDER}`, borderBottom: `1px solid ${BORDER}`, py: 2.5 }}>
-              <StatChip value="150" label="packs/min max" />
+              <StatChip value="200" label="packs/min max" />
               <StatChip value="3" label="sealing wheel pairs" />
               <StatChip value="200mm" label="max product width" />
               <StatChip value="Hot+Cold" label="seal" />

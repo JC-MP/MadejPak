@@ -13,7 +13,7 @@ import LeadFormEn from './LeadFormEn';
 export const metadata: Metadata = {
   title: 'Horizontal Flow Wrap Packaging Machines GSP',
   description:
-    'Horizontal flow wrap packaging machines GSP from MadejPak. S series (45, 50, 55, 75) and EVO series (MAP, box motion). Food, cosmetics and industrial packaging — standard to modified atmosphere.',
+    'Horizontal flow wrap machines GSP: model comparison 45 S–600 EVO, BB and box motion versions, options and selection by product. Up to 400 packs/min — MadejPak.',
   alternates: {
     canonical: `${SITE_URL}/en/maszyny/poziome-maszyny-pakujace`,
     languages: {
@@ -243,32 +243,32 @@ const MODELS: MachineModel[] = [
     id: 'gsp55sbb',
     name: 'GSP 55 S BB',
     badge: 'New model',
-    tagline: 'Bottom seal — clean package appearance without top seam',
+    tagline: 'Film fed from below — for delicate and unstable products',
     description:
-      'Bottom Brake (BB) version — the film reel is fed from below, so the longitudinal seal is hidden underneath the package. Result: clean, attractive shelf presentation. Popular in food and cosmetics industries.',
+      'BB version (Italian: bobina bassa) — the film reel sits at the bottom of the machine and the film is fed from below. Worth considering for delicate or unstable products, or products that are hard to move with pushers. Up to 150 packs/min, product 10–250 × 1–120 × 60–600 mm.',
     specs: [
-      { label: 'Film reel', value: 'From below (bottom brake)' },
-      { label: 'Longitudinal seal', value: 'Under the package' },
+      { label: 'Film reel', value: 'At the bottom (BB — bobina bassa)' },
+      { label: 'Throughput', value: 'up to 150 packs/min' },
       { label: 'Application', value: 'Food & non-food' },
     ],
-    features: ['Bottom Brake (reel from below)', 'Seal hidden under pack', 'Clean shelf appearance', 'Electronic control'],
+    features: ['Film fed from below (BB)', 'Delicate and unstable products', 'Electronic control', 'Film 520 / 720 / 920 mm'],
     products: ['Confectionery', 'Cosmetics', 'Premium products', 'Bread', 'Cheese'],
     imageSrc: '/images/machines/flowpack-gsp55sbb.jpg',
-    imageAlt: 'GSP 55 S BB – flow pack bottom brake',
+    imageAlt: 'GSP 55 S BB – flow pack with film fed from below',
   },
   {
     id: 'gsp75s',
     name: 'GSP 75 S',
     badge: 'Highest throughput',
-    tagline: 'Heavy-duty frame and cantable sealing units — for the most demanding lines',
+    tagline: 'Up to 400 packs/min — robust design for automatic lines',
     description:
-      'Exceptionally robust packaging machine supporting multi-axis loaders. Features special cantable longitudinal sealing units — ensuring precise seals even at high speed and with thicker gas-barrier films. Built for intensive multi-shift production.',
+      'The fastest machine in the GSP range — up to 400 packs/min. A robust cantilever frame and a stable film unwinder are built for automatic lines, including intensive use. Tiltable longitudinal sealing units allow high-speed sealing, including gas-tight seals. Supports multi-axis loaders.',
     specs: [
-      { label: 'Frame', value: 'Heavy-duty industrial' },
-      { label: 'Long. seal unit', value: 'Cantable' },
+      { label: 'Throughput', value: 'up to 400 packs/min' },
+      { label: 'Long. seal unit', value: 'Tiltable sealing units' },
       { label: 'Loaders', value: 'Multi-axis' },
     ],
-    features: ['Cantable longitudinal sealing units', 'High mechanical durability', 'Multi-axis loader support', 'Standard & gas-barrier films'],
+    features: ['Up to 400 packs/min', 'Tiltable longitudinal sealing units', 'Built for automatic lines', 'Standard & gas-barrier films'],
     products: ['Biscuits & wafers', 'Bars & chocolate', 'FMCG products', 'Industrial articles'],
     imageSrc: '/images/machines/flowpack-gsp75s.jpg',
     imageAlt: 'GSP 75 S – high throughput robust flow pack',
@@ -280,7 +280,7 @@ const MODELS: MachineModel[] = [
     badge: 'Modified atmosphere',
     tagline: 'MAP and box motion — industrial hermetic packaging',
     description:
-      'Industrial MAP (Modified Atmosphere Packaging) machine with electronically controlled box motion jaw system — jaws follow the product, guaranteeing hermetic seals even with variable bag lengths. Handles large, tall and in-chain products. Available with gas flushing (N₂/CO₂) or aroma spraying. PE and polyolefin films.',
+      'Industrial MAP (Modified Atmosphere Packaging) machine with electronically controlled box motion jaw system — jaws move together with the film, which extends the sealing time and supports tight seals, also with variable pack length. Handles large, tall and in-chain products. Available with gas flushing (N₂/CO₂) or aroma spraying. PE and polyolefin films.',
     specs: [
       { label: 'Cross seal', value: 'Box motion (electronic)' },
       { label: 'Packaging', value: 'MAP (modified atmosphere)' },
@@ -295,31 +295,31 @@ const MODELS: MachineModel[] = [
     id: 'gsp65evobb',
     name: 'GSP 65 EVO BB',
     badge: 'New model',
-    tagline: 'MAP with box motion and bottom seal — shelf appeal plus airtight freshness',
+    tagline: 'MAP and box motion with film fed from below',
     description:
-      'Bottom Brake version of the GSP 65 EVO — combines all MAP box motion benefits with the aesthetic advantage of a hidden longitudinal seal under the package. Ideal for producers who prioritise both extended shelf life and on-shelf appearance.',
+      'BB version of the GSP 65 EVO — film reel at the bottom of the machine, film fed from below. Combines modified atmosphere packaging (MAP) with box motion sealing — for larger and delicate products that need proper sealing.',
     specs: [
       { label: 'Cross seal', value: 'Box motion (electronic)' },
-      { label: 'Film reel', value: 'From below (bottom brake)' },
+      { label: 'Film reel', value: 'At the bottom (BB — bobina bassa)' },
       { label: 'Packaging', value: 'MAP (modified atmosphere)' },
     ],
-    features: ['Box motion – electronic sealing jaws', 'Bottom Brake (seal hidden below)', 'N₂/CO₂ gas flushing (MAP)', 'Hermetic packaging', 'PE & polyolefin films'],
+    features: ['Box motion – electronic sealing jaws', 'Film fed from below (BB)', 'N₂/CO₂ gas flushing (MAP)', 'PE & polyolefin films'],
     products: ['Fresh meat & fish', 'Premium cheeses', 'Ready meals', 'Tall & large products'],
     imageSrc: '/images/machines/flowpack-gsp65evobb.jpg',
-    imageAlt: 'GSP 65 EVO BB – MAP box motion bottom brake',
+    imageAlt: 'GSP 65 EVO BB – MAP, box motion, film fed from below',
   },
   {
     id: 'gsp600trbbe',
     name: 'GSP 600 TR BB-E',
-    tagline: 'MAP for large and heavy products — with motorised jaw closing',
+    tagline: 'MAP for large products — box motion and film fed from below',
     description:
-      'Industrial MAP machine in Bottom Brake configuration only. Designed for large, tall and in-chain products. Optional motorised jaw closing mechanism enables high-speed operation with heavy-gauge films. PE and polyolefin films.',
+      'Industrial machine for long-shelf-life products packed with gas injection (MAP). BB version — film reel at the bottom, film fed from below — with an electronically controlled traversing cross seal. For large, tall and overlapping products, up to 80/90 packs/min. Polyethylene and polyolefin films.',
     specs: [
-      { label: 'Film reel', value: 'From below (bottom brake)' },
+      { label: 'Film reel', value: 'At the bottom (BB — bobina bassa)' },
       { label: 'Packaging', value: 'MAP (modified atmosphere)' },
-      { label: 'Jaw closing', value: 'Motorised (option)' },
+      { label: 'Cross seal', value: 'Box motion (electronic)' },
     ],
-    features: ['BB only (bottom brake)', 'Motorised jaw closing (option)', 'N₂/CO₂ gas flushing (MAP)', 'Heavy-gauge films at high speed', 'PE & polyolefin films'],
+    features: ['Film fed from below (BB)', 'Box motion – electronic cross seal', 'Gas flushing (MAP)', 'Product up to 280 × 200 × 2000 mm', 'PE & polyolefin films'],
     products: ['Large meat cuts', 'Fish & seafood', 'Large MAP products', 'In-chain products'],
     imageSrc: '/images/machines/flowpack-gsp600trbbe.jpg',
     imageAlt: 'GSP 600 TR BB-E – MAP for large products',
@@ -340,9 +340,103 @@ const SECTORS = [
   { name: 'Industrial', items: ['Small components', 'Tools & accessories', 'DIY articles', 'Electronic components'] },
 ];
 
+// ─── Comparison and selection (source: GSP product cards; catalogue data, not a guarantee) ───
+const COMPARE = [
+  { model: 'GSP 45 S', href: '/en/maszyny/poziome-maszyny-pakujace/gsp-45-s', speed: 'up to 150', size: '20–200 × 1–100 × 50–600', feature: 'Basic, compact machine', when: 'Simple wrapping of single products' },
+  { model: 'GSP 50 S', href: '/en/maszyny/poziome-maszyny-pakujace/gsp-50-s', speed: 'up to 150', size: '10–250 × 1–120 × up to 600', feature: 'Larger size range than the 45 S', when: 'Versatile food and industrial applications' },
+  { model: 'GSP 55 S', href: '/en/maszyny/poziome-maszyny-pakujace/gsp-55-s', speed: 'up to 200', size: '10–250 × 1–120 × 60–600', feature: 'Higher output and more upgrade options', when: 'Automatic lines, biscuits, bars, baked goods' },
+  { model: 'GSP 55 S BB', href: null, speed: 'up to 150', size: '10–250 × 1–120 × 60–600', feature: 'Film fed from below', when: 'Delicate, unstable or hard-to-push products' },
+  { model: 'GSP 65 EVO', href: '/en/maszyny/poziome-maszyny-pakujace/gsp-65-evo', speed: 'up to 60/70', size: '10–280 × 1–200 × 50–2000', feature: 'Box motion — longer cross seal', when: 'Large products, MAP, PE and polyolefin films' },
+  { model: 'GSP 65 EVO BB', href: null, speed: 'up to 60/70', size: '10–280 × 1–200 × 50–2000', feature: 'Box motion + film from below', when: 'Larger, delicate products needing a good seal' },
+  { model: 'GSP 75 S', href: null, speed: 'up to 400', size: '10–250 × 1–120 × 60–600', feature: 'Highest output', when: 'Fast lines with automatic infeed' },
+  { model: 'GSP 600 EVO', href: null, speed: 'up to 80/90', size: '10–280 × 1–200 × 50–2000', feature: 'Large products, box motion', when: 'Long products, MAP, demanding films' },
+  { model: 'GSP 600 TR BB-E', href: null, speed: 'up to 80/90', size: '10–280 × 1–200 × 50–2000', feature: 'Box motion + film from below', when: 'Large products needing special handling' },
+];
+
+const QUICK_SELECT = [
+  { need: 'Standard single product', pick: 'GSP 45 S or 50 S' },
+  { need: 'High output', pick: 'GSP 55 S or 75 S' },
+  { need: 'Delicate or unstable product', pick: 'GSP 55 S BB' },
+  { need: 'Large, long or tall product', pick: 'GSP 65 EVO or 600 EVO' },
+  { need: 'Large and delicate product', pick: 'GSP 65 EVO BB or 600 TR BB-E' },
+];
+
+const TECH_DIFFS = [
+  { title: 'Standard or BB?', desc: 'BB (Italian: bobina bassa) is the version with the film reel at the bottom — the film is fed from below. It is worth considering for products that are hard to move with pushers or deform easily. The choice depends on trials and the feeder design.' },
+  { title: 'Rotary jaws or box motion?', desc: 'In standard applications the cross seal is made by rotary jaws. With box motion the jaws move together with the film, which extends the contact time — important for some PE films, tall products and packs that need a tighter seal.' },
+  { title: 'GSP 55 S or GSP 65 EVO?', desc: 'The 55 S has a higher catalogue maximum output, but the 65 EVO handles larger products and applications that need longer sealing. We never choose a model on packs per minute alone.' },
+];
+
+const OPTIONS = [
+  { name: 'Automatic product infeed', why: 'Less manual handling; can be integrated with a cobot or another system.' },
+  { name: 'Registration-mark photocell', why: 'Positioning of printed film.' },
+  { name: 'No product – no bag', why: 'Reduces empty packs when product is missing.' },
+  { name: 'PE film kit', why: 'Sealing adapted to polyethylene.' },
+  { name: 'Modified atmosphere packaging (MAP)', why: 'Protective gas introduced into the pack.' },
+  { name: 'Side gusset forming', why: 'Changes the shape of the pack.' },
+  { name: 'Printer', why: 'Date, batch or other markings.' },
+  { name: 'Automatic film splicing', why: 'Shorter stoppage at the end of a reel.' },
+  { name: 'Product misposition sensor', why: 'Lower risk of sealing the film onto the product.' },
+];
+
+const INQUIRY_QUESTIONS = [
+  { q: 'What do we pack?', hint: 'product type, dimensions, weight, fragility, how it is arranged' },
+  { q: 'How many pieces per minute?', hint: 'required output and number of products per pack' },
+  { q: 'What film?', hint: 'type, thickness, width, print, MAP if needed' },
+  { q: 'How does the product reach the machine?', hint: 'manually, from a conveyor, in stacks, from several lanes or via an automatic system' },
+  { q: 'What happens to the finished pack?', hint: 'inspection, conveying, case packing, palletising' },
+];
+
+const BEYOND_MACHINE = [
+  { label: 'Robotics and cobots', href: '/en/maszyny/robotyzacja-pakowania' },
+  { label: 'Conveying and end of line', href: '/en/maszyny/transport-i-koniec-linii' },
+  { label: 'Palletising', href: '/en/maszyny/paletyzacja' },
+];
+
+const PAGE_TOC = [
+  { label: 'How it works', href: '#jak-dziala' },
+  { label: 'Models', href: '#models' },
+  { label: 'Comparison and selection', href: '#porownanie' },
+  { label: 'BB and box motion', href: '#technologia' },
+  { label: 'Options', href: '#opcje' },
+  { label: 'Enquiry', href: '#zapytanie' },
+  { label: 'FAQ', href: '#faq' },
+];
+
+// FAQ — text visible on the page and in the FAQPage schema (must be identical)
+const FAQ = [
+  { q: 'How many packs per minute does a flow pack machine make?', a: 'In the catalogue, from 60/70 packs/min on box motion models (GSP 65 EVO) up to 400 packs/min on the GSP 75 S. These are maximum values — real output depends on the product, film, infeed and pack discharge. We confirm it after selection and trials.' },
+  { q: 'What is the difference between the BB and the standard version?', a: 'BB (Italian: bobina bassa) means the film reel is at the bottom — the film is fed from below. It is worth considering for delicate or unstable products, or products that are hard to move with pushers. Trials and the feeder design decide.' },
+  { q: 'What is box motion?', a: 'A cross-sealing system in which the jaws move together with the film, so they stay in contact with it longer. It matters for PE and polyolefin films, tall products and packs that need a tight seal, e.g. modified atmosphere packs. Standard models use rotary jaws.' },
+  { q: 'Can I pack in a modified atmosphere (MAP)?', a: 'Yes. The EVO models — GSP 65 EVO, 600 EVO and 600 TR BB-E — are designed for long-shelf-life products packed in a modified atmosphere with gas injection. MAP also requires a suitable film and a tight seal.' },
+  { q: 'Which films does a flow pack machine handle?', a: 'Heat-sealable and laminated films, cold-seal films and, on selected models, polyethylene (PE), polyolefin films and cast polypropylene. A dedicated sealing kit is used for PE film. We confirm film compatibility for the specific model.' },
+  { q: 'GSP 55 S or GSP 65 EVO?', a: 'The GSP 55 S has a higher catalogue output (up to 200 packs/min), but the GSP 65 EVO handles larger products (up to 280 × 200 × 2000 mm) and applications that need longer sealing, such as MAP and PE films. We choose the model by product and film, not just packs per minute.' },
+  { q: 'Can the product be fed automatically, e.g. by a cobot?', a: 'Yes. Besides the GSP machine we design automatic product infeed — including with cobots — and, after the machine, pack discharge, case packing and palletising.' },
+  { q: 'What should I prepare for a quote request?', a: 'Product type, dimensions, weight and fragility, the required output, the film (thickness, width, print, MAP if needed), how the product reaches the machine and what happens to the finished pack.' },
+];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'FAQPage',
+      mainEntity: FAQ.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'MadejPak', item: `${SITE_URL}/en` },
+        { '@type': 'ListItem', position: 2, name: 'Machines', item: `${SITE_URL}/en/maszyny` },
+        { '@type': 'ListItem', position: 3, name: 'Horizontal packaging machines', item: `${SITE_URL}/en/maszyny/poziome-maszyny-pakujace` },
+      ],
+    },
+  ],
+};
+
 export default function HorizontalMachinesPage() {
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Box sx={{ height: { xs: 64, lg: 72 } }} />
 
       {/* ── 1. HERO ── */}
@@ -412,6 +506,22 @@ export default function HorizontalMachinesPage() {
         </Container>
       </Box>
 
+      {/* ── On this page ── */}
+      <Box component="nav" aria-label="On this page" sx={{ borderBottom: `1px solid ${BORDER}`, py: 2 }}>
+        <Container maxWidth="xl">
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, overflowX: 'auto', pb: 0.25, scrollbarWidth: 'none', '&::-webkit-scrollbar': { display: 'none' } }}>
+            <Typography sx={{ fontSize: '0.62rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--dim-45)', whiteSpace: 'nowrap', mr: 1 }}>
+              On this page
+            </Typography>
+            {PAGE_TOC.map((t) => (
+              <Box key={t.href} component="a" href={t.href} sx={{ whiteSpace: 'nowrap', px: 1.5, py: 0.6, border: `1px solid ${BORDER}`, borderRadius: '100px', fontSize: '0.78rem', fontWeight: 600, color: 'var(--dim-75)', textDecoration: 'none', transition: 'border-color 0.15s ease, color 0.15s ease', '&:hover': { borderColor: ACCENT, color: ACCENT } }}>
+                {t.label}
+              </Box>
+            ))}
+          </Box>
+        </Container>
+      </Box>
+
       {/* ── What is a flow pack ── */}
       <Box component="section" sx={{ py: { xs: 7, md: 10 }, borderBottom: `1px solid ${BORDER}` }}>
         <Container maxWidth="xl">
@@ -448,7 +558,7 @@ export default function HorizontalMachinesPage() {
       </Box>
 
       {/* ── 2. HOW IT WORKS ── */}
-      <Box component="section" sx={{ bgcolor: BG_ALT, borderBottom: `1px solid ${BORDER}`, py: { xs: 9, md: 12 } }}>
+      <Box id="jak-dziala" component="section" sx={{ scrollMarginTop: '80px', bgcolor: BG_ALT, borderBottom: `1px solid ${BORDER}`, py: { xs: 9, md: 12 } }}>
         <Container maxWidth="xl">
           <Typography sx={{ fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.18em',
             textTransform: 'uppercase', color: ACCENT, mb: 2 }}>
@@ -537,7 +647,9 @@ export default function HorizontalMachinesPage() {
         </Container>
       </Box>
 
-      <LeadFormEn />
+      <Box id="zapytaj" sx={{ scrollMarginTop: '80px' }}>
+        <LeadFormEn />
+      </Box>
 
       {/* ── 4. SECTORS ── */}
       <Box component="section" sx={{ bgcolor: BG_ALT, borderBottom: `1px solid ${BORDER}`, py: { xs: 9, md: 12 } }}>
@@ -636,6 +748,150 @@ export default function HorizontalMachinesPage() {
         </Container>
       </Box>
 
+      {/* ── COMPARISON AND SELECTION ── */}
+      <Box id="porownanie" component="section" sx={{ scrollMarginTop: '80px', bgcolor: BG_ALT, borderBottom: `1px solid ${BORDER}`, py: { xs: 9, md: 12 } }}>
+        <Container maxWidth="xl">
+          <Box sx={{ mb: { xs: 4, md: 5 }, maxWidth: 760 }}>
+            <Typography sx={{ fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: ACCENT, mb: 2 }}>Model comparison</Typography>
+            <Typography component="h2" sx={{ fontSize: { xs: '1.4rem', md: '1.75rem' }, fontWeight: 800, letterSpacing: '-0.02em', lineHeight: 1.2, color: 'var(--text)' }}>Which GSP machine should you choose?</Typography>
+            <Typography sx={{ fontSize: '0.92rem', color: TEXT_DIM, lineHeight: 1.75, mt: 2 }}>
+              The whole range of GSP horizontal machines at a glance. Dimensions refer to the product (width × height × length),
+              not the finished pack.
+            </Typography>
+          </Box>
+          <Box sx={{ overflowX: 'auto', border: `1px solid ${BORDER}`, borderRadius: '4px', bgcolor: BG_CARD }}>
+            <Box component="table" sx={{ width: '100%', minWidth: 860, borderCollapse: 'collapse', '& th': { textAlign: 'left', px: 2.5, py: 1.5, fontSize: '0.62rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: TEXT_DIM, bgcolor: BG_ALT, borderBottom: `1px solid ${BORDER}` }, '& td': { px: 2.5, py: 1.75, fontSize: '0.84rem', lineHeight: 1.5, borderBottom: `1px solid ${BORDER}`, verticalAlign: 'top' }, '& tr:last-of-type td': { borderBottom: 'none' } }}>
+              <thead>
+                <tr><th>Model</th><th>Max output (packs/min)</th><th>Product [mm]</th><th>Key feature</th><th>When to consider</th></tr>
+              </thead>
+              <tbody>
+                {COMPARE.map((m) => (
+                  <tr key={m.model}>
+                    <Box component="td" sx={{ fontWeight: 700, color: 'var(--text)', whiteSpace: 'nowrap' }}>
+                      {m.href ? (
+                        <Box component={Link} href={m.href} sx={{ color: 'inherit', textDecoration: 'none', borderBottom: `1px solid ${ACCENT}`, '&:hover': { color: ACCENT } }}>{m.model}</Box>
+                      ) : m.model}
+                    </Box>
+                    <Box component="td" sx={{ fontWeight: 700, color: ACCENT, whiteSpace: 'nowrap' }}>{m.speed}</Box>
+                    <Box component="td" sx={{ color: 'var(--dim-75)', whiteSpace: 'nowrap' }}>{m.size}</Box>
+                    <Box component="td" sx={{ color: 'var(--dim-75)' }}>{m.feature}</Box>
+                    <Box component="td" sx={{ color: TEXT_DIM }}>{m.when}</Box>
+                  </tr>
+                ))}
+              </tbody>
+            </Box>
+          </Box>
+          <Typography sx={{ fontSize: '0.75rem', color: 'var(--dim-55)', lineHeight: 1.6, mt: 1.5, maxWidth: 900 }}>
+            Outputs are catalogue maximums, not a guarantee for a specific product. For EVO models the manufacturer states output as
+            “60/70” or “80/90” — we confirm the value for your product after selection. All models need 7 bar compressed air
+            (dry, filtered).
+          </Typography>
+
+          {/* Selection in 30 seconds */}
+          <Box sx={{ mt: { xs: 6, md: 8 }, display: 'grid', gridTemplateColumns: { xs: '1fr', md: '300px 1fr' }, gap: { xs: 3, md: 8 }, alignItems: 'start' }}>
+            <Box>
+              <Typography component="h3" sx={{ fontSize: { xs: '1.15rem', md: '1.3rem' }, fontWeight: 800, letterSpacing: '-0.01em', color: 'var(--text)', mb: 1.25 }}>
+                Selection in 30 seconds
+              </Typography>
+              <Typography sx={{ fontSize: '0.85rem', color: TEXT_DIM, lineHeight: 1.7 }}>
+                A first direction based on the product’s main requirement. It does not replace checking parameters and packing trials.
+              </Typography>
+            </Box>
+            <Box sx={{ border: `1px solid ${BORDER}`, borderRadius: '4px', overflow: 'hidden' }}>
+              {QUICK_SELECT.map((r, idx) => (
+                <Box key={r.need} sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1.2fr 1fr' }, gap: { xs: 0.5, sm: 3 }, px: 3, py: 1.75, bgcolor: BG_CARD, borderBottom: idx < QUICK_SELECT.length - 1 ? `1px solid ${BORDER}` : 'none' }}>
+                  <Typography sx={{ fontSize: '0.88rem', color: TEXT_DIM }}>{r.need}</Typography>
+                  <Typography sx={{ fontSize: '0.88rem', fontWeight: 700, color: 'var(--text)' }}>→ {r.pick}</Typography>
+                </Box>
+              ))}
+            </Box>
+          </Box>
+        </Container>
+      </Box>
+
+      {/* ── TECHNOLOGY DIFFERENCES ── */}
+      <Box id="technologia" component="section" sx={{ scrollMarginTop: '80px', bgcolor: BG, borderBottom: `1px solid ${BORDER}`, py: { xs: 9, md: 12 } }}>
+        <Container maxWidth="xl">
+          <Box sx={{ mb: { xs: 4, md: 5 }, maxWidth: 760 }}>
+            <Typography sx={{ fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: ACCENT, mb: 2 }}>Technology differences</Typography>
+            <Typography component="h2" sx={{ fontSize: { xs: '1.4rem', md: '1.75rem' }, fontWeight: 800, letterSpacing: '-0.02em', lineHeight: 1.2, color: 'var(--text)' }}>BB, box motion and model choice — what to know</Typography>
+          </Box>
+          <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: 'repeat(3, 1fr)' }, gap: 2.5 }}>
+            {TECH_DIFFS.map((t) => (
+              <Box key={t.title} sx={{ p: { xs: 3, md: 3.5 }, bgcolor: BG_CARD, border: `1px solid ${BORDER}`, borderTop: `2px solid ${ACCENT}`, borderRadius: '4px' }}>
+                <Typography component="h3" sx={{ fontSize: '1rem', fontWeight: 800, color: 'var(--text)', mb: 1.25 }}>{t.title}</Typography>
+                <Typography sx={{ fontSize: '0.86rem', color: TEXT_DIM, lineHeight: 1.75 }}>{t.desc}</Typography>
+              </Box>
+            ))}
+          </Box>
+        </Container>
+      </Box>
+
+      {/* ── OPTIONS ── */}
+      <Box id="opcje" component="section" sx={{ scrollMarginTop: '80px', bgcolor: BG_ALT, borderBottom: `1px solid ${BORDER}`, py: { xs: 9, md: 12 } }}>
+        <Container maxWidth="xl">
+          <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '300px 1fr' }, gap: { xs: 4, md: 8 }, alignItems: 'start' }}>
+            <Box>
+              <Typography sx={{ fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: ACCENT, mb: 2 }}>Equipment</Typography>
+              <Typography component="h2" sx={{ fontSize: { xs: '1.4rem', md: '1.75rem' }, fontWeight: 800, letterSpacing: '-0.02em', lineHeight: 1.2, color: 'var(--text)' }}>Most popular options</Typography>
+              <Typography sx={{ fontSize: '0.85rem', color: TEXT_DIM, lineHeight: 1.7, mt: 2 }}>
+                We check the availability of each option for the selected model and variant.
+              </Typography>
+            </Box>
+            <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' }, gap: 2 }}>
+              {OPTIONS.map((o) => (
+                <Box key={o.name} sx={{ p: 2.5, bgcolor: BG_CARD, border: `1px solid ${BORDER}`, borderRadius: '4px' }}>
+                  <Typography component="h3" sx={{ fontSize: '0.9rem', fontWeight: 700, color: 'var(--text)', mb: 0.75, lineHeight: 1.35 }}>{o.name}</Typography>
+                  <Typography sx={{ fontSize: '0.8rem', color: TEXT_DIM, lineHeight: 1.6 }}>{o.why}</Typography>
+                </Box>
+              ))}
+            </Box>
+          </Box>
+        </Container>
+      </Box>
+
+      {/* ── ENQUIRY + MORE THAN A MACHINE ── */}
+      <Box id="zapytanie" component="section" sx={{ scrollMarginTop: '80px', bgcolor: BG, borderBottom: `1px solid ${BORDER}`, py: { xs: 9, md: 12 } }}>
+        <Container maxWidth="xl">
+          <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1.2fr 1fr' }, gap: { xs: 5, md: 8 }, alignItems: 'start' }}>
+            <Box>
+              <Typography sx={{ fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: ACCENT, mb: 2 }}>Quote request</Typography>
+              <Typography component="h2" sx={{ fontSize: { xs: '1.4rem', md: '1.75rem' }, fontWeight: 800, letterSpacing: '-0.02em', lineHeight: 1.2, color: 'var(--text)' }}>Five questions we start with</Typography>
+              <Typography sx={{ fontSize: '0.9rem', color: TEXT_DIM, lineHeight: 1.75, mt: 2, mb: 3.5 }}>
+                We match the machine to the product, the film and the whole process. With this information we can prepare a concrete proposal faster.
+              </Typography>
+              <Box component="ol" sx={{ m: 0, p: 0, listStyle: 'none', display: 'grid', gap: 1.75, mb: 3.5 }}>
+                {INQUIRY_QUESTIONS.map((item, i) => (
+                  <Box key={item.q} component="li" sx={{ display: 'flex', gap: 2, alignItems: 'baseline' }}>
+                    <Typography sx={{ fontSize: '0.85rem', fontWeight: 800, color: ACCENT, minWidth: 18 }}>{i + 1}.</Typography>
+                    <Typography sx={{ fontSize: '0.9rem', lineHeight: 1.6, color: TEXT_DIM }}>
+                      <Box component="span" sx={{ fontWeight: 700, color: 'var(--text)' }}>{item.q}</Box> — {item.hint}
+                    </Typography>
+                  </Box>
+                ))}
+              </Box>
+              <Box component="a" href="#zapytaj" sx={{ display: 'inline-flex', alignItems: 'center', gap: 1, px: 3, py: 1.25, bgcolor: ACCENT, borderRadius: '3px', fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase', color: '#fff', textDecoration: 'none', '&:hover': { bgcolor: '#D45509' } }}>
+                Go to the form →
+              </Box>
+            </Box>
+            <Box sx={{ p: { xs: 3, md: 4 }, bgcolor: BG_CARD, border: `1px solid ${BORDER}`, borderLeft: `3px solid ${ACCENT}`, borderRadius: '4px' }}>
+              <Typography component="h3" sx={{ fontSize: '1.05rem', fontWeight: 800, color: 'var(--text)', mb: 1.25 }}>More than a machine</Typography>
+              <Typography sx={{ fontSize: '0.88rem', color: TEXT_DIM, lineHeight: 1.75, mb: 2.5 }}>
+                Our offer covers not only the GSP machine but also automatic product infeed — including with cobots — pack
+                discharge, case packing and palletising. One partner for the whole line.
+              </Typography>
+              <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+                {BEYOND_MACHINE.map((b) => (
+                  <Box key={b.href} component={Link} href={b.href} sx={{ px: 1.5, py: 0.6, border: `1px solid ${BORDER}`, borderRadius: '100px', fontSize: '0.78rem', fontWeight: 600, color: 'var(--dim-75)', textDecoration: 'none', '&:hover': { borderColor: ACCENT, color: ACCENT } }}>
+                    {b.label} →
+                  </Box>
+                ))}
+              </Box>
+            </Box>
+          </Box>
+        </Container>
+      </Box>
+
       {/* ── 6. PARTNER ── */}
       <Box component="section" sx={{ bgcolor: BG_ALT, borderBottom: `1px solid ${BORDER}`, py: { xs: 9, md: 12 } }}>
         <Container maxWidth="xl">
@@ -704,8 +960,8 @@ export default function HorizontalMachinesPage() {
               <Stack spacing={1.5}>
                 {[
                   { label: 'Extended shelf life', val: 'GSP 65 EVO / GSP 600 TR BB-E (MAP)' },
-                  { label: 'Shelf appearance', val: 'GSP 55 S BB / GSP 65 EVO BB' },
-                  { label: 'High line throughput', val: 'GSP 75 S (cantable sealing units)' },
+                  { label: 'Delicate or unstable products', val: 'GSP 55 S BB / GSP 65 EVO BB' },
+                  { label: 'High line throughput', val: 'GSP 75 S (up to 400 packs/min)' },
                   { label: 'Entry into automation', val: 'GSP 45 S / GSP 50 S' },
                 ].map((r) => (
                   <Box key={r.label} sx={{
@@ -722,6 +978,29 @@ export default function HorizontalMachinesPage() {
                   </Box>
                 ))}
               </Stack>
+            </Box>
+          </Box>
+        </Container>
+      </Box>
+
+      {/* ── FAQ ── */}
+      <Box id="faq" component="section" sx={{ scrollMarginTop: '80px', bgcolor: BG, borderBottom: `1px solid ${BORDER}`, py: { xs: 9, md: 12 } }}>
+        <Container maxWidth="xl">
+          <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '300px 1fr' }, gap: { xs: 4, md: 8 }, alignItems: 'start' }}>
+            <Box>
+              <Typography sx={{ fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: ACCENT, mb: 2 }}>FAQ</Typography>
+              <Typography component="h2" sx={{ fontSize: { xs: '1.4rem', md: '1.75rem' }, fontWeight: 800, letterSpacing: '-0.02em', lineHeight: 1.2, color: 'var(--text)' }}>Frequently asked questions about flow pack machines</Typography>
+            </Box>
+            <Box>
+              {FAQ.map((f, idx) => (
+                <Box key={f.q} component="details" sx={{ borderTop: idx === 0 ? `1px solid ${BORDER}` : 'none', borderBottom: `1px solid ${BORDER}`, '& summary': { listStyle: 'none', cursor: 'pointer' }, '& summary::-webkit-details-marker': { display: 'none' }, '&[open] .faq-icon': { transform: 'rotate(45deg)' } }}>
+                  <Box component="summary" sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 3, py: 2.25 }}>
+                    <Typography component="h3" sx={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--text)', lineHeight: 1.4 }}>{f.q}</Typography>
+                    <Box className="faq-icon" aria-hidden="true" sx={{ color: ACCENT, fontSize: '1.3rem', lineHeight: 1, flexShrink: 0, transition: 'transform 0.2s ease' }}>+</Box>
+                  </Box>
+                  <Typography sx={{ fontSize: '0.88rem', lineHeight: 1.75, color: TEXT_DIM, pb: 2.5, pr: { md: 6 } }}>{f.a}</Typography>
+                </Box>
+              ))}
             </Box>
           </Box>
         </Container>

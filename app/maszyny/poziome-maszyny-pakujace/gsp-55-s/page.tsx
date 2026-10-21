@@ -13,11 +13,11 @@ import LeadForm from '../LeadForm';
 export const metadata: Metadata = {
   title: 'GSP 55 S – Kompaktowa Maszyna Flow Pack',
   description:
-    'GSP 55 S – kompaktowa maszyna flow pack do 150 op./min. Budowa wspornikowa, 3 pary kół zgrzewających, folie hot-seal i cold-seal, zapamiętywanie receptur. Pakowanie przemysłowe.',
+    'GSP 55 S – maszyna flow pack do 200 op./min. Budowa wspornikowa, produkt 10–250 × 1–120 × 60–600 mm, folie hot-seal i cold-seal, ekran dotykowy 5,7″. Pakowanie spożywcze i niespożywcze.',
   keywords: [
     'GSP 55 S', 'kompaktowa maszyna flow pack', 'maszyna pakująca cantilever',
     'flow pack hot seal cold seal', 'maszyna pakująca przemysłowa',
-    'flow pack 150 opakowań', 'GSP 55S',
+    'flow pack 200 opakowań', 'GSP 55S',
   ],
   alternates: {
     canonical: `${SITE_URL}/maszyny/poziome-maszyny-pakujace/gsp-55-s`,
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     url:         `${SITE_URL}/maszyny/poziome-maszyny-pakujace/gsp-55-s`,
     title:       'GSP 55 S – Kompaktowa Maszyna Flow Pack | MadejPak',
-    description: 'Kompaktowa maszyna flow pack do 150 op./min. 3 pary kół zgrzewających, folie hot-seal i cold-seal, zapamiętywanie receptur.',
+    description: 'Maszyna flow pack do 200 op./min. Produkt 10–250 × 1–120 × 60–600 mm, folie hot-seal i cold-seal, zapamiętywanie receptur.',
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'GSP 55 S – maszyna flow pack – MadejPak' }],
   },
 };
@@ -69,11 +69,11 @@ const DLA_KOGO = [
   },
   {
     title: 'Zakłady pakujące produkty średniej wielkości',
-    desc: 'Maszyna obsługuje produkty o szerokości do 200 mm i wysokości do 120 mm. Sprawdzi się przy wielu produktach spożywczych i niespożywczych wymagających klasycznego opakowania flow pack.',
+    desc: 'Maszyna obsługuje produkty o szerokości 10–250 mm, wysokości do 120 mm i długości 60–600 mm. Sprawdzi się przy wielu produktach spożywczych i niespożywczych wymagających klasycznego opakowania flow pack.',
   },
   {
     title: 'Firmy wymagające łatwej obsługi',
-    desc: 'Panel operatorski z wyświetlaczem alfanumerycznym i klawiaturą umożliwia prostą kontrolę parametrów. Funkcja przywoływania receptur ułatwia powrót do zapisanych ustawień dla powtarzalnych produktów.',
+    desc: 'Panel operatorski z ekranem dotykowym 5,7″ umożliwia prostą kontrolę parametrów. Funkcja przywoływania receptur ułatwia powrót do zapisanych ustawień dla powtarzalnych produktów.',
   },
   {
     title: 'Producenci pracujący z foliami hot-seal i cold-seal',
@@ -87,8 +87,8 @@ const ZALETY = [
     desc: 'Przemysłowa jakość pakowania w kompaktowej formie. Dobry wybór dla zakładów z ograniczoną przestrzenią produkcyjną.',
   },
   {
-    title: 'Do 150 opakowań na minutę',
-    desc: 'Maszyna osiąga wydajność do 150 op./min, w zależności od produktu, folii i ustawień procesu.',
+    title: 'Do 200 opakowań na minutę',
+    desc: 'Maszyna osiąga wydajność do 200 op./min, w zależności od produktu, folii i ustawień procesu.',
   },
   {
     title: 'Rama wspornikowa (cantilever)',
@@ -99,8 +99,8 @@ const ZALETY = [
     desc: 'Jednostka zgrzewania wzdłużnego z trzema parami kół wspiera stabilne prowadzenie folii i powtarzalny zgrzew.',
   },
   {
-    title: 'Sterowanie trzema silnikami',
-    desc: 'Trzy silniki zarządzane przez kontrolę osi zapewniają precyzyjną synchronizację i powtarzalność procesu pakowania.',
+    title: 'Kontrola osi przez PLC',
+    desc: 'Osie maszyny sterowane przez PLC zapewniają precyzyjną synchronizację i powtarzalność procesu pakowania.',
   },
   {
     title: 'Zapamiętywanie receptur',
@@ -130,18 +130,18 @@ const OPCJE = [
 const SPECS: { label: string; value: string }[] = [
   { label: 'Typ konstrukcji',                 value: 'Rama wspornikowa (cantilever)' },
   { label: 'Zgrzewanie wzdłużne',             value: '3 pary kół' },
-  { label: 'Wydajność',                       value: 'do 150 op./min' },
-  { label: 'Maks. szerokość produktu',        value: '200 mm' },
-  { label: 'Maks. wysokość produktu',         value: '120 mm' },
-  { label: 'Maks. szerokość folii',           value: '520 mm' },
+  { label: 'Wydajność',                       value: 'do 200 op./min' },
+  { label: 'Szerokość produktu',              value: '10–250 mm' },
+  { label: 'Wysokość produktu',               value: '1–120 mm' },
+  { label: 'Długość produktu',                value: '60–600 mm' },
+  { label: 'Szerokość rolki folii',           value: '520 / 720 / 920 mm' },
   { label: 'Materiały opakowaniowe',          value: 'Hot-seal i cold-seal' },
   { label: 'Masa maszyny',                    value: '750 kg' },
-  { label: 'Liczba silników',                 value: '3' },
-  { label: 'Sterowanie',                      value: 'Kontrola osi' },
-  { label: 'Panel operatora',                 value: 'Wyświetlacz alfanumeryczny + klawiatura' },
+  { label: 'Sterowanie',                      value: 'Kontrola osi przez PLC' },
+  { label: 'Panel operatora',                 value: 'Ekran dotykowy 5,7″' },
   { label: 'Zasilanie',                       value: '400 V, 50 Hz, 3 fazy + N' },
   { label: 'Moc zainstalowana',               value: '5 kW' },
-  { label: 'Sprężone powietrze',              value: '6 bar (suche, filtrowane)' },
+  { label: 'Sprężone powietrze',              value: '7 bar (suche, filtrowane)' },
   { label: 'Zużycie powietrza',               value: '20 NL/min' },
 ];
 
@@ -210,7 +210,7 @@ export default function Gsp55SPage() {
             </Typography>
             <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 2, mb: 4,
               borderTop: `1px solid ${BORDER}`, borderBottom: `1px solid ${BORDER}`, py: 2.5 }}>
-              <StatChip value="150" label="op./min max" />
+              <StatChip value="200" label="op./min max" />
               <StatChip value="3" label="pary kół zgrzew." />
               <StatChip value="200mm" label="maks. szer. produktu" />
               <StatChip value="Hot+Cold" label="seal" />
