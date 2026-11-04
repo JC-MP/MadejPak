@@ -11,6 +11,9 @@ import { getEventStatus, type TradeEvent } from '@/data/eventsData';
 import { EVENTS_EN } from '@/data/eventsDataEn';
 import ClientsSection from '@/components/sections/ClientsSection';
 import TrustDifferentiator from '@/components/sections/TrustDifferentiator';
+import CampaignPopup from '@/components/sections/CampaignPopup';
+import PromoBanner from '@/components/campaign/PromoBanner';
+import { PROMO_RED } from '@/data/campaignData';
 
 // ─── Design tokens ────────────────────────────────────────────────────────────
 const ACCENT       = '#E8610A';
@@ -421,7 +424,9 @@ function EventCard({ event }: { event: TradeEvent }) {
             fontWeight: 700,
             letterSpacing: '0.1em',
             textTransform: 'uppercase',
-            ...(status === 'ongoing'
+            ...(event.eventType === 'promocja'
+              ? { bgcolor: PROMO_RED, color: '#fff', border: `1px solid ${PROMO_RED}` }
+              : status === 'ongoing'
               ? { bgcolor: ACCENT, color: '#fff', border: `1px solid ${ACCENT}` }
               : status === 'upcoming'
               ? { color: 'var(--dim-55)', border: `1px solid ${BORDER}` }
@@ -440,7 +445,7 @@ function EventCard({ event }: { event: TradeEvent }) {
               }}
             />
           )}
-          {status === 'ongoing' ? 'Now on' : status === 'upcoming' ? 'Upcoming' : 'Past'}
+          {event.eventType === 'promocja' ? 'Promotion' : status === 'ongoing' ? 'Now on' : status === 'upcoming' ? 'Upcoming' : 'Past'}
         </Box>
       </Box>
 
@@ -475,7 +480,7 @@ function EventCard({ event }: { event: TradeEvent }) {
       <Box sx={{ px: { xs: 3, md: 3.5 }, pb: 3, pt: 1 }}>
         <Box
           component={Link}
-          href={`/en/targi-i-wydarzenia#${event.id}`}
+          href={event.eventType === 'promocja' && event.invitationUrl ? event.invitationUrl : `/en/targi-i-wydarzenia#${event.id}`}
           sx={{
             display: 'inline-flex',
             alignItems: 'center',
@@ -490,7 +495,7 @@ function EventCard({ event }: { event: TradeEvent }) {
             '&:hover svg': { transform: 'translateX(2px)' },
           }}
         >
-          View details
+          {event.eventType === 'promocja' ? 'View the offer' : 'View details'}
           <ArrowRight />
         </Box>
       </Box>
@@ -507,6 +512,8 @@ export default function EnHomePage() {
 
   return (
     <>
+      <CampaignPopup lang="en" />
+      <PromoBanner lang="en" showLinks sx={{ mt: { xs: '60px', md: '72px' } }} />
       {/* ── HERO ──────────────────────────────────────────────────────────── */}
       <Box
         component="section"

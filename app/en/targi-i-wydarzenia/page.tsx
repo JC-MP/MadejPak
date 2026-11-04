@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { getEventStatus, type TradeEvent } from '@/data/eventsData';
+import { PROMO_RED } from '@/data/campaignData';
 import { EVENTS_EN } from '@/data/eventsDataEn';
 import CaseStudyVideo from '@/components/realizacje/CaseStudyVideo';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
@@ -12,7 +13,7 @@ import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
 export const metadata: Metadata = {
   title: 'Trade Shows & Events',
   description:
-    'MadejPak at industry trade shows: Taropak, IPACK-IMA, IBA, Warsaw Industry Automatica and more. Packaging technology, automation and robotics — presence at key industrial events.',
+    'MadejPak trade shows, open days and promotions: Taropak, IPACK-IMA, IBA, Warsaw Industry Automatica and more. Packaging technology, automation and robotics.',
   alternates: {
     canonical: `${SITE_URL}/en/targi-i-wydarzenia`,
     languages: {
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     url:         `${SITE_URL}/en/targi-i-wydarzenia`,
     title:       'Trade Shows & Events | MadejPak',
-    description: 'MadejPak at industry trade shows: Taropak, IPACK-IMA, IBA, Warsaw Industry Automatica and more.',
+    description: 'MadejPak trade shows, open days and promotions: Taropak, IPACK-IMA, IBA, Warsaw Industry Automatica and more. Packaging technology, automation and robotics.',
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'MadejPak at industry trade shows' }],
   },
 };
@@ -57,7 +58,7 @@ function ArrowRight() {
 }
 
 function EventTypeBadge({ type }: { type: TradeEvent['eventType'] }) {
-  const label = type === 'dni-otwarte' ? 'Open Days' : 'Trade Fair';
+  const label = type === 'promocja' ? 'Promotion' : type === 'dni-otwarte' ? 'Open Days' : 'Trade Fair';
   return (
     <Box
       sx={{
@@ -65,13 +66,14 @@ function EventTypeBadge({ type }: { type: TradeEvent['eventType'] }) {
         px: 1.25,
         py: 0.4,
         mb: 2.5,
-        border: `1px solid ${type === 'dni-otwarte' ? `${ACCENT}50` : BORDER}`,
+        border: `1px solid ${type === 'promocja' ? PROMO_RED : type !== 'targi' ? `${ACCENT}50` : BORDER}`,
+        bgcolor: type === 'promocja' ? PROMO_RED : 'transparent',
         borderRadius: '2px',
         fontSize: '0.6rem',
         fontWeight: 700,
         letterSpacing: '0.1em',
         textTransform: 'uppercase',
-        color: type === 'dni-otwarte' ? ACCENT : 'var(--dim-28)',
+        color: type === 'promocja' ? '#fff' : type !== 'targi' ? ACCENT : 'var(--dim-28)',
       }}
     >
       {label}
@@ -199,7 +201,7 @@ function EventBlock({ event }: { event: TradeEvent }) {
               transition: 'background-color 0.15s ease', '&:hover': { bgcolor: '#D45509' },
             }}
           >
-            {getEventStatus(event) === 'past' ? 'View the recap' : 'Register'} →
+            {event.eventType === 'promocja' ? 'View the offer' : getEventStatus(event) === 'past' ? 'View the recap' : 'Register'} →
           </Box>
         )}
 
@@ -215,7 +217,7 @@ function EventBlock({ event }: { event: TradeEvent }) {
                 mb: 1.75,
               }}
             >
-              At our booth
+              {event.eventType === 'promocja' ? 'In this offer' : 'At our booth'}
             </Typography>
             <Box component="ul" sx={{ m: 0, p: 0, listStyle: 'none' }}>
               {event.highlights.map((item) => (

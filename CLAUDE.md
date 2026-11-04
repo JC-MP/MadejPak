@@ -34,6 +34,7 @@
 | `/maszyny/poziome-maszyny-pakujace` | Poziome maszyny pakujące (flow pack) — **cel kampanii Ads** |
 | `/maszyny/poziome-maszyny-pakujace/[model]` | Podstrony modeli: `gsp-45-s`, `gsp-50-s`, `gsp-55-s`, `gsp-65-evo` |
 | `/maszyny/pionowe-maszyny-pakujace` | Pionowe maszyny pakujące |
+| `/maszyny/pactur-auto-60-unica`, `/maszyny/colimatic-thera-450` | Podstrony akcji promocyjnej (modal na stronie głównej) |
 | `/maszyny/madejpak` | **Maszyny własnej produkcji** — lista wg grup |
 | `/maszyny/madejpak/[slug]` | Podstrona maszyny własnej — opis, galeria, wideo, realizacje (9 maszyn) |
 | `/maszyny/partnerzy` | Maszyny partnerów |
@@ -44,7 +45,7 @@
 | `/maszyny/workowanie` | Workowanie, BigBag |
 | `/maszyny/owijarki-do-palet` | Owijarki palet |
 | `/maszyny/gotowe-linie-pakujace` | Gotowe linie |
-| `/coboty-w-akcji` | Rezerwacja wizyt demo — trwa **do 31 sierpnia 2026** |
+| `/coboty-w-akcji` | Akcja zakończona 4.11.2026: strona z podziękowaniem, `noindex`, bez linków z serwisu i bez wpisu w sitemapie |
 | `/kontakt` | Formularz kontaktowy |
 | `/o-firmie` | O firmie |
 | `/partnerzy` | Partnerzy (m.in. Essegi, GSP) |
@@ -120,28 +121,22 @@ chronią rozwiązania konstrukcyjne przed konkurencją. To decyzja biznesowa, ni
 - Rozliczenie: refaktura lub MadejPak płaci bezpośrednio
 - MadejPak powinien zachować własne konto Ads (dane historyczne)
 
-## Wydarzenie: Coboty w Akcji
+## Kampania na stronie głównej (modal)
 
-- **Termin**: trwa **do 31 sierpnia 2026**, dni robocze, termin uzgadniany indywidualnie
-- **Godziny slotów**: 9:00, 12:00, 14:00
-- **Strona**: `/coboty-w-akcji`
-- **Rejestracja**: formularz EmailJS — pole daty (`min` = jutro, `max` = `CAMPAIGN_END`) + wybór godziny.
-  Walidacja odrzuca weekendy i terminy po końcu kampanii.
+- `data/campaignData.ts` — modal i przełączniki; `components/sections/CampaignPopup.tsx` — jeden wspólny mechanizm dla PL i EN.
+- `data/campaignMachines.ts` + `components/campaign/` — treści i szablon podstron.
+- `components/campaign/PromoBanner.tsx` — czerwony pasek: modal, podstrony maszyn, strona główna PL i EN.
+- **LCP:** nie powiększać zdjęć ani tekstów w modalu. Większy element staje się LCP strony głównej (modal otwiera się po 3 s).
+- **Wyłączenie modala:** `enabled: false` w `ACTIVE_CAMPAIGN`. **Nowa kampania:** nowy `id` i treści w `content`.
+- **Maszyna sprzedana:** `promo: false` w `CAMPAIGN_MACHINES` (hasło znika z modala, podstrony, formularza i meta description, a wpis z listy wydarzeń).
+- Akcje są też wpisami na `/targi-i-wydarzenia` i na stronie głównej: `data/eventsData.ts`, `eventType: 'promocja'` (teksty EN: `data/eventsDataEn.ts`). **Nie oznaczać ich schematem `Event`.**
+- Hasło promocji podajemy bez kwot, rabatów, liczby sztuk i terminów dostawy.
 
-### Przedłużanie / zmiana terminu — data żyje w 6 plikach
+## Zakończone: Coboty w Akcji
 
-Zmiana terminu wymaga edycji **wszystkich** poniższych, inaczej serwis zaczyna podawać sprzeczne daty
-(tak było wcześniej: `eventsData` mówił „10 czerwca", landing „15–26 czerwca", a CLAUDE.md „8–19 czerwca"):
-
-1. `data/eventsData.ts` — `dateLabel`, `dateStart`, `zajawka`, `opis`
-2. `app/coboty-w-akcji/page.tsx` — `CAMPAIGN_END` + teksty (hero, „Terminy", stopka, kafel z datą)
-3. `app/coboty-w-akcji/layout.tsx` — `DESCRIPTION`, OG/Twitter title+description
-4. `app/coboty-w-akcji/layout.tsx` — **JSON-LD `startDate` / `endDate`** (łatwo przeoczyć; zły `endDate` = Google pokazuje wydarzenie jako zakończone)
-5. `components/sections/CobotsBanner.tsx`
-6. `components/ui/CobotyConsentGate.tsx`
-
-`dateStart` w `eventsData.ts` jest ustawiony na **koniec** kampanii (`2026-08-31`), żeby wpis trzymał się
-góry listy wydarzeń przez cały czas jej trwania — semantycznie to nadużycie pola, świadome.
+Akcja zakończona 4.11.2026. Pod `/coboty-w-akcji` jest krótkie podziękowanie z linkami do robotyzacji i kontaktu:
+`noindex`, bez formularza, bez schematu `Event`, bez linków z serwisu i bez wpisu w sitemapie. Wpis na liście wydarzeń
+ma status `past`. `CobotyConsentGate`, `CobotyConversion` i `CobotsBanner` zostały w repo, ale nic ich już nie używa.
 
 ## Przekierowania (next.config.ts)
 

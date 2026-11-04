@@ -401,7 +401,6 @@ const INQUIRY_QUESTIONS = [
 
 const BEYOND_MACHINE = [
   { label: 'Robotyzacja i coboty', href: '/maszyny/robotyzacja-pakowania' },
-  { label: 'Coboty w akcji', href: '/coboty-w-akcji' },
   { label: 'Transport i koniec linii', href: '/maszyny/transport-i-koniec-linii' },
   { label: 'Paletyzacja', href: '/maszyny/paletyzacja' },
 ];

@@ -4,6 +4,7 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Link from 'next/link';
 import { EVENTS, getEventStatus, type TradeEvent } from '@/data/eventsData';
+import { PROMO_RED } from '@/data/campaignData';
 
 // ─── Design tokens ──────────────────────────────────────────────────────────
 const BG_CARD  = 'var(--bg-card)';
@@ -97,7 +98,9 @@ function EventCard({ event }: { event: TradeEvent }) {
             fontWeight: 700,
             letterSpacing: '0.1em',
             textTransform: 'uppercase',
-            ...STATUS_BADGE[status].sx,
+            ...(event.eventType === 'promocja'
+              ? { bgcolor: PROMO_RED, color: '#fff', border: `1px solid ${PROMO_RED}` }
+              : STATUS_BADGE[status].sx),
           }}
         >
           {status === 'ongoing' && (
@@ -112,7 +115,7 @@ function EventCard({ event }: { event: TradeEvent }) {
               }}
             />
           )}
-          {STATUS_BADGE[status].label}
+          {event.eventType === 'promocja' ? 'Promocja' : STATUS_BADGE[status].label}
         </Box>
       </Box>
 
@@ -149,7 +152,7 @@ function EventCard({ event }: { event: TradeEvent }) {
       <Box sx={{ px: { xs: 3, md: 3.5 }, pb: 3, pt: 1 }}>
         <Box
           component={Link}
-          href={`/targi-i-wydarzenia#${event.id}`}
+          href={event.eventType === 'promocja' && event.invitationUrl ? event.invitationUrl : `/targi-i-wydarzenia#${event.id}`}
           sx={{
             display: 'inline-flex',
             alignItems: 'center',
@@ -164,7 +167,7 @@ function EventCard({ event }: { event: TradeEvent }) {
             '&:hover svg': { transform: 'translateX(2px)' },
           }}
         >
-          Zobacz szczegóły
+          {event.eventType === 'promocja' ? 'Poznaj ofertę' : 'Zobacz szczegóły'}
           <ArrowRight />
         </Box>
       </Box>

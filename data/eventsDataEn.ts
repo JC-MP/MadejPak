@@ -6,21 +6,57 @@ type EventTextEn = Pick<TradeEvent, 'name' | 'dateLabel' | 'city' | 'country' | 
   Partial<Pick<TradeEvent, 'venue' | 'boothInfo' | 'teamNote' | 'highlights' | 'invitationUrl'>>;
 
 const EVENT_TEXT_EN: Record<string, EventTextEn> = {
+  'akcja-promocyjna-pactur-auto-60-unica': {
+    name: 'Promotion: Pactur AUTO 60 UNICA',
+    dateLabel: 'while stocks last',
+    city: 'MadejPak offer',
+    venue: 'Automatic shrink wrapping',
+    country: 'Poland',
+    zajawka:
+      'Promotional price on an automatic L-sealer with a separate shrink tunnel, while stocks last. Less manual work and better pack appearance.',
+    opis:
+      'The Pactur AUTO 60 UNICA is an automatic L-sealer with a separate shrink tunnel that reduces manual film wrapping and improves pack appearance. We offer the machine in this configuration at a promotional price, while stocks last. Tell us what you pack and we will check whether it suits your production.',
+    highlights: [
+      'Automatic product detection and transfer',
+      'Separate, longer tunnel for even film shrinkage',
+      'Stand-alone operation or work in a line',
+      'Service and integration by MadejPak',
+    ],
+    invitationUrl: '/en/maszyny/pactur-auto-60-unica',
+  },
+  'akcja-promocyjna-colimatic-thera-450': {
+    name: 'Promotion: Colimatic THERA 450',
+    dateLabel: 'while stocks last',
+    city: 'MadejPak offer',
+    venue: 'Thermoforming, vacuum and MAP',
+    country: 'Poland',
+    zajawka:
+      'Promotional price on an automatic thermoformer with a vacuum and MAP system and a gas installation, while stocks last. Up to 1,680 packs/h in a specified configuration.',
+    opis:
+      'The Colimatic THERA 450 automatically forms and packs food products. The offered configuration has a vacuum and MAP packaging system with a gas installation. We offer the machine in this configuration at a promotional price, while stocks last. Tell us what you pack and we will check whether it suits your production.',
+    highlights: [
+      'Vacuum and MAP in one machine, with a gas installation',
+      'Up to 1,680 packs/h with a 200 × 150 mm format',
+      'Hinged forming and sealing stations',
+      'Service and integration by MadejPak',
+    ],
+    invitationUrl: '/en/maszyny/colimatic-thera-450',
+  },
   'dni-otwarte-coboty-2026': {
     name: 'MadejPak Open Days — Cobots in Action',
-    dateLabel: 'date by arrangement',
+    dateLabel: 'June – November 2026',
     city: 'Dziewin',
     venue: 'MadejPak headquarters',
     country: 'Poland',
     zajawka:
-      'Live DOBOT cobot demos — CR20A palletising, Nova 5 pick & place, integration with a flow-pack machine. Visits on an ongoing basis, date by arrangement. Free registration, limited places.',
+      'Live DOBOT cobot demos at our headquarters: CR20A palletising, Nova 5 pick & place, integration with a flow-pack machine. The campaign has ended.',
     opis:
-      'MadejPak + DOBOT Open Days are for company owners, production managers and engineers who want to see live how cobots work in real production conditions. The DOBOT CR20A (20 kg, 1700 mm reach) shows carton and bag palletising, and the Nova 5 (5 kg, 850 mm reach) demonstrates precise pick & place and automatic feeding of a flow-pack machine. Free entry, registration required — demos run on working days at an individually agreed date (the cobots are in stock, visits on an ongoing basis).',
+      'MadejPak + DOBOT Open Days were aimed at company owners, production managers and engineers who wanted to see live how cobots work in real production conditions. The DOBOT CR20A (20 kg, 1700 mm reach) showed carton and bag palletising, and the Nova 5 (5 kg, 850 mm reach) demonstrated precise pick & place and automatic feeding of a flow-pack machine. The campaign has ended. You can ask us about packaging robotics at any time.',
     highlights: [
       'DOBOT CR20A — carton and bag palletising, 24/7 operation',
       'DOBOT Nova 5 — product pick & place, integration with a flow-pack machine',
       'Real-time cobot programming — no coding skills needed',
-      'Consultations with MadejPak and DOBOT experts — ROI estimate for your company',
+      'Consultations with MadejPak and DOBOT experts',
     ],
   },
   'interpack-2026': {

@@ -1,4 +1,6 @@
-export type EventType = 'targi' | 'dni-otwarte';
+import { CAMPAIGN_MACHINES } from './campaignData';
+
+export type EventType = 'targi' | 'dni-otwarte' | 'promocja';
 
 export interface TradeEvent {
   id: string;
@@ -19,34 +21,87 @@ export interface TradeEvent {
   youtubeId?: string;     // film z wydarzenia (YouTube) — wyświetlany pod opisem na /targi-i-wydarzenia
   eventType: EventType;
   // Opcjonalny ręczny override statusu. Domyślnie status liczony jest z dat
-  // (getEventStatus). Używane np. dla Coboty — rolling-kampania, której dateStart
-  // to celowo data KOŃCA (trzyma wpis na górze listy), więc auto-liczenie by nie zadziałało.
+  // (getEventStatus). Używane dla akcji promocyjnych, których dateStart to celowo
+  // odległa data (trzyma wpis na górze listy), więc auto-liczenie by nie zadziałało.
   status?: 'ongoing' | 'upcoming' | 'past';
 }
 
+// Akcje promocyjne: osobny wpis na każdą maszynę, znika po `promo: false` w campaignData.ts.
+// Nie oznaczać ich schematem Event: wytyczne Google nie dopuszczają tam promocji.
+// dateStart to świadomie koniec roku: trzyma wpisy na górze listy.
+const { pactur, thera } = CAMPAIGN_MACHINES;
+
+const PROMO_PACTUR: TradeEvent = {
+  id: 'akcja-promocyjna-pactur-auto-60-unica',
+  name: `Akcja promocyjna: ${pactur.name}`,
+  dateLabel: 'do wyczerpania zapasów',
+  dateStart: '2026-12-31',
+  city: 'Oferta MadejPak',
+  venue: 'Automatyczne pakowanie termokurczliwe',
+  country: 'Polska',
+  zajawka:
+    'Cena promocyjna na automatyczną zgrzewarkę kątową z oddzielnym tunelem obkurczającym, do wyczerpania zapasów. Mniej pracy ręcznej i lepsza estetyka opakowań.',
+  opis:
+    'Pactur AUTO 60 UNICA to automatyczna zgrzewarka kątowa z oddzielnym tunelem obkurczającym, która ogranicza pracę ręczną przy foliowaniu i poprawia estetykę opakowań. Maszynę w tej konfiguracji oferujemy w cenie promocyjnej, do wyczerpania zapasów. Napisz, co pakujesz, a sprawdzimy, czy pasuje do Twojej produkcji.',
+  highlights: [
+    'Automatyczne wykrywanie i przenoszenie produktu',
+    'Oddzielny, dłuższy tunel dla równomiernego obkurczania folii',
+    'Praca samodzielna lub w linii',
+    'Serwis i integracja po stronie MadejPak',
+  ],
+  invitationUrl: `/maszyny/${pactur.slug}`,
+  eventType: 'promocja',
+  status: 'ongoing',
+};
+
+const PROMO_THERA: TradeEvent = {
+  id: 'akcja-promocyjna-colimatic-thera-450',
+  name: `Akcja promocyjna: ${thera.name}`,
+  dateLabel: 'do wyczerpania zapasów',
+  dateStart: '2026-12-31',
+  city: 'Oferta MadejPak',
+  venue: 'Termoformowanie, próżnia i MAP',
+  country: 'Polska',
+  zajawka:
+    'Cena promocyjna na automatyczną termoformierkę z systemem próżniowym i MAP oraz instalacją gazową, do wyczerpania zapasów. Do 1680 opakowań/h w określonej konfiguracji.',
+  opis:
+    'Colimatic THERA 450 automatycznie formuje i pakuje produkty spożywcze. Oferowana konfiguracja ma system pakowania próżniowego oraz MAP wraz z instalacją gazową. Maszynę w tej konfiguracji oferujemy w cenie promocyjnej, do wyczerpania zapasów. Napisz, co pakujesz, a sprawdzimy, czy pasuje do Twojej produkcji.',
+  highlights: [
+    'Próżnia i MAP w jednej maszynie, z instalacją gazową',
+    'Do 1680 opakowań/h przy formacie 200 × 150 mm',
+    'Uchylne stacje formowania i zgrzewania',
+    'Serwis i integracja po stronie MadejPak',
+  ],
+  invitationUrl: `/maszyny/${thera.slug}`,
+  eventType: 'promocja',
+  status: 'ongoing',
+};
+
 export const EVENTS: TradeEvent[] = [
+  ...(pactur.promo ? [PROMO_PACTUR] : []),
+  ...(thera.promo ? [PROMO_THERA] : []),
   // ─── 2026 ────────────────────────────────────────────────────────────────
   {
     id: 'dni-otwarte-coboty-2026',
     name: 'Dni Otwarte MadejPak — Coboty w Akcji',
-    dateLabel: 'termin do uzgodnienia',
-    dateStart: '2026-12-31',   // pokazy trwają bez daty końca — wysoka data trzyma wpis na górze listy
+    dateLabel: 'czerwiec – listopad 2026',
+    dateStart: '2026-06-15',
+    dateEnd: '2026-11-04',
     city: 'Dziewin',
     venue: 'Siedziba MadejPak',
     country: 'Polska',
     zajawka:
-      'Pokazy cobotów DOBOT na żywo — paletyzacja CR20A, pick & place Nova 5, integracja z flowpackiem. Zapraszamy na bieżąco, termin do uzgodnienia. Bezpłatna rejestracja, ograniczona liczba miejsc.',
+      'Pokazy cobotów DOBOT na żywo w naszej siedzibie: paletyzacja CR20A, pick & place Nova 5, integracja z flowpackiem. Akcja zakończona.',
     opis:
-      'Dni Otwarte MadejPak + DOBOT to wydarzenie dla właścicieli firm, kierowników produkcji i inżynierów, którzy chcą zobaczyć na żywo jak coboty pracują w realnych warunkach produkcyjnych. DOBOT CR20A (20 kg, zasięg 1700 mm) pokaże możliwości paletyzacji kartonów i worków, a Nova 5 (5 kg, zasięg 850 mm) zademonstruje precyzyjny pick & place i automatyczne podawanie do maszyny flow-pack. Wstęp bezpłatny, rejestracja obowiązkowa — pokazy prowadzimy w dni robocze, w terminie uzgodnionym indywidualnie (mamy maszynę na stanie, zapraszamy na bieżąco).',
+      'Dni Otwarte MadejPak + DOBOT były skierowane do właścicieli firm, kierowników produkcji i inżynierów, którzy chcieli zobaczyć na żywo, jak coboty pracują w realnych warunkach produkcyjnych. DOBOT CR20A (20 kg, zasięg 1700 mm) pokazywał paletyzację kartonów i worków, a Nova 5 (5 kg, zasięg 850 mm) precyzyjny pick & place i automatyczne podawanie do maszyny flow-pack. Akcja jest zakończona. O robotyzację pakowania możesz zapytać nas w każdej chwili.',
     highlights: [
       'DOBOT CR20A — paletyzacja kartonów i worków, praca 24/7',
       'DOBOT Nova 5 — pick & place produktów, integracja z flowpackiem',
       'Programowanie cobota w czasie rzeczywistym — bez znajomości kodowania',
-      'Konsultacje z ekspertami MadejPak i DOBOT — wycena ROI dla Twojej firmy',
+      'Konsultacje z ekspertami MadejPak i DOBOT',
     ],
-    invitationUrl: '/coboty-w-akcji',
     eventType: 'dni-otwarte',
-    status: 'ongoing',
+    status: 'past',
   },
   {
     id: 'interpack-2026',

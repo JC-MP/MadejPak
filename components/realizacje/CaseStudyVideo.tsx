@@ -22,6 +22,7 @@ export default function CaseStudyVideo({ youtubeId, src, title = 'Video' }: { yo
           component="iframe"
           src={`https://www.youtube-nocookie.com/embed/${youtubeId}`}
           title={title}
+          loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
           sx={{

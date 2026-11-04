@@ -45,21 +45,21 @@ import PartnersStripSection from '@/components/sections/PartnersStripSection';
 import ServiceTeaserSection from '@/components/sections/ServiceTeaserSection';
 import EventsSection from '@/components/sections/EventsSection';
 
-import CobotsBanner from '@/components/sections/CobotsBanner';
+import PromoBanner from '@/components/campaign/PromoBanner';
 import SymasBanner from '@/components/sections/SymasBanner';
-import SymasPopup from '@/components/sections/SymasPopup';
+import CampaignPopup from '@/components/sections/CampaignPopup';
 
 export default function HomePage() {
   return (
     <main>
-      {/* Baner Coboty w Akcji — Dni Otwarte MadejPak + DOBOT, znika po 26 czerwca 2026 */}
-      <CobotsBanner />
+      {/* Baner akcji promocyjnej — znika, gdy żadna maszyna nie ma `promo: true` (data/campaignData.ts) */}
+      <PromoBanner lang="pl" showLinks sx={{ mt: { xs: '60px', md: '72px' } }} />
 
       {/* Baner targów SYMAS & MAINTENANCE 2026 — linkuje do zaproszenia, znika po 16.10.2026 */}
       <SymasBanner />
 
-      {/* Wyskakujące okienko targów SYMAS — po 3 s, raz na sesję, znika po 16.10.2026 */}
-      <SymasPopup />
+      {/* Modal aktywnej kampanii: data/campaignData.ts */}
+      <CampaignPopup />
 
 {/* 1. Hero — kim jesteśmy, wideo, liczby */}
       <HeroSection />
