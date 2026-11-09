@@ -94,18 +94,18 @@ export const MACHINE_CATEGORIES: MachineCategory[] = [
     name: 'Paletyzacja',
     category: 'Koniec linii',
     description:
-      'Paletyzacja to finalny etap linii pakującej — automatyczne układanie opakowań, worków lub kartonów na palecie w stabilnym wzorze. MadejPak realizuje projekty paletyzacji we współpracy z Concetti (paletyzatory liniowe) oraz liderami w robotyzacji przemysłowej (roboty i coboty). Dobór systemu zależy od wydajności linii, formatu opakowania, dostępnej przestrzeni i wymagań procesu.',
+      'Paletyzacja to finalny etap linii pakującej — automatyczne układanie opakowań, worków lub kartonów na palecie w stabilnym wzorze. Stanowiska paletyzacji budujemy sami na robotach KUKA i cobotach DOBOT, z własnymi chwytakami i magazynem palet. Niektóre projekty paletyzacji, szczególnie przy big bagach, realizujemy we współpracy z Concetti. Dobór systemu zależy od wydajności linii, formatu opakowania, dostępnej przestrzeni i wymagań procesu.',
     applications: [
-      'Paletyzacja worków, kartonów i opakowań zbiorczych',
-      'Paletyzatory liniowe i robotyczne',
-      'Wydajności od 200 do 1800+ cykli/h',
+      'Paletyzacja worków, kartonów i ładunków nietypowych',
+      'Stanowiska z robotem KUKA i cobotem DOBOT',
+      'Big bagi i wybrane projekty z Concetti',
       'Sektory spożywczy, chemiczny, FMCG',
       'Integracja z przenośnikami i owijarkami palet',
     ],
     partners: ['Concetti', 'KUKA', 'DOBOT'],
     imageSrc: '/images/machines/palletizing-concetti.jpg',
     imageAlt: 'Automatyczny paletyzator robotyczny na linii pakującej',
-    cta: { label: 'Zobacz systemy paletyzacji', href: '/maszyny/paletyzacja' },
+    cta: { label: 'Zobacz gotowe linie paletyzacji', href: '/maszyny/paletyzacja' },
   },
   {
     id: 'owijanie',

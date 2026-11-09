@@ -38,7 +38,8 @@
 | `/maszyny/madejpak` | **Maszyny własnej produkcji** — lista wg grup |
 | `/maszyny/madejpak/[slug]` | Podstrona maszyny własnej — opis, galeria, wideo, realizacje (9 maszyn) |
 | `/maszyny/partnerzy` | Maszyny partnerów |
-| `/maszyny/paletyzacja` | Systemy paletyzacji |
+| `/maszyny/paletyzacja` | Gotowe stanowiska paletyzacji + dobór online (`?produkt=…#dobor` (worki-ciezkie, worki-sypkie, kartony, nietypowe) — wejścia z reklam) |
+| `/maszyny/kartonowanie` | Formowanie, pakowanie i zaklejanie kartonów (same zakresy, bez nazwy producenta) |
 | `/maszyny/robotyzacja-pakowania` | Robotyzacja, coboty |
 | `/maszyny/wazenie-i-dozowanie` | Wagi wielogłowicowe |
 | `/maszyny/transport-i-koniec-linii` | Podajniki, transport |
@@ -131,6 +132,15 @@ chronią rozwiązania konstrukcyjne przed konkurencją. To decyzja biznesowa, ni
 - **Maszyna sprzedana:** `promo: false` w `CAMPAIGN_MACHINES` (hasło znika z modala, podstrony, formularza i meta description, a wpis z listy wydarzeń).
 - Akcje są też wpisami na `/targi-i-wydarzenia` i na stronie głównej: `data/eventsData.ts`, `eventType: 'promocja'` (teksty EN: `data/eventsDataEn.ts`). **Nie oznaczać ich schematem `Event`.**
 - Hasło promocji podajemy bez kwot, rabatów, liczby sztuk i terminów dostawy.
+
+## Paletyzacja i kartonowanie
+
+- Treści: `data/palletizingData.ts` (+ reguły doboru w `data/palletizingSpec.ts`), `data/cartoningData.ts`; szablony w `components/palletizing/` i `components/cartoning/`.
+- **Od partnerów** bierzemy tylko roboty (KUKA, cobot DOBOT dla lekkich kartonów), owijarki (Technowrapp) i maszyny do kartonów. Chwytaki, podajniki, bufory, magazyn palet i integracja — MadejPak.
+- **Nigdy nie podajemy cen.** Producenta formowarek/zaklejarek nie nazywamy i nie pokazujemy jego zdjęć — tylko zakresy.
+- Wydajności stanowisk paletyzacji nie są publikowane (zależą od procesu klienta) — dodać, gdy przyjdą od techników.
+- `COBOT_MAX_MASS_INDEX` w `palletizingSpec.ts` — próg masy dla wariantu z cobotem, do potwierdzenia przez techników.
+- Obrazy: rysunki 3D linii (`PRODUCT_LINE_IMAGES`) i zdjęcia wariantów (`VARIANT_MEDIA`) w `palletizingSpec.ts`, pliki w `public/images/palletizing/`. Filmy modułów: `MODULE_VIDEOS`.
 
 ## Zakończone: Coboty w Akcji
 

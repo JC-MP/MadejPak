@@ -8,6 +8,22 @@ import type { Metadata } from 'next';
 import { REALIZACJE } from '@/data/realizacjeData';
 import { REALIZACJE_EN } from '@/data/realizacjeDataEn';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
+import { PAGE_REFERENCES, PRODUCTS } from '@/data/palletizingSpec';
+import { CART_REFERENCES } from '@/data/cartoningData';
+
+const PALLET_SLUGS = new Set<string>([...PAGE_REFERENCES, ...Object.values(PRODUCTS).flatMap((p) => p.references)]);
+
+function relatedOffer(slug: string, typy: string[], en: boolean) {
+  const prefix = en ? '/en' : '';
+  const links: { href: string; label: string }[] = [];
+  if (PALLET_SLUGS.has(slug) || typy.includes('paletyzacja')) {
+    links.push({ href: `${prefix}/maszyny/paletyzacja`, label: en ? 'Ready-made palletising cells' : 'Gotowe stanowiska paletyzacji' });
+  }
+  if (CART_REFERENCES.includes(slug)) {
+    links.push({ href: `${prefix}/maszyny/kartonowanie`, label: en ? 'Case erecting, packing and sealing' : 'Formowanie, pakowanie i zaklejanie kartonów' });
+  }
+  return links;
+}
 
 const BG = 'var(--bg)', BG_CARD = 'var(--bg-card)', BG_ALT = 'var(--bg-alt)', ACCENT = '#E8610A', BORDER = 'var(--border)', TEXT_DIM = 'var(--dim-72)';
 
@@ -248,6 +264,15 @@ export default async function RealizacjaEnPage({ params }: { params: Promise<{ s
               Let&apos;s talk about your project
               <ArrowRight />
             </Box>
+            {relatedOffer(item.slug, item.typyProjektu, true).length > 0 && (
+              <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2.5, mt: 3 }}>
+                {relatedOffer(item.slug, item.typyProjektu, true).map((l) => (
+                  <Box key={l.href} component={Link} href={l.href} sx={{ fontSize: '0.88rem', fontWeight: 700, color: ACCENT, textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}>
+                    {l.label} →
+                  </Box>
+                ))}
+              </Box>
+            )}
           </Box>
         </Container>
       </Box>

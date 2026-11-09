@@ -107,7 +107,7 @@ const SCOPE = [
   },
   {
     title: 'Palletizing',
-    desc: 'Linear and robotic palletizers — from 200 to 1800+ cycles/h, for bags, cartons, and grouped packaging.',
+    desc: 'Robotic and layer palletizers — for bags, cartons, and grouped packaging.',
     icon: (
       <Box component="svg" viewBox="0 0 24 24" fill="none" aria-hidden sx={{ width: 26, height: 26 }}>
         <rect x="3" y="14" width="8" height="7" rx="1" stroke="currentColor" strokeWidth="1.75" />

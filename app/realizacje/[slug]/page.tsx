@@ -7,6 +7,22 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { REALIZACJE } from '@/data/realizacjeData';
 import { SITE_URL, OG_IMAGE } from '@/lib/seo.config';
+import { PAGE_REFERENCES, PRODUCTS } from '@/data/palletizingSpec';
+import { CART_REFERENCES } from '@/data/cartoningData';
+
+const PALLET_SLUGS = new Set<string>([...PAGE_REFERENCES, ...Object.values(PRODUCTS).flatMap((p) => p.references)]);
+
+function relatedOffer(slug: string, typy: string[], en: boolean) {
+  const prefix = en ? '/en' : '';
+  const links: { href: string; label: string }[] = [];
+  if (PALLET_SLUGS.has(slug) || typy.includes('paletyzacja')) {
+    links.push({ href: `${prefix}/maszyny/paletyzacja`, label: en ? 'Ready-made palletising cells' : 'Gotowe stanowiska paletyzacji' });
+  }
+  if (CART_REFERENCES.includes(slug)) {
+    links.push({ href: `${prefix}/maszyny/kartonowanie`, label: en ? 'Case erecting, packing and sealing' : 'Formowanie, pakowanie i zaklejanie kartonów' });
+  }
+  return links;
+}
 
 // ─── Design tokens ──────────────────────────────────────────────────────────
 const BG      = 'var(--bg)';
@@ -571,6 +587,15 @@ export default async function RealizacjaPage({
               Porozmawiajmy o projekcie
               <ArrowRight />
             </Box>
+            {relatedOffer(item.slug, item.typyProjektu, false).length > 0 && (
+              <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2.5, mt: 3 }}>
+                {relatedOffer(item.slug, item.typyProjektu, false).map((l) => (
+                  <Box key={l.href} component={Link} href={l.href} sx={{ fontSize: '0.88rem', fontWeight: 700, color: ACCENT, textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}>
+                    {l.label} →
+                  </Box>
+                ))}
+              </Box>
+            )}
           </Box>
         </Container>
       </Box>
