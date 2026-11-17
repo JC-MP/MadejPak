@@ -29,13 +29,13 @@ const CONTENT = {
   pl: {
     eyebrow: 'Pewny partner',
     h2: 'Kupujesz maszyny na lata — nie na jeden sezon',
-    leadA: 'Od 2000 roku, 200+ wdrożeń. ',
+    leadA: 'Ponad 25 lat na rynku, 200+ wdrożeń. ',
     leadStrong1: 'Autoryzowany przedstawiciel Essegi i GSP',
     leadB: ' oraz partner wielu europejskich producentów. Serwis i części w Polsce — a gdy trzeba, ',
     leadStrong2: 'budujemy własne maszyny',
     leadC: '.',
     stats: [
-      { num: 'od 2000', label: 'ćwierć wieku na rynku maszyn pakujących' },
+      { num: '25+ lat', label: 'na rynku maszyn pakujących' },
       { num: '200+', label: 'wdrożeń w przemyśle spożywczym, chemicznym i innych' },
       { num: 'Essegi i GSP', label: 'autoryzowany przedstawiciel w Polsce' },
       { num: 'PL', label: 'serwis i oryginalne części na miejscu' },
@@ -80,13 +80,13 @@ const CONTENT = {
   en: {
     eyebrow: 'A partner you can rely on',
     h2: 'You buy machines for years — not for one season',
-    leadA: 'Since 2000, 200+ implementations. ',
+    leadA: 'More than 25 years, 200+ implementations. ',
     leadStrong1: 'Authorized representative of Essegi and GSP',
     leadB: ' and partner of many European manufacturers. Service and parts in Poland — and when it fits, we ',
     leadStrong2: 'build our own machines',
     leadC: '.',
     stats: [
-      { num: 'since 2000', label: 'a quarter-century in packaging machinery' },
+      { num: '25+ years', label: 'in packaging machinery' },
       { num: '200+', label: 'implementations across food, chemical and other industries' },
       { num: 'Essegi & GSP', label: 'authorized representative in Poland' },
       { num: 'PL', label: 'service and original parts on the spot' },

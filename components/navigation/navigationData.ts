@@ -21,6 +21,7 @@ export const NAV_ITEMS: NavItem[] = [
       { label: 'Automatyzacja pakowania',     href: '/rozwiazania/automatyzacja-pakowania' },
       { label: 'Robotyzacja pakowania',       href: '/rozwiazania/robotyzacja-pakowania' },
       { label: 'Projekty custom',             href: '/rozwiazania/projekty-custom' },
+      { label: 'Poradnik',                    href: '/poradnik' },
     ],
   },
   {
@@ -73,6 +74,7 @@ export const EN_NAV_ITEMS: NavItem[] = [
       { label: 'Packaging Automation',       href: '/en/rozwiazania/automatyzacja-pakowania' },
       { label: 'Packaging Robotics',         href: '/en/rozwiazania/robotyzacja-pakowania' },
       { label: 'Custom Projects',            href: '/en/rozwiazania/projekty-custom' },
+      { label: 'Guide',                      href: '/en/poradnik' },
     ],
   },
   {

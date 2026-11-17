@@ -47,6 +47,7 @@
 | `/maszyny/owijarki-do-palet` | Owijarki palet |
 | `/maszyny/gotowe-linie-pakujace` | Gotowe linie |
 | `/coboty-w-akcji` | Akcja zakończona 4.11.2026: strona z podziękowaniem, `noindex`, bez linków z serwisu i bez wpisu w sitemapie |
+| `/poradnik` | Poradnik (AEO/GEO): pytania z krótką odpowiedzią na początku, FAQPage + Article; treść w `data/guideData.ts` |
 | `/kontakt` | Formularz kontaktowy |
 | `/o-firmie` | O firmie |
 | `/partnerzy` | Partnerzy (m.in. Essegi, GSP) |
@@ -153,6 +154,9 @@ ma status `past`. `CobotyConsentGate`, `CobotyConversion` i `CobotsBanner` zosta
 Wszystkie stare URL-e ze starego serwisu mają 301 redirect. Nie dodawać przekierowania www→non-www w `next.config.ts` — obsługuje to Vercel Dashboard (308).
 
 ## SEO / Search Console
+
+- `public/llms.txt` — opis firmy i kluczowe strony dla modeli AI (GEO). Aktualizować przy nowych stronach oferty.
+- `app/robots.ts` jawnie wpuszcza boty wyszukiwarek AI (OAI-SearchBot, ChatGPT-User, PerplexityBot, Google-Extended, Bingbot, Applebot).
 
 - Sitemap: https://madejpak.pl/sitemap.xml
 - `/*?_rsc=*` zablokowane w robots.txt (parametry Next.js RSC)

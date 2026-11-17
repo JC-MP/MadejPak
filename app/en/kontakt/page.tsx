@@ -531,7 +531,7 @@ export default function ContactEnPage() {
                 25 years of experience in packaging technology
               </Typography>
               <Typography sx={{ fontSize: '0.875rem', color: 'var(--dim-65)' }}>
-                Serving the manufacturing industry since 2000.
+                Serving the manufacturing industry for more than 25 years.
               </Typography>
             </Box>
             <Stack direction="row" flexWrap="wrap" useFlexGap gap={{ xs: 2.5, md: 4 }} sx={{ flexShrink: 0 }}>

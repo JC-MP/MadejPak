@@ -1,0 +1,26 @@
+# MadejPak
+
+> PPHU MadejPak Sp. z o.o. (Dziewin, Polska, ponad 25 lat na rynku) projektuje i integruje linie pakujące oraz automatyzuje koniec linii: paletyzację robotami przemysłowymi KUKA i cobotami DOBOT, kartonowanie i owijanie palet. Chwytaki do robotów, podajniki, bufory i automatyczne magazyny palet projektujemy i budujemy sami. Dostarczamy włoskie maszyny pionowe (Essegi) i poziome (GSP / Tecno Pack), linie workowania i big bagów (Concetti) oraz owijarki Technowrapp. Z wieloma klientami pracujemy od czasów, gdy zaczynali w garażu, a dziś mają duże fabryki. Obsługujemy klientów w całej Polsce, z własnym serwisem. Cen nie publikujemy, wycenę przygotowujemy po analizie linii.
+
+MadejPak (Poland, more than 25 years on the market) designs and integrates packaging lines and automates end-of-line handling: palletising with KUKA industrial robots and DOBOT cobots, case packing and pallet wrapping. We design and build robot grippers, feeders, buffers and automatic pallet magazines in-house. English pages are under https://madejpak.pl/en.
+
+## Poradnik / Guide
+- [Poradnik: automatyzacja pakowania w prostych słowach](https://madejpak.pl/poradnik): historia firmy, koniec linii, maszyny pionowe i poziome, workowanie i big bagi (Concetti), paletyzacja, coboty, własne chwytaki, zwrot z inwestycji (zwykle 8 miesięcy – 3 lata), brak pracowników, włoskie maszyny.
+- [Guide: packaging automation in plain words](https://madejpak.pl/en/poradnik)
+
+## Oferta / Offer
+- [Gotowe stanowiska paletyzacji z doborem online](https://madejpak.pl/maszyny/paletyzacja): worki ciężkie i lżejsze, kartony, ładunki nietypowe; warianty: sama paletyzacja z automatycznym magazynem palet, paletyzacja z owijarką, kompaktowa paletyzacja cobotem.
+- [Kartonowanie: formowanie, pakowanie i zaklejanie kartonów](https://madejpak.pl/maszyny/kartonowanie)
+- [Pionowe maszyny pakujące (VFFS)](https://madejpak.pl/maszyny/pionowe-maszyny-pakujace)
+- [Poziome maszyny pakujące (flow-pack)](https://madejpak.pl/maszyny/poziome-maszyny-pakujace)
+- [Maszyny własnej produkcji MadejPak](https://madejpak.pl/maszyny/madejpak): chwytaki, desztaplery (magazyny palet), podajniki, bufory.
+- [Robotyzacja pakowania](https://madejpak.pl/maszyny/robotyzacja-pakowania)
+- [Workowanie i big bagi](https://madejpak.pl/maszyny/workowanie)
+- [Owijarki do palet](https://madejpak.pl/maszyny/owijarki-do-palet)
+- [Serwis maszyn](https://madejpak.pl/serwis)
+
+## Realizacje / Case studies
+- [Realizacje z opisami i filmami](https://madejpak.pl/realizacje): m.in. Siarkopol (Grupa Azoty), Europol, Planta, Promotor, Certech, Dobis, Alexpol, Lazur, Bolsius.
+
+## Kontakt / Contact
+- [Kontakt](https://madejpak.pl/kontakt): biuro@madejpak.pl, +48 123 454 397, Dziewin 333, 32-708 Dziewin, Polska.

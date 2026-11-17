@@ -70,8 +70,8 @@ const CLIENTS = [
   { name: 'Dr Marcus',             src: '/logos/klienci/dr-marcus.png',             href: 'https://dr-marcus.com/pl' },
   { name: 'Kazart',                src: '/logos/klienci/kazart.png',                href: 'https://kazart.com.pl/' },
   { name: 'Piekarnia Wielgomłyny', src: '/logos/klienci/piekarnia-wielgomyny.png',  href: 'http://piekarnia-wielgomlyny.pl/' },
-  { name: 'Sandezia',              src: '/logos/klienci/sandezia.png',              href: 'https://www.sandezia.com/' },
-  { name: 'Stabrawa',              src: '/logos/klienci/stabrawa.png',              href: 'https://pelletstabrawa.pl/' },
+  { name: 'Sandezia',              src: '/logos/klienci/sandezia-logo.svg',              href: 'https://www.sandezia.com/' },
+  { name: 'Stabrawa',              src: '/logos/klienci/stabrawa-logo.png',              href: 'https://pelletstabrawa.pl/' },
   { name: 'Timex',                 src: '/logos/klienci/timex.png',                 href: '' },
   { name: 'Trak',                  src: '/logos/klienci/trak.svg',                  href: 'https://www.trak-garbatka.pl/' },
 ];

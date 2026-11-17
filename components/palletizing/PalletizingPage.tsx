@@ -375,6 +375,9 @@ export default function PalletizingPage({ lang }: { lang: PalLang }) {
               </Box>
             ))}
           </Box>
+          <Box component={Link} href={`${prefix}/poradnik`} sx={{ display: 'inline-block', mt: 3, fontSize: '0.92rem', fontWeight: 800, color: ACCENT, textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}>
+            {lang === 'en' ? 'More answers in our guide' : 'Więcej odpowiedzi w poradniku'} →
+          </Box>
         </Container>
       </Box>
 

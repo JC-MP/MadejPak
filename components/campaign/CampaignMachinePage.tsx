@@ -38,7 +38,7 @@ const UI = {
     videoTitle: 'Zobacz technologię w pracy',
     serviceEyebrow: 'MadejPak',
     serviceTitle: 'Serwis i integracja po naszej stronie',
-    serviceLead: 'Od 2000 roku projektujemy i integrujemy linie pakujące. Nie kończymy na dostawie maszyny.',
+    serviceLead: 'Od ponad 25 lat projektujemy i integrujemy linie pakujące. Nie kończymy na dostawie maszyny.',
     service: [
       { title: 'Dobór do produktu', desc: 'Sprawdzamy produkt, opakowanie i wymaganą wydajność, zanim przedstawimy ofertę.' },
       { title: 'Integracja z linią', desc: 'Podawanie produktu, transport, kontrola, kartonowanie i paletyzacja — jeden partner za całą linię.' },
@@ -71,7 +71,7 @@ const UI = {
     videoTitle: 'See the technology at work',
     serviceEyebrow: 'MadejPak',
     serviceTitle: 'Service and integration on our side',
-    serviceLead: 'We have been designing and integrating packaging lines since 2000. We do not stop at delivering the machine.',
+    serviceLead: 'We have been designing and integrating packaging lines for more than 25 years. We do not stop at delivering the machine.',
     service: [
       { title: 'Matched to your product', desc: 'We check the product, pack and required output before making an offer.' },
       { title: 'Line integration', desc: 'Product infeed, conveying, inspection, case packing and palletising — one partner for the whole line.' },
